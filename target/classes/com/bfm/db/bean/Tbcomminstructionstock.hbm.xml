@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcomminstructionstock" table="TBCOMMINSTRUCTIONSTOCK" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcomminstructionstockId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="instrDailyModify" type="big_decimal">
+            <column name="INSTR_DAILY_MODIFY" precision="38" scale="0" not-null="true">
+                <comment>
+                &#180;&#211;1&#191;&#170;&#202;&#188;&#163;&#187;&#211;&#235;&#214;&#184;&#193;&#238;&#177;&#237;&#214;&#208;&#181;&#196;&#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#208;&#242;&#186;&#197;&#178;&#187;&#205;&#172;&#210;&#226;&#210;&#229;</comment>
+            </column>
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_TZLX 1&#163;&#186;&#191;&#201;&#189;&#187;&#210;&#215;
+                2&#163;&#186;&#179;&#214;&#211;&#208;&#181;&#189;&#198;&#218; 3&#163;&#186;&#191;&#201;&#185;&#169;&#179;&#246;&#202;&#219;
+                4&#163;&#186;&#180;&#251;&#191;&#238;&#186;&#205;&#211;&#166;&#202;&#213;&#191;&#238;&#207;&#238;</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_TYZLLB</comment>
+            </column>
+        </property>
+        <property name="opFlag" type="string">
+            <column name="OP_FLAG" length="6" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_ZTBCZ</comment>
+            </column>
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228; K_WTFX</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>K_BZ</comment>
+            </column>
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1&#163;&#186;&#213;&#253;&#179;&#163; 2&#163;&#186;&#210;&#209;&#208;&#222;&#184;&#196;
+                &#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_ZLZQZT&#207;&#238; from 20090519
+                1&#161;&#162;&#212;&#218;&#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#181;&#196;&#202;&#177;&#186;&#242;&#208;&#222;&#184;&#196;&#180;&#203;&#215;&#180;&#204;&#172;&#206;&#170;&#210;&#209;&#208;&#222;&#184;&#196;&#161;&#163;&#196;&#218;&#178;&#191;&#202;&#185;&#211;&#195;&#163;&#172;&#178;&#187;&#208;&#232;&#210;&#170;&#182;&#212;&#205;&#226;&#213;&#185;&#202;&#190;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true">
+                <comment>&#183;&#199;&#177;&#234;&#214;&#184;&#193;&#238;&#202;&#177;&#163;&#172;&#206;&#170;&#189;&#187;&#210;&#215;&#193;&#247;&#203;&#174;&#186;&#197;
+                &#211;&#195;checktable&#202;&#177;&#163;&#172;&#206;&#170;checktable&#181;&#196;Serial_no &#198;&#228;&#203;&#252;&#206;&#170;&#191;&#213;</comment>
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="256" not-null="true" />
+        </property>
+        <property name="reserve4" type="string">
+            <column name="RESERVE4" length="256" not-null="true" />
+        </property>
+        <property name="reserve5" type="string">
+            <column name="RESERVE5" length="256" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

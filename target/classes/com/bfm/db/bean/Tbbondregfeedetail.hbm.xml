@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondregfeedetail" table="TBBONDREGFEEDETAIL" schema="TZYHSC">
+        <comment>Add by fj from 20100517 for bns version 1??????????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbondregfeedetailId">
+            <key-property name="regfeeId" type="big_decimal">
+                <column name="REGFEE_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="amountLower" type="big_decimal">
+                <column name="AMOUNT_LOWER" precision="16" />
+            </key-property>
+            <key-property name="amountUpper" type="big_decimal">
+                <column name="AMOUNT_UPPER" precision="16" />
+            </key-property>
+            <key-property name="feeRate" type="big_decimal">
+                <column name="FEE_RATE" precision="16" scale="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atcalresultdetail" table="ATCALRESULTDETAIL" schema="TZYHSC">
+        <comment>ATCALRESULTDETAIL&#185;&#192;&#214;&#181;&#177;&#237;&#195;&#247;&#207;&#184;&#202;&#253;&#190;&#221;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtcalresultdetailId">
+            <key-property name="serialno" type="string">
+                <column name="SERIALNO" length="20" />
+            </key-property>
+            <key-property name="seq" type="big_decimal">
+                <column name="SEQ" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="100">
+                <comment>&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="rank" type="java.lang.Character">
+            <column name="RANK" length="1">
+                <comment>&#191;&#198;&#196;&#191;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="accountname" type="string">
+            <column name="ACCOUNTNAME" length="200">
+                <comment>&#191;&#198;&#196;&#191;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="count" type="string">
+            <column name="COUNT" length="100">
+                <comment>&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="unitcost" type="string">
+            <column name="UNITCOST" length="100">
+                <comment>&#181;&#165;&#206;&#187;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="cost" type="string">
+            <column name="COST" length="100">
+                <comment>&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="costpercent" type="string">
+            <column name="COSTPERCENT" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#213;&#188;&#215;&#202;&#178;&#250;&#190;&#187;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="unitassetvalue" type="string">
+            <column name="UNITASSETVALUE" length="100">
+                <comment>&#181;&#165;&#206;&#187;&#215;&#202;&#178;&#250;&#188;&#219;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="assetvalue" type="string">
+            <column name="ASSETVALUE" length="100">
+                <comment>&#215;&#202;&#178;&#250;&#188;&#219;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="assetvaluepercent" type="string">
+            <column name="ASSETVALUEPERCENT" length="100">
+                <comment>&#215;&#202;&#178;&#250;&#188;&#219;&#214;&#181;&#213;&#188;&#215;&#202;&#178;&#250;&#190;&#187;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="addedprice" type="string">
+            <column name="ADDEDPRICE" length="100">
+                <comment>&#185;&#192;&#214;&#181;&#212;&#246;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="avgprice" type="string">
+            <column name="AVGPRICE" length="100">
+                <comment>&#181;&#177;&#200;&#213;&#190;&#249;&#188;&#219;&#163;&#168;&#202;&#208;&#188;&#219;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="price" type="string">
+            <column name="PRICE" length="100">
+                <comment>&#202;&#208;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="pricepercent" type="string">
+            <column name="PRICEPERCENT" length="100">
+                <comment>&#202;&#208;&#214;&#181;&#213;&#188;&#215;&#202;&#178;&#250;&#190;&#187;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="offprice" type="string">
+            <column name="OFFPRICE" length="100">
+                <comment>&#198;&#171;&#192;&#235;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="offpercent" type="string">
+            <column name="OFFPERCENT" length="100">
+                <comment>&#198;&#171;&#192;&#235;&#189;&#240;&#182;&#238;&#213;&#188;&#215;&#202;&#178;&#250;&#190;&#187;&#214;&#181;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

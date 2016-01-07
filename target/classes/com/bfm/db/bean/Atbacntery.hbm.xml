@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbacntery" table="ATBACNTERY" schema="TZYHSC">
+        <comment>ATBACNTERY</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbacnteryId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="trntype" type="string">
+                <column name="TRNTYPE" length="4" />
+            </key-property>
+            <key-property name="catcode" type="string">
+                <column name="CATCODE" length="4" />
+            </key-property>
+            <key-property name="acctype" type="string">
+                <column name="ACCTYPE" length="4" />
+            </key-property>
+            <key-property name="erykey" type="string">
+                <column name="ERYKEY" length="10" />
+            </key-property>
+            <key-property name="eryseq" type="big_decimal">
+                <column name="ERYSEQ" precision="22" scale="0" />
+            </key-property>
+            <key-property name="genflag" type="char">
+                <column name="GENFLAG" length="1" />
+            </key-property>
+            <key-property name="cur" type="string">
+                <column name="CUR" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40">
+                <comment>&#182;&#212;&#211;&#166;&#177;&#234;&#215;&#188;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="naccount" type="string">
+            <column name="NACCOUNT" length="40">
+                <comment>&#184;&#186;&#202;&#253;&#188;&#199;&#213;&#203;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="curcode" type="string">
+            <column name="CURCODE" length="10">
+                <comment>&#177;&#210;&#214;&#214;1 &#177;&#210;&#214;&#214;2</comment>
+            </column>
+        </property>
+        <property name="eryamt" type="string">
+            <column name="ERYAMT" length="100">
+                <comment>&#189;&#240;&#182;&#238;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="cdflag" type="java.lang.Character">
+            <column name="CDFLAG" length="1">
+                <comment>&#189;&#232;&#180;&#251;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="totnum" type="big_decimal">
+            <column name="TOTNUM" precision="22" scale="0">
+                <comment>&#215;&#220;&#177;&#200;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="eryrem" type="string">
+            <column name="ERYREM" length="60">
+                <comment>&#191;&#198;&#196;&#191;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="chkflag" type="java.lang.Character">
+            <column name="CHKFLAG" length="1">
+                <comment>&#212;&#221;&#202;&#177;&#178;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="furinf" type="string">
+            <column name="FURINF" length="150">
+                <comment>&#200;&#177;&#202;&#161;&#213;&#170;&#210;&#170;</comment>
+            </column>
+        </property>
+        <property name="mergeflag" type="java.lang.Character">
+            <column name="MERGEFLAG" length="1">
+                <comment>&#212;&#221;&#202;&#177;&#178;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="seccur" type="string">
+            <column name="SECCUR" length="3">
+                <comment>&#181;&#218;&#182;&#254;&#187;&#245;&#177;&#210;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="secamt" type="string">
+            <column name="SECAMT" length="3">
+                <comment>&#181;&#218;&#182;&#254;&#189;&#240;&#182;&#238;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="setseq" type="big_decimal">
+            <column name="SETSEQ" precision="22" scale="0">
+                <comment>&#212;&#221;&#202;&#177;&#178;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="havacct" type="java.lang.Character">
+            <column name="HAVACCT" length="1">
+                <comment>1.&#186;&#173;&#184;&#199;&#207;&#194;&#188;&#182;&#191;&#198;&#196;&#191;
+                2.&#178;&#187;&#186;&#173;&#184;&#199;&#207;&#194;&#188;&#182;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="subacct" type="string">
+            <column name="SUBACCT" length="2">
+                <comment>1.&#186;&#173;&#184;&#199;&#207;&#194;&#188;&#182;&#191;&#198;&#196;&#191;
+                2.&#178;&#187;&#186;&#173;&#184;&#199;&#207;&#194;&#188;&#182;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="cdchg" type="java.lang.Character">
+            <column name="CDCHG" length="1">
+                <comment>&#184;&#186;&#189;&#240;&#182;&#238;&#208;&#222;&#184;&#196;&#177;&#228;&#182;&#175;&#177;&#234;&#214;&#190; 1
+                &#189;&#232;&#180;&#251;&#178;&#187;&#177;&#228; 2 &#189;&#232;&#180;&#251;&#177;&#228;&#182;&#175;</comment>
+            </column>
+        </property>
+        <property name="trader" type="string">
+            <column name="TRADER" length="20">
+                <comment>&#212;&#221;&#202;&#177;&#178;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="count" type="big_decimal">
+            <column name="COUNT" precision="22" scale="0">
+                <comment>&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="bankacct" type="string">
+            <column name="BANKACCT" length="40">
+                <comment>&#210;&#248;&#208;&#208;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="entrycatalog" type="string">
+            <column name="ENTRYCATALOG" length="6">
+                <comment>&#198;&#190;&#214;&#164;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="genamttype" type="java.lang.Character">
+            <column name="GENAMTTYPE" length="1">
+                <comment>&#200;&#161;&#202;&#253;&#183;&#189;&#183;&#168;</comment>
+            </column>
+        </property>
+        <property name="sendgl" type="java.lang.Character">
+            <column name="SENDGL" length="1">
+                <comment>0 &#178;&#187;&#203;&#205;&#215;&#220;&#213;&#202; 1 &#203;&#205;&#215;&#220;&#213;&#202;</comment>
+            </column>
+        </property>
+        <property name="repFlag" type="java.lang.Character">
+            <column name="REP_FLAG" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#202;&#185;&#211;&#195;&#191;&#198;&#196;&#191;&#204;&#230;&#187;&#187;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="repBank" type="java.lang.Character">
+            <column name="REP_BANK" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#214;&#177;&#189;&#211;&#204;&#230;&#187;&#187;&#210;&#248;&#208;&#208;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="repRank" type="string">
+            <column name="REP_RANK" length="10">
+                <comment>&#191;&#198;&#196;&#191;&#204;&#230;&#187;&#187;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="repCode" type="string">
+            <column name="REP_CODE" length="128">
+                <comment>&#204;&#230;&#187;&#187;&#183;&#251;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sendglFormula" type="string">
+            <column name="SENDGL_FORMULA" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

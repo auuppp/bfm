@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbholiday" table="ATBHOLIDAY" schema="TZYHSC">
+        <comment>ATBHOLIDAY&#189;&#187;&#210;&#215;&#189;&#218;&#188;&#217;&#200;&#213;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbholidayId">
+            <key-property name="calendarid" type="string">
+                <column name="CALENDARID" length="15" />
+            </key-property>
+            <key-property name="holidaytype" type="char">
+                <column name="HOLIDAYTYPE" length="1" />
+            </key-property>
+            <key-property name="holidate" type="string">
+                <column name="HOLIDATE" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

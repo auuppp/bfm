@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbtempinstrcreditasset" table="TBTEMPINSTRCREDITASSET" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbtempinstrcreditassetId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="creditCode" type="string">
+            <column name="CREDIT_CODE" length="32" not-null="true" />
+        </property>
+        <property name="assoSerial" type="string">
+            <column name="ASSO_SERIAL" length="32" not-null="true" />
+        </property>
+        <property name="oriBeginDate" type="big_decimal">
+            <column name="ORI_BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditBeginDate" type="big_decimal">
+            <column name="CREDIT_BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditEndDate" type="big_decimal">
+            <column name="CREDIT_END_DATE" precision="22" scale="0" not-null="true">
+                <comment>1????? 2????? 3?????? 4????? 5????????</comment>
+            </column>
+        </property>
+        <property name="payFrequency" type="string">
+            <column name="PAY_FREQUENCY" length="3" not-null="true">
+                <comment>1????? 2????? 3????? 4????</comment>
+            </column>
+        </property>
+        <property name="interestFlag" type="string">
+            <column name="INTEREST_FLAG" length="1" not-null="true">
+                <comment>1:??? 2:??? 3:?? 4:?? 5:????? 6:????</comment>
+            </column>
+        </property>
+        <property name="creditPrincipal" type="big_decimal">
+            <column name="CREDIT_PRINCIPAL" precision="18" not-null="true" />
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="18" not-null="true">
+                <comment>????+??(???????????0)</comment>
+            </column>
+        </property>
+        <property name="realAmount" type="big_decimal">
+            <column name="REAL_AMOUNT" precision="18" not-null="true">
+                <comment>????+??(???????????0)</comment>
+            </column>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

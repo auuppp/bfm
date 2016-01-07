@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbbuysellrel" table="ATBBUYSELLREL" schema="TZYHSC">
+        <comment>ATBBUYSELLREL&#194;&#242;&#194;&#244;&#185;&#216;&#207;&#181;&#182;&#212;&#211;&#166;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbbuysellrelId">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="sellSerialNo" type="string">
+                <column name="SELL_SERIAL_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="sellamt" type="big_decimal">
+            <column name="SELLAMT" precision="18">
+                <comment>&#194;&#244;&#179;&#246;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="sellcount" type="big_decimal">
+            <column name="SELLCOUNT" precision="18">
+                <comment>&#194;&#244;&#179;&#246;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="sellFlag" type="big_decimal">
+            <column name="SELL_FLAG" precision="18">
+                <comment>1 &#206;&#180;&#194;&#244;&#179;&#246; 2.&#178;&#191;&#183;&#214;&#194;&#244;&#179;&#246; 3.&#200;&#171;&#178;&#191;&#194;&#244;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="count" type="big_decimal">
+            <column name="COUNT" precision="18">
+                <comment>&#212;&#173;&#202;&#188;&#194;&#242;&#200;&#235;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="sellDate" type="string">
+            <column name="SELL_DATE" length="8">
+                <comment>&#194;&#244;&#179;&#246;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

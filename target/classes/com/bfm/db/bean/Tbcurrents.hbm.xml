@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcurrents" table="TBCURRENTS" schema="TZYHSC">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="currDate" type="big_decimal">
+            <column name="CURR_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="currentAmount" type="big_decimal">
+            <column name="CURRENT_AMOUNT" precision="16" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="frozenAmount" type="big_decimal">
+            <column name="FROZEN_AMOUNT" precision="16" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="unsettleAmount" type="big_decimal">
+            <column name="UNSETTLE_AMOUNT" precision="16" not-null="true">
+                <comment>??????????????????????????????????????????????? ????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="unsettleBalance" type="big_decimal">
+            <column name="UNSETTLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="dealSerialNo" type="string">
+            <column name="DEAL_SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="opFlag" type="string">
+            <column name="OP_FLAG" length="1" not-null="true">
+                <comment>K_FEBDBZ 1 ?? 2 ?? 3 ?? 4 ???? 5 ???? 6 ???? 7 ???? 8 ???? 9 ???</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

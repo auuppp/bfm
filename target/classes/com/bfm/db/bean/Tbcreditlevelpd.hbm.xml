@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcreditlevelpd" table="TBCREDITLEVELPD" schema="TZYHSC">
+        <id name="customAppraise" type="string">
+            <column name="CUSTOM_APPRAISE" length="1" />
+            <generator class="assigned" />
+        </id>
+        <property name="pdAvg" type="big_decimal">
+            <column name="PD_AVG" precision="16" not-null="true" />
+        </property>
+        <property name="pdMin" type="big_decimal">
+            <column name="PD_MIN" precision="16" not-null="true" />
+        </property>
+        <property name="pdMax" type="big_decimal">
+            <column name="PD_MAX" precision="16" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

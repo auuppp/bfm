@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcombi" table="TBCOMBI" schema="TZYHSC">
+        <comment>20130401??????????? ???????????????</comment>
+        <id name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="combiName" type="string">
+            <column name="COMBI_NAME" length="64" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true">
+                <comment>?????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true">
+                <comment>???????????????????</comment>
+            </column>
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>?????????????????????COMBI_DECIDE_INVEST????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="costsCenter" type="string">
+            <column name="COSTS_CENTER" length="20" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="businTypes" type="string">
+            <column name="BUSIN_TYPES" length="512" not-null="true">
+                <comment>???????????????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bankAccount" type="string">
+            <column name="BANK_ACCOUNT" length="32" not-null="true">
+                <comment>????????????????????????????????????? 1?????????????? 2??????????????????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bankAccount2" type="string">
+            <column name="BANK_ACCOUNT2" length="32" not-null="true">
+                <comment>?????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bankAccount3" type="string">
+            <column name="BANK_ACCOUNT3" length="32" not-null="true">
+                <comment>?????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bankAccount4" type="string">
+            <column name="BANK_ACCOUNT4" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="stockTypeRight" type="string">
+            <column name="STOCK_TYPE_RIGHT" length="256" not-null="true">
+                <comment>??????????????????????</comment>
+            </column>
+        </property>
+        <property name="controlMethodInstr" type="string">
+            <column name="CONTROL_METHOD_INSTR" length="1" not-null="true">
+                <comment>???0???? 1????</comment>
+            </column>
+        </property>
+        <property name="controlMethodDeal" type="string">
+            <column name="CONTROL_METHOD_DEAL" length="1" not-null="true">
+                <comment>???0???? 1????</comment>
+            </column>
+        </property>
+        <property name="matchMethod" type="string">
+            <column name="MATCH_METHOD" length="1" not-null="true">
+                <comment>1????? 2?FIFO?????????? 3?LIFO???????</comment>
+            </column>
+        </property>
+        <property name="openCloseMethod" type="string">
+            <column name="OPEN_CLOSE_METHOD" length="1" not-null="true">
+                <comment>K_KPCFS 0?????????????1?????????0</comment>
+            </column>
+        </property>
+        <property name="param1" type="string">
+            <column name="PARAM1" length="256" not-null="true" />
+        </property>
+        <property name="param2" type="string">
+            <column name="PARAM2" length="256" not-null="true" />
+        </property>
+        <property name="param3" type="string">
+            <column name="PARAM3" length="256" not-null="true" />
+        </property>
+        <property name="param4" type="string">
+            <column name="PARAM4" length="256" not-null="true" />
+        </property>
+        <property name="param5" type="string">
+            <column name="PARAM5" length="256" not-null="true" />
+        </property>
+        <property name="param6" type="string">
+            <column name="PARAM6" length="256" not-null="true" />
+        </property>
+        <property name="setupDate" type="big_decimal">
+            <column name="SETUP_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="combiStatus" type="string">
+            <column name="COMBI_STATUS" length="1" not-null="true">
+                <comment>1??? 2??? ????K_TZZHZT?</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

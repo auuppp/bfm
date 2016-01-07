@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbrealdeal" table="TBREALDEAL" schema="TZYHSC">
+        <comment>??????????????????????(??????)?????????????????????????????????????????????????????(???????????????????tbbankrealdeal?????tbmmrealdeal)</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbrealdealId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>??????? ??ACT/365</comment>
+            </column>
+        </property>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true">
+                <comment>???????? ???R+yyyyymmdd+?? ???B+yyyyymmdd+?? ???????????????</comment>
+            </column>
+        </property>
+        <property name="dealTime" type="big_decimal">
+            <column name="DEAL_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="settleSpeed" type="big_decimal">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+                <comment>0?T+0?? 1?T+1??</comment>
+            </column>
+        </property>
+        <property name="dealAmount" type="big_decimal">
+            <column name="DEAL_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="firstSettleInterest" type="big_decimal">
+            <column name="FIRST_SETTLE_INTEREST" precision="18" scale="12" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="firstNetPrice" type="big_decimal">
+            <column name="FIRST_NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>??????100</comment>
+            </column>
+        </property>
+        <property name="firstFullPrice" type="big_decimal">
+            <column name="FIRST_FULL_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="firstClearBalance" type="big_decimal">
+            <column name="FIRST_CLEAR_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="secondSettleInterest" type="big_decimal">
+            <column name="SECOND_SETTLE_INTEREST" precision="18" scale="12" not-null="true" />
+        </property>
+        <property name="secondNetPrice" type="big_decimal">
+            <column name="SECOND_NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>??????100</comment>
+            </column>
+        </property>
+        <property name="secondFullPrice" type="big_decimal">
+            <column name="SECOND_FULL_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondClearBalance" type="big_decimal">
+            <column name="SECOND_CLEAR_BALANCE" precision="16" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="firstMatureYield" type="big_decimal">
+            <column name="FIRST_MATURE_YIELD" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondMatureYield" type="big_decimal">
+            <column name="SECOND_MATURE_YIELD" precision="16" scale="8" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="firstSettleDate" type="big_decimal">
+            <column name="FIRST_SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>?????????????????</comment>
+            </column>
+        </property>
+        <property name="secondSettleDate" type="big_decimal">
+            <column name="SECOND_SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="firstSettleType" type="string">
+            <column name="FIRST_SETTLE_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="secondSettleType" type="string">
+            <column name="SECOND_SETTLE_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="16" scale="8" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="hgDays" type="big_decimal">
+            <column name="HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="realHgDays" type="big_decimal">
+            <column name="REAL_HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="bondAccountname" type="string">
+            <column name="BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="bondTrustBranch" type="string">
+            <column name="BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="bondAccount" type="string">
+            <column name="BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="otherBondAccountname" type="string">
+            <column name="OTHER_BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="otherBondTrustBranch" type="string">
+            <column name="OTHER_BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="otherBondAccount" type="string">
+            <column name="OTHER_BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="feePosition" type="string">
+            <column name="FEE_POSITION" length="1" not-null="true">
+                <comment>?? 1-?? 2-?? ??????????????</comment>
+            </column>
+        </property>
+        <property name="fee" type="big_decimal">
+            <column name="FEE" precision="16" not-null="true">
+                <comment>??????????????????????????</comment>
+            </column>
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="feeDate" type="big_decimal">
+            <column name="FEE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="tenderInfoId" type="string">
+            <column name="TENDER_INFO_ID" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="bondEnableDate" type="big_decimal">
+            <column name="BOND_ENABLE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

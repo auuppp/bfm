@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbtoacctmp" table="ATBTOACCTMP" schema="TZYHSC">
+        <comment>&#187;&#225;&#188;&#198;&#189;&#240;&#182;&#238;&#186;&#203;&#203;&#227;&#189;&#211;&#191;&#218;&#202;&#253;&#190;&#221;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbtoacctmpId">
+            <key-property name="erykey" type="string">
+                <column name="ERYKEY" length="10" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="tranSubCode" type="string">
+                <column name="TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="8" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+            <key-property name="transFlowid" type="string">
+                <column name="TRANS_FLOWID" length="32" />
+            </key-property>
+            <key-property name="amountType" type="string">
+                <column name="AMOUNT_TYPE" length="3" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="accDate" type="string">
+                <column name="ACC_DATE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="18" scale="6">
+                <comment>&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="count" type="big_decimal">
+            <column name="COUNT" precision="18" scale="6">
+                <comment>&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="serialno" type="string">
+            <column name="SERIALNO" length="32">
+                <comment>&#201;&#250;&#179;&#201;&#198;&#190;&#214;&#164;&#182;&#212;&#211;&#166;&#181;&#196;&#193;&#247;&#203;&#174;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

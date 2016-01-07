@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbissuebondhold" table="TBISSUEBONDHOLD" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbissuebondholdId">
+            <key-property name="issueNo" type="string">
+                <column name="ISSUE_NO" length="32" />
+            </key-property>
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="holdDate" type="big_decimal">
+            <column name="HOLD_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="bondAccount" type="string">
+            <column name="BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="mainHolder" type="string">
+            <column name="MAIN_HOLDER" length="1" not-null="true">
+                <comment>0???1??</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="fee" type="big_decimal">
+            <column name="FEE" precision="16" not-null="true" />
+        </property>
+        <property name="accountName" type="string">
+            <column name="ACCOUNT_NAME" length="128" not-null="true" />
+        </property>
+        <property name="feeRate" type="big_decimal">
+            <column name="FEE_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="issueFeeRate" type="big_decimal">
+            <column name="ISSUE_FEE_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="issueFee" type="big_decimal">
+            <column name="ISSUE_FEE" precision="16" not-null="true" />
+        </property>
+        <property name="totalFee" type="big_decimal">
+            <column name="TOTAL_FEE" precision="16" not-null="true" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="40" not-null="true" />
+        </property>
+        <property name="accountBankName" type="string">
+            <column name="ACCOUNT_BANK_NAME" length="256" not-null="true" />
+        </property>
+        <property name="accountBankNo" type="string">
+            <column name="ACCOUNT_BANK_NO" length="32" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

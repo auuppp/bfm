@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbplatesubject" table="TBPLATESUBJECT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbplatesubjectId">
+            <key-property name="plateType" type="string">
+                <column name="PLATE_TYPE" length="2" />
+            </key-property>
+            <key-property name="plateName" type="string">
+                <column name="PLATE_NAME" length="64" />
+            </key-property>
+            <key-property name="subjectNo" type="string">
+                <column name="SUBJECT_NO" length="32" />
+            </key-property>
+            <key-property name="subjectName" type="string">
+                <column name="SUBJECT_NAME" length="128" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

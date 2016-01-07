@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbinstratevar" table="TMP_TBINSTRATEVAR" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbinstratevarId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="38" scale="0" />
+            </key-property>
+            <key-property name="ruleNo" type="big_decimal">
+                <column name="RULE_NO" precision="38" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="38" scale="0" />
+            </key-property>
+            <key-property name="ruleRefersNo" type="string">
+                <column name="RULE_REFERS_NO" length="32" />
+            </key-property>
+            <key-property name="ruleType" type="string">
+                <column name="RULE_TYPE" length="1" />
+            </key-property>
+            <key-property name="payBasis" type="string">
+                <column name="PAY_BASIS" length="12" />
+            </key-property>
+            <key-property name="interestConfType" type="string">
+                <column name="INTEREST_CONF_TYPE" length="1" />
+            </key-property>
+            <key-property name="interestType" type="string">
+                <column name="INTEREST_TYPE" length="1" />
+            </key-property>
+            <key-property name="fixType" type="string">
+                <column name="FIX_TYPE" length="1" />
+            </key-property>
+            <key-property name="fixRate" type="big_decimal">
+                <column name="FIX_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="indexId" type="string">
+                <column name="INDEX_ID" length="20" />
+            </key-property>
+            <key-property name="isRuleFreq" type="string">
+                <column name="IS_RULE_FREQ" length="1" />
+            </key-property>
+            <key-property name="floatType" type="string">
+                <column name="FLOAT_TYPE" length="1" />
+            </key-property>
+            <key-property name="paySpread" type="big_decimal">
+                <column name="PAY_SPREAD" precision="18" />
+            </key-property>
+            <key-property name="obsFirstDate" type="big_decimal">
+                <column name="OBS_FIRST_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="fixingOffset" type="big_decimal">
+                <column name="FIXING_OFFSET" precision="38" scale="0" />
+            </key-property>
+            <key-property name="upfrontOrArrears" type="string">
+                <column name="UPFRONT_OR_ARREARS" length="1" />
+            </key-property>
+            <key-property name="obsFreq" type="string">
+                <column name="OBS_FREQ" length="3" />
+            </key-property>
+            <key-property name="dateAdjustMethod" type="string">
+                <column name="DATE_ADJUST_METHOD" length="1" />
+            </key-property>
+            <key-property name="holiday" type="string">
+                <column name="HOLIDAY" length="30" />
+            </key-property>
+            <key-property name="isObsCombine" type="string">
+                <column name="IS_OBS_COMBINE" length="1" />
+            </key-property>
+            <key-property name="isRealAdjust" type="string">
+                <column name="IS_REAL_ADJUST" length="1" />
+            </key-property>
+            <key-property name="rateFormula" type="string">
+                <column name="RATE_FORMULA" length="1" />
+            </key-property>
+            <key-property name="fixScale" type="big_decimal">
+                <column name="FIX_SCALE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="capFloorStatus" type="string">
+                <column name="CAP_FLOOR_STATUS" length="1" />
+            </key-property>
+            <key-property name="capRate" type="big_decimal">
+                <column name="CAP_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="floorRate" type="big_decimal">
+                <column name="FLOOR_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="everyDayType" type="string">
+                <column name="EVERY_DAY_TYPE" length="1" />
+            </key-property>
+            <key-property name="levelType" type="string">
+                <column name="LEVEL_TYPE" length="1" />
+            </key-property>
+            <key-property name="avgDailyFreq" type="string">
+                <column name="AVG_DAILY_FREQ" length="3" />
+            </key-property>
+            <key-property name="isCondBal" type="string">
+                <column name="IS_COND_BAL" length="1" />
+            </key-property>
+            <key-property name="isCondLimit" type="string">
+                <column name="IS_COND_LIMIT" length="1" />
+            </key-property>
+            <key-property name="limitType" type="string">
+                <column name="LIMIT_TYPE" length="1" />
+            </key-property>
+            <key-property name="isLimit" type="string">
+                <column name="IS_LIMIT" length="1" />
+            </key-property>
+            <key-property name="limitRate" type="big_decimal">
+                <column name="LIMIT_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="indexPrecision" type="big_decimal">
+                <column name="INDEX_PRECISION" precision="38" scale="0" />
+            </key-property>
+            <key-property name="decimalCalcType" type="string">
+                <column name="DECIMAL_CALC_TYPE" length="1" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

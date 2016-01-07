@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atvchgrp" table="ATVCHGRP" schema="TZYHSC">
+        <comment>ATVCHGRP&#198;&#190;&#214;&#164;&#192;&#224;&#208;&#205;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtvchgrpId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="entrycatalog" type="string">
+                <column name="ENTRYCATALOG" length="6" />
+            </key-property>
+        </composite-id>
+        <property name="entryname" type="string">
+            <column name="ENTRYNAME" length="40">
+                <comment>&#198;&#190;&#214;&#164;&#214;&#214;&#192;&#224;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="dmasthave" type="string">
+            <column name="DMASTHAVE" length="16">
+                <comment>&#189;&#232;&#183;&#189;&#177;&#216;&#211;&#208;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="dnothave" type="string">
+            <column name="DNOTHAVE" length="16">
+                <comment>&#189;&#232;&#183;&#189;&#177;&#216;&#206;&#222;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="cmasthave" type="string">
+            <column name="CMASTHAVE" length="16">
+                <comment>&#180;&#251;&#183;&#189;&#177;&#216;&#211;&#208;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="cnothave" type="string">
+            <column name="CNOTHAVE" length="16">
+                <comment>&#180;&#251;&#183;&#189;&#177;&#216;&#206;&#222;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="validFlag" type="java.lang.Character">
+            <column name="VALID_FLAG" length="1">
+                <comment>1 &#191;&#216;&#214;&#198;&#189;&#232;&#180;&#251;&#198;&#189;&#186;&#226; 2
+                &#178;&#187;&#191;&#216;&#214;&#198;&#189;&#211;&#180;&#253;&#198;&#189;&#186;&#226;</comment>
+            </column>
+        </property>
+        <property name="entryflag" type="java.lang.Character">
+            <column name="ENTRYFLAG" length="1">
+                <comment>1 &#207;&#181;&#205;&#179;&#198;&#190;&#214;&#164;&#192;&#224;&#208;&#205; 2
+                &#211;&#195;&#187;&#167;&#215;&#212;&#182;&#168;&#210;&#229;&#198;&#190;&#214;&#164;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atprojlist" table="ATPROJLIST" schema="TZYHSC">
+        <comment>ATPROJLIST&#213;&#202;&#204;&#215;&#186;&#203;&#203;&#227;&#181;&#165;&#206;&#187;&#185;&#216;&#207;&#181;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtprojlistId">
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="20" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="projno" type="string">
+            <column name="PROJNO" length="20" not-null="true">
+                <comment>&#186;&#203;&#203;&#227;&#181;&#165;&#206;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="projname" type="string">
+            <column name="PROJNAME" length="100" not-null="true">
+                <comment>&#186;&#203;&#203;&#227;&#181;&#165;&#206;&#187;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

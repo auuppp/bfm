@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbhistaskpool" table="TBHISTASKPOOL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbhistaskpoolId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="marketCode" type="string">
+                <column name="MARKET_CODE" length="20" />
+            </key-property>
+            <key-property name="taskCode" type="string">
+                <column name="TASK_CODE" length="10" />
+            </key-property>
+            <key-property name="parentTaskCode" type="string">
+                <column name="PARENT_TASK_CODE" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="taskName" type="string">
+            <column name="TASK_NAME" length="256" not-null="true" />
+        </property>
+        <property name="actionClass" type="string">
+            <column name="ACTION_CLASS" length="100" not-null="true" />
+        </property>
+        <property name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" not-null="true">
+                <comment>&#211;&#195;&#211;&#218;&#188;&#199;&#194;&#188;tbmonitor&#177;&#227;&#211;&#218;&#178;&#233;&#213;&#210;</comment>
+            </column>
+        </property>
+        <property name="parentTaskNum" type="big_decimal">
+            <column name="PARENT_TASK_NUM" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="taskPage" type="string">
+            <column name="TASK_PAGE" length="1" not-null="true">
+                <comment>0&#200;&#213;&#198;&#244;&#210;&#179;&#195;&#230; 1&#200;&#213;&#214;&#213;&#210;&#179;&#195;&#230; 2&#215;&#212;&#211;&#201;&#210;&#179;&#195;&#230;
+                3&#210;&#236;&#179;&#163;&#181;&#165;&#178;&#189;&#180;&#166;&#192;&#237;&#210;&#179;&#195;&#230;</comment>
+            </column>
+        </property>
+        <property name="taskType" type="string">
+            <column name="TASK_TYPE" length="1" not-null="true">
+                <comment>[K_TASKTYPE] 1&#199;&#229;&#203;&#227;&#199;&#176;&#185;&#171;&#185;&#178;&#196;&#163;&#191;&#233;
+                2&#199;&#229;&#203;&#227;&#183;&#214;&#214;&#167;&#196;&#163;&#191;&#233;
+                3&#199;&#229;&#203;&#227;&#186;&#243;&#185;&#171;&#185;&#178;&#196;&#163;&#191;&#233;&#163;&#168;&#191;&#201;&#210;&#212;&#184;&#249;&#190;&#221;&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;&#215;&#212;&#208;&#208;&#182;&#168;&#210;&#229;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="taskRow" type="big_decimal">
+            <column name="TASK_ROW" precision="22" scale="0" not-null="true">
+                <comment>
+                &#180;&#211;1&#191;&#170;&#202;&#188;&#181;&#196;&#208;&#242;&#186;&#197;(&#196;&#220;&#188;&#198;&#203;&#227;&#181;&#196;&#191;&#201;&#210;&#212;&#178;&#187;&#210;&#192;&#192;&#181;&#211;&#218;&#184;&#195;&#215;&#214;&#182;&#206;&#215;&#212;&#182;&#175;&#178;&#188;&#190;&#214;)</comment>
+            </column>
+        </property>
+        <property name="taskColumn" type="big_decimal">
+            <column name="TASK_COLUMN" precision="22" scale="0" not-null="true">
+                <comment>
+                &#180;&#211;1&#191;&#170;&#202;&#188;&#181;&#196;&#208;&#242;&#186;&#197;(&#196;&#220;&#188;&#198;&#203;&#227;&#181;&#196;&#191;&#201;&#210;&#212;&#178;&#187;&#210;&#192;&#192;&#181;&#211;&#218;&#184;&#195;&#215;&#214;&#182;&#206;&#215;&#212;&#182;&#175;&#178;&#188;&#190;&#214;)</comment>
+            </column>
+        </property>
+        <property name="redoFlag" type="string">
+            <column name="REDO_FLAG" length="1" not-null="true">
+                <comment>0-&#178;&#187;&#212;&#202;&#208;&#237; 1-&#212;&#202;&#208;&#237;</comment>
+            </column>
+        </property>
+        <property name="delayFlag" type="string">
+            <column name="DELAY_FLAG" length="1" not-null="true">
+                <comment>0-&#206;&#222; 1-&#209;&#211;&#202;&#177; 2-&#182;&#168;&#202;&#177; 3-&#214;&#208;&#182;&#207;</comment>
+            </column>
+        </property>
+        <property name="delayTime" type="string">
+            <column name="DELAY_TIME" length="6" not-null="true">
+                <comment>&#184;&#249;&#190;&#221;&#209;&#211;&#202;&#177;&#177;&#234;&#214;&#190;&#204;&#238;&#208;&#180;
+                &#209;&#211;&#202;&#177;&#177;&#234;&#214;&#190;=&#161;&#174;0&#161;&#175;&#163;&#172;&#177;&#237;&#202;&#190;&#178;&#187;&#215;&#247;&#180;&#166;&#192;&#237;&#163;&#172;&#212;&#242;&#206;&#170;&#191;&#213;&#184;&#241;&#163;&#187;
+                &#209;&#211;&#202;&#177;&#177;&#234;&#214;&#190;=&#161;&#174;1&#161;&#175;&#163;&#172;&#177;&#237;&#202;&#190;&#209;&#211;&#202;&#177;&#163;&#172;&#212;&#242;&#204;&#238;&#190;&#223;&#204;&#229;&#181;&#196;&#209;&#211;&#202;&#177;&#195;&#235;&#202;&#253;&#163;&#187;
+                &#209;&#211;&#202;&#177;&#177;&#234;&#214;&#190;=&#161;&#174;2&#161;&#175;&#163;&#172;&#177;&#237;&#202;&#190;&#182;&#168;&#202;&#177;&#163;&#172;&#212;&#242;&#204;&#238;&#181;&#177;&#204;&#236;&#190;&#223;&#204;&#229;&#181;&#196;&#198;&#244;&#182;&#175;&#202;&#177;&#188;&#228;&#163;&#172;&#184;&#241;&#202;&#189;&#206;&#170;hhmmss&#163;&#187;
+                &#209;&#211;&#202;&#177;&#177;&#234;&#214;&#190;=&#161;&#174;3&#161;&#175;&#163;&#172;&#177;&#237;&#202;&#190;&#182;&#207;&#181;&#227;&#163;&#172;&#212;&#242;&#206;&#170;&#191;&#213;&#184;&#241;&#163;&#187;</comment>
+            </column>
+        </property>
+        <property name="opCode" type="string">
+            <column name="OP_CODE" length="32" not-null="true" />
+        </property>
+        <property name="opTimes" type="big_decimal">
+            <column name="OP_TIMES" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="dealStatus" type="string">
+            <column name="DEAL_STATUS" length="1" not-null="true">
+                <comment>[K_PCLZT] 0-&#206;&#180;&#188;&#164;&#187;&#238; 1-&#210;&#209;&#188;&#164;&#187;&#238; 2-&#215;&#247;&#210;&#181;&#212;&#221;&#205;&#163;
+                3-&#215;&#247;&#210;&#181;&#205;&#234;&#179;&#201; 4-&#215;&#247;&#210;&#181;&#202;&#167;&#176;&#220; 5-&#215;&#247;&#210;&#181;&#214;&#208;&#182;&#207;
+                Z-&#213;&#253;&#212;&#218;&#180;&#166;&#192;&#237;</comment>
+            </column>
+        </property>
+        <property name="stopDealFlag" type="string">
+            <column name="STOP_DEAL_FLAG" length="1" not-null="true">
+                <comment>
+                &#211;&#166;&#211;&#195;&#211;&#218;TA&#212;&#221;&#205;&#163;&#199;&#229;&#203;&#227;&#202;&#177;&#184;&#195;&#178;&#189;&#214;&#232;&#202;&#199;&#183;&#241;&#214;&#180;&#208;&#208;&#163;&#168;&#214;&#187;&#211;&#166;&#211;&#195;&#211;&#218;&#183;&#199;&#207;&#181;&#205;&#179;&#215;&#247;&#210;&#181;&#207;&#194;&#163;&#169;
+                1&#177;&#237;&#202;&#190;&#208;&#232;&#210;&#170;&#214;&#180;&#208;&#208; 0
+                &#177;&#237;&#202;&#190;&#214;&#177;&#189;&#211;&#179;&#201;&#185;&#166;&#163;&#168;&#196;&#172;&#200;&#207;0&#163;&#169;
+                &#192;&#237;&#178;&#198;&#210;&#181;&#206;&#241;&#207;&#181;&#205;&#179;&#163;&#172;200109&#211;&#201;&#211;&#218;&#208;&#232;&#210;&#170;&#184;&#252;&#208;&#194;&#182;&#212;&#213;&#202;&#200;&#213;&#198;&#218;&#186;&#205;&#214;&#195;TA&#213;&#253;&#212;&#218;&#199;&#229;&#203;&#227;&#178;&#187;&#196;&#220;&#204;&#248;&#185;&#253;&#163;&#172;200110&#208;&#222;&#184;&#196;TA&#215;&#180;&#204;&#172;&#178;&#191;&#183;&#214;&#178;&#187;&#196;&#220;&#204;&#248;&#185;&#253;&#163;&#172;&#183;&#214;TA&#182;&#212;&#213;&#202;&#178;&#187;&#196;&#220;&#204;&#248;&#185;&#253;&#163;&#172;&#198;&#228;&#211;&#224;&#207;&#214;&#196;&#172;&#200;&#207;&#190;&#249;&#206;&#170;0&#214;&#177;&#189;&#211;&#204;&#248;&#185;&#253;&#177;&#228;&#179;&#201;&#179;&#201;&#185;&#166;</comment>
+            </column>
+        </property>
+        <property name="excutePercentage" type="big_decimal">
+            <column name="EXCUTE_PERCENTAGE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="errCode" type="string">
+            <column name="ERR_CODE" length="7" not-null="true" />
+        </property>
+        <property name="errMsg" type="string">
+            <column name="ERR_MSG" length="512" not-null="true" />
+        </property>
+        <property name="warnFlag" type="string">
+            <column name="WARN_FLAG" length="1" not-null="true">
+                <comment>0&#213;&#253;&#179;&#163;&#180;&#166;&#192;&#237;&#181;&#196;&#190;&#175;&#184;&#230;(&#196;&#172;&#200;&#207;0&#186;&#205;&#191;&#213;)
+                1&#178;&#187;&#196;&#220;&#181;&#247;&#198;&#240;&#215;&#211;&#215;&#247;&#210;&#181;&#181;&#196;&#190;&#175;&#184;&#230;</comment>
+            </column>
+        </property>
+        <property name="warnMsg" type="string">
+            <column name="WARN_MSG" length="256" not-null="true" />
+        </property>
+        <property name="beginTime" type="big_decimal">
+            <column name="BEGIN_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endTime" type="big_decimal">
+            <column name="END_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="holdTime" type="big_decimal">
+            <column name="HOLD_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTransDate" type="big_decimal">
+            <column name="LAST_TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="transToSub" type="string">
+            <column name="TRANS_TO_SUB" length="256" not-null="true" />
+        </property>
+        <property name="transToSub2" type="string">
+            <column name="TRANS_TO_SUB2" length="256" not-null="true" />
+        </property>
+        <property name="detailUrl" type="string">
+            <column name="DETAIL_URL" length="256" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbilateralquote" table="TBBILATERALQUOTE" schema="TZYHSC">
+        <id name="quoteId" type="string">
+            <column name="QUOTE_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="clearSpeed" type="big_decimal">
+            <column name="CLEAR_SPEED" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="buyPrice" type="big_decimal">
+            <column name="BUY_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="buyYield" type="big_decimal">
+            <column name="BUY_YIELD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="salePrice" type="big_decimal">
+            <column name="SALE_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="saleYield" type="big_decimal">
+            <column name="SALE_YIELD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="updateTime" type="big_decimal">
+            <column name="UPDATE_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

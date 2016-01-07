@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <BankBondInstrVO>
+        <InterCode>110021</InterCode>
+        <StockName>11附息国债21</StockName>
+        <TradeMethod>1</TradeMethod>
+        <Combi>LQB01</Combi>
+        <CombiName>LQB01</CombiName>
+        <InvestType>2</InvestType>
+        <EntrustDirection>3</EntrustDirection>
+        <SettleSpeed>1</SettleSpeed>
+        <Price>98.1223</Price>
+        <Amount>1000</Amount>
+        <RivalNo>台州银行</RivalNo>
+    </BankBondInstrVO>
+</data>

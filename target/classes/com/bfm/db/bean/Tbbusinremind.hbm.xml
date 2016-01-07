@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbusinremind" table="TBBUSINREMIND" schema="TZYHSC">
+        <comment>Adjust by fj from 20100728 for pub version 1??????????????????????? from lizq 20100120 ????????????????????????????????? ??????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbusinremindId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="remindType" type="string">
+                <column name="REMIND_TYPE" length="4" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="reminderContents" type="string">
+                <column name="REMINDER_CONTENTS" length="256" />
+            </key-property>
+            <key-property name="matureFlag" type="string">
+                <column name="MATURE_FLAG" length="1" />
+            </key-property>
+            <key-property name="triggerDate" type="big_decimal">
+                <column name="TRIGGER_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="exeFlag" type="string">
+                <column name="EXE_FLAG" length="1" />
+            </key-property>
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="16" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbaccbal" table="ATBACCBAL" schema="TZYHSC">
+        <comment>&#191;&#198;&#196;&#191;&#211;&#224;&#182;&#238;&#177;&#237;&#181;&#188;&#179;&#246;&#188;&#199;&#194;&#188;&#177;&#237;</comment>
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="DDate" type="string">
+            <column name="D_DATE" length="8">
+                <comment>&#202;&#253;&#190;&#221;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="fileName" type="string">
+            <column name="FILE_NAME" length="30">
+                <comment>&#206;&#196;&#188;&#254;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="filePath" type="string">
+            <column name="FILE_PATH" length="256">
+                <comment>&#180;&#230;&#183;&#197;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="bak" type="string">
+            <column name="BAK" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

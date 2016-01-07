@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atdeptlist" table="ATDEPTLIST" schema="TZYHSC">
+        <comment>ATDEPTLIST&#178;&#191;&#195;&#197;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtdeptlistId">
+            <key-property name="deptno" type="string">
+                <column name="DEPTNO" length="32" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="40" not-null="true">
+                <comment>&#178;&#191;&#195;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="bottomflag" type="char">
+            <column name="BOTTOMFLAG" length="1" not-null="true">
+                <comment>&#181;&#205;&#188;&#182;&#178;&#191;&#195;&#197;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

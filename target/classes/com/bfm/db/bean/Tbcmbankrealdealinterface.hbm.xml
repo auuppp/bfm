@@ -1,0 +1,430 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcmbankrealdealinterface" table="TBCMBANKREALDEALINTERFACE" schema="TZYHSC">
+        <comment>??CSTP????????????????cstp????????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true">
+                <comment>???????? ???R+yyyyymmdd+?? ???B+yyyyymmdd+?? ??????????????seq??</comment>
+            </column>
+        </property>
+        <property name="dealDate" type="big_decimal">
+            <column name="DEAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="dealTime" type="big_decimal">
+            <column name="DEAL_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="dealAmount" type="big_decimal">
+            <column name="DEAL_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="currContra" type="string">
+            <column name="CURR_CONTRA" length="3" not-null="true" />
+        </property>
+        <property name="dealAmountContra" type="big_decimal">
+            <column name="DEAL_AMOUNT_CONTRA" precision="16" not-null="true" />
+        </property>
+        <property name="forwardPoint1" type="big_decimal">
+            <column name="FORWARD_POINT1" precision="16" scale="4" not-null="true" />
+        </property>
+        <property name="forwardPoint2" type="big_decimal">
+            <column name="FORWARD_POINT2" precision="16" scale="4" not-null="true" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="20" scale="12" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="farPrice" type="big_decimal">
+            <column name="FAR_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true" />
+        </property>
+        <property name="limit" type="big_decimal">
+            <column name="LIMIT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="farLimitUnit" type="string">
+            <column name="FAR_LIMIT_UNIT" length="1" not-null="true" />
+        </property>
+        <property name="farLimit" type="big_decimal">
+            <column name="FAR_LIMIT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fixingDate" type="big_decimal">
+            <column name="FIXING_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="spotDate" type="big_decimal">
+            <column name="SPOT_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="nearValueDate" type="big_decimal">
+            <column name="NEAR_VALUE_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="farValueDate" type="big_decimal">
+            <column name="FAR_VALUE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="currSettle" type="string">
+            <column name="CURR_SETTLE" length="3" not-null="true" />
+        </property>
+        <property name="spotPrice" type="big_decimal">
+            <column name="SPOT_PRICE" precision="20" scale="12" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="fxSettleType" type="string">
+            <column name="FX_SETTLE_TYPE" length="1" not-null="true">
+                <comment>1.????(??)NET_NEGOTIATION? 2.?????? GROSS? 3.???? NET_MATCH</comment>
+            </column>
+        </property>
+        <property name="tradeMethod" type="string">
+            <column name="TRADE_METHOD" length="1" not-null="true">
+                <comment>1 = NEGOTIATION_NORMAL *2 = ONE_CLICK_LIMIT_QUOTE ?????? 3 = MATCHING *4 = REQUEST_FOR_QUOTE RFQ?? *5 = ONE_CLICK_NORMAL ???????? 6 =
+                CLICK_IN_NEGOTIATE_QUOTE</comment>
+            </column>
+        </property>
+        <property name="tradeInstrument" type="string">
+            <column name="TRADE_INSTRUMENT" length="1" not-null="true">
+                <comment>1 = FX_BILATERAL ???? 2 = FX_CROSS ????,????? 3 = FX_ANONYMOUS ????,????? 4 = IRDV_BILATERAL</comment>
+            </column>
+        </property>
+        <property name="riskLastQty" type="big_decimal">
+            <column name="RISK_LAST_QTY" precision="16" not-null="true" />
+        </property>
+        <property name="bank" type="string">
+            <column name="BANK" length="128" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="128" not-null="true" />
+        </property>
+        <property name="accountname" type="string">
+            <column name="ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="bankBic" type="string">
+            <column name="BANK_BIC" length="128" not-null="true" />
+        </property>
+        <property name="contraBank" type="string">
+            <column name="CONTRA_BANK" length="128" not-null="true" />
+        </property>
+        <property name="contraAccount" type="string">
+            <column name="CONTRA_ACCOUNT" length="128" not-null="true" />
+        </property>
+        <property name="contraAccountname" type="string">
+            <column name="CONTRA_ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="contraBankBic" type="string">
+            <column name="CONTRA_BANK_BIC" length="128" not-null="true" />
+        </property>
+        <property name="otherBank" type="string">
+            <column name="OTHER_BANK" length="128" not-null="true" />
+        </property>
+        <property name="otherAccount" type="string">
+            <column name="OTHER_ACCOUNT" length="128" not-null="true" />
+        </property>
+        <property name="otherAccountname" type="string">
+            <column name="OTHER_ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="otherBankBic" type="string">
+            <column name="OTHER_BANK_BIC" length="128" not-null="true" />
+        </property>
+        <property name="otherContraBank" type="string">
+            <column name="OTHER_CONTRA_BANK" length="128" not-null="true" />
+        </property>
+        <property name="otherContraAccount" type="string">
+            <column name="OTHER_CONTRA_ACCOUNT" length="128" not-null="true" />
+        </property>
+        <property name="otherContraAccountname" type="string">
+            <column name="OTHER_CONTRA_ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="otherContraBankBic" type="string">
+            <column name="OTHER_CONTRA_BANK_BIC" length="128" not-null="true" />
+        </property>
+        <property name="bondAccountname" type="string">
+            <column name="BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="bondTrustBranch" type="string">
+            <column name="BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="bondAccount" type="string">
+            <column name="BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="otherBondAccountname" type="string">
+            <column name="OTHER_BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="otherBondTrustBranch" type="string">
+            <column name="OTHER_BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="otherBondAccount" type="string">
+            <column name="OTHER_BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="otherOperator" type="string">
+            <column name="OTHER_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="otherPhone" type="string">
+            <column name="OTHER_PHONE" length="32" not-null="true" />
+        </property>
+        <property name="otherFax" type="string">
+            <column name="OTHER_FAX" length="32" not-null="true" />
+        </property>
+        <property name="otherCorporation" type="string">
+            <column name="OTHER_CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="otherAddress" type="string">
+            <column name="OTHER_ADDRESS" length="256" not-null="true" />
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="32" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="32" not-null="true" />
+        </property>
+        <property name="corporation" type="string">
+            <column name="CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="256" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="currBail" type="string">
+            <column name="CURR_BAIL" length="3" not-null="true" />
+        </property>
+        <property name="bailBalance" type="big_decimal">
+            <column name="BAIL_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="currOther" type="string">
+            <column name="CURR_OTHER" length="3" not-null="true" />
+        </property>
+        <property name="otherBailBalance" type="big_decimal">
+            <column name="OTHER_BAIL_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="principalExchType" type="string">
+            <column name="PRINCIPAL_EXCH_TYPE" length="1" not-null="true">
+                <comment>K_BJJHFS ???? K_BJJHFS 0????? 1???? 2???? 3???</comment>
+            </column>
+        </property>
+        <property name="farBalance" type="big_decimal">
+            <column name="FAR_BALANCE" precision="18" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="farBalanceContra" type="big_decimal">
+            <column name="FAR_BALANCE_CONTRA" precision="18" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="optionUpFlag" type="string">
+            <column name="OPTION_UP_FLAG" length="1" not-null="true">
+                <comment>K_QQJYLX 1?? 2??</comment>
+            </column>
+        </property>
+        <property name="payInstStubType" type="string">
+            <column name="PAY_INST_STUB_TYPE" length="1" not-null="true">
+                <comment>K_FXCDBS</comment>
+            </column>
+        </property>
+        <property name="optionType" type="string">
+            <column name="OPTION_TYPE" length="1" not-null="true">
+                <comment>K_XQFS</comment>
+            </column>
+        </property>
+        <property name="optionEndTime" type="big_decimal">
+            <column name="OPTION_END_TIME" precision="22" scale="0" not-null="true">
+                <comment>6????</comment>
+            </column>
+        </property>
+        <property name="discountRateType" type="string">
+            <column name="DISCOUNT_RATE_TYPE" length="20" not-null="true">
+                <comment>K_TXLBLLX</comment>
+            </column>
+        </property>
+        <property name="discountRate" type="string">
+            <column name="DISCOUNT_RATE" length="20" not-null="true">
+                <comment>???Libor??referindex</comment>
+            </column>
+        </property>
+        <property name="fixPay" type="string">
+            <column name="FIX_PAY" length="1" not-null="true">
+                <comment>1?? 2???</comment>
+            </column>
+        </property>
+        <property name="calcAgency" type="string">
+            <column name="CALC_AGENCY" length="256" not-null="true" />
+        </property>
+        <property name="priceType1" type="string">
+            <column name="PRICE_TYPE1" length="1" not-null="true">
+                <comment>1??? 2??? ????????????????? price_type2????????</comment>
+            </column>
+        </property>
+        <property name="benchRate1" type="string">
+            <column name="BENCH_RATE1" length="20" not-null="true">
+                <comment>FR001 FR007 Shibor_O/N Shibor_1W Shibor_2W Shibor_1M Shibor_3M Shibor_6M Shibor_9M Shibor_1Y ??????</comment>
+            </column>
+        </property>
+        <property name="spread1" type="big_decimal">
+            <column name="SPREAD1" precision="16" scale="4" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="payFrequency1" type="string">
+            <column name="PAY_FREQUENCY1" length="3" not-null="true">
+                <comment>1?? 2?? 3??? 4?? 5?? 6??? 7?? 8???</comment>
+            </column>
+        </property>
+        <property name="baseInterest1" type="string">
+            <column name="BASE_INTEREST1" length="3" not-null="true">
+                <comment>1?A/A 2?A/360 3?A/365 4?A/365F 5?30/360 6?30E/360</comment>
+            </column>
+        </property>
+        <property name="firstInstDate1" type="big_decimal">
+            <column name="FIRST_INST_DATE1" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="firstPayDate1" type="big_decimal">
+            <column name="FIRST_PAY_DATE1" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="resetFrequency1" type="string">
+            <column name="RESET_FREQUENCY1" length="3" not-null="true">
+                <comment>1?? 2?? 3??? 4?? 5?? 6??? 7??</comment>
+            </column>
+        </property>
+        <property name="payDateRule1" type="string">
+            <column name="PAY_DATE_RULE1" length="1" not-null="true">
+                <comment>??????????????? 0???? 1???? 2??????? 3???????</comment>
+            </column>
+        </property>
+        <property name="instConfirmDateRule1" type="string">
+            <column name="INST_CONFIRM_DATE_RULE1" length="1" not-null="true">
+                <comment>??????????????? 0???? 1???? 2??????? 3???????</comment>
+            </column>
+        </property>
+        <property name="instMethod1" type="string">
+            <column name="INST_METHOD1" length="1" not-null="true">
+                <comment>1??? 2???</comment>
+            </column>
+        </property>
+        <property name="instDaysAdjust1" type="string">
+            <column name="INST_DAYS_ADJUST1" length="1" not-null="true">
+                <comment>0?????1???????</comment>
+            </column>
+        </property>
+        <property name="instConfirmRule1" type="string">
+            <column name="INST_CONFIRM_RULE1" length="1" not-null="true">
+                <comment>???????????(??????) 0?V-0 1?V-1 2?V-2</comment>
+            </column>
+        </property>
+        <property name="priceType2" type="string">
+            <column name="PRICE_TYPE2" length="1" not-null="true">
+                <comment>1??? 2???</comment>
+            </column>
+        </property>
+        <property name="benchRate2" type="string">
+            <column name="BENCH_RATE2" length="20" not-null="true">
+                <comment>FR001 FR007 Shibor_O/N Shibor_1W Shibor_2W Shibor_1M Shibor_3M Shibor_6M Shibor_9M Shibor_1Y ??????</comment>
+            </column>
+        </property>
+        <property name="spread2" type="big_decimal">
+            <column name="SPREAD2" precision="16" scale="4" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="payFrequency2" type="string">
+            <column name="PAY_FREQUENCY2" length="3" not-null="true">
+                <comment>1?? 2?? 3??? 4?? 5?? 6??? 7?? 8???</comment>
+            </column>
+        </property>
+        <property name="baseInterest2" type="string">
+            <column name="BASE_INTEREST2" length="3" not-null="true">
+                <comment>1?A/A 2?A/360 3?A/365 4?A/365F 5?30/360 6?30E/360</comment>
+            </column>
+        </property>
+        <property name="firstInstDate2" type="big_decimal">
+            <column name="FIRST_INST_DATE2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="firstPayDate2" type="big_decimal">
+            <column name="FIRST_PAY_DATE2" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="resetFrequency2" type="string">
+            <column name="RESET_FREQUENCY2" length="3" not-null="true">
+                <comment>1?? 2?? 3??? 4?? 5?? 6??? 7??</comment>
+            </column>
+        </property>
+        <property name="payDateRule2" type="string">
+            <column name="PAY_DATE_RULE2" length="1" not-null="true">
+                <comment>??????????????? 0???? 1???? 2??????? 3???????</comment>
+            </column>
+        </property>
+        <property name="instConfirmDateRule2" type="string">
+            <column name="INST_CONFIRM_DATE_RULE2" length="1" not-null="true">
+                <comment>??????????????? 0???? 1???? 2??????? 3???????</comment>
+            </column>
+        </property>
+        <property name="instMethod2" type="string">
+            <column name="INST_METHOD2" length="3" not-null="true">
+                <comment>1??? 2???</comment>
+            </column>
+        </property>
+        <property name="instDaysAdjust2" type="string">
+            <column name="INST_DAYS_ADJUST2" length="1" not-null="true">
+                <comment>0?????1???????</comment>
+            </column>
+        </property>
+        <property name="instConfirmRule2" type="string">
+            <column name="INST_CONFIRM_RULE2" length="1" not-null="true">
+                <comment>??????????? 0?V-0 1?V-1 2?V-2</comment>
+            </column>
+        </property>
+        <property name="payMethod" type="string">
+            <column name="PAY_METHOD" length="1" not-null="true">
+                <comment>1??????? ??? 2???</comment>
+            </column>
+        </property>
+        <property name="errorNo" type="string">
+            <column name="ERROR_NO" length="256" not-null="true" />
+        </property>
+        <property name="errorMsg" type="string">
+            <column name="ERROR_MSG" length="256" not-null="true" />
+        </property>
+        <property name="dealStatus" type="string">
+            <column name="DEAL_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="1" not-null="true" />
+        </property>
+        <property name="dealType" type="string">
+            <column name="DEAL_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="clearingMethod" type="string">
+            <column name="CLEARING_METHOD" length="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atmessage" table="ATMESSAGE" schema="TZYHSC">
+        <comment>ATMESSAGE&#207;&#181;&#205;&#179;&#180;&#237;&#206;&#243;&#208;&#197;&#207;&#162;&#177;&#237;</comment>
+        <id name="code" type="string">
+            <column name="CODE" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="message" type="string">
+            <column name="MESSAGE" length="100">
+                <comment>&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

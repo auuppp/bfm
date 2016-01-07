@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbinstrate" table="TMP_TBINSTRATE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbinstrateId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleNormalNo" type="big_decimal">
+                <column name="RULE_NORMAL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleOverdueNo" type="big_decimal">
+                <column name="RULE_OVERDUE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleTermNo" type="big_decimal">
+                <column name="RULE_TERM_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleTermRemainNo" type="big_decimal">
+                <column name="RULE_TERM_REMAIN_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ruleCompoundNo" type="big_decimal">
+                <column name="RULE_COMPOUND_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="interestCcy" type="string">
+                <column name="INTEREST_CCY" length="3" />
+            </key-property>
+            <key-property name="interestMode" type="string">
+                <column name="INTEREST_MODE" length="1" />
+            </key-property>
+            <key-property name="payFreq" type="string">
+                <column name="PAY_FREQ" length="3" />
+            </key-property>
+            <key-property name="resetFreq" type="string">
+                <column name="RESET_FREQ" length="3" />
+            </key-property>
+            <key-property name="isAdjust" type="string">
+                <column name="IS_ADJUST" length="1" />
+            </key-property>
+            <key-property name="holiday" type="string">
+                <column name="HOLIDAY" length="30" />
+            </key-property>
+            <key-property name="dateAdjustMethod" type="string">
+                <column name="DATE_ADJUST_METHOD" length="1" />
+            </key-property>
+            <key-property name="paymentOffset" type="big_decimal">
+                <column name="PAYMENT_OFFSET" precision="22" scale="0" />
+            </key-property>
+            <key-property name="isMonthEnd" type="string">
+                <column name="IS_MONTH_END" length="1" />
+            </key-property>
+            <key-property name="upfrontOrArrears" type="string">
+                <column name="UPFRONT_OR_ARREARS" length="1" />
+            </key-property>
+            <key-property name="firstPaydate" type="big_decimal">
+                <column name="FIRST_PAYDATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastPayDate" type="big_decimal">
+                <column name="LAST_PAY_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="compdMethod" type="string">
+                <column name="COMPD_METHOD" length="1" />
+            </key-property>
+            <key-property name="isResetCombine" type="string">
+                <column name="IS_RESET_COMBINE" length="1" />
+            </key-property>
+            <key-property name="payBasis" type="string">
+                <column name="PAY_BASIS" length="12" />
+            </key-property>
+            <key-property name="aheadAsNormal" type="big_decimal">
+                <column name="AHEAD_AS_NORMAL" precision="22" scale="0" />
+            </key-property>
+            <key-property name="isInterestBal" type="string">
+                <column name="IS_INTEREST_BAL" length="1" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

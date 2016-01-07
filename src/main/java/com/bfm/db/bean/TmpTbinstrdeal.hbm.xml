@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbinstrdeal" table="TMP_TBINSTRDEAL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbinstrdealId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="fundNo" type="string">
+                <column name="FUND_NO" length="32" />
+            </key-property>
+            <key-property name="assetNo" type="string">
+                <column name="ASSET_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="entrustDirection" type="string">
+                <column name="ENTRUST_DIRECTION" length="1" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="dealAmount" type="big_decimal">
+                <column name="DEAL_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="dealBalance" type="big_decimal">
+                <column name="DEAL_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="entrustDealSerialId" type="string">
+                <column name="ENTRUST_DEAL_SERIAL_ID" length="32" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="deductFee" type="big_decimal">
+                <column name="DEDUCT_FEE" precision="16" />
+            </key-property>
+            <key-property name="deductBail" type="big_decimal">
+                <column name="DEDUCT_BAIL" precision="16" />
+            </key-property>
+            <key-property name="deductFeeFlag" type="string">
+                <column name="DEDUCT_FEE_FLAG" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

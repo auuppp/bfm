@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbiddeal" table="TBBIDDEAL" schema="TZYHSC">
+        <comment>Adjust by fj from 20091218 for bns version ?????????????????????????????????????????????????????????????? ?????????????????????????????????
+        ??????????????????????? ?????????????????????????????? ???????????????????????????????? from 20090530 1????????????????????????? ???????????????????????????????
+        ????-&gt;??????-&gt;?????-&gt;???????-&gt;????????-&gt;??????????-&gt;???????? ????-&gt;???????? ????-&gt;??????-&gt;????????</comment>
+        <id name="dealSerialNo" type="string">
+            <column name="DEAL_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="basicAmount" type="big_decimal">
+            <column name="BASIC_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="basicPrice" type="big_decimal">
+            <column name="BASIC_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="basicBalance" type="big_decimal">
+            <column name="BASIC_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="selfSurBidAmount" type="big_decimal">
+            <column name="SELF_SUR_BID_AMOUNT" precision="16" not-null="true">
+                <comment>Add by fj from 20091225 for bns version ???0.</comment>
+            </column>
+        </property>
+        <property name="agentSurBidAmount" type="big_decimal">
+            <column name="AGENT_SUR_BID_AMOUNT" precision="16" not-null="true">
+                <comment>Add by fj from 20091225 for bns version ???0.</comment>
+            </column>
+        </property>
+        <property name="surBidPrice" type="big_decimal">
+            <column name="SUR_BID_PRICE" precision="16" scale="8" not-null="true">
+                <comment>Add by fj from 20091225 for bns version ???0.</comment>
+            </column>
+        </property>
+        <property name="surBidBalance" type="big_decimal">
+            <column name="SUR_BID_BALANCE" precision="16" not-null="true">
+                <comment>Add by fj from 20091225 for bns version ???0.</comment>
+            </column>
+        </property>
+        <property name="selfBidAmount" type="big_decimal">
+            <column name="SELF_BID_AMOUNT" precision="16" not-null="true">
+                <comment>??bns?????????????????????</comment>
+            </column>
+        </property>
+        <property name="agentBidAmount" type="big_decimal">
+            <column name="AGENT_BID_AMOUNT" precision="16" not-null="true">
+                <comment>??bns?????????????????????</comment>
+            </column>
+        </property>
+        <property name="bidAmount" type="big_decimal">
+            <column name="BID_AMOUNT" precision="16" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="bidPrice" type="big_decimal">
+            <column name="BID_PRICE" precision="16" scale="8" not-null="true">
+                <comment>1?=????/????? 2??????????????????</comment>
+            </column>
+        </property>
+        <property name="bidBalance" type="big_decimal">
+            <column name="BID_BALANCE" precision="16" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="matureBalance" type="big_decimal">
+            <column name="MATURE_BALANCE" precision="16" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="bidDealInterest" type="big_decimal">
+            <column name="BID_DEAL_INTEREST" precision="18" scale="12" not-null="true">
+                <comment>Add by fj from 20100613 for pub version 1???????????????????</comment>
+            </column>
+        </property>
+        <property name="matureInterest" type="big_decimal">
+            <column name="MATURE_INTEREST" precision="16" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="firstSettleType" type="string">
+            <column name="FIRST_SETTLE_TYPE" length="1" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="secondSettleType" type="string">
+            <column name="SECOND_SETTLE_TYPE" length="1" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="realDays" type="big_decimal">
+            <column name="REAL_DAYS" precision="22" scale="0" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="fee" type="big_decimal">
+            <column name="FEE" precision="16" not-null="true" />
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="feeBackDate" type="big_decimal">
+            <column name="FEE_BACK_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="bondEnableDate" type="big_decimal">
+            <column name="BOND_ENABLE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="matureYield" type="big_decimal">
+            <column name="MATURE_YIELD" precision="16" scale="8" not-null="true">
+                <comment>Add by fj from 20100626 for pub version 1????????????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="registerAmount" type="big_decimal">
+            <column name="REGISTER_AMOUNT" precision="16" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="bidStatus" type="string">
+            <column name="BID_STATUS" length="1" not-null="true">
+                <comment>1????? 2?????? 3??????? 4??????? 5: ?????? 6: ??????? 7: ???????</comment>
+            </column>
+        </property>
+        <property name="bidRegisterStatus" type="string">
+            <column name="BID_REGISTER_STATUS" length="1" not-null="true">
+                <comment>0?????? 1????? 2???? 3????? 4?????</comment>
+            </column>
+        </property>
+        <property name="payStatus" type="string">
+            <column name="PAY_STATUS" length="1" not-null="true">
+                <comment>0????????? 1??????????? 2??????????? 3????????????? 4????????????? 5????????????????? 6???????????? ???????????? ???????????????? ?????????????????
+                ????????????????? ????????????????????? ??????????????????</comment>
+            </column>
+        </property>
+        <property name="feeStatus" type="string">
+            <column name="FEE_STATUS" length="1" not-null="true">
+                <comment>0???? 1????? 2?????? 3??????? 4??????? 5????????? 6????</comment>
+            </column>
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true" />
+        </property>
+        <property name="flowInstanceId1" type="string">
+            <column name="FLOW_INSTANCE_ID1" length="256" not-null="true" />
+        </property>
+        <property name="flowInstanceId2" type="string">
+            <column name="FLOW_INSTANCE_ID2" length="256" not-null="true" />
+        </property>
+        <property name="flowInstanceId3" type="string">
+            <column name="FLOW_INSTANCE_ID3" length="256" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="settleSpeed" type="big_decimal">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+                <comment>add by fj from 20091006 for BNS ??????????</comment>
+            </column>
+        </property>
+        <property name="firstSettleDate" type="big_decimal">
+            <column name="FIRST_SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>add by fj from 20091006 for BNS ??????????</comment>
+            </column>
+        </property>
+        <property name="secondSettleDate" type="big_decimal">
+            <column name="SECOND_SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>add by fj from 20091006 for BNS ??????????</comment>
+            </column>
+        </property>
+        <property name="flowInstanceId4" type="string">
+            <column name="FLOW_INSTANCE_ID4" length="256" not-null="true">
+                <comment>add by fj from 20091006 for BNS ?????????????????????</comment>
+            </column>
+        </property>
+        <property name="custNo" type="string">
+            <column name="CUST_NO" length="32" not-null="true">
+                <comment>add by fj from 20091007 for BNS</comment>
+            </column>
+        </property>
+        <property name="businDays" type="big_decimal">
+            <column name="BUSIN_DAYS" precision="22" scale="0" not-null="true">
+                <comment>add by fj from 20091007 for BNS ???????????????????????</comment>
+            </column>
+        </property>
+        <property name="businStatus" type="string">
+            <column name="BUSIN_STATUS" length="1" not-null="true">
+                <comment>K_DQJSZT 1???? 2?????? 3??????? 4??????? 5??????? 6??????? add by fj from 20091006 for BNS ?????????????????????</comment>
+            </column>
+        </property>
+        <property name="tenderInfoId" type="string">
+            <column name="TENDER_INFO_ID" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

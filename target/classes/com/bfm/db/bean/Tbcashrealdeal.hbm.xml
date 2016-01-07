@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcashrealdeal" table="TBCASHREALDEAL" schema="TZYHSC">
+        <comment>??????????????????????????????????????(?????????????????????)</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbcashrealdealId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true">
+                <comment>???????? ???R+yyyyymmdd+?? ???B+yyyyymmdd+?? ??????????????seq??</comment>
+            </column>
+        </property>
+        <property name="dealAssoSerial" type="string">
+            <column name="DEAL_ASSO_SERIAL" length="32" not-null="true">
+                <comment>????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="outSerialNo" type="string">
+            <column name="OUT_SERIAL_NO" length="32" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="inSerialNo" type="string">
+            <column name="IN_SERIAL_NO" length="32" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="payMethod" type="string">
+            <column name="PAY_METHOD" length="1" not-null="true">
+                <comment>??K_ZFFF_ZJDB????</comment>
+            </column>
+        </property>
+        <property name="opAssigned" type="string">
+            <column name="OP_ASSIGNED" length="1" not-null="true">
+                <comment>??K_CZFGS????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+bankBondInstrIframe:
+ value:"//iframe[contains(@src,'/bankBondbsdInstr.mw')]"

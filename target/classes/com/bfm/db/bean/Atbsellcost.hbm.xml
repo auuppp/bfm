@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbsellcost" table="ATBSELLCOST" schema="TZYHSC">
+        <comment>&#196;&#254;&#178;&#168;&#210;&#248;&#208;&#208;&#214;&#247;&#187;&#250;&#180;&#171;&#213;&#203;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="costNo" type="string">
+            <column name="COST_NO" length="32">
+                <comment>&#178;&#250;&#198;&#183;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sellDate" type="string">
+            <column name="SELL_DATE" length="8">
+                <comment>&#194;&#244;&#179;&#246;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="sellamt" type="big_decimal">
+            <column name="SELLAMT" precision="18">
+                <comment>&#194;&#244;&#179;&#246;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="buyamt" type="big_decimal">
+            <column name="BUYAMT" precision="18">
+                <comment>&#194;&#242;&#200;&#235;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

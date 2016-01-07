@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbankacct" table="ATBANKACCT" schema="TZYHSC">
+        <comment>ATBANKACCT&#187;&#250;&#185;&#185;&#210;&#248;&#208;&#208;&#213;&#203;&#186;&#197;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbankacctId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="branchid" type="string">
+                <column name="BRANCHID" length="10" />
+            </key-property>
+            <key-property name="bankcode" type="string">
+                <column name="BANKCODE" length="2" />
+            </key-property>
+            <key-property name="bankacct" type="string">
+                <column name="BANKACCT" length="20" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

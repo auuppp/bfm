@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpageelement" table="TBPAGEELEMENT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbpageelementId">
+            <key-property name="formId" type="string">
+                <column name="FORM_ID" length="32" />
+            </key-property>
+            <key-property name="formScene" type="string">
+                <column name="FORM_SCENE" length="1" />
+            </key-property>
+            <key-property name="componentName" type="string">
+                <column name="COMPONENT_NAME" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="componentType" type="string">
+            <column name="COMPONENT_TYPE" length="1" not-null="true">
+                <comment>????K_ZJLX ?????????????????panel?(??????????)</comment>
+            </column>
+        </property>
+        <property name="displayFlag" type="string">
+            <column name="DISPLAY_FLAG" length="1" not-null="true">
+                <comment>????K_YORN 0 - ? 1 - ?</comment>
+            </column>
+        </property>
+        <property name="readonlyFlag" type="string">
+            <column name="READONLY_FLAG" length="1" not-null="true">
+                <comment>????K_YORN 0 - ? 1 - ?</comment>
+            </column>
+        </property>
+        <property name="requiredFlag" type="string">
+            <column name="REQUIRED_FLAG" length="1" not-null="true">
+                <comment>????K_YORN 0 - ? 1 - ?</comment>
+            </column>
+        </property>
+        <property name="defaultValue" type="string">
+            <column name="DEFAULT_VALUE" length="32" not-null="true" />
+        </property>
+        <property name="visible" type="string">
+            <column name="VISIBLE" length="1" not-null="true" />
+        </property>
+        <property name="tipText" type="string">
+            <column name="TIP_TEXT" length="256" not-null="true" />
+        </property>
+        <property name="maxLength" type="big_decimal">
+            <column name="MAX_LENGTH" precision="22" scale="0" not-null="true">
+                <comment>?????????0</comment>
+            </column>
+        </property>
+        <property name="minLength" type="big_decimal">
+            <column name="MIN_LENGTH" precision="22" scale="0" not-null="true">
+                <comment>?????????0</comment>
+            </column>
+        </property>
+        <property name="labelTitle" type="string">
+            <column name="LABEL_TITLE" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

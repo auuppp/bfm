@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbftprate" table="TBFTPRATE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbftprateId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="startDate" type="big_decimal">
+                <column name="START_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="endDate" type="big_decimal">
+                <column name="END_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ftpRate" type="big_decimal">
+                <column name="FTP_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="guidRate" type="big_decimal">
+                <column name="GUID_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="remark" type="string">
+                <column name="REMARK" length="100" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="bpValue" type="big_decimal">
+                <column name="BP_VALUE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="shiborValue" type="big_decimal">
+                <column name="SHIBOR_VALUE" precision="10" scale="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

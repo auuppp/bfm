@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondrate" table="TBBONDRATE" schema="TZYHSC">
+        <comment>Adjust by fj from 20091026 for PUB 1?????????????Asset-backed Securities????? Add by fj from 20090901 for pub
+        1??????????????????????????????????????????????????????? 2?????????????????????????????????????????????? 3???????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbondrateId">
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="rateId" type="string">
+                <column name="RATE_ID" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="rateBeginDate" type="big_decimal">
+            <column name="RATE_BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="yearRate" type="big_decimal">
+            <column name="YEAR_RATE" precision="10" scale="8" not-null="true">
+                <comment>?%</comment>
+            </column>
+        </property>
+        <property name="remainPrincipal" type="big_decimal">
+            <column name="REMAIN_PRINCIPAL" precision="16" scale="8" not-null="true">
+                <comment>Add by fj from 20091026 for ABS</comment>
+            </column>
+        </property>
+        <property name="repayBalance" type="big_decimal">
+            <column name="REPAY_BALANCE" precision="16" scale="8" not-null="true">
+                <comment>Add by fj from 20091026 for ABS</comment>
+            </column>
+        </property>
+        <property name="registDate" type="big_decimal">
+            <column name="REGIST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

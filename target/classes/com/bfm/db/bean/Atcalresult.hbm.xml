@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atcalresult" table="ATCALRESULT" schema="TZYHSC">
+        <comment>&#177;&#163;&#180;&#230;&#195;&#191;&#204;&#236;&#185;&#192;&#214;&#181;&#177;&#237;&#188;&#198;&#203;&#227;&#189;&#225;&#185;&#251;</comment>
+        <id name="serialno" type="string">
+            <column name="SERIALNO" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="60">
+                <comment>&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="caldate" type="string">
+            <column name="CALDATE" length="8">
+                <comment>&#185;&#192;&#214;&#181;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="productid" type="string">
+            <column name="PRODUCTID" length="20">
+                <comment>&#178;&#250;&#198;&#183;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sharesq" type="big_decimal">
+            <column name="SHARESQ" precision="18">
+                <comment>&#183;&#221;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="cash" type="big_decimal">
+            <column name="CASH" precision="18">
+                <comment>&#191;&#201;&#211;&#195;&#205;&#183;&#180;&#231;</comment>
+            </column>
+        </property>
+        <property name="DBase" type="big_decimal">
+            <column name="D_BASE" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="CBase" type="big_decimal">
+            <column name="C_BASE" precision="18">
+                <comment>&#184;&#186;&#213;&#174;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="DNow" type="big_decimal">
+            <column name="D_NOW" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#215;&#202;&#178;&#250;</comment>
+            </column>
+        </property>
+        <property name="CNow" type="big_decimal">
+            <column name="C_NOW" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#184;&#186;&#213;&#174;</comment>
+            </column>
+        </property>
+        <property name="DMar" type="big_decimal">
+            <column name="D_MAR" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#202;&#208;&#214;&#181;&#215;&#202;&#178;&#250;</comment>
+            </column>
+        </property>
+        <property name="CMar" type="big_decimal">
+            <column name="C_MAR" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#202;&#208;&#214;&#181;&#184;&#186;&#213;&#174;</comment>
+            </column>
+        </property>
+        <property name="productvalue" type="big_decimal">
+            <column name="PRODUCTVALUE" precision="10" scale="8">
+                <comment>&#181;&#165;&#206;&#187;&#190;&#187;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="productincrease" type="big_decimal">
+            <column name="PRODUCTINCREASE" precision="10" scale="8">
+                <comment>&#178;&#250;&#198;&#183;&#202;&#213;&#210;&#230;</comment>
+            </column>
+        </property>
+        <property name="customerincrease" type="big_decimal">
+            <column name="CUSTOMERINCREASE" precision="10" scale="8">
+                <comment>&#191;&#205;&#187;&#167;&#202;&#213;&#210;&#230;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="profit" type="big_decimal">
+            <column name="PROFIT" precision="18">
+                <comment>&#177;&#190;&#198;&#218;&#192;&#251;&#200;&#243;</comment>
+            </column>
+        </property>
+        <property name="assetincome" type="big_decimal">
+            <column name="ASSETINCOME" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#202;&#213;&#210;&#230;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

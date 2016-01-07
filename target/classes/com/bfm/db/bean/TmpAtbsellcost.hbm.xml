@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbsellcost" table="TMP_ATBSELLCOST" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbsellcostId">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="10" />
+            </key-property>
+            <key-property name="costNo" type="string">
+                <column name="COST_NO" length="32" />
+            </key-property>
+            <key-property name="sellDate" type="string">
+                <column name="SELL_DATE" length="8" />
+            </key-property>
+            <key-property name="sellamt" type="big_decimal">
+                <column name="SELLAMT" precision="18" />
+            </key-property>
+            <key-property name="buyamt" type="big_decimal">
+                <column name="BUYAMT" precision="18" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

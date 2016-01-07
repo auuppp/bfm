@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcuststockholder" table="TBCUSTSTOCKHOLDER" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcuststockholderId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="stockholderIdCode" type="string">
+                <column name="STOCKHOLDER_ID_CODE" length="32" />
+            </key-property>
+            <key-property name="stockholderIdType" type="string">
+                <column name="STOCKHOLDER_ID_TYPE" length="5" />
+            </key-property>
+        </composite-id>
+        <property name="investRanking" type="string">
+            <column name="INVEST_RANKING" length="32" not-null="true" />
+        </property>
+        <property name="shareholdingRatio" type="big_decimal">
+            <column name="SHAREHOLDING_RATIO" precision="18" scale="8" not-null="true" />
+        </property>
+        <property name="stockholderType" type="string">
+            <column name="STOCKHOLDER_TYPE" length="5" not-null="true" />
+        </property>
+        <property name="stockholderName" type="string">
+            <column name="STOCKHOLDER_NAME" length="100" not-null="true" />
+        </property>
+        <property name="investCurrType" type="string">
+            <column name="INVEST_CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="investMode" type="string">
+            <column name="INVEST_MODE" length="5" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="5" not-null="true" />
+        </property>
+        <property name="investAmount" type="big_decimal">
+            <column name="INVEST_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="investDate" type="big_decimal">
+            <column name="INVEST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

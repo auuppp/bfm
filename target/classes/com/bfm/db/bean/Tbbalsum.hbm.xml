@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbalsum" table="TBBALSUM" schema="TZYHSC">
+        <comment>???????????????? ??????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbalsumId">
+            <key-property name="isBond" type="string">
+                <column name="IS_BOND" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rateNo" type="big_decimal">
+                <column name="RATE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="seqNo" type="big_decimal">
+                <column name="SEQ_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="type" type="string">
+            <column name="TYPE" length="1" not-null="true">
+                <comment>0-???????1-??</comment>
+            </column>
+        </property>
+        <property name="doneLastDate" type="big_decimal">
+            <column name="DONE_LAST_DATE" precision="22" scale="0" not-null="true">
+                <comment>?seq_no=0?????????seq_no&gt;0???????</comment>
+            </column>
+        </property>
+        <property name="balSum" type="big_decimal">
+            <column name="BAL_SUM" precision="18" not-null="true">
+                <comment>?seq_no=0?????????seq_no&gt;0??????</comment>
+            </column>
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="256" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

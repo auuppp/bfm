@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.AtsysAcc" table="ATSYS_ACC" schema="TZYHSC">
+        <comment>
+        &#188;&#199;&#194;&#188;&#213;&#202;&#204;&#215;&#181;&#196;&#186;&#203;&#203;&#227;&#215;&#180;&#204;&#172;&#208;&#197;&#207;&#162;&#163;&#172;&#181;&#177;&#200;&#213;&#186;&#203;&#203;&#227;&#205;&#234;&#177;&#207;&#186;&#243;&#163;&#172;&#178;&#187;&#212;&#202;&#208;&#237;&#212;&#217;&#186;&#203;&#203;&#227;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtsysAccId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="accdate" type="string">
+                <column name="ACCDATE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="6">
+                <comment>&#186;&#203;&#203;&#227;&#200;&#203;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="accstatus" type="java.lang.Character">
+            <column name="ACCSTATUS" length="1">
+                <comment>1.&#210;&#209;&#190;&#173;&#186;&#203;&#203;&#227; 2.&#206;&#180;&#186;&#203;&#203;&#227;</comment>
+            </column>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="200">
+                <comment>&#186;&#203;&#203;&#227;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

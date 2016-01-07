@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositionreport" table="TBPOSITIONREPORT" schema="TZYHSC">
+        <comment>????????????????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="organApprove" type="string">
+            <column name="ORGAN_APPROVE" length="16" not-null="true" />
+        </property>
+        <property name="organReceive" type="string">
+            <column name="ORGAN_RECEIVE" length="16" not-null="true" />
+        </property>
+        <property name="approveType" type="string">
+            <column name="APPROVE_TYPE" length="6" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="approveEntrustion" type="string">
+            <column name="APPROVE_ENTRUSTION" length="1" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="approveBalance" type="big_decimal">
+            <column name="APPROVE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="realBalance" type="big_decimal">
+            <column name="REAL_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="paymentStyle" type="string">
+            <column name="PAYMENT_STYLE" length="1" not-null="true" />
+        </property>
+        <property name="approveDate" type="big_decimal">
+            <column name="APPROVE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="approveTime" type="big_decimal">
+            <column name="APPROVE_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="effectiveDate" type="big_decimal">
+            <column name="EFFECTIVE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="occurTime" type="big_decimal">
+            <column name="OCCUR_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="actionDate" type="big_decimal">
+            <column name="ACTION_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="actionTime" type="big_decimal">
+            <column name="ACTION_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="paymentPath" type="string">
+            <column name="PAYMENT_PATH" length="32" not-null="true" />
+        </property>
+        <property name="bankAccount" type="string">
+            <column name="BANK_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="matchStatus" type="string">
+            <column name="MATCH_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="512" not-null="true" />
+        </property>
+        <property name="remark2" type="string">
+            <column name="REMARK2" length="512" not-null="true" />
+        </property>
+        <property name="remark3" type="string">
+            <column name="REMARK3" length="512" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

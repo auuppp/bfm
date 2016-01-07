@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcoreaccountbalance" table="TBCOREACCOUNTBALANCE" schema="TZYHSC">
+        <comment>??????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbcoreaccountbalanceId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="accountNo" type="string">
+                <column name="ACCOUNT_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="coreCustNo" type="string">
+            <column name="CORE_CUST_NO" length="32" not-null="true">
+                <comment>?????????????(???????)</comment>
+            </column>
+        </property>
+        <property name="accountName" type="string">
+            <column name="ACCOUNT_NAME" length="64" not-null="true" />
+        </property>
+        <property name="accountStatus" type="string">
+            <column name="ACCOUNT_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="openBranch" type="string">
+            <column name="OPEN_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="18" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="frozenBalance" type="big_decimal">
+            <column name="FROZEN_BALANCE" precision="18" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="18" scale="8" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

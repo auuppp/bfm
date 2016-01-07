@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbooksetperiod" table="ATBOOKSETPERIOD" schema="TZYHSC">
+        <comment>&#201;&#232;&#214;&#195;&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;&#208;&#197;&#207;&#162;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbooksetperiodId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="2" />
+            </key-property>
+            <key-property name="year" type="string">
+                <column name="YEAR" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="beginDate" type="string">
+            <column name="BEGIN_DATE" length="8">
+                <comment>&#191;&#170;&#202;&#188;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="endDate" type="string">
+            <column name="END_DATE" length="8">
+                <comment>&#189;&#225;&#202;&#248;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

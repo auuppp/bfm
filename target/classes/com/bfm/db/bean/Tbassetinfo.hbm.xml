@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbassetinfo" table="TBASSETINFO" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbassetinfoId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="14" />
+            </key-property>
+        </composite-id>
+        <property name="financialManager" type="string">
+            <column name="FINANCIAL_MANAGER" length="32" not-null="true" />
+        </property>
+        <property name="assetType" type="string">
+            <column name="ASSET_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="stockCode" type="string">
+            <column name="STOCK_CODE" length="20" not-null="true" />
+        </property>
+        <property name="stockName" type="string">
+            <column name="STOCK_NAME" length="100" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="beginCalDate" type="big_decimal">
+            <column name="BEGIN_CAL_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="beginBalance" type="big_decimal">
+            <column name="BEGIN_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="endBalance" type="big_decimal">
+            <column name="END_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="rivalName" type="string">
+            <column name="RIVAL_NAME" length="64" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

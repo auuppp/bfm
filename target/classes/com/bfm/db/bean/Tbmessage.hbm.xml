@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbmessage" table="TBMESSAGE" schema="TZYHSC">
+        <comment>????????????? lizq</comment>
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="TITLE" length="128" not-null="true" />
+        </property>
+        <property name="content" type="string">
+            <column name="CONTENT" length="512" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="department" type="string">
+            <column name="DEPARTMENT" length="128" not-null="true" />
+        </property>
+        <property name="send" type="string">
+            <column name="SEND" length="32" not-null="true" />
+        </property>
+        <property name="holdDays" type="big_decimal">
+            <column name="HOLD_DAYS" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="messageType" type="big_decimal">
+            <column name="MESSAGE_TYPE" precision="22" scale="0" not-null="true">
+                <comment>1:????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0:????1:???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

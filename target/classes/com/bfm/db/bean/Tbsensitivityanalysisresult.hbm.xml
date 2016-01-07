@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsensitivityanalysisresult" table="TBSENSITIVITYANALYSISRESULT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbsensitivityanalysisresultId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="balance1" type="big_decimal">
+            <column name="BALANCE1" precision="18" not-null="true" />
+        </property>
+        <property name="balance2" type="big_decimal">
+            <column name="BALANCE2" precision="18" not-null="true" />
+        </property>
+        <property name="macaulayDuration1" type="big_decimal">
+            <column name="MACAULAY_DURATION1" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="macaulayDuration2" type="big_decimal">
+            <column name="MACAULAY_DURATION2" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="modifiedDuration1" type="big_decimal">
+            <column name="MODIFIED_DURATION1" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="modifiedDuration2" type="big_decimal">
+            <column name="MODIFIED_DURATION2" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="convexity" type="big_decimal">
+            <column name="CONVEXITY" precision="16" scale="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

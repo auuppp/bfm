@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbbillproperty" table="TMP_TBBILLPROPERTY" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbbillpropertyId">
+            <key-property name="billNo" type="string">
+                <column name="BILL_NO" length="32" />
+            </key-property>
+            <key-property name="outDate" type="big_decimal">
+                <column name="OUT_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="endDate" type="big_decimal">
+                <column name="END_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="faceAmt" type="big_decimal">
+                <column name="FACE_AMT" precision="18" />
+            </key-property>
+            <key-property name="billClass" type="string">
+                <column name="BILL_CLASS" length="1" />
+            </key-property>
+            <key-property name="billType" type="string">
+                <column name="BILL_TYPE" length="1" />
+            </key-property>
+            <key-property name="accepterNo" type="string">
+                <column name="ACCEPTER_NO" length="256" />
+            </key-property>
+            <key-property name="accepterName" type="string">
+                <column name="ACCEPTER_NAME" length="256" />
+            </key-property>
+            <key-property name="accepterBankNo" type="string">
+                <column name="ACCEPTER_BANK_NO" length="256" />
+            </key-property>
+            <key-property name="accepterBankno" type="string">
+                <column name="ACCEPTER_BANKNO" length="256" />
+            </key-property>
+            <key-property name="accepterOpenName" type="string">
+                <column name="ACCEPTER_OPEN_NAME" length="256" />
+            </key-property>
+            <key-property name="accepterOpenNo" type="string">
+                <column name="ACCEPTER_OPEN_NO" length="256" />
+            </key-property>
+            <key-property name="accepterOpenAname" type="string">
+                <column name="ACCEPTER_OPEN_ANAME" length="256" />
+            </key-property>
+            <key-property name="accepterType" type="string">
+                <column name="ACCEPTER_TYPE" length="256" />
+            </key-property>
+            <key-property name="drawerNo" type="string">
+                <column name="DRAWER_NO" length="256" />
+            </key-property>
+            <key-property name="drawerAccount" type="string">
+                <column name="DRAWER_ACCOUNT" length="256" />
+            </key-property>
+            <key-property name="drawerOpenName" type="string">
+                <column name="DRAWER_OPEN_NAME" length="256" />
+            </key-property>
+            <key-property name="drawerOpenNo" type="string">
+                <column name="DRAWER_OPEN_NO" length="256" />
+            </key-property>
+            <key-property name="drawerOpenAname" type="string">
+                <column name="DRAWER_OPEN_ANAME" length="256" />
+            </key-property>
+            <key-property name="receiverNo" type="string">
+                <column name="RECEIVER_NO" length="256" />
+            </key-property>
+            <key-property name="receiverAccount" type="string">
+                <column name="RECEIVER_ACCOUNT" length="256" />
+            </key-property>
+            <key-property name="receiverOpenName" type="string">
+                <column name="RECEIVER_OPEN_NAME" length="256" />
+            </key-property>
+            <key-property name="receiverOpenNo" type="string">
+                <column name="RECEIVER_OPEN_NO" length="256" />
+            </key-property>
+            <key-property name="receiverOpenAname" type="string">
+                <column name="RECEIVER_OPEN_ANAME" length="256" />
+            </key-property>
+            <key-property name="allowFlag" type="string">
+                <column name="ALLOW_FLAG" length="1" />
+            </key-property>
+            <key-property name="payBasis" type="string">
+                <column name="PAY_BASIS" length="12" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="dealingStatus" type="string">
+                <column name="DEALING_STATUS" length="1" />
+            </key-property>
+            <key-property name="isOrgin" type="string">
+                <column name="IS_ORGIN" length="1" />
+            </key-property>
+            <key-property name="buySubCode" type="string">
+                <column name="BUY_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="endDateUnadj" type="big_decimal">
+                <column name="END_DATE_UNADJ" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

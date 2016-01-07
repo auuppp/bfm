@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbrate" table="TBRATE" schema="TZYHSC">
+        <comment>????? 1) ????????????????????????????????????????????????????????????????????????????????????????????????????????? 2) ????????? 3) ????????????????????
+        4??????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbrateId">
+            <key-property name="isBond" type="string">
+                <column name="IS_BOND" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rateNo" type="big_decimal">
+                <column name="RATE_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="ruleNo" type="big_decimal">
+            <column name="RULE_NO" precision="22" scale="0" not-null="true">
+                <comment>?????????????????????</comment>
+            </column>
+        </property>
+        <property name="startDateAdj" type="big_decimal">
+            <column name="START_DATE_ADJ" precision="22" scale="0" not-null="true">
+                <comment>???????????????????????????????????????????? ?????????????????</comment>
+            </column>
+        </property>
+        <property name="startDateUnadj" type="big_decimal">
+            <column name="START_DATE_UNADJ" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDateAdj" type="big_decimal">
+            <column name="END_DATE_ADJ" precision="22" scale="0" not-null="true">
+                <comment>???????????????????????????????????????????? ?????????????????</comment>
+            </column>
+        </property>
+        <property name="endDateUnadj" type="big_decimal">
+            <column name="END_DATE_UNADJ" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="useAdjOrUnadj" type="string">
+            <column name="USE_ADJ_OR_UNADJ" length="1" not-null="true">
+                <comment>?????????????????1 0???? 1????</comment>
+            </column>
+        </property>
+        <property name="payRate" type="big_decimal">
+            <column name="PAY_RATE" precision="10" scale="8" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>?????status???? 1-???, 2-???,3-???</comment>
+            </column>
+        </property>
+        <property name="observCount" type="big_decimal">
+            <column name="OBSERV_COUNT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="isCondBal" type="string">
+            <column name="IS_COND_BAL" length="1" not-null="true">
+                <comment>?????????????????????????? 0-??? 1-????????????</comment>
+            </column>
+        </property>
+        <property name="isCondLimit" type="string">
+            <column name="IS_COND_LIMIT" length="1" not-null="true">
+                <comment>???????????3????????????????????????????????? 0-??? 1-????????????</comment>
+            </column>
+        </property>
+        <property name="isRealAdjust" type="string">
+            <column name="IS_REAL_ADJUST" length="1" not-null="true">
+                <comment>0-??? 1-?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="levelType" type="string">
+            <column name="LEVEL_TYPE" length="1" not-null="true">
+                <comment>0-????? 1???</comment>
+            </column>
+        </property>
+        <property name="limitType" type="string">
+            <column name="LIMIT_TYPE" length="1" not-null="true">
+                <comment>??????????? 0-??? 1-???</comment>
+            </column>
+        </property>
+        <property name="indexId" type="string">
+            <column name="INDEX_ID" length="20" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="accrueRate" type="big_decimal">
+            <column name="ACCRUE_RATE" precision="10" scale="8" not-null="true">
+                <comment>?????????????? ?????0????????????</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>??????????????? ??????????????????????????</comment>
+            </column>
+        </property>
+        <property name="payFreq" type="string">
+            <column name="PAY_FREQ" length="3" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" not-null="true" />
+        </property>
+        <property name="isDealIndex" type="string">
+            <column name="IS_DEAL_INDEX" length="1" not-null="true">
+                <comment>0??-?????????? 1-?????????????????????index_id????</comment>
+            </column>
+        </property>
+        <property name="accuredAdjustDate" type="big_decimal">
+            <column name="ACCURED_ADJUST_DATE" precision="22" scale="0" not-null="true">
+                <comment>???0?????????????? ????????????????????0</comment>
+            </column>
+        </property>
+        <property name="rateFormula" type="string">
+            <column name="RATE_FORMULA" length="1" not-null="true">
+                <comment>1????? 2????? 3??????? 4???????</comment>
+            </column>
+        </property>
+        <property name="paySpread" type="big_decimal">
+            <column name="PAY_SPREAD" precision="18" not-null="true">
+                <comment>???%????20???????20 ????????????????0</comment>
+            </column>
+        </property>
+        <property name="fixScale" type="big_decimal">
+            <column name="FIX_SCALE" precision="10" scale="8" not-null="true">
+                <comment>%</comment>
+            </column>
+        </property>
+        <property name="capFloorStatus" type="string">
+            <column name="CAP_FLOOR_STATUS" length="1" not-null="true">
+                <comment>0??-??? 1?????? 2?????? 3??????</comment>
+            </column>
+        </property>
+        <property name="capRate" type="big_decimal">
+            <column name="CAP_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="floorRate" type="big_decimal">
+            <column name="FLOOR_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastRateFlag" type="string">
+            <column name="LAST_RATE_FLAG" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

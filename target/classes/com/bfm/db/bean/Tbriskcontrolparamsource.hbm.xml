@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbriskcontrolparamsource" table="TBRISKCONTROLPARAMSOURCE" schema="TZYHSC">
+        <comment>??????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbriskcontrolparamsourceId">
+            <key-property name="riskType" type="string">
+                <column name="RISK_TYPE" length="32" />
+            </key-property>
+            <key-property name="paramValue" type="string">
+                <column name="PARAM_VALUE" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="dataType" type="string">
+            <column name="DATA_TYPE" length="1" not-null="true">
+                <comment>?????0 ?? ????????1 ???????2</comment>
+            </column>
+        </property>
+        <property name="isunique" type="string">
+            <column name="ISUNIQUE" length="1" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="dataSour" type="string">
+            <column name="DATA_SOUR" length="512" not-null="true">
+                <comment>????????????????sql? ???sql??????2????????????????????????</comment>
+            </column>
+        </property>
+        <property name="param1" type="string">
+            <column name="PARAM1" length="64" not-null="true" />
+        </property>
+        <property name="param2" type="string">
+            <column name="PARAM2" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

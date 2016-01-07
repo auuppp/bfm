@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TMonitorDetal" table="T_MONITOR_DETAL" schema="TZYHSC">
+        <comment>t_monitor_detal??????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TMonitorDetalId">
+            <key-property name="id" type="string">
+                <column name="ID" length="16" />
+            </key-property>
+            <key-property name="fieldEnName" type="string">
+                <column name="FIELD_EN_NAME" length="20" />
+            </key-property>
+            <key-property name="fieldChName" type="string">
+                <column name="FIELD_CH_NAME" length="50" />
+            </key-property>
+            <key-property name="dataType" type="string">
+                <column name="DATA_TYPE" length="20" />
+            </key-property>
+            <key-property name="isFormat" type="java.lang.Character">
+                <column name="IS_FORMAT" length="1" />
+            </key-property>
+            <key-property name="tableName" type="string">
+                <column name="TABLE_NAME" length="30" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

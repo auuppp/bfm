@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbassetriskweight" table="TBASSETRISKWEIGHT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbassetriskweightId">
+            <key-property name="assetRiskType" type="string">
+                <column name="ASSET_RISK_TYPE" length="4" />
+            </key-property>
+            <key-property name="beginDate" type="big_decimal">
+                <column name="BEGIN_DATE" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="weight" type="big_decimal">
+            <column name="WEIGHT" precision="10" scale="6" not-null="true">
+                <comment>?%</comment>
+            </column>
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="inputOperator" type="string">
+            <column name="INPUT_OPERATOR" length="32" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="inputDate" type="big_decimal">
+            <column name="INPUT_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="inputTime" type="big_decimal">
+            <column name="INPUT_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="512" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

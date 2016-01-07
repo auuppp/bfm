@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbassetindicators" table="TBASSETINDICATORS" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbassetindicatorsId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="netPrice" type="big_decimal">
+            <column name="NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>4???</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="16" scale="8" not-null="true">
+                <comment>4???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

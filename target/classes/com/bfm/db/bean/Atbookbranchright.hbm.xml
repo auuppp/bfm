@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbookbranchright" table="ATBOOKBRANCHRIGHT" schema="TZYHSC">
+        <comment>&#188;&#199;&#213;&#203;&#187;&#250;&#185;&#185;&#200;&#168;&#207;&#222;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbookbranchrightId">
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

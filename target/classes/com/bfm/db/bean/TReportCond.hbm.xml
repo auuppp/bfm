@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TReportCond" table="T_REPORT_COND" schema="TZYHSC">
+        <comment>t_report_cond?????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TReportCondId">
+            <key-property name="condId" type="string">
+                <column name="COND_ID" length="30" />
+            </key-property>
+            <key-property name="reportId" type="string">
+                <column name="REPORT_ID" length="30" />
+            </key-property>
+            <key-property name="condName" type="string">
+                <column name="COND_NAME" length="50" />
+            </key-property>
+            <key-property name="condType" type="char">
+                <column name="COND_TYPE" length="1" />
+            </key-property>
+            <key-property name="isNull" type="char">
+                <column name="IS_NULL" length="1" />
+            </key-property>
+            <key-property name="orderId" type="big_decimal">
+                <column name="ORDER_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="condValue" type="string">
+                <column name="COND_VALUE" length="100" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" length="10" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" length="50" />
+            </key-property>
+            <key-property name="bak1" type="string">
+                <column name="BAK1" length="30" />
+            </key-property>
+            <key-property name="bak2" type="string">
+                <column name="BAK2" length="30" />
+            </key-property>
+            <key-property name="bak3" type="string">
+                <column name="BAK3" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

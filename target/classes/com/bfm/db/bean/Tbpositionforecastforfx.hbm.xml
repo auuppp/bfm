@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositionforecastforfx" table="TBPOSITIONFORECASTFORFX" schema="TZYHSC">
+        <comment>
+        &#211;&#201;&#211;&#218;&#210;&#181;&#206;&#241;&#199;&#248;&#183;&#214;&#163;&#172;&#189;&#225;&#202;&#219;&#187;&#227;&#205;&#183;&#180;&#231;&#212;&#164;&#177;&#168;&#208;&#197;&#207;&#162;&#182;&#192;&#193;&#162;&#202;&#185;&#211;&#195;&#184;&#195;&#177;&#237;&#161;&#163;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbpositionforecastforfxId">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="reportBranch" type="string">
+                <column name="REPORT_BRANCH" length="32" />
+            </key-property>
+            <key-property name="reciveBranch" type="string">
+                <column name="RECIVE_BRANCH" length="32" />
+            </key-property>
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="tradeType" type="string">
+                <column name="TRADE_TYPE" length="1" />
+            </key-property>
+            <key-property name="summary" type="string">
+                <column name="SUMMARY" length="32" />
+            </key-property>
+            <key-property name="balance" type="big_decimal">
+                <column name="BALANCE" precision="16" />
+            </key-property>
+            <key-property name="direction" type="string">
+                <column name="DIRECTION" length="1" />
+            </key-property>
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="custName" type="string">
+                <column name="CUST_NAME" length="32" />
+            </key-property>
+            <key-property name="payMethod" type="string">
+                <column name="PAY_METHOD" length="1" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="32" />
+            </key-property>
+            <key-property name="custAccount" type="string">
+                <column name="CUST_ACCOUNT" length="32" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="3" />
+            </key-property>
+            <key-property name="cahsStatus" type="string">
+                <column name="CAHS_STATUS" length="1" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="remark" type="string">
+                <column name="REMARK" length="128" />
+            </key-property>
+            <key-property name="reserve1" type="string">
+                <column name="RESERVE1" length="256" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="256" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="256" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

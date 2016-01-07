@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.C99ConfigExport" table="C99_CONFIG_EXPORT" schema="TZYHSC">
+        <comment>&#189;&#211;&#191;&#218;&#181;&#188;&#179;&#246;&#197;&#228;&#214;&#195;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.C99ConfigExportId">
+            <key-property name="fileid" type="string">
+                <column name="FILEID" length="10" />
+            </key-property>
+            <key-property name="sysid" type="string">
+                <column name="SYSID" length="5" />
+            </key-property>
+            <key-property name="filecode" type="string">
+                <column name="FILECODE" length="30" />
+            </key-property>
+            <key-property name="filename" type="string">
+                <column name="FILENAME" length="100" />
+            </key-property>
+            <key-property name="sqlstr" type="string">
+                <column name="SQLSTR" length="4000" />
+            </key-property>
+            <key-property name="freq" type="java.lang.Character">
+                <column name="FREQ" length="1" />
+            </key-property>
+            <key-property name="directorys" type="string">
+                <column name="DIRECTORYS" length="30" />
+            </key-property>
+            <key-property name="delimiter" type="string">
+                <column name="DELIMITER" length="5" />
+            </key-property>
+            <key-property name="linebreak" type="string">
+                <column name="LINEBREAK" length="5" />
+            </key-property>
+            <key-property name="spname" type="string">
+                <column name="SPNAME" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

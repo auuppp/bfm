@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcreditdetail" table="TBCREDITDETAIL" schema="TZYHSC">
+        <comment>
+        &#210;&#181;&#206;&#241;&#201;&#243;&#197;&#250;&#205;&#234;&#179;&#201;&#186;&#243;&#163;&#172;&#208;&#180;&#200;&#235;&#202;&#218;&#208;&#197;&#195;&#247;&#207;&#184;&#163;&#187;&#206;&#170;&#214;&#167;&#179;&#214;&#204;&#225;&#214;&#167;&#187;&#242;&#181;&#189;&#198;&#218;&#181;&#200;&#178;&#250;&#201;&#250;&#202;&#218;&#208;&#197;&#177;&#228;&#182;&#175;&#163;&#172;&#210;&#170;&#199;&#243;&#176;&#180;&#177;&#200;&#192;&#253;&#202;&#205;&#183;&#197;&#212;&#173;&#202;&#188;&#213;&#188;&#211;&#195;&#181;&#196;&#202;&#218;&#208;&#197;&#177;&#210;&#214;&#214;&#189;&#240;&#182;&#238;&#161;&#163;
+        &#210;&#187;&#176;&#227;&#206;&#170;:
+        &#202;&#218;&#208;&#197;&#177;&#210;&#214;&#214;&#202;&#163;&#211;&#224;&#213;&#188;&#211;&#195;&#189;&#240;&#182;&#238;=&#202;&#218;&#208;&#197;&#177;&#210;&#214;&#214;&#202;&#163;&#211;&#224;&#213;&#188;&#211;&#195;&#189;&#240;&#182;&#238;
+        - &#189;&#187;&#210;&#215;&#189;&#240;&#182;&#238;/&#212;&#173;&#202;&#188;&#213;&#188;&#211;&#195;&#189;&#240;&#182;&#238;
+        *&#212;&#173;&#202;&#188;&#202;&#218;&#208;&#197;&#177;&#210;&#214;&#214;&#213;&#188;&#211;&#195;&#189;&#240;&#182;&#238;</comment>
+        <id name="creditSerialNo" type="string">
+            <column name="CREDIT_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="totalCreditId" type="string">
+            <column name="TOTAL_CREDIT_ID" length="32" not-null="true" />
+        </property>
+        <property name="creditType" type="big_decimal">
+            <column name="CREDIT_TYPE" precision="38" scale="0" not-null="true">
+                <comment>1&#187;&#236;&#186;&#207;&#215;&#202;&#177;&#190;&#213;&#174; 2&#180;&#206;&#188;&#182;&#213;&#174;
+                3&#210;&#187;&#176;&#227;&#189;&#240;&#200;&#218;&#213;&#174; 4&#208;&#197;&#211;&#195;&#178;&#240;&#179;&#246; 5&#180;&#230;&#183;&#197;&#205;&#172;&#210;&#181;
+                6&#208;&#197;&#180;&#251;&#215;&#202;&#178;&#250;&#215;&#170;&#200;&#195;(&#212;&#221;&#178;&#187;&#211;&#195;)
+                7&#211;&#166;&#202;&#213;&#215;&#226;&#193;&#222;&#191;&#238;&#187;&#216;&#185;&#186;(&#212;&#221;&#178;&#187;&#211;&#195;)
+                8&#198;&#177;&#190;&#221;&#204;&#249;&#207;&#214;(&#212;&#221;&#178;&#187;&#211;&#195;)
+                9&#185;&#250;&#188;&#202;&#210;&#181;&#206;&#241;(&#212;&#221;&#178;&#187;&#211;&#195;) 10&#198;&#228;&#203;&#251;</comment>
+            </column>
+        </property>
+        <property name="opFlag" type="string">
+            <column name="OP_FLAG" length="1" not-null="true">
+                <comment>1&#161;&#162;&#214;&#184;&#193;&#238;&#208;&#242;&#186;&#197; 2&#161;&#162;&#179;&#201;&#189;&#187;&#208;&#242;&#186;&#197;
+                3&#161;&#162;&#214;&#208;&#177;&#234;&#208;&#242;&#186;&#197; 4&#161;&#162;&#189;&#187;&#210;&#215;&#208;&#242;&#186;&#197;
+                5&#161;&#162;&#213;&#174;&#200;&#175;&#183;&#221;&#182;&#238;&#163;&#168;&#187;&#185;&#177;&#190;&#186;&#205;&#181;&#189;&#198;&#218;&#163;&#169;
+                6&#161;&#162;&#215;&#202;&#185;&#220;&#188;&#198;&#187;&#174;&#163;&#168;&#181;&#189;&#198;&#218;&#163;&#169;
+                7&#161;&#162;&#208;&#197;&#180;&#251;&#215;&#202;&#178;&#250;&#163;&#168;&#181;&#189;&#198;&#218;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="relateNo" type="string">
+            <column name="RELATE_NO" length="100" not-null="true">
+                <comment>
+                &#213;&#174;&#200;&#175;&#163;&#168;SE&#163;&#169;&#181;&#196;&#206;&#170;&#179;&#201;&#189;&#187;&#193;&#247;&#203;&#174;&#186;&#197;/&#214;&#208;&#177;&#234;&#208;&#242;&#186;&#197;&#163;&#187;&#198;&#228;&#203;&#252;&#206;&#170;&#189;&#187;&#210;&#215;&#177;&#237;&#193;&#247;&#203;&#174;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="tradeDate" type="big_decimal">
+            <column name="TRADE_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="oriCurrType" type="string">
+            <column name="ORI_CURR_TYPE" length="3" not-null="true">
+                <comment>
+                &#210;&#187;&#184;&#246;&#202;&#218;&#208;&#197;&#182;&#212;&#207;&#243;&#214;&#187;&#212;&#202;&#208;&#237;&#202;&#218;&#208;&#197;&#210;&#187;&#184;&#246;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="oriBalance" type="big_decimal">
+            <column name="ORI_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>
+                &#210;&#187;&#184;&#246;&#202;&#218;&#208;&#197;&#182;&#212;&#207;&#243;&#214;&#187;&#212;&#202;&#208;&#237;&#202;&#218;&#208;&#197;&#210;&#187;&#184;&#246;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="oriCreditBalance" type="big_decimal">
+            <column name="ORI_CREDIT_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="postBalance" type="big_decimal">
+            <column name="POST_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1-&#211;&#208;&#208;&#167; 0-&#206;&#222;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="notEffectiveDate" type="big_decimal">
+            <column name="NOT_EFFECTIVE_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="notEffectiveReason" type="string">
+            <column name="NOT_EFFECTIVE_REASON" length="1" not-null="true">
+                <comment>
+                K_SXMXSXYY&#163;&#172;&#212;&#221;&#206;&#222;&#183;&#168;&#195;&#247;&#200;&#183;&#199;&#248;&#183;&#214;&#203;&#249;&#211;&#208;&#163;&#172;&#191;&#201;&#178;&#187;&#204;&#238;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

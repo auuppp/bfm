@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbrealmatchrule" table="TBREALMATCHRULE" schema="TZYHSC">
+        <comment>???????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbrealmatchruleId">
+            <key-property name="businType" type="string">
+                <column name="BUSIN_TYPE" length="2" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="matchFlag" type="string">
+            <column name="MATCH_FLAG" length="1" not-null="true">
+                <comment>K_CJPPGZ?0??????? 1??????? 3???????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysStdField" table="TSYS_STD_FIELD" schema="TZYHSC">
+        <comment>?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TsysStdFieldId">
+            <key-property name="fieldCode" type="string">
+                <column name="FIELD_CODE" length="16" />
+            </key-property>
+            <key-property name="relOrg" type="string">
+                <column name="REL_ORG" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="bizTypeCode" type="string">
+            <column name="BIZ_TYPE_CODE" length="16">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="defValueCode" type="string">
+            <column name="DEF_VALUE_CODE" length="16">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="fieldName" type="string">
+            <column name="FIELD_NAME" length="32" not-null="true" />
+        </property>
+        <property name="dispCtrl" type="string">
+            <column name="DISP_CTRL" length="8" not-null="true" />
+        </property>
+        <property name="ctrlAttr" type="string">
+            <column name="CTRL_ATTR" length="256" />
+        </property>
+        <property name="ctrlEvent" type="string">
+            <column name="CTRL_EVENT" length="256" />
+        </property>
+        <property name="nullFlag" type="string">
+            <column name="NULL_FLAG" length="8">
+                <comment>?????????????? ?????[SYS_BIZ_YES_OR_NO] 0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="dispFlag" type="string">
+            <column name="DISP_FLAG" length="8">
+                <comment>????????????? ?????[SYS_BIZ_YES_OR_NO] 0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="readFlag" type="string">
+            <column name="READ_FLAG" length="8">
+                <comment>????????????? ?????[SYS_BIZ_YES_OR_NO] 0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

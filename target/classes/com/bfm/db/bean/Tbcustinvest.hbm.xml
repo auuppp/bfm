@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustinvest" table="TBCUSTINVEST" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcustinvestId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="investedEstOrgCode" type="string">
+                <column name="INVESTED_EST_ORG_CODE" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="investedEstablishment" type="string">
+            <column name="INVESTED_ESTABLISHMENT" length="100" not-null="true" />
+        </property>
+        <property name="shareholdingRatio" type="big_decimal">
+            <column name="SHAREHOLDING_RATIO" precision="18" scale="8" not-null="true" />
+        </property>
+        <property name="investCurrType" type="string">
+            <column name="INVEST_CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="investRanking" type="string">
+            <column name="INVEST_RANKING" length="32" not-null="true" />
+        </property>
+        <property name="investMode" type="string">
+            <column name="INVEST_MODE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

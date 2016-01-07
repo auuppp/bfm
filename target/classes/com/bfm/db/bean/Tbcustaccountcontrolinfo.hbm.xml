@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustaccountcontrolinfo" table="TBCUSTACCOUNTCONTROLINFO" schema="TZYHSC">
+        <comment>
+        &#205;&#168;&#179;&#163;&#199;&#233;&#191;&#246;&#207;&#194;&#163;&#172;&#214;&#187;&#211;&#208;&#210;&#187;&#181;&#247;&#202;&#253;&#190;&#221;&#161;&#163;&#211;&#195;&#210;&#212;&#178;&#206;&#202;&#253;&#191;&#216;&#214;&#198;&#200;&#171;&#178;&#191;&#191;&#205;&#187;&#167;&#213;&#203;&#187;&#167;&#161;&#163;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="outcomingSingleBalance" type="big_decimal">
+            <column name="OUTCOMING_SINGLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="outcomingTotalBalance" type="big_decimal">
+            <column name="OUTCOMING_TOTAL_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="outcomingDeadtime1" type="big_decimal">
+            <column name="OUTCOMING_DEADTIME1" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="outcomingDeadtime2" type="big_decimal">
+            <column name="OUTCOMING_DEADTIME2" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="incomingSingleBalance" type="big_decimal">
+            <column name="INCOMING_SINGLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="incomingTotalBalance" type="big_decimal">
+            <column name="INCOMING_TOTAL_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="incomingDeadtime1" type="big_decimal">
+            <column name="INCOMING_DEADTIME1" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="incomingDeadtime2" type="big_decimal">
+            <column name="INCOMING_DEADTIME2" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="32" not-null="true" />
+        </property>
+        <property name="beforeDays" type="big_decimal">
+            <column name="BEFORE_DAYS" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="offsetAbsolute" type="big_decimal">
+            <column name="OFFSET_ABSOLUTE" precision="16" not-null="true" />
+        </property>
+        <property name="offsetPercentage" type="big_decimal">
+            <column name="OFFSET_PERCENTAGE" precision="16" not-null="true">
+                <comment>&#178;&#187;&#180;&#248;%</comment>
+            </column>
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="payRouter" type="string">
+            <column name="PAY_ROUTER" length="32" not-null="true" />
+        </property>
+        <property name="clearType" type="string">
+            <column name="CLEAR_TYPE" length="2" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

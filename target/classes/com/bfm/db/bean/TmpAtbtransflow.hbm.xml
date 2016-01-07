@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbtransflow" table="TMP_ATBTRANSFLOW" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbtransflowId">
+            <key-property name="id" type="string">
+                <column name="ID" length="32" />
+            </key-property>
+            <key-property name="productid" type="string">
+                <column name="PRODUCTID" length="20" />
+            </key-property>
+            <key-property name="subflag" type="string">
+                <column name="SUBFLAG" length="8" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="tranSubCode" type="string">
+                <column name="TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="assetName" type="string">
+                <column name="ASSET_NAME" length="100" />
+            </key-property>
+            <key-property name="assetCode" type="string">
+                <column name="ASSET_CODE" length="32" />
+            </key-property>
+            <key-property name="costs" type="big_decimal">
+                <column name="COSTS" precision="18" scale="4" />
+            </key-property>
+            <key-property name="costsInterest" type="big_decimal">
+                <column name="COSTS_INTEREST" precision="18" scale="4" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="18" scale="4" />
+            </key-property>
+            <key-property name="baseInterest" type="string">
+                <column name="BASE_INTEREST" length="3" />
+            </key-property>
+            <key-property name="yjInterest" type="big_decimal">
+                <column name="YJ_INTEREST" precision="18" scale="4" />
+            </key-property>
+            <key-property name="assetShares" type="big_decimal">
+                <column name="ASSET_SHARES" precision="18" scale="4" />
+            </key-property>
+            <key-property name="cur" type="string">
+                <column name="CUR" length="3" />
+            </key-property>
+            <key-property name="price" type="big_decimal">
+                <column name="PRICE" precision="16" scale="8" />
+            </key-property>
+            <key-property name="secCur" type="string">
+                <column name="SEC_CUR" length="3" />
+            </key-property>
+            <key-property name="secAmount" type="big_decimal">
+                <column name="SEC_AMOUNT" precision="18" scale="4" />
+            </key-property>
+            <key-property name="secPrice" type="big_decimal">
+                <column name="SEC_PRICE" precision="18" scale="8" />
+            </key-property>
+            <key-property name="transDate" type="string">
+                <column name="TRANS_DATE" length="8" />
+            </key-property>
+            <key-property name="valueDate" type="string">
+                <column name="VALUE_DATE" length="8" />
+            </key-property>
+            <key-property name="payDate" type="string">
+                <column name="PAY_DATE" length="8" />
+            </key-property>
+            <key-property name="endDate" type="string">
+                <column name="END_DATE" length="8" />
+            </key-property>
+            <key-property name="farTranDate" type="string">
+                <column name="FAR_TRAN_DATE" length="8" />
+            </key-property>
+            <key-property name="farDealPrice" type="big_decimal">
+                <column name="FAR_DEAL_PRICE" precision="18" scale="8" />
+            </key-property>
+            <key-property name="sellAmount" type="big_decimal">
+                <column name="SELL_AMOUNT" precision="18" scale="4" />
+            </key-property>
+            <key-property name="sellSecAmount" type="big_decimal">
+                <column name="SELL_SEC_AMOUNT" precision="18" scale="4" />
+            </key-property>
+            <key-property name="principleExchType" type="string">
+                <column name="PRINCIPLE_EXCH_TYPE" length="1" />
+            </key-property>
+            <key-property name="optionUpFlag" type="string">
+                <column name="OPTION_UP_FLAG" length="1" />
+            </key-property>
+            <key-property name="interestRate" type="big_decimal">
+                <column name="INTEREST_RATE" precision="12" scale="8" />
+            </key-property>
+            <key-property name="billRate" type="big_decimal">
+                <column name="BILL_RATE" precision="16" scale="4" />
+            </key-property>
+            <key-property name="endFlag" type="string">
+                <column name="END_FLAG" length="3" />
+            </key-property>
+            <key-property name="fee" type="big_decimal">
+                <column name="FEE" precision="18" scale="4" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="4" />
+            </key-property>
+            <key-property name="deskid" type="string">
+                <column name="DESKID" length="10" />
+            </key-property>
+            <key-property name="dealflag" type="char">
+                <column name="DEALFLAG" length="1" />
+            </key-property>
+            <key-property name="srcId" type="string">
+                <column name="SRC_ID" length="32" />
+            </key-property>
+            <key-property name="srcTranCode" type="string">
+                <column name="SRC_TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="srcTranSubCode" type="string">
+                <column name="SRC_TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="srcAcct" type="string">
+                <column name="SRC_ACCT" length="10" />
+            </key-property>
+            <key-property name="flowVailidFlag" type="string">
+                <column name="FLOW_VAILID_FLAG" length="2" />
+            </key-property>
+            <key-property name="certSerialno" type="string">
+                <column name="CERT_SERIALNO" length="32" />
+            </key-property>
+            <key-property name="assetSubType" type="java.lang.Character">
+                <column name="ASSET_SUB_TYPE" length="1" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="transPlaces" type="string">
+                <column name="TRANS_PLACES" length="3" />
+            </key-property>
+            <key-property name="srcTranId" type="string">
+                <column name="SRC_TRAN_ID" length="32" />
+            </key-property>
+            <key-property name="cashFlag" type="java.lang.Character">
+                <column name="CASH_FLAG" length="1" />
+            </key-property>
+            <key-property name="srcSerialNo" type="string">
+                <column name="SRC_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="operId" type="string">
+                <column name="OPER_ID" length="32" />
+            </key-property>
+            <key-property name="impDate" type="string">
+                <column name="IMP_DATE" length="8" />
+            </key-property>
+            <key-property name="sellShares" type="big_decimal">
+                <column name="SELL_SHARES" precision="18" scale="4" />
+            </key-property>
+            <key-property name="toAssetPort" type="string">
+                <column name="TO_ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="sellFlag" type="char">
+                <column name="SELL_FLAG" length="1" />
+            </key-property>
+            <key-property name="bak" type="string">
+                <column name="BAK" length="256" />
+            </key-property>
+            <key-property name="innerFundNo" type="string">
+                <column name="INNER_FUND_NO" length="32" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

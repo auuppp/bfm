@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpendsettle" table="TBPENDSETTLE" schema="TZYHSC">
+        <comment>???????????????????????????????????????? ???????????????????????????????????pendsettle???????????????????????</comment>
+        <id name="pendSerialNo" type="string">
+            <column name="PEND_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="settleDate" type="big_decimal">
+            <column name="SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>1?????????????? 2?????????????????????????????????????? 3???????????????????</comment>
+            </column>
+        </property>
+        <property name="originalNo" type="string">
+            <column name="ORIGINAL_NO" length="32" not-null="true">
+                <comment>???????????????????</comment>
+            </column>
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true">
+                <comment>????K_YWZL?</comment>
+            </column>
+        </property>
+        <property name="settleStatus" type="string">
+            <column name="SETTLE_STATUS" length="1" not-null="true">
+                <comment>????K_JSZT 0???????????????? 1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="stockSettleStatus" type="string">
+            <column name="STOCK_SETTLE_STATUS" length="1" not-null="true">
+                <comment>K_ZQJSZT 1????? 2???? 3????????? 4????? 5????? 6?????</comment>
+            </column>
+        </property>
+        <property name="cashSettleStatus" type="string">
+            <column name="CASH_SETTLE_STATUS" length="1" not-null="true">
+                <comment>K_ZJJSZT 1????? 2???? 3????????? 4????? 5????? 6?????</comment>
+            </column>
+        </property>
+        <property name="oriBusinClass" type="string">
+            <column name="ORI_BUSIN_CLASS" length="6" not-null="true">
+                <comment>??????????????????????????????10??????????????????</comment>
+            </column>
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true">
+                <comment>??????-1</comment>
+            </column>
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>????K_TZLX 1???? 2????? 3????? 4???????? ???????</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="settleSpeed" type="big_decimal">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+                <comment>0?T+0?? 1?T+1??</comment>
+            </column>
+        </property>
+        <property name="settleType" type="string">
+            <column name="SETTLE_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="firstMaturity" type="string">
+            <column name="FIRST_MATURITY" length="1" not-null="true">
+                <comment>5-?? 6-?? ????????????????????5</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

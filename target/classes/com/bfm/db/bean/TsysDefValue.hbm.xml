@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysDefValue" table="TSYS_DEF_VALUE" schema="TZYHSC">
+        <comment>????</comment>
+        <id name="defValueCode" type="string">
+            <column name="DEF_VALUE_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="defValueName" type="string">
+            <column name="DEF_VALUE_NAME" length="32">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="defValue" type="string">
+            <column name="DEF_VALUE" length="1024">
+                <comment>???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

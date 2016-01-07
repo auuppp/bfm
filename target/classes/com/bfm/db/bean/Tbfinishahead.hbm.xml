@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbfinishahead" table="TBFINISHAHEAD" schema="TZYHSC">
+        <comment>???????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbfinishaheadId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="useAheadRateFlag" type="string">
+            <column name="USE_AHEAD_RATE_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="subAccountNo" type="string">
+            <column name="SUB_ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="businFlag" type="string">
+            <column name="BUSIN_FLAG" length="1" not-null="true">
+                <comment>1???? 2???? 3??? 4????</comment>
+            </column>
+        </property>
+        <property name="businFlag2" type="string">
+            <column name="BUSIN_FLAG2" length="1" not-null="true">
+                <comment>?????????1??????????(1.62) 0 ????????(0.72)</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0???? 1???? 2????</comment>
+            </column>
+        </property>
+        <property name="recordDate" type="big_decimal">
+            <column name="RECORD_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="recordTime" type="big_decimal">
+            <column name="RECORD_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreportdataconfiguration" table="TBREPORTDATACONFIGURATION" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbreportdataconfigurationId">
+            <key-property name="reportId" type="string">
+                <column name="REPORT_ID" length="8" />
+            </key-property>
+            <key-property name="itemId" type="string">
+                <column name="ITEM_ID" length="4" />
+            </key-property>
+            <key-property name="sequenceNo" type="string">
+                <column name="SEQUENCE_NO" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="reportRowNo" type="string">
+            <column name="REPORT_ROW_NO" length="4" not-null="true" />
+        </property>
+        <property name="reportColumnNo" type="string">
+            <column name="REPORT_COLUMN_NO" length="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

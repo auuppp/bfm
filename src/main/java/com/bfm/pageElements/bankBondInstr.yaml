@@ -1,0 +1,39 @@
+interCode:  
+ type:xpath
+ value:".//div[label[contains(text(),'债券代码')]]//div[input[@name='stockCode']]//input[2]"
+tradeType:
+ type:xpath
+ value:".//div[label[contains(text(),'交易方式')]]//div[input[@name='tradeType']]//input[2]"
+combiNo:
+ type:xpath
+ value:".//div[label[contains(text(),'组合')]]//div[input[@name='combiNo']]//input[2]"
+investType:
+ type:xpath
+ value:".//div[label[contains(text(),'投资类型')]]//div[input[@name='investType']]//input[2]"
+entrustDirection:
+ type:xpath
+ value:".//div[label[contains(text(),'交易方向')]]//div[input[@name='entrustDirection']]//input[2]"
+settleSpeed:
+ type:xpath
+ value:".//div[label[contains(text(),'清算速度')]]//div[input[@name='settleSpeed']]//input[2]"
+price:
+ type:xpath
+ value:".//div[label[contains(text(),'净价')]]//td[input[@name='price']]//input[2]"
+amount:
+ type:xpath
+ value:".//div[label[contains(text(),'券面总额')]]//td[input[@name='amount']]//input[2]"
+rivalName:
+ type:xpath
+ value:".//div[label[contains(text(),'交易对手')]]//input[@name='rivalName']"
+submit:
+ type:xpath
+ value:".//button[@type='button' and contains(text(),'提交')]"
+confirmButton:
+ type:xpath
+ value:".//button[@type='button' and contains(text(),'是')]"
+bondInstructionNo:
+ type:xpath
+ value:".//span[contains(text(),'指令下达成功')]"
+alertConfirm:
+ type:xpath
+ value:".//button[@type='button' and contains(text(),'确定')]"

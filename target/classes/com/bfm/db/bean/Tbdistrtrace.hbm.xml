@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbdistrtrace" table="TBDISTRTRACE" schema="TZYHSC">
+        <comment>tbdistrtrace????????????????????????????????????????????????????????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="subAccountNo" type="string">
+            <column name="SUB_ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="distrAmt" type="big_decimal">
+            <column name="DISTR_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

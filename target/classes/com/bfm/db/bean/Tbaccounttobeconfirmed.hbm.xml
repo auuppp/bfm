@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbaccounttobeconfirmed" table="TBACCOUNTTOBECONFIRMED" schema="TZYHSC">
+        <comment>?????????????????????????????????account_type?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbaccounttobeconfirmedId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="accountNo" type="string">
+                <column name="ACCOUNT_NO" length="32" />
+            </key-property>
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="matureAmt" type="big_decimal">
+            <column name="MATURE_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="inAmt" type="big_decimal">
+            <column name="IN_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="outAmt" type="big_decimal">
+            <column name="OUT_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+        <property name="openBranch" type="string">
+            <column name="OPEN_BRANCH" length="32" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

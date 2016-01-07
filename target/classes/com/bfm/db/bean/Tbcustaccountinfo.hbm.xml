@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustaccountinfo" table="TBCUSTACCOUNTINFO" schema="TZYHSC">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="autoGenFlag" type="string">
+            <column name="AUTO_GEN_FLAG" length="1" not-null="true">
+                <comment>1?0?</comment>
+            </column>
+        </property>
+        <property name="iisNo" type="string">
+            <column name="IIS_NO" length="128" not-null="true" />
+        </property>
+        <property name="custNo" type="string">
+            <column name="CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="payCcy" type="string">
+            <column name="PAY_CCY" length="3" not-null="true" />
+        </property>
+        <property name="position" type="string">
+            <column name="POSITION" length="1" not-null="true">
+                <comment>0.?? 1.? 2.?</comment>
+            </column>
+        </property>
+        <property name="cflType" type="string">
+            <column name="CFL_TYPE" length="1" not-null="true">
+                <comment>0.?? 1. ?? 2. ?? 3. ?? 4. ???? 5.??+?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="payMethod" type="string">
+            <column name="PAY_METHOD" length="1" not-null="true">
+                <comment>??????????????????????????</comment>
+            </column>
+        </property>
+        <property name="advanceCycle" type="big_decimal">
+            <column name="ADVANCE_CYCLE" precision="22" scale="0" not-null="true">
+                <comment>??????????????1 ???????????? ?????&gt;??????+???????????CutOffDateTime?????????????????</comment>
+            </column>
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="bank" type="string">
+            <column name="BANK" length="128" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="accountname" type="string">
+            <column name="ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="bankHvpsNo" type="string">
+            <column name="BANK_HVPS_NO" length="32" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="clearHvpsNo" type="string">
+            <column name="CLEAR_HVPS_NO" length="32" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="bankNo" type="string">
+            <column name="BANK_NO" length="12" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="bankBic" type="string">
+            <column name="BANK_BIC" length="32" not-null="true">
+                <comment>??swiftCode</comment>
+            </column>
+        </property>
+        <property name="interBank" type="string">
+            <column name="INTER_BANK" length="128" not-null="true" />
+        </property>
+        <property name="interBankAdd" type="string">
+            <column name="INTER_BANK_ADD" length="128" not-null="true" />
+        </property>
+        <property name="interBankBic" type="string">
+            <column name="INTER_BANK_BIC" length="32" not-null="true" />
+        </property>
+        <property name="interBankCode" type="string">
+            <column name="INTER_BANK_CODE" length="32" not-null="true" />
+        </property>
+        <property name="isCentralBank" type="string">
+            <column name="IS_CENTRAL_BANK" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

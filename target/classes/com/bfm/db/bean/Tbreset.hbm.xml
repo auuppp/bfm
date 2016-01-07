@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreset" table="TBRESET" schema="TZYHSC">
+        <comment>????????????? ????? 1) ??????????? 2) ????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbresetId">
+            <key-property name="isBond" type="string">
+                <column name="IS_BOND" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="resetNo" type="big_decimal">
+                <column name="RESET_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="rateNo" type="big_decimal">
+            <column name="RATE_NO" precision="22" scale="0" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="startDate" type="big_decimal">
+            <column name="START_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="resetDate" type="big_decimal">
+            <column name="RESET_DATE" precision="22" scale="0" not-null="true">
+                <comment>???????? ACT/ACT?????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="nominalType" type="string">
+            <column name="NOMINAL_TYPE" length="1" not-null="true">
+                <comment>0??????????????? 1???????????Act/360??????Act???????</comment>
+            </column>
+        </property>
+        <property name="nominalAmt" type="big_decimal">
+            <column name="NOMINAL_AMT" precision="18" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="nominalSum" type="big_decimal">
+            <column name="NOMINAL_SUM" precision="18" not-null="true" />
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>????????????ACT/360?ACT/365?30E/360</comment>
+            </column>
+        </property>
+        <property name="payFreq" type="string">
+            <column name="PAY_FREQ" length="3" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="payCcy" type="string">
+            <column name="PAY_CCY" length="3" not-null="true" />
+        </property>
+        <property name="payRate" type="big_decimal">
+            <column name="PAY_RATE" precision="10" scale="8" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="payAmt" type="big_decimal">
+            <column name="PAY_AMT" precision="18" scale="7" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>?????status???? 1-????????, 2-????, 3-????????, 4-???</comment>
+            </column>
+        </property>
+        <property name="payRateCalc" type="big_decimal">
+            <column name="PAY_RATE_CALC" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="paySpread" type="big_decimal">
+            <column name="PAY_SPREAD" precision="18" not-null="true">
+                <comment>?????????+??/100?????%????20???????20</comment>
+            </column>
+        </property>
+        <property name="dealSerialNo2" type="string">
+            <column name="DEAL_SERIAL_NO2" length="32" not-null="true">
+                <comment>???????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

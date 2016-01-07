@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbacctrep" table="ATBACCTREP" schema="TZYHSC">
+        <comment>&#198;&#190;&#214;&#164;&#197;&#228;&#214;&#195;&#214;&#208;&#191;&#198;&#196;&#191;&#204;&#230;&#187;&#187;&#185;&#230;&#212;&#242;&#177;&#237;</comment>
+        <id name="repNo" type="string">
+            <column name="REP_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="repCode" type="string">
+            <column name="REP_CODE" length="128" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#183;&#251;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="assetType" type="string">
+            <column name="ASSET_TYPE" length="4" not-null="true">
+                <comment>&#215;&#202;&#178;&#250;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="repType1" type="string">
+            <column name="REP_TYPE1" length="32" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#192;&#224;&#208;&#205;1</comment>
+            </column>
+        </property>
+        <property name="repType2" type="string">
+            <column name="REP_TYPE2" length="32" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#192;&#224;&#208;&#205;2</comment>
+            </column>
+        </property>
+        <property name="repType3" type="string">
+            <column name="REP_TYPE3" length="32" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#192;&#224;&#208;&#205;3</comment>
+            </column>
+        </property>
+        <property name="repType4" type="string">
+            <column name="REP_TYPE4" length="32" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#192;&#224;&#208;&#205;4</comment>
+            </column>
+        </property>
+        <property name="repType5" type="string">
+            <column name="REP_TYPE5" length="32" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#192;&#224;&#208;&#205;5</comment>
+            </column>
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40" not-null="true">
+                <comment>&#204;&#230;&#187;&#187;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="repDesc" type="string">
+            <column name="REP_DESC" length="256">
+                <comment>&#204;&#230;&#187;&#187;&#183;&#251;&#186;&#197;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+        <property name="bak" type="string">
+            <column name="BAK" length="40">
+                <comment>&#212;&#164;&#193;&#244;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

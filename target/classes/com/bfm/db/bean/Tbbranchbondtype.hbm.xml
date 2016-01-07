@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbranchbondtype" table="TBBRANCHBONDTYPE" schema="TZYHSC">
+        <comment>Add by fj from 20091025 for znx</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbranchbondtypeId">
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="16" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="stockType" type="string">
+            <column name="STOCK_TYPE" length="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

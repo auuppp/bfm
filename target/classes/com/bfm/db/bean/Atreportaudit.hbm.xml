@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atreportaudit" table="ATREPORTAUDIT" schema="TZYHSC">
+        <comment>ATREPORTAUDIT&#187;&#225;&#188;&#198;&#177;&#168;&#177;&#237;&#201;&#243;&#186;&#203;&#185;&#171;&#202;&#189;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtreportauditId">
+            <key-property name="code" type="string">
+                <column name="CODE" length="6" />
+            </key-property>
+            <key-property name="row" type="big_decimal">
+                <column name="ROW" precision="22" scale="0" />
+            </key-property>
+            <key-property name="col" type="big_decimal">
+                <column name="COL" precision="22" scale="0" />
+            </key-property>
+            <key-property name="formula" type="string">
+                <column name="FORMULA" />
+            </key-property>
+            <key-property name="cnformula" type="string">
+                <column name="CNFORMULA" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

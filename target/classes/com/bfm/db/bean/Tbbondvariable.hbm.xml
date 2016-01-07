@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondvariable" table="TBBONDVARIABLE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbbondvariableId">
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="variableName" type="string">
+                <column name="VARIABLE_NAME" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="variableValue" type="string">
+            <column name="VARIABLE_VALUE" length="1" not-null="true" />
+        </property>
+        <property name="variableType" type="string">
+            <column name="VARIABLE_TYPE" length="3" not-null="true">
+                <comment>0??? 1???</comment>
+            </column>
+        </property>
+        <property name="indexObserveFreq" type="string">
+            <column name="INDEX_OBSERVE_FREQ" length="3" not-null="true" />
+        </property>
+        <property name="indexFixingOffset" type="big_decimal">
+            <column name="INDEX_FIXING_OFFSET" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="indexUseCutoff" type="big_decimal">
+            <column name="INDEX_USE_CUTOFF" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="indexObserveFlag" type="string">
+            <column name="INDEX_OBSERVE_FLAG" length="1" not-null="true">
+                <comment>???????????????????</comment>
+            </column>
+        </property>
+        <property name="indexFix" type="string">
+            <column name="INDEX_FIX_" length="1" not-null="true" />
+        </property>
+        <property name="indexlastcombine" type="string">
+            <column name="INDEXLASTCOMBINE" length="1" not-null="true" />
+        </property>
+        <property name="indexfixingoffsetadjmethod" type="string">
+            <column name="INDEXFIXINGOFFSETADJMETHOD" length="1" not-null="true" />
+        </property>
+        <property name="indexHolidays" type="string">
+            <column name="INDEX_HOLIDAYS" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

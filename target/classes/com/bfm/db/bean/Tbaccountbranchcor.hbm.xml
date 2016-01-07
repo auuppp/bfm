@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbaccountbranchcor" table="TBACCOUNTBRANCHCOR" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbaccountbranchcorId">
+            <key-property name="openBranch" type="string">
+                <column name="OPEN_BRANCH" length="32" />
+            </key-property>
+            <key-property name="businTypes" type="string">
+                <column name="BUSIN_TYPES" length="1024" />
+            </key-property>
+            <key-property name="currTypes" type="string">
+                <column name="CURR_TYPES" length="256" />
+            </key-property>
+            <key-property name="combiNos" type="string">
+                <column name="COMBI_NOS" length="1024" />
+            </key-property>
+        </composite-id>
+        <property name="bookBranch" type="string">
+            <column name="BOOK_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="inputSystemDate" type="big_decimal">
+            <column name="INPUT_SYSTEM_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="inputSystemTime" type="big_decimal">
+            <column name="INPUT_SYSTEM_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

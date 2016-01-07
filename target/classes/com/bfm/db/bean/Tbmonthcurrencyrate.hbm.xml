@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbmonthcurrencyrate" table="TBMONTHCURRENCYRATE" schema="TZYHSC">
+        <comment>???????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbmonthcurrencyrateId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="currSource" type="string">
+                <column name="CURR_SOURCE" length="3" />
+            </key-property>
+            <key-property name="currTarget" type="string">
+                <column name="CURR_TARGET" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="20" scale="12" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="maintainDate" type="big_decimal">
+            <column name="MAINTAIN_DATE" precision="22" scale="0" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="maintainTime" type="big_decimal">
+            <column name="MAINTAIN_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcomminstruction" table="TBCOMMINSTRUCTION" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcomminstructionId">
+            <key-property name="dailyInstructionNo" type="string">
+                <column name="DAILY_INSTRUCTION_NO" length="32" />
+            </key-property>
+            <key-property name="indexDailyModify" type="big_decimal">
+                <column name="INDEX_DAILY_MODIFY" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="lockFlag" type="string">
+            <column name="LOCK_FLAG" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;: K_ZLSDBZ 0&#163;&#186;&#206;&#180;&#203;&#248;&#182;&#168;
+                1&#163;&#186;&#203;&#248;&#182;&#168;</comment>
+            </column>
+        </property>
+        <property name="indexLastModify" type="big_decimal">
+            <column name="INDEX_LAST_MODIFY" precision="38" scale="0" not-null="true">
+                <comment>
+                &#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#202;&#177;&#163;&#172;&#188;&#199;&#194;&#188;&#177;&#187;&#208;&#222;&#184;&#196;&#214;&#184;&#193;&#238;&#181;&#196;
+                &#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#180;&#206;&#208;&#242;&#161;&#163;
+                &#182;&#212;&#211;&#218;&#208;&#194;&#207;&#194;&#180;&#239;&#181;&#196;&#214;&#184;&#193;&#238;&#163;&#172;&#204;&#238;0</comment>
+            </column>
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>
+                &#211;&#195;&#211;&#218;&#185;&#216;&#193;&#170;&#213;&#226;&#177;&#202;&#210;&#181;&#206;&#241;&#181;&#196;&#185;&#164;&#215;&#247;&#193;&#247;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="instructionType" type="string">
+            <column name="INSTRUCTION_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="beginTime" type="big_decimal">
+            <column name="BEGIN_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="endTime" type="big_decimal">
+            <column name="END_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="directDate" type="big_decimal">
+            <column name="DIRECT_DATE" precision="38" scale="0" not-null="true">
+                <comment>
+                &#207;&#194;&#180;&#239;&#214;&#184;&#193;&#238;&#202;&#177;&#181;&#196;&#181;&#177;&#199;&#176;&#207;&#181;&#205;&#179;&#200;&#213;&#198;&#218;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="directTime" type="big_decimal">
+            <column name="DIRECT_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="directOperator" type="string">
+            <column name="DIRECT_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true" />
+        </property>
+        <property name="modifyDate" type="big_decimal">
+            <column name="MODIFY_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="modifyTime" type="big_decimal">
+            <column name="MODIFY_TIME" precision="38" scale="0" not-null="true">
+                <comment>
+                &#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#202;&#177;&#163;&#172;&#208;&#222;&#184;&#196;&#208;&#197;&#207;&#162;&#202;&#199;&#204;&#238;&#212;&#218;&#208;&#194;&#208;&#222;&#184;&#196;&#214;&#184;&#193;&#238;&#201;&#207;&#163;&#172;&#177;&#187;&#208;&#222;&#184;&#196;&#214;&#184;&#193;&#238;&#179;&#253;&#193;&#203;&#215;&#180;&#204;&#172;&#214;&#174;&#205;&#226;&#202;&#199;&#178;&#187;&#177;&#228;&#181;&#196;</comment>
+            </column>
+        </property>
+        <property name="modifyOperator" type="string">
+            <column name="MODIFY_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="modifyReason" type="string">
+            <column name="MODIFY_REASON" length="256" not-null="true" />
+        </property>
+        <property name="checkDate" type="big_decimal">
+            <column name="CHECK_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="checkTime" type="big_decimal">
+            <column name="CHECK_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="checkRefuseReason" type="string">
+            <column name="CHECK_REFUSE_REASON" length="256" not-null="true" />
+        </property>
+        <property name="cancelDate" type="big_decimal">
+            <column name="CANCEL_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="cancelTime" type="big_decimal">
+            <column name="CANCEL_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="cancelOperator" type="string">
+            <column name="CANCEL_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="cancelReason" type="string">
+            <column name="CANCEL_REASON" length="256" not-null="true" />
+        </property>
+        <property name="cancelCheckDate" type="big_decimal">
+            <column name="CANCEL_CHECK_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="cancelCheckTime" type="big_decimal">
+            <column name="CANCEL_CHECK_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="cancelCheckOperator" type="string">
+            <column name="CANCEL_CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="cancelCheckRefuseReason" type="string">
+            <column name="CANCEL_CHECK_REFUSE_REASON" length="256" not-null="true" />
+        </property>
+        <property name="executeOperator" type="string">
+            <column name="EXECUTE_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="instructionStatus" type="string">
+            <column name="INSTRUCTION_STATUS" length="1" not-null="true">
+                <comment>
+                0&#161;&#162;&#206;&#222;&#208;&#167;(&#191;&#201;&#211;&#166;&#211;&#195;&#211;&#218;&#214;&#177;&#189;&#211;&#206;&#175;&#205;&#208;&#202;&#167;&#176;&#220;&#202;&#177;&#208;&#233;&#196;&#226;&#214;&#184;&#193;&#238;&#206;&#222;&#208;&#167;&#206;&#222;&#208;&#167;)
+                1&#161;&#162;&#211;&#208;&#208;&#167; 2&#161;&#162;&#210;&#209;&#208;&#222;&#184;&#196; 3&#161;&#162;&#210;&#209;&#179;&#183;&#207;&#250;
+                6&#161;&#162;&#183;&#214;&#183;&#162;&#190;&#220;&#190;&#248;
+                7&#161;&#162;&#214;&#184;&#193;&#238;&#194;&#188;&#200;&#235;&#163;&#168;&#212;&#221;&#178;&#187;&#211;&#195;&#163;&#169;
+                8&#161;&#162;&#180;&#253;&#179;&#183;&#207;&#250;
+                9&#161;&#162;&#208;&#222;&#184;&#196;&#199;&#176;&#203;&#248;&#182;&#168;(&#199;&#176;&#215;&#180;&#204;&#172;&#177;&#216;&#206;&#170;1&#211;&#208;&#208;&#167;&#163;&#172;&#190;&#220;&#190;&#248;&#202;&#177;&#208;&#222;&#184;&#196;&#178;&#187;&#208;&#232;&#203;&#248;&#182;&#168;)
+                1&#161;&#162;&#214;&#184;&#193;&#238;&#207;&#194;&#180;&#239;&#202;&#177;&#163;&#172;&#202;&#199;&#211;&#208;&#208;&#167;&#215;&#180;&#204;&#172;&#161;&#163;
+                2&#161;&#162;&#214;&#184;&#193;&#238;&#215;&#238;&#214;&#213;&#177;&#187;&#184;&#180;&#186;&#203;&#190;&#220;&#190;&#248;&#161;&#162;&#215;&#238;&#214;&#213;&#177;&#187;&#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248;&#202;&#177;&#163;&#172;&#214;&#195;&#206;&#170;&#207;&#224;&#211;&#166;&#181;&#196;&#184;&#180;&#186;&#203;&#190;&#220;&#190;&#248;&#161;&#162;&#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248;&#215;&#180;&#204;&#172;&#161;&#163;&#214;&#187;&#211;&#208;&#211;&#208;&#208;&#167;&#215;&#180;&#204;&#172;&#181;&#196;&#214;&#184;&#193;&#238;&#178;&#197;&#196;&#220;&#177;&#187;&#184;&#180;&#186;&#203;&#190;&#220;&#190;&#248;&#187;&#242;&#213;&#223;&#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248;&#161;&#163;
+                3&#161;&#162;&#214;&#184;&#193;&#238;&#179;&#183;&#207;&#250;&#183;&#162;&#198;&#240;&#202;&#177;&#163;&#172;&#214;&#184;&#193;&#238;&#215;&#180;&#204;&#172;&#206;&#170;&#180;&#253;&#179;&#183;&#207;&#250;&#163;&#172;&#214;&#184;&#193;&#238;&#179;&#183;&#207;&#250;&#184;&#180;&#186;&#203;&#215;&#180;&#204;&#172;&#206;&#170;&#206;&#180;&#184;&#180;&#186;&#203;&#163;&#187;&#214;&#184;&#193;&#238;&#179;&#183;&#207;&#250;&#184;&#180;&#186;&#203;&#205;&#168;&#185;&#253;&#214;&#174;&#186;&#243;&#163;&#172;&#214;&#184;&#193;&#238;&#215;&#180;&#204;&#172;&#206;&#170;&#210;&#209;&#179;&#183;&#207;&#250;&#161;&#163;&#214;&#187;&#211;&#208;&#180;&#166;&#211;&#218;&#211;&#208;&#208;&#167;&#215;&#180;&#204;&#172;&#181;&#196;&#214;&#184;&#193;&#238;&#178;&#197;&#196;&#220;&#177;&#187;&#179;&#183;&#207;&#250;&#161;&#163;
+                4&#161;&#162;&#185;&#216;&#211;&#218;&#214;&#184;&#193;&#238;&#208;&#222;&#184;&#196;&#163;&#172;&#190;&#220;&#190;&#248;&#202;&#177;&#214;&#177;&#189;&#211;&#208;&#222;&#184;&#196;&#163;&#172;&#211;&#208;&#208;&#167;&#202;&#177;&#177;&#216;&#208;&#235;&#207;&#200;&#203;&#248;&#182;&#168;
+                5&#161;&#162;&#205;&#172;&#210;&#187;&#184;&#246;&#181;&#177;&#200;&#213;&#214;&#184;&#193;&#238;&#208;&#242;&#186;&#197;&#163;&#172;&#215;&#180;&#204;&#172;&#202;&#199;&#211;&#208;&#208;&#167;&#181;&#196;&#215;&#238;&#182;&#224;&#214;&#187;&#196;&#220;&#211;&#208;&#210;&#187;&#204;&#245;&#163;&#172;&#215;&#180;&#204;&#172;&#202;&#199;&#214;&#184;&#193;&#238;&#194;&#188;&#200;&#235;&#181;&#196;&#210;&#178;&#215;&#238;&#182;&#224;&#214;&#187;&#196;&#220;&#211;&#208;&#210;&#187;&#204;&#245;&#161;&#163;&#205;&#172;&#210;&#187;&#184;&#246;&#181;&#177;&#200;&#213;&#214;&#184;&#193;&#238;&#208;&#242;&#186;&#197;&#163;&#172;&#200;&#231;&#185;&#251;&#195;&#187;&#211;&#208;&#215;&#180;&#204;&#172;&#202;&#199;&#211;&#208;&#208;&#167;&#181;&#196;&#163;&#172;&#210;&#178;&#178;&#187;&#191;&#201;&#196;&#220;&#211;&#208;&#215;&#180;&#204;&#172;&#202;&#199;&#214;&#184;&#193;&#238;&#194;&#188;&#200;&#235;&#181;&#196;&#161;&#163;&#205;&#172;&#210;&#187;&#184;&#246;&#181;&#177;&#200;&#213;&#214;&#184;&#193;&#238;&#208;&#242;&#186;&#197;&#163;&#172;&#210;&#209;&#183;&#214;&#183;&#162;&#199;&#210;&#210;&#209;&#179;&#183;&#207;&#250;&#181;&#196;&#163;&#172;&#215;&#238;&#182;&#224;&#214;&#187;&#211;&#208;&#210;&#187;&#204;&#245;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="checkStatus" type="string">
+            <column name="CHECK_STATUS" length="1" not-null="true">
+                <comment>1&#163;&#186;&#206;&#180;&#184;&#180;&#186;&#203; 2&#163;&#186;&#206;&#222;&#208;&#232;&#184;&#180;&#186;&#203;
+                3&#163;&#186;&#184;&#180;&#186;&#203;&#205;&#168;&#185;&#253; 4&#163;&#186;&#184;&#180;&#186;&#203;&#190;&#220;&#190;&#248;
+                &#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_ZLFHZT&#207;&#238; from 20090519
+                1&#161;&#162;&#214;&#184;&#181;&#196;&#202;&#199;&#214;&#184;&#193;&#238;&#181;&#196;&#215;&#238;&#214;&#213;&#184;&#180;&#186;&#203;&#215;&#180;&#204;&#172;&#163;&#172;&#200;&#231;&#185;&#251;&#210;&#187;&#204;&#245;&#214;&#184;&#193;&#238;&#190;&#173;&#192;&#250;&#182;&#224;&#184;&#246;&#184;&#180;&#186;&#203;&#187;&#183;&#189;&#218;&#163;&#172;&#212;&#242;&#214;&#187;&#211;&#208;&#203;&#249;&#211;&#208;&#181;&#196;&#184;&#180;&#186;&#203;&#187;&#183;&#189;&#218;&#182;&#188;&#184;&#180;&#186;&#203;&#205;&#168;&#185;&#253;&#214;&#174;&#186;&#243;&#163;&#172;&#184;&#195;&#214;&#184;&#193;&#238;&#181;&#196;&#184;&#180;&#186;&#203;&#215;&#180;&#204;&#172;&#178;&#197;&#206;&#170;&#184;&#180;&#186;&#203;&#205;&#168;&#185;&#253;&#163;&#172;&#183;&#241;&#212;&#242;&#188;&#180;&#206;&#170;&#184;&#180;&#186;&#203;&#190;&#220;&#190;&#248;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true">
+                <comment>1&#163;&#186;&#206;&#180;&#201;&#243;&#197;&#250; 2&#163;&#186;&#206;&#222;&#208;&#232;&#201;&#243;&#197;&#250;
+                3&#163;&#186;&#201;&#243;&#197;&#250;&#205;&#168;&#185;&#253; 4&#163;&#186;&#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248; 5&#161;&#162;&#201;&#243;&#197;&#250;
+                &#214;&#208; &#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_ZLSPZT&#207;&#238; from 20090519
+                1&#161;&#162;&#214;&#184;&#181;&#196;&#202;&#199;&#214;&#184;&#193;&#238;&#181;&#196;&#215;&#238;&#214;&#213;&#201;&#243;&#197;&#250;&#215;&#180;&#204;&#172;&#163;&#172;&#200;&#231;&#185;&#251;&#210;&#187;&#204;&#245;&#214;&#184;&#193;&#238;&#190;&#173;&#192;&#250;&#182;&#224;&#184;&#246;&#201;&#243;&#197;&#250;&#187;&#183;&#189;&#218;&#163;&#172;&#212;&#242;&#214;&#187;&#211;&#208;&#203;&#249;&#211;&#208;&#181;&#196;&#201;&#243;&#197;&#250;&#187;&#183;&#189;&#218;&#182;&#188;&#201;&#243;&#197;&#250;&#205;&#168;&#185;&#253;&#214;&#174;&#186;&#243;&#163;&#172;&#184;&#195;&#214;&#184;&#193;&#238;&#181;&#196;&#201;&#243;&#197;&#250;&#215;&#180;&#204;&#172;&#178;&#197;&#206;&#170;&#201;&#243;&#197;&#250;&#205;&#168;&#185;&#253;&#163;&#172;&#183;&#241;&#212;&#242;&#188;&#180;&#206;&#170;&#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="cancelCheckStatus" type="string">
+            <column name="CANCEL_CHECK_STATUS" length="1" not-null="true">
+                <comment>from 20090519
+                1&#161;&#162;&#182;&#168;&#210;&#229;&#205;&#172;&#184;&#180;&#186;&#203;&#215;&#180;&#204;&#172;&#215;&#214;&#182;&#206;&#163;&#172;&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_ZLFHZT&#207;&#238;&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_YWZL&#161;&#163; &#205;&#168;&#211;&#195;&#201;&#243;&#197;&#250;&#202;&#177;&#206;&#170;89</comment>
+            </column>
+        </property>
+        <property name="transTime" type="big_decimal">
+            <column name="TRANS_TIME" precision="38" scale="0" not-null="true">
+                <comment>&#200;&#177;&#202;&#161;&#214;&#181;&#206;&#170; &#202;&#253;&#190;&#221;&#191;&#226;&#187;&#250;&#198;&#247;&#202;&#177;&#188;&#228; sysdate</comment>
+            </column>
+        </property>
+        <property name="approveNoStatus" type="string">
+            <column name="APPROVE_NO_STATUS" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_SPDZT</comment>
+            </column>
+        </property>
+        <property name="approveNo" type="string">
+            <column name="APPROVE_NO" length="32" not-null="true" />
+        </property>
+        <property name="instructionRelatedNo" type="string">
+            <column name="INSTRUCTION_RELATED_NO" length="32" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atprlist" table="ATPRLIST" schema="TZYHSC">
+        <comment>ATPRLIST&#205;&#249;&#192;&#180;&#181;&#165;&#206;&#187;&#188;&#176;&#184;&#246;&#200;&#203;&#196;&#191;&#194;&#188;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtprlistId">
+            <key-property name="prlistcatalog" type="string">
+                <column name="PRLISTCATALOG" length="2" />
+            </key-property>
+            <key-property name="prlistcode" type="string">
+                <column name="PRLISTCODE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="prlistname" type="string">
+            <column name="PRLISTNAME" length="40" not-null="true">
+                <comment>&#205;&#249;&#192;&#180;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="prlistdetail" type="string">
+            <column name="PRLISTDETAIL" length="200" not-null="true">
+                <comment>&#205;&#249;&#192;&#180;&#187;&#167;&#195;&#247;&#207;&#184;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

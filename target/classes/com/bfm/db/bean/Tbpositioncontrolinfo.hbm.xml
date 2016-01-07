@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositioncontrolinfo" table="TBPOSITIONCONTROLINFO" schema="TZYHSC">
+        <comment>
+        &#188;&#199;&#194;&#188;&#214;&#167;&#184;&#182;&#207;&#181;&#205;&#179;&#183;&#162;&#192;&#180;&#181;&#196;&#215;&#202;&#189;&#240;&#187;&#174;&#178;&#166;&#199;&#235;&#199;&#243;&#214;&#208;&#163;&#172;&#206;&#180;&#215;&#212;&#182;&#175;&#198;&#165;&#197;&#228;&#163;&#172;&#208;&#232;&#200;&#203;&#185;&#164;&#198;&#165;&#197;&#228;&#181;&#196;&#188;&#199;&#194;&#188;&#161;&#163;&#204;&#225;&#185;&#169;&#205;&#183;&#180;&#231;&#191;&#216;&#214;&#198;&#200;&#203;&#212;&#177;&#200;&#203;&#185;&#164;&#198;&#165;&#197;&#228;&#188;&#176;&#214;&#167;&#184;&#182;&#212;&#217;&#180;&#206;&#178;&#233;&#209;&#175;&#161;&#163;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="direction" type="string">
+            <column name="DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="custAccount" type="string">
+            <column name="CUST_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="custNo" type="string">
+            <column name="CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="custName" type="string">
+            <column name="CUST_NAME" length="32" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="3" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true" />
+        </property>
+        <property name="matchSerial" type="string">
+            <column name="MATCH_SERIAL" length="256" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

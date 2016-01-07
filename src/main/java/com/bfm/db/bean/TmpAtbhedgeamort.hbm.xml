@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbhedgeamort" table="TMP_ATBHEDGEAMORT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbhedgeamortId">
+            <key-property name="hsdate" type="string">
+                <column name="HSDATE" length="8" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="amortizationType" type="char">
+                <column name="AMORTIZATION_TYPE" length="1" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="4" />
+            </key-property>
+            <key-property name="amorDate" type="string">
+                <column name="AMOR_DATE" length="8" />
+            </key-property>
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="assetAmor" type="big_decimal">
+                <column name="ASSET_AMOR" precision="18" />
+            </key-property>
+            <key-property name="amorDays" type="big_decimal">
+                <column name="AMOR_DAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="incomeStatus" type="java.lang.Character">
+                <column name="INCOME_STATUS" length="1" />
+            </key-property>
+            <key-property name="incomeCert" type="string">
+                <column name="INCOME_CERT" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

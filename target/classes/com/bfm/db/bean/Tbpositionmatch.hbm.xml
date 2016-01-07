@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositionmatch" table="TBPOSITIONMATCH" schema="TZYHSC">
+        <comment>????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbpositionmatchId">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="hostSerial" type="string">
+                <column name="HOST_SERIAL" length="32" />
+            </key-property>
+            <key-property name="hostDate" type="big_decimal">
+                <column name="HOST_DATE" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="matchStatus" type="string">
+            <column name="MATCH_STATUS" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

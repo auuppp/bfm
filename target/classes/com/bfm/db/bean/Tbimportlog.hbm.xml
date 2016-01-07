@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbimportlog" table="TBIMPORTLOG" schema="TZYHSC">
+        <id name="logSerial" type="string">
+            <column name="LOG_SERIAL" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="importSerial" type="string">
+            <column name="IMPORT_SERIAL" length="32" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0-?? 1???</comment>
+            </column>
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="1024" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true" />
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

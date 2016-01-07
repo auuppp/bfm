@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreturnrecord" table="TBRETURNRECORD" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbreturnrecordId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="transTime" type="big_decimal">
+                <column name="TRANS_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="serviceCode" type="string">
+                <column name="SERVICE_CODE" length="30" />
+            </key-property>
+            <key-property name="serviceScene" type="string">
+                <column name="SERVICE_SCENE" length="2" />
+            </key-property>
+            <key-property name="consumerSeqNo" type="string">
+                <column name="CONSUMER_SEQ_NO" length="52" />
+            </key-property>
+            <key-property name="oriTranSeqNo" type="string">
+                <column name="ORI_TRAN_SEQ_NO" length="52" />
+            </key-property>
+            <key-property name="retCode" type="string">
+                <column name="RET_CODE" length="30" />
+            </key-property>
+            <key-property name="retMsg" type="string">
+                <column name="RET_MSG" length="512" />
+            </key-property>
+            <key-property name="flag" type="string">
+                <column name="FLAG" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="remark" type="string">
+                <column name="REMARK" length="256" />
+            </key-property>
+            <key-property name="payAmt" type="big_decimal">
+                <column name="PAY_AMT" precision="18" />
+            </key-property>
+            <key-property name="interestAmt" type="big_decimal">
+                <column name="INTEREST_AMT" precision="18" />
+            </key-property>
+            <key-property name="commission" type="big_decimal">
+                <column name="COMMISSION" precision="18" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

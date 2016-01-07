@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbftpfincguidprices" table="TBFTPFINCGUIDPRICES" schema="TZYHSC">
+        <comment>
+        &#211;&#195;&#211;&#218;FTP&#214;&#184;&#181;&#188;&#188;&#219;&#184;&#241;&#186;&#205;&#182;&#212;&#211;&#166;&#214;&#184;&#177;&#234;&#192;&#251;&#194;&#202;&#206;&#172;&#187;&#164;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbftpfincguidpricesId">
+            <key-property name="hsDate" type="int">
+                <column name="HS_DATE" precision="8" scale="0" />
+            </key-property>
+            <key-property name="term" type="byte">
+                <column name="TERM" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="ftpSpread" type="big_decimal">
+            <column name="FTP_SPREAD" precision="8" scale="6">
+                <comment>ftp&#178;&#238;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="guidSpread" type="big_decimal">
+            <column name="GUID_SPREAD" precision="8" scale="6">
+                <comment>guid&#178;&#238;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="guidRate" type="big_decimal">
+            <column name="GUID_RATE" precision="8" scale="6">
+                <comment>guid&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="ftpRate" type="big_decimal">
+            <column name="FTP_RATE" precision="8" scale="6">
+                <comment>ftp&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="indexRate" type="big_decimal">
+            <column name="INDEX_RATE" precision="8" scale="6">
+                <comment>&#214;&#184;&#177;&#234;&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="java.lang.Integer">
+            <column name="LAST_DATE" precision="8" scale="0">
+                <comment>&#215;&#238;&#186;&#243;&#208;&#222;&#184;&#196;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="lastTime" type="java.lang.Integer">
+            <column name="LAST_TIME" precision="6" scale="0">
+                <comment>&#215;&#238;&#186;&#243;&#208;&#222;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="32" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="reserver1" type="string">
+            <column name="RESERVER1" length="32">
+                <comment>&#177;&#163;&#193;&#244;&#215;&#214;&#182;&#206;1</comment>
+            </column>
+        </property>
+        <property name="reserver2" type="string">
+            <column name="RESERVER2" length="32">
+                <comment>&#177;&#163;&#193;&#244;&#215;&#214;&#182;&#206;2</comment>
+            </column>
+        </property>
+        <property name="reserver3" type="string">
+            <column name="RESERVER3" length="32">
+                <comment>&#177;&#163;&#193;&#244;&#215;&#214;&#182;&#206;3</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

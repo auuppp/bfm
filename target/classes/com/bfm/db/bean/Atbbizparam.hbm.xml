@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbbizparam" table="ATBBIZPARAM" schema="TZYHSC">
+        <comment>&#213;&#202;&#204;&#215;&#210;&#181;&#206;&#241;&#178;&#206;&#202;&#253;&#201;&#232;&#214;&#195;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbbizparamId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="paramId" type="string">
+                <column name="PARAM_ID" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="paramName" type="string">
+            <column name="PARAM_NAME" length="110">
+                <comment>&#178;&#206;&#202;&#253;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="paramValue" type="string">
+            <column name="PARAM_VALUE" length="110">
+                <comment>&#178;&#206;&#202;&#253;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="paramType" type="string">
+            <column name="PARAM_TYPE" length="1">
+                <comment>1. &#207;&#181;&#205;&#179;&#178;&#206;&#202;&#253; 2 &#210;&#181;&#206;&#241;&#178;&#206;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="bak" type="string">
+            <column name="BAK" length="30">
+                <comment>BAK</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

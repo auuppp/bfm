@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositionaccountinfo" table="TBPOSITIONACCOUNTINFO" schema="TZYHSC">
+        <comment>
+        &#180;&#230;&#180;&#162;&#180;&#211;&#214;&#167;&#184;&#182;&#207;&#181;&#205;&#179;&#187;&#241;&#200;&#161;&#181;&#196;&#181;&#177;&#200;&#213;&#205;&#249;&#192;&#180;&#213;&#203;&#195;&#247;&#207;&#184;&#208;&#197;&#207;&#162;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="drCrFlag" type="string">
+            <column name="DR_CR_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="payBranchId" type="string">
+            <column name="PAY_BRANCH_ID" length="20" not-null="true" />
+        </property>
+        <property name="payerAcctOpenBranchId" type="string">
+            <column name="PAYER_ACCT_OPEN_BRANCH_ID" length="20" not-null="true" />
+        </property>
+        <property name="payerAcctNo" type="string">
+            <column name="PAYER_ACCT_NO" length="32" not-null="true" />
+        </property>
+        <property name="payerName" type="string">
+            <column name="PAYER_NAME" length="64" not-null="true" />
+        </property>
+        <property name="addInfo" type="string">
+            <column name="ADD_INFO" length="128" not-null="true" />
+        </property>
+        <property name="payeeBranchId" type="string">
+            <column name="PAYEE_BRANCH_ID" length="20" not-null="true" />
+        </property>
+        <property name="payeeAcctOpenBranchId" type="string">
+            <column name="PAYEE_ACCT_OPEN_BRANCH_ID" length="20" not-null="true" />
+        </property>
+        <property name="payeeAcctNo" type="string">
+            <column name="PAYEE_ACCT_NO" length="32" not-null="true" />
+        </property>
+        <property name="bankState" type="string">
+            <column name="BANK_STATE" length="2" not-null="true" />
+        </property>
+        <property name="acctNo" type="string">
+            <column name="ACCT_NO" length="32" not-null="true" />
+        </property>
+        <property name="acctName" type="string">
+            <column name="ACCT_NAME" length="256" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="direction" type="string">
+            <column name="DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="custAccount" type="string">
+            <column name="CUST_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="custName" type="string">
+            <column name="CUST_NAME" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="3" not-null="true" />
+        </property>
+        <property name="payMethod" type="string">
+            <column name="PAY_METHOD" length="1" not-null="true" />
+        </property>
+        <property name="busiState" type="string">
+            <column name="BUSI_STATE" length="2" not-null="true" />
+        </property>
+        <property name="acctBranch" type="string">
+            <column name="ACCT_BRANCH" length="10" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

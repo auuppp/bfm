@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbasset" table="TBASSET" schema="TZYHSC">
+        <id name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="assetName" type="string">
+            <column name="ASSET_NAME" length="64" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="16" not-null="true" />
+        </property>
+        <property name="overdraft" type="string">
+            <column name="OVERDRAFT" length="1" not-null="true">
+                <comment>?????????? 1??????2?????? ????40008? ??????????? ?????????????</comment>
+            </column>
+        </property>
+        <property name="bankNo" type="string">
+            <column name="BANK_NO" length="12" not-null="true" />
+        </property>
+        <property name="bankName" type="string">
+            <column name="BANK_NAME" length="128" not-null="true" />
+        </property>
+        <property name="accountname" type="string">
+            <column name="ACCOUNTNAME" length="128" not-null="true" />
+        </property>
+        <property name="bankAccount" type="string">
+            <column name="BANK_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="trust" type="string">
+            <column name="TRUST" length="1" not-null="true">
+                <comment>????????????? 1??? ??????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtfeeflow" table="TMP_ATFEEFLOW" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtfeeflowId">
+            <key-property name="id" type="string">
+                <column name="ID" length="32" />
+            </key-property>
+            <key-property name="productid" type="string">
+                <column name="PRODUCTID" length="20" />
+            </key-property>
+            <key-property name="subflag" type="string">
+                <column name="SUBFLAG" length="8" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="tranSubCode" type="string">
+                <column name="TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="calfeeBase" type="string">
+                <column name="CALFEE_BASE" length="1" />
+            </key-property>
+            <key-property name="calfeeBaseValue" type="big_decimal">
+                <column name="CALFEE_BASE_VALUE" precision="18" />
+            </key-property>
+            <key-property name="feeType" type="string">
+                <column name="FEE_TYPE" length="2" />
+            </key-property>
+            <key-property name="feeMode" type="string">
+                <column name="FEE_MODE" length="2" />
+            </key-property>
+            <key-property name="feeModeValue" type="big_decimal">
+                <column name="FEE_MODE_VALUE" precision="18" scale="8" />
+            </key-property>
+            <key-property name="feeJtfrequency" type="string">
+                <column name="FEE_JTFREQUENCY" length="1" />
+            </key-property>
+            <key-property name="certSerialno" type="string">
+                <column name="CERT_SERIALNO" length="32" />
+            </key-property>
+            <key-property name="feeJtMode" type="string">
+                <column name="FEE_JT_MODE" length="1" />
+            </key-property>
+            <key-property name="feeZffrequency" type="string">
+                <column name="FEE_ZFFREQUENCY" length="1" />
+            </key-property>
+            <key-property name="feeZfMode" type="string">
+                <column name="FEE_ZF_MODE" length="1" />
+            </key-property>
+            <key-property name="feeOrder" type="string">
+                <column name="FEE_ORDER" length="2" />
+            </key-property>
+            <key-property name="feedate" type="string">
+                <column name="FEEDATE" length="8" />
+            </key-property>
+            <key-property name="currency" type="string">
+                <column name="CURRENCY" length="3" />
+            </key-property>
+            <key-property name="feeAmount" type="big_decimal">
+                <column name="FEE_AMOUNT" precision="18" />
+            </key-property>
+            <key-property name="feeAmount1" type="big_decimal">
+                <column name="FEE_AMOUNT1" precision="18" />
+            </key-property>
+            <key-property name="srcFeeType" type="string">
+                <column name="SRC_FEE_TYPE" length="2" />
+            </key-property>
+            <key-property name="srcSubType" type="string">
+                <column name="SRC_SUB_TYPE" length="4" />
+            </key-property>
+            <key-property name="srcSerialNo" type="string">
+                <column name="SRC_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="srcStartDate" type="string">
+                <column name="SRC_START_DATE" length="8" />
+            </key-property>
+            <key-property name="srcEndDate" type="string">
+                <column name="SRC_END_DATE" length="8" />
+            </key-property>
+            <key-property name="impDate" type="string">
+                <column name="IMP_DATE" length="8" />
+            </key-property>
+            <key-property name="fldMemo" type="string">
+                <column name="FLD_MEMO" length="200" />
+            </key-property>
+            <key-property name="bak" type="string">
+                <column name="BAK" length="200" />
+            </key-property>
+            <key-property name="dealflag" type="char">
+                <column name="DEALFLAG" length="1" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

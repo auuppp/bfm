@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Athsaccounttab" table="ATHSACCOUNTTAB" schema="TZYHSC">
+        <comment>ATHSACCOUNTTAB&#177;&#234;&#215;&#188;&#191;&#198;&#196;&#191;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AthsaccounttabId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="40" />
+            </key-property>
+        </composite-id>
+        <property name="preacct" type="string">
+            <column name="PREACCT" length="40">
+                <comment>&#201;&#207;&#188;&#182;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="shortcode" type="string">
+            <column name="SHORTCODE" length="100">
+                <comment>&#215;&#202;&#178;&#250;&#180;&#250;&#194;&#235;/&#189;&#187;&#210;&#215;&#193;&#247;&#203;&#174;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="150" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="shortname" type="string">
+            <column name="SHORTNAME" length="50">
+                <comment>&#191;&#198;&#196;&#191;&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="direction" type="char">
+            <column name="DIRECTION" length="1" not-null="true">
+                <comment>D &#189;&#232;&#183;&#189; C &#180;&#251;&#183;&#189;</comment>
+            </column>
+        </property>
+        <property name="catalog" type="char">
+            <column name="CATALOG" length="1" not-null="true">
+                <comment>1 &#215;&#202;&#178;&#250;&#192;&#224; 2 &#184;&#186;&#213;&#174;&#192;&#224; 3 &#185;&#178;&#205;&#172;&#192;&#224; 5
+                &#203;&#249;&#211;&#208;&#213;&#223;&#200;&#168;&#210;&#230; 6 &#203;&#240;&#210;&#230;&#192;&#224;</comment>
+            </column>
+        </property>
+        <property name="subflag" type="string">
+            <column name="SUBFLAG" length="8">
+                <comment>&#178;&#191;&#195;&#197; 1 &#207;&#238;&#196;&#191; 2 &#202;&#253;&#193;&#191; 3 &#205;&#249;&#192;&#180;&#181;&#165;&#206;&#187; 4</comment>
+            </column>
+        </property>
+        <property name="rank" type="big_decimal">
+            <column name="RANK" precision="22" scale="0" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="bottomflag" type="char">
+            <column name="BOTTOMFLAG" length="1" not-null="true">
+                <comment>1 &#215;&#238;&#181;&#205;&#188;&#182; 0 &#183;&#199;&#215;&#238;&#181;&#205;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="unit" type="string">
+            <column name="UNIT" length="6">
+                <comment>&#212;&#221;&#202;&#177;&#178;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="subjectType" type="string">
+            <column name="SUBJECT_TYPE" length="2" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

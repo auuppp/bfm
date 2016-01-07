@@ -1,0 +1,421 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbtransflowprop" table="ATBTRANSFLOWPROP" schema="TZYHSC">
+        <comment>ATBTRANSFLOWPROP&#189;&#187;&#210;&#215;&#193;&#247;&#203;&#174;&#184;&#189;&#188;&#211;&#202;&#244;&#208;&#212;&#177;&#237;</comment>
+        <id name="id" type="string">
+            <column name="ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="pors" type="string">
+            <column name="PORS" length="3">
+                <comment>1 &#202;&#213; 2 &#184;&#182;</comment>
+            </column>
+        </property>
+        <property name="interestCcy" type="string">
+            <column name="INTEREST_CCY" length="3">
+                <comment>&#188;&#198;&#207;&#162;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="schedPayFreq" type="string">
+            <column name="SCHED_PAY_FREQ" length="3">
+                <comment>A Annual S Semi Annual Q Quarterly M Monthly W Weekly D Daily Z Zero Coupon</comment>
+            </column>
+        </property>
+        <property name="resetFreq" type="string">
+            <column name="RESET_FREQ" length="3">
+                <comment>A Annual S Semi Annual Q Quarterly M Monthly W Weekly D Daily Z Zero Coupon</comment>
+            </column>
+        </property>
+        <property name="benchmarkInte" type="string">
+            <column name="BENCHMARK_INTE" length="3">
+                <comment>1&#163;&#186;A/A 2&#163;&#186;A/360 3&#163;&#186;A/365 4&#163;&#186;A/365F 5&#163;&#186;30/360 6&#163;&#186;30E/360</comment>
+            </column>
+        </property>
+        <property name="confirmDate" type="string">
+            <column name="CONFIRM_DATE" length="8">
+                <comment>&#192;&#251;&#194;&#202;&#200;&#183;&#182;&#168;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="doublerate" type="java.lang.Character">
+            <column name="DOUBLERATE" length="1">
+                <comment>0 &#181;&#165;&#192;&#251; 1 &#184;&#180;&#192;&#251;</comment>
+            </column>
+        </property>
+        <property name="schedResetCal" type="string">
+            <column name="SCHED_RESET_CAL" length="3">
+                <comment>
+                &#214;&#216;&#214;&#195;&#200;&#213;&#211;&#246;&#181;&#189;&#189;&#218;&#188;&#217;&#200;&#213;&#176;&#180;&#213;&#213;&#180;&#203;&#215;&#214;&#182;&#206;&#182;&#212;&#211;&#166;&#181;&#196;&#189;&#218;&#188;&#217;&#200;&#213;&#192;&#224;&#208;&#205;&#181;&#247;&#213;&#251;</comment>
+            </column>
+        </property>
+        <property name="intResPaymentreset" type="java.lang.Character">
+            <column name="INT_RES_PAYMENTRESET" length="1">
+                <comment>Y N</comment>
+            </column>
+        </property>
+        <property name="rateType" type="string">
+            <column name="RATE_TYPE" length="3">
+                <comment>1 &#185;&#204;&#182;&#168; 2 &#184;&#161;&#182;&#175;</comment>
+            </column>
+        </property>
+        <property name="refRate" type="string">
+            <column name="REF_RATE" length="3">
+                <comment>1&#163;&#186;FR001 2&#163;&#186;FR007 3&#163;&#186;Shibor_O/N 4&#163;&#186;Shibor_1W 5&#163;&#186;Shibor_2W 6&#163;&#186;Shibor_1M 7&#163;&#186;Shibor_3M
+                8&#163;&#186;Shibor_6M 9&#163;&#186;Shibor_9M 10&#163;&#186;Shibor_1Y
+                11&#163;&#186;&#210;&#187;&#196;&#234;&#182;&#168;&#180;&#230;&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="schedResetAnnday" type="big_decimal">
+            <column name="SCHED_RESET_ANNDAY" precision="22" scale="0">
+                <comment>&#198;&#218;&#188;&#228;&#185;&#204;&#182;&#168;&#214;&#216;&#214;&#195;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="schedResetRule" type="string">
+            <column name="SCHED_RESET_RULE" length="3">
+                <comment>F Following P Preceding MF Modified Following MP Modified Previous E Eurodollar Convention SA South African</comment>
+            </column>
+        </property>
+        <property name="intAccAcccalc" type="java.lang.Character">
+            <column name="INT_ACC_ACCCALC" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#188;&#198;&#203;&#227;&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="nextfixing" type="string">
+            <column name="NEXTFIXING" length="8">
+                <comment>&#207;&#194;&#210;&#187;&#214;&#216;&#214;&#195;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="bp" type="big_decimal">
+            <column name="BP" precision="8" scale="4">
+                <comment>&#192;&#251;&#178;&#238;</comment>
+            </column>
+        </property>
+        <property name="schedPayCal" type="string">
+            <column name="SCHED_PAY_CAL" length="3">
+                <comment>
+                &#214;&#167;&#184;&#182;&#211;&#246;&#181;&#189;&#189;&#218;&#188;&#217;&#200;&#213;&#176;&#180;&#213;&#213;&#180;&#203;&#215;&#214;&#182;&#206;&#182;&#212;&#211;&#166;&#181;&#196;&#189;&#218;&#188;&#217;&#200;&#213;&#192;&#224;&#208;&#205;&#181;&#247;&#213;&#251;</comment>
+            </column>
+        </property>
+        <property name="schedPayRule" type="string">
+            <column name="SCHED_PAY_RULE" length="3">
+                <comment>F Following P Preceding MF Modified Following MP Modified Previous E Eurodollar Convention SA South African</comment>
+            </column>
+        </property>
+        <property name="schedPayTime" type="string">
+            <column name="SCHED_PAY_TIME" length="3">
+                <comment>1 &#198;&#218;&#179;&#245; 2 &#198;&#218;&#196;&#169; 3 both</comment>
+            </column>
+        </property>
+        <property name="rollRolloverstatus" type="string">
+            <column name="ROLL_ROLLOVERSTATUS" length="3">
+                <comment>NOR UNL LIK REL</comment>
+            </column>
+        </property>
+        <property name="mmtype" type="string">
+            <column name="MMTYPE" length="3">
+                <comment>&#187;&#245;&#177;&#210;&#202;&#208;&#179;&#161;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="interestIntratetype" type="string">
+            <column name="INTEREST_INTRATETYPE" length="3">
+                <comment>&#192;&#251;&#207;&#162;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="useintpaygaprules" type="java.lang.Character">
+            <column name="USEINTPAYGAPRULES" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#202;&#185;&#211;&#195;&#214;&#167;&#184;&#182;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="intResNtlGap" type="big_decimal">
+            <column name="INT_RES_NTL_GAP" precision="22" scale="0">
+                <comment>&#177;&#190;&#189;&#240;&#214;&#167;&#184;&#182;&#214;&#216;&#214;&#195;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="accrualfactors" type="java.lang.Character">
+            <column name="ACCRUALFACTORS" length="1">
+                <comment>Y N</comment>
+            </column>
+        </property>
+        <property name="schedPayGap" type="big_decimal">
+            <column name="SCHED_PAY_GAP" precision="22" scale="0">
+                <comment>&#214;&#167;&#184;&#182;&#181;&#247;&#213;&#251;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="intResFxGap" type="big_decimal">
+            <column name="INT_RES_FX_GAP" precision="22" scale="0">
+                <comment>&#187;&#227;&#194;&#202;&#214;&#216;&#214;&#195;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="intResRefixmode" type="string">
+            <column name="INT_RES_REFIXMODE" length="3">
+                <comment>MAN AUTO AUTOMANUAL</comment>
+            </column>
+        </property>
+        <property name="schedPayAnnday" type="big_decimal">
+            <column name="SCHED_PAY_ANNDAY" precision="22" scale="0">
+                <comment>&#198;&#218;&#188;&#228;&#185;&#204;&#182;&#168;&#214;&#167;&#184;&#182;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="interestCcy2" type="string">
+            <column name="INTEREST_CCY2" length="3">
+                <comment>&#188;&#198;&#207;&#162;&#177;&#210;&#214;&#214;2</comment>
+            </column>
+        </property>
+        <property name="schedPayFreq2" type="string">
+            <column name="SCHED_PAY_FREQ2" length="3">
+                <comment>A Annual S Semi Annual Q Quarterly M Monthly W Weekly D Daily Z Zero Coupon</comment>
+            </column>
+        </property>
+        <property name="resetFreq2" type="string">
+            <column name="RESET_FREQ2" length="3">
+                <comment>A Annual S Semi Annual Q Quarterly M Monthly W Weekly D Daily Z Zero Coupon</comment>
+            </column>
+        </property>
+        <property name="benchmarkInte2" type="string">
+            <column name="BENCHMARK_INTE2" length="3">
+                <comment>1&#163;&#186;A/A 2&#163;&#186;A/360 3&#163;&#186;A/365 4&#163;&#186;A/365F 5&#163;&#186;30/360 6&#163;&#186;30E/360</comment>
+            </column>
+        </property>
+        <property name="confirmDate2" type="string">
+            <column name="CONFIRM_DATE2" length="8">
+                <comment>&#192;&#251;&#194;&#202;&#200;&#183;&#182;&#168;&#200;&#213;2</comment>
+            </column>
+        </property>
+        <property name="doublerate2" type="java.lang.Character">
+            <column name="DOUBLERATE2" length="1">
+                <comment>0 &#181;&#165;&#192;&#251; 1 &#184;&#180;&#192;&#251;</comment>
+            </column>
+        </property>
+        <property name="schedResetCal2" type="string">
+            <column name="SCHED_RESET_CAL2" length="3">
+                <comment>
+                &#214;&#216;&#214;&#195;&#200;&#213;&#211;&#246;&#181;&#189;&#189;&#218;&#188;&#217;&#200;&#213;&#176;&#180;&#213;&#213;&#180;&#203;&#215;&#214;&#182;&#206;&#182;&#212;&#211;&#166;&#181;&#196;&#189;&#218;&#188;&#217;&#200;&#213;&#192;&#224;&#208;&#205;&#181;&#247;&#213;&#251;</comment>
+            </column>
+        </property>
+        <property name="intResPaymentreset2" type="java.lang.Character">
+            <column name="INT_RES_PAYMENTRESET2" length="1">
+                <comment>Y N</comment>
+            </column>
+        </property>
+        <property name="rateType2" type="string">
+            <column name="RATE_TYPE2" length="3">
+                <comment>1 &#185;&#204;&#182;&#168; 2 &#184;&#161;&#182;&#175;</comment>
+            </column>
+        </property>
+        <property name="refRate2" type="string">
+            <column name="REF_RATE2" length="3">
+                <comment>1&#163;&#186;FR001 2&#163;&#186;FR007 3&#163;&#186;Shibor_O/N 4&#163;&#186;Shibor_1W 5&#163;&#186;Shibor_2W 6&#163;&#186;Shibor_1M 7&#163;&#186;Shibor_3M
+                8&#163;&#186;Shibor_6M 9&#163;&#186;Shibor_9M 10&#163;&#186;Shibor_1Y
+                11&#163;&#186;&#210;&#187;&#196;&#234;&#182;&#168;&#180;&#230;&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="schedResetAnnday2" type="big_decimal">
+            <column name="SCHED_RESET_ANNDAY2" precision="22" scale="0">
+                <comment>&#198;&#218;&#188;&#228;&#185;&#204;&#182;&#168;&#214;&#216;&#214;&#195;&#200;&#213;2</comment>
+            </column>
+        </property>
+        <property name="schedResetRule2" type="string">
+            <column name="SCHED_RESET_RULE2" length="3">
+                <comment>F Following P Preceding MF Modified Following MP Modified Previous E Eurodollar Convention SA South African</comment>
+            </column>
+        </property>
+        <property name="intAccAcccalc2" type="java.lang.Character">
+            <column name="INT_ACC_ACCCALC2" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#188;&#198;&#203;&#227;&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;2</comment>
+            </column>
+        </property>
+        <property name="nextfixing2" type="string">
+            <column name="NEXTFIXING2" length="8">
+                <comment>&#207;&#194;&#210;&#187;&#214;&#216;&#214;&#195;&#200;&#213;2</comment>
+            </column>
+        </property>
+        <property name="bp2" type="big_decimal">
+            <column name="BP2" precision="8" scale="4">
+                <comment>&#192;&#251;&#178;&#238;2</comment>
+            </column>
+        </property>
+        <property name="schedPayCal2" type="string">
+            <column name="SCHED_PAY_CAL2" length="3">
+                <comment>
+                &#214;&#167;&#184;&#182;&#211;&#246;&#181;&#189;&#189;&#218;&#188;&#217;&#200;&#213;&#176;&#180;&#213;&#213;&#180;&#203;&#215;&#214;&#182;&#206;&#182;&#212;&#211;&#166;&#181;&#196;&#189;&#218;&#188;&#217;&#200;&#213;&#192;&#224;&#208;&#205;&#181;&#247;&#213;&#251;</comment>
+            </column>
+        </property>
+        <property name="schedPayRule2" type="string">
+            <column name="SCHED_PAY_RULE2" length="3">
+                <comment>F Following P Preceding MF Modified Following MP Modified Previous E Eurodollar Convention SA South African</comment>
+            </column>
+        </property>
+        <property name="schedPayTime2" type="string">
+            <column name="SCHED_PAY_TIME2" length="3">
+                <comment>1 &#198;&#218;&#179;&#245; 2 &#198;&#218;&#196;&#169; 3 both</comment>
+            </column>
+        </property>
+        <property name="rollRolloverstatus2" type="string">
+            <column name="ROLL_ROLLOVERSTATUS2" length="3">
+                <comment>NOR UNL LIK REL</comment>
+            </column>
+        </property>
+        <property name="mmtype2" type="string">
+            <column name="MMTYPE2" length="3">
+                <comment>&#187;&#245;&#177;&#210;&#202;&#208;&#179;&#161;&#192;&#224;&#208;&#205;2</comment>
+            </column>
+        </property>
+        <property name="interestIntratetype2" type="string">
+            <column name="INTEREST_INTRATETYPE2" length="3">
+                <comment>&#192;&#251;&#207;&#162;&#192;&#224;&#208;&#205;2</comment>
+            </column>
+        </property>
+        <property name="useintpaygaprules2" type="java.lang.Character">
+            <column name="USEINTPAYGAPRULES2" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#202;&#185;&#211;&#195;&#214;&#167;&#184;&#182;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;2</comment>
+            </column>
+        </property>
+        <property name="pors2" type="string">
+            <column name="PORS2" length="3">
+                <comment>1 &#202;&#213; 2 &#184;&#182;</comment>
+            </column>
+        </property>
+        <property name="intResNtlGap2" type="big_decimal">
+            <column name="INT_RES_NTL_GAP2" precision="22" scale="0">
+                <comment>&#177;&#190;&#189;&#240;&#214;&#167;&#184;&#182;&#214;&#216;&#214;&#195;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;2</comment>
+            </column>
+        </property>
+        <property name="accrualfactors2" type="java.lang.Character">
+            <column name="ACCRUALFACTORS2" length="1">
+                <comment>Y N</comment>
+            </column>
+        </property>
+        <property name="schedPayGap2" type="big_decimal">
+            <column name="SCHED_PAY_GAP2" precision="22" scale="0">
+                <comment>&#214;&#167;&#184;&#182;&#181;&#247;&#213;&#251;&#204;&#236;&#202;&#253;2</comment>
+            </column>
+        </property>
+        <property name="intResFxGap2" type="big_decimal">
+            <column name="INT_RES_FX_GAP2" precision="22" scale="0">
+                <comment>&#187;&#227;&#194;&#202;&#214;&#216;&#214;&#195;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;2</comment>
+            </column>
+        </property>
+        <property name="intResRefixmode2" type="string">
+            <column name="INT_RES_REFIXMODE2" length="3">
+                <comment>MAN AUTO AUTOMANUAL</comment>
+            </column>
+        </property>
+        <property name="schedPayAnnday2" type="big_decimal">
+            <column name="SCHED_PAY_ANNDAY2" precision="22" scale="0">
+                <comment>&#198;&#218;&#188;&#228;&#185;&#204;&#182;&#168;&#214;&#167;&#184;&#182;&#200;&#213;2</comment>
+            </column>
+        </property>
+        <property name="underlying" type="string">
+            <column name="UNDERLYING" length="6">
+                <comment>&#177;&#234;&#181;&#196;&#178;&#250;&#198;&#183;</comment>
+            </column>
+        </property>
+        <property name="porc" type="string">
+            <column name="PORC" length="1">
+                <comment>&#194;&#242;&#200;&#168;/&#194;&#244;&#200;&#168;</comment>
+            </column>
+        </property>
+        <property name="pors3" type="string">
+            <column name="PORS3" length="1">
+                <comment>P&#163;&#186;&#202;&#213;&#200;&#161; S&#163;&#186;&#214;&#167;&#184;&#182;</comment>
+            </column>
+        </property>
+        <property name="style" type="string">
+            <column name="STYLE" length="4">
+                <comment>&#198;&#218;&#200;&#168;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="strike" type="big_decimal">
+            <column name="STRIKE" precision="12" scale="6">
+                <comment>&#214;&#180;&#208;&#208;&#188;&#219;&#184;&#241;</comment>
+            </column>
+        </property>
+        <property name="stkccy" type="string">
+            <column name="STKCCY" length="3">
+                <comment>&#214;&#180;&#208;&#208;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="expdate" type="string">
+            <column name="EXPDATE" length="8">
+                <comment>&#198;&#218;&#200;&#168;&#181;&#189;&#198;&#218;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="exercise" type="string">
+            <column name="EXERCISE" length="8">
+                <comment>&#198;&#218;&#200;&#168;&#214;&#180;&#208;&#208;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="premdataVolspread" type="big_decimal">
+            <column name="PREMDATA_VOLSPREAD" precision="12" scale="6">
+                <comment>&#178;&#168;&#182;&#175;&#208;&#212;&#188;&#219;&#178;&#238;</comment>
+            </column>
+        </property>
+        <property name="premdataPremium" type="big_decimal">
+            <column name="PREMDATA_PREMIUM" precision="18">
+                <comment>&#198;&#218;&#200;&#168;&#183;&#209;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="premdataCcy" type="string">
+            <column name="PREMDATA_CCY" length="3">
+                <comment>&#198;&#218;&#200;&#168;&#183;&#209;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="premdataDate" type="string">
+            <column name="PREMDATA_DATE" length="8">
+                <comment>&#198;&#218;&#200;&#168;&#183;&#209;&#189;&#187;&#184;&#238;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="settledataStlmode" type="string">
+            <column name="SETTLEDATA_STLMODE" length="4">
+                <comment>CASH PHYS DISC</comment>
+            </column>
+        </property>
+        <property name="settledataStldate" type="string">
+            <column name="SETTLEDATA_STLDATE" length="8">
+                <comment>&#208;&#208;&#200;&#168;&#189;&#187;&#184;&#238;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="expcity" type="string">
+            <column name="EXPCITY" length="12">
+                <comment>&#198;&#218;&#200;&#168;&#181;&#189;&#198;&#218;&#179;&#199;&#202;&#208;</comment>
+            </column>
+        </property>
+        <property name="inststyle" type="string">
+            <column name="INSTSTYLE" length="5">
+                <comment>&#192;&#251;&#194;&#202;&#192;&#224;&#208;&#205;1</comment>
+            </column>
+        </property>
+        <property name="exercised" type="string">
+            <column name="EXERCISED" length="4">
+                <comment>&#208;&#208;&#200;&#168;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="expcal" type="string">
+            <column name="EXPCAL" length="3">
+                <comment>&#198;&#218;&#200;&#168;&#214;&#180;&#208;&#208;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="exprule" type="string">
+            <column name="EXPRULE" length="2">
+                <comment>&#198;&#218;&#200;&#168;&#181;&#189;&#198;&#218;&#189;&#218;&#188;&#217;&#200;&#213;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="exerterm" type="string">
+            <column name="EXERTERM" length="1">
+                <comment>1 &#202;&#199; 2 &#183;&#241;</comment>
+            </column>
+        </property>
+        <property name="productname" type="string">
+            <column name="PRODUCTNAME" length="30">
+                <comment>&#198;&#218;&#200;&#168;&#207;&#184;&#192;&#224;</comment>
+            </column>
+        </property>
+        <property name="cecmrisk" type="string">
+            <column name="CECMRISK" length="40">
+                <comment>&#183;&#231;&#207;&#213;&#177;&#169;&#194;&#182;&#183;&#214;&#192;&#224;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

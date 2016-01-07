@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbankquotation" table="TBBANKQUOTATION" schema="TZYHSC">
+        <comment>from 20090512 1????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbankquotationId">
+            <key-property name="dailyTime" type="big_decimal">
+                <column name="DAILY_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="marketIndicatior" type="string">
+                <column name="MARKET_INDICATIOR" length="1" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="dailyDate" type="big_decimal">
+            <column name="DAILY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="preClosePrice" type="big_decimal">
+            <column name="PRE_CLOSE_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="preAvgPrice" type="big_decimal">
+            <column name="PRE_AVG_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="lastPrice" type="big_decimal">
+            <column name="LAST_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="openPrice" type="big_decimal">
+            <column name="OPEN_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="highPrice" type="big_decimal">
+            <column name="HIGH_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="lowPrice" type="big_decimal">
+            <column name="LOW_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="closePrice" type="big_decimal">
+            <column name="CLOSE_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="avgPrice" type="big_decimal">
+            <column name="AVG_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="dif" type="big_decimal">
+            <column name="DIF" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="preClosePriceYld" type="big_decimal">
+            <column name="PRE_CLOSE_PRICE_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="openPriceYld" type="big_decimal">
+            <column name="OPEN_PRICE_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="lastPriceYld" type="big_decimal">
+            <column name="LAST_PRICE_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="highestYld" type="big_decimal">
+            <column name="HIGHEST_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="avgPriceYld" type="big_decimal">
+            <column name="AVG_PRICE_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="lowestYld" type="big_decimal">
+            <column name="LOWEST_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+        <property name="closePriceYld" type="big_decimal">
+            <column name="CLOSE_PRICE_YLD" precision="9" scale="8" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

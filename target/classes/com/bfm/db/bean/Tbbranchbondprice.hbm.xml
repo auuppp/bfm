@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbranchbondprice" table="TBBRANCHBONDPRICE" schema="TZYHSC">
+        <comment>Add by fj from 20091025 for znx 1???????????? 2??????
+        ?????????????????????????????????????????????????????????????????????????????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbranchbondpriceId">
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="16" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fairPrice" type="big_decimal">
+            <column name="FAIR_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="updateDate" type="big_decimal">
+            <column name="UPDATE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

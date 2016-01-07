@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbaccountbalance" table="TBACCOUNTBALANCE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbaccountbalanceId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="accountNo" type="string">
+                <column name="ACCOUNT_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="accountName" type="string">
+            <column name="ACCOUNT_NAME" length="64" not-null="true">
+                <comment>&#213;&#203;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="accountRate" type="big_decimal">
+            <column name="ACCOUNT_RATE" precision="10" scale="8" not-null="true">
+                <comment>&#213;&#203;&#187;&#167;&#187;&#238;&#198;&#218;&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="accountBalance" type="big_decimal">
+            <column name="ACCOUNT_BALANCE" precision="18" not-null="true">
+                <comment>&#213;&#203;&#187;&#167;&#211;&#224;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="subject" type="string">
+            <column name="SUBJECT" length="12" not-null="true">
+                <comment>&#213;&#203;&#187;&#167;&#182;&#212;&#211;&#166;&#191;&#198;&#196;&#191;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="accountStatus" type="string">
+            <column name="ACCOUNT_STATUS" length="12" not-null="true">
+                <comment>&#213;&#203;&#187;&#167;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="64" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="100" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="100" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

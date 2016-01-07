@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbcashflow" table="TMP_ATBCASHFLOW" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbcashflowId">
+            <key-property name="id" type="string">
+                <column name="ID" length="30" />
+            </key-property>
+            <key-property name="subflag" type="string">
+                <column name="SUBFLAG" length="8" />
+            </key-property>
+            <key-property name="productid" type="string">
+                <column name="PRODUCTID" length="20" />
+            </key-property>
+            <key-property name="assetCode" type="string">
+                <column name="ASSET_CODE" length="30" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="accDate" type="string">
+                <column name="ACC_DATE" length="8" />
+            </key-property>
+            <key-property name="transDate" type="string">
+                <column name="TRANS_DATE" length="8" />
+            </key-property>
+            <key-property name="currency" type="string">
+                <column name="CURRENCY" length="3" />
+            </key-property>
+            <key-property name="shares" type="big_decimal">
+                <column name="SHARES" precision="18" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="18" />
+            </key-property>
+            <key-property name="dealflag" type="char">
+                <column name="DEALFLAG" length="1" />
+            </key-property>
+            <key-property name="certSerialno" type="string">
+                <column name="CERT_SERIALNO" length="32" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="4" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="tranSubCode" type="string">
+                <column name="TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="impDate" type="string">
+                <column name="IMP_DATE" length="8" />
+            </key-property>
+            <key-property name="operator" type="string">
+                <column name="OPERATOR" length="15" />
+            </key-property>
+            <key-property name="calBegin" type="string">
+                <column name="CAL_BEGIN" length="8" />
+            </key-property>
+            <key-property name="calEnd" type="string">
+                <column name="CAL_END" length="8" />
+            </key-property>
+            <key-property name="srcCashType" type="string">
+                <column name="SRC_CASH_TYPE" length="4" />
+            </key-property>
+            <key-property name="srcCashFlag" type="char">
+                <column name="SRC_CASH_FLAG" length="1" />
+            </key-property>
+            <key-property name="srcAcct" type="string">
+                <column name="SRC_ACCT" length="10" />
+            </key-property>
+            <key-property name="srcSerialNo" type="string">
+                <column name="SRC_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="srcTranId" type="string">
+                <column name="SRC_TRAN_ID" length="32" />
+            </key-property>
+            <key-property name="srcCashSubtype" type="string">
+                <column name="SRC_CASH_SUBTYPE" length="4" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="bak" type="string">
+                <column name="BAK" length="256" />
+            </key-property>
+            <key-property name="memo" type="string">
+                <column name="MEMO" length="256" />
+            </key-property>
+            <key-property name="innerFundNo" type="string">
+                <column name="INNER_FUND_NO" length="32" />
+            </key-property>
+            <key-property name="srcId" type="string">
+                <column name="SRC_ID" length="32" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

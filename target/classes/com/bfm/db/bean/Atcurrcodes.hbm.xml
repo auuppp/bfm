@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atcurrcodes" table="ATCURRCODES" schema="TZYHSC">
+        <comment>ATCURRCODES&#177;&#210;&#214;&#214;&#177;&#237;</comment>
+        <id name="ccy" type="string">
+            <column name="CCY" length="3" />
+            <generator class="assigned" />
+        </id>
+        <property name="ccydesc" type="string">
+            <column name="CCYDESC" length="30">
+                <comment>&#177;&#210;&#214;&#214;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="decs" type="big_decimal">
+            <column name="DECS" precision="22" scale="0">
+                <comment>&#214;&#184;&#202;&#253;&#208;&#161;&#202;&#253;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="wday1" type="string">
+            <column name="WDAY1" length="2">
+                <comment>&#214;&#220;&#196;&#169;1</comment>
+            </column>
+        </property>
+        <property name="wday2" type="string">
+            <column name="WDAY2" length="2">
+                <comment>&#214;&#220;&#196;&#169;2</comment>
+            </column>
+        </property>
+        <property name="roundind" type="string">
+            <column name="ROUNDIND" length="2">
+                <comment>&#203;&#196;&#201;&#225;&#206;&#229;&#200;&#235;&#214;&#184;&#177;&#234;</comment>
+            </column>
+        </property>
+        <property name="roundno" type="big_decimal">
+            <column name="ROUNDNO" precision="22" scale="0">
+                <comment>&#203;&#196;&#201;&#225;&#206;&#229;&#200;&#235;&#206;&#187;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="roundrule" type="string">
+            <column name="ROUNDRULE" length="2">
+                <comment>&#203;&#196;&#201;&#225;&#206;&#229;&#200;&#235;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="isocurrcode" type="string">
+            <column name="ISOCURRCODE" length="3">
+                <comment>&#177;&#234;&#215;&#188;&#187;&#245;&#177;&#210;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="lstmntdte" type="string">
+            <column name="LSTMNTDTE" length="8">
+                <comment>&#215;&#238;&#189;&#252;&#208;&#222;&#184;&#196;&#200;&#213;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

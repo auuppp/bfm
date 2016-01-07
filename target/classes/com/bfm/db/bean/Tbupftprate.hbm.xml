@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbupftprate" table="TBUPFTPRATE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbupftprateId">
+            <key-property name="firstSubject" type="string">
+                <column name="FIRST_SUBJECT" length="12" />
+            </key-property>
+            <key-property name="secondSubject" type="string">
+                <column name="SECOND_SUBJECT" length="12" />
+            </key-property>
+        </composite-id>
+        <property name="firstSubjectName" type="string">
+            <column name="FIRST_SUBJECT_NAME" length="64" not-null="true" />
+        </property>
+        <property name="secondSubjectName" type="string">
+            <column name="SECOND_SUBJECT_NAME" length="64" not-null="true" />
+        </property>
+        <property name="upGuidRate" type="big_decimal">
+            <column name="UP_GUID_RATE" precision="18" not-null="true">
+                <comment>&#181;&#165;&#206;&#187;BP</comment>
+            </column>
+        </property>
+        <property name="upFtpRate" type="big_decimal">
+            <column name="UP_FTP_RATE" precision="18" not-null="true">
+                <comment>&#181;&#165;&#206;&#187;BP</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="64" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="100" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="100" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="100" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true">
+                <comment>&#180;&#230;&#180;&#162;&#187;&#250;&#198;&#247;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true">
+                <comment>&#180;&#230;&#180;&#162;&#187;&#250;&#198;&#247;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

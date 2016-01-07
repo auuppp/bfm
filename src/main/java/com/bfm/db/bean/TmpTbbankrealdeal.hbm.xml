@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbbankrealdeal" table="TMP_TBBANKREALDEAL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbbankrealdealId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="dealNo" type="string">
+                <column name="DEAL_NO" length="32" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="32" />
+            </key-property>
+            <key-property name="dealDate" type="big_decimal">
+                <column name="DEAL_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="dealTime" type="big_decimal">
+                <column name="DEAL_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="relateDealSerialId" type="string">
+                <column name="RELATE_DEAL_SERIAL_ID" length="32" />
+            </key-property>
+            <key-property name="flowInstanceId" type="string">
+                <column name="FLOW_INSTANCE_ID" length="256" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="fundNo" type="string">
+                <column name="FUND_NO" length="32" />
+            </key-property>
+            <key-property name="assetNo" type="string">
+                <column name="ASSET_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="entrustDirection" type="string">
+                <column name="ENTRUST_DIRECTION" length="1" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="settleSpeed" type="big_decimal">
+                <column name="SETTLE_SPEED" precision="22" scale="0" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="dealAmount" type="big_decimal">
+                <column name="DEAL_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="firstSettleInterest" type="big_decimal">
+                <column name="FIRST_SETTLE_INTEREST" precision="18" scale="12" />
+            </key-property>
+            <key-property name="firstNetPrice" type="big_decimal">
+                <column name="FIRST_NET_PRICE" precision="18" scale="12" />
+            </key-property>
+            <key-property name="firstFullPrice" type="big_decimal">
+                <column name="FIRST_FULL_PRICE" precision="18" scale="12" />
+            </key-property>
+            <key-property name="firstClearBalance" type="big_decimal">
+                <column name="FIRST_CLEAR_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="secondSettleInterest" type="big_decimal">
+                <column name="SECOND_SETTLE_INTEREST" precision="18" scale="12" />
+            </key-property>
+            <key-property name="secondNetPrice" type="big_decimal">
+                <column name="SECOND_NET_PRICE" precision="18" scale="12" />
+            </key-property>
+            <key-property name="secondFullPrice" type="big_decimal">
+                <column name="SECOND_FULL_PRICE" precision="18" scale="12" />
+            </key-property>
+            <key-property name="secondClearBalance" type="big_decimal">
+                <column name="SECOND_CLEAR_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="firstMatureYield" type="big_decimal">
+                <column name="FIRST_MATURE_YIELD" precision="16" scale="8" />
+            </key-property>
+            <key-property name="secondMatureYield" type="big_decimal">
+                <column name="SECOND_MATURE_YIELD" precision="16" scale="8" />
+            </key-property>
+            <key-property name="firstSettleDate" type="big_decimal">
+                <column name="FIRST_SETTLE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="secondSettleDate" type="big_decimal">
+                <column name="SECOND_SETTLE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="firstSettleType" type="string">
+                <column name="FIRST_SETTLE_TYPE" length="1" />
+            </key-property>
+            <key-property name="secondSettleType" type="string">
+                <column name="SECOND_SETTLE_TYPE" length="1" />
+            </key-property>
+            <key-property name="rate" type="big_decimal">
+                <column name="RATE" precision="16" scale="8" />
+            </key-property>
+            <key-property name="hgDays" type="big_decimal">
+                <column name="HG_DAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="realHgDays" type="big_decimal">
+                <column name="REAL_HG_DAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="remitterName" type="string">
+                <column name="REMITTER_NAME" length="128" />
+            </key-property>
+            <key-property name="remitterAccount" type="string">
+                <column name="REMITTER_ACCOUNT" length="128" />
+            </key-property>
+            <key-property name="remitterBank" type="string">
+                <column name="REMITTER_BANK" length="128" />
+            </key-property>
+            <key-property name="remitterBankNo" type="string">
+                <column name="REMITTER_BANK_NO" length="128" />
+            </key-property>
+            <key-property name="remitteeName" type="string">
+                <column name="REMITTEE_NAME" length="128" />
+            </key-property>
+            <key-property name="remitteeAccount" type="string">
+                <column name="REMITTEE_ACCOUNT" length="128" />
+            </key-property>
+            <key-property name="remitteeBank" type="string">
+                <column name="REMITTEE_BANK" length="128" />
+            </key-property>
+            <key-property name="remitteeBankNo" type="string">
+                <column name="REMITTEE_BANK_NO" length="128" />
+            </key-property>
+            <key-property name="bondAccountname" type="string">
+                <column name="BOND_ACCOUNTNAME" length="256" />
+            </key-property>
+            <key-property name="bondTrustBranch" type="string">
+                <column name="BOND_TRUST_BRANCH" length="256" />
+            </key-property>
+            <key-property name="bondAccount" type="string">
+                <column name="BOND_ACCOUNT" length="11" />
+            </key-property>
+            <key-property name="otherBondAccountname" type="string">
+                <column name="OTHER_BOND_ACCOUNTNAME" length="256" />
+            </key-property>
+            <key-property name="otherBondTrustBranch" type="string">
+                <column name="OTHER_BOND_TRUST_BRANCH" length="256" />
+            </key-property>
+            <key-property name="otherBondAccount" type="string">
+                <column name="OTHER_BOND_ACCOUNT" length="11" />
+            </key-property>
+            <key-property name="otherOperator" type="string">
+                <column name="OTHER_OPERATOR" length="32" />
+            </key-property>
+            <key-property name="otherPhone" type="string">
+                <column name="OTHER_PHONE" length="32" />
+            </key-property>
+            <key-property name="otherFax" type="string">
+                <column name="OTHER_FAX" length="32" />
+            </key-property>
+            <key-property name="otherCorporation" type="string">
+                <column name="OTHER_CORPORATION" length="32" />
+            </key-property>
+            <key-property name="otherAddress" type="string">
+                <column name="OTHER_ADDRESS" length="256" />
+            </key-property>
+            <key-property name="operator" type="string">
+                <column name="OPERATOR" length="32" />
+            </key-property>
+            <key-property name="phone" type="string">
+                <column name="PHONE" length="32" />
+            </key-property>
+            <key-property name="fax" type="string">
+                <column name="FAX" length="32" />
+            </key-property>
+            <key-property name="corporation" type="string">
+                <column name="CORPORATION" length="32" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="ADDRESS" length="256" />
+            </key-property>
+            <key-property name="fee" type="big_decimal">
+                <column name="FEE" precision="16" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="storeStatus" type="string">
+                <column name="STORE_STATUS" length="1" />
+            </key-property>
+            <key-property name="enoughFlag" type="string">
+                <column name="ENOUGH_FLAG" length="1" />
+            </key-property>
+            <key-property name="dataSource" type="string">
+                <column name="DATA_SOURCE" length="1" />
+            </key-property>
+            <key-property name="remark" type="string">
+                <column name="REMARK" length="256" />
+            </key-property>
+            <key-property name="cancelFlag" type="string">
+                <column name="CANCEL_FLAG" length="1" />
+            </key-property>
+            <key-property name="entrustSerialNo" type="string">
+                <column name="ENTRUST_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="payDate" type="big_decimal">
+                <column name="PAY_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="feeDate" type="big_decimal">
+                <column name="FEE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="deductBalance" type="big_decimal">
+                <column name="DEDUCT_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="deductFeeFlag" type="string">
+                <column name="DEDUCT_FEE_FLAG" length="1" />
+            </key-property>
+            <key-property name="deductFeeType" type="string">
+                <column name="DEDUCT_FEE_TYPE" length="1" />
+            </key-property>
+            <key-property name="feeStatus" type="string">
+                <column name="FEE_STATUS" length="1" />
+            </key-property>
+            <key-property name="bailOfferSide" type="string">
+                <column name="BAIL_OFFER_SIDE" length="1" />
+            </key-property>
+            <key-property name="bailBalance" type="big_decimal">
+                <column name="BAIL_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="otherBailBalance" type="big_decimal">
+                <column name="OTHER_BAIL_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="tradeFare" type="big_decimal">
+                <column name="TRADE_FARE" precision="16" />
+            </key-property>
+            <key-property name="settleFare" type="big_decimal">
+                <column name="SETTLE_FARE" precision="16" />
+            </key-property>
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="32" />
+            </key-property>
+            <key-property name="strategy" type="string">
+                <column name="STRATEGY" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

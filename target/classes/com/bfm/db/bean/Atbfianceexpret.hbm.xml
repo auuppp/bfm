@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbfianceexpret" table="ATBFIANCEEXPRET" schema="TZYHSC">
+        <comment>
+        &#182;&#212;&#211;&#218;&#177;&#163;&#177;&#190;&#208;&#205;&#192;&#237;&#178;&#198;&#178;&#250;&#198;&#183;&#188;&#198;&#204;&#225;&#181;&#196;&#212;&#164;&#198;&#218;&#202;&#213;&#210;&#230;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbfianceexpretId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="retdate" type="string">
+                <column name="RETDATE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="retrun" type="big_decimal">
+            <column name="RETRUN" precision="18">
+                <comment>&#212;&#164;&#198;&#218;&#202;&#213;&#210;&#230;</comment>
+            </column>
+        </property>
+        <property name="dealflag" type="java.lang.Character">
+            <column name="DEALFLAG" length="1">
+                <comment>0 &#206;&#170;&#180;&#166;&#192;&#237; 1 &#210;&#209;&#180;&#166;&#192;&#237;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

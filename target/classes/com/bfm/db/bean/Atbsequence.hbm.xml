@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbsequence" table="ATBSEQUENCE" schema="TZYHSC">
+        <comment>ATBSEQUENCE&#208;&#242;&#193;&#208;&#186;&#197;&#201;&#250;&#179;&#201;&#177;&#237;</comment>
+        <id name="hsKey" type="string">
+            <column name="HS_KEY" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="value" type="string">
+            <column name="VALUE" length="30">
+                <comment>&#207;&#214;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="space" type="string">
+            <column name="SPACE" length="5">
+                <comment>&#212;&#246;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="cycleflag" type="java.lang.Character">
+            <column name="CYCLEFLAG" length="1">
+                <comment>1 &#214;&#216;&#184;&#180;&#192;&#251;&#211;&#195; 0 &#178;&#187;&#214;&#216;&#184;&#180;&#192;&#251;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="maxvalue" type="java.lang.Long">
+            <column name="MAXVALUE" precision="10" scale="0">
+                <comment>&#215;&#238;&#180;&#243;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="autozero" type="java.lang.Character">
+            <column name="AUTOZERO" length="1">
+                <comment>0 &#178;&#187;&#199;&#229;&#193;&#227; 1 &#195;&#191;&#200;&#213;&#215;&#212;&#182;&#175;&#199;&#229;&#193;&#227;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbinterestrate" table="ATBINTERESTRATE" schema="TZYHSC">
+        <comment>ATBINTERESTRATE&#192;&#251;&#194;&#202;&#208;&#197;&#207;&#162;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbinterestrateId">
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="30" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rateType" type="char">
+                <column name="RATE_TYPE" length="1" />
+            </key-property>
+            <key-property name="beginDate" type="string">
+                <column name="BEGIN_DATE" length="8" />
+            </key-property>
+            <key-property name="endDate" type="string">
+                <column name="END_DATE" length="8" />
+            </key-property>
+            <key-property name="status" type="char">
+                <column name="STATUS" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="16" scale="12">
+                <comment>&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="curCode" type="string">
+            <column name="CUR_CODE" length="3">
+                <comment>&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="changeDate" type="string">
+            <column name="CHANGE_DATE" length="8">
+                <comment>&#188;&#198;&#207;&#162;&#181;&#247;&#213;&#251;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="basis" type="string">
+            <column name="BASIS" length="3">
+                <comment>&#188;&#198;&#207;&#162;&#187;&#249;&#180;&#161;</comment>
+            </column>
+        </property>
+        <property name="freq" type="string">
+            <column name="FREQ" length="3">
+                <comment>&#198;&#181;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="compdMethod" type="java.lang.Character">
+            <column name="COMPD_METHOD" length="1">
+                <comment>&#184;&#180;&#192;&#251;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+        <property name="indexId" type="string">
+            <column name="INDEX_ID" length="20">
+                <comment>&#214;&#184;&#177;&#234;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

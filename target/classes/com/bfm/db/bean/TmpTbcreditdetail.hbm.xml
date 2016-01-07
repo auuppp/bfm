@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbcreditdetail" table="TMP_TBCREDITDETAIL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbcreditdetailId">
+            <key-property name="totalCreditId" type="string">
+                <column name="TOTAL_CREDIT_ID" length="32" />
+            </key-property>
+            <key-property name="creditType" type="big_decimal">
+                <column name="CREDIT_TYPE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="creditSerialNo" type="string">
+                <column name="CREDIT_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="opFlag" type="string">
+                <column name="OP_FLAG" length="1" />
+            </key-property>
+            <key-property name="relateNo" type="string">
+                <column name="RELATE_NO" length="100" />
+            </key-property>
+            <key-property name="tradeDate" type="big_decimal">
+                <column name="TRADE_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="32" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="oriCurrType" type="string">
+                <column name="ORI_CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="oriBalance" type="big_decimal">
+                <column name="ORI_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="oriCreditBalance" type="big_decimal">
+                <column name="ORI_CREDIT_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="balance" type="big_decimal">
+                <column name="BALANCE" precision="16" />
+            </key-property>
+            <key-property name="postBalance" type="big_decimal">
+                <column name="POST_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="notEffectiveDate" type="big_decimal">
+                <column name="NOT_EFFECTIVE_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="notEffectiveReason" type="string">
+                <column name="NOT_EFFECTIVE_REASON" length="1" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

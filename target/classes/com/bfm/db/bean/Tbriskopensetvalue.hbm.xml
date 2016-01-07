@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbriskopensetvalue" table="TBRISKOPENSETVALUE" schema="TZYHSC">
+        <comment>???????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbriskopensetvalueId">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="layerId" type="string">
+                <column name="LAYER_ID" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="assetValue" type="big_decimal">
+            <column name="ASSET_VALUE" precision="16" not-null="true" />
+        </property>
+        <property name="modifyOperator" type="string">
+            <column name="MODIFY_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="modifyDate" type="big_decimal">
+            <column name="MODIFY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="modifyTime" type="big_decimal">
+            <column name="MODIFY_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

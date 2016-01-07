@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysKind" table="TSYS_KIND" schema="TZYHSC">
+        <comment>?????</comment>
+        <id name="kindCode" type="string">
+            <column name="KIND_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="kindType" type="string">
+            <column name="KIND_TYPE" length="8" not-null="true">
+                <comment>???????????? ?????[SYS_BIZ_KIND_TYPE] 0-???? 1-???? 2-???? 3-???? 4-????</comment>
+            </column>
+        </property>
+        <property name="kindName" type="string">
+            <column name="KIND_NAME" length="32" not-null="true" />
+        </property>
+        <property name="parentCode" type="string">
+            <column name="PARENT_CODE" length="16" />
+        </property>
+        <property name="mnemonic" type="string">
+            <column name="MNEMONIC" length="16" not-null="true" />
+        </property>
+        <property name="treeIdx" type="string">
+            <column name="TREE_IDX" length="256" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Salaryitem" table="SALARYITEM" schema="TZYHSC">
+        <comment>salaryitem</comment>
+        <composite-id name="id" class="com.bfm.db.bean.SalaryitemId">
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="6" />
+            </key-property>
+            <key-property name="itemno" type="string">
+                <column name="ITEMNO" length="3" />
+            </key-property>
+            <key-property name="itemname" type="string">
+                <column name="ITEMNAME" length="12" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="TYPE" length="11" />
+            </key-property>
+            <key-property name="width" type="big_decimal">
+                <column name="WIDTH" precision="22" scale="0" />
+            </key-property>
+            <key-property name="formula" type="string">
+                <column name="FORMULA" length="80" />
+            </key-property>
+            <key-property name="cnformula" type="string">
+                <column name="CNFORMULA" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

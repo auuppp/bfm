@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbratemodel" table="TBRATEMODEL" schema="TZYHSC">
+        <comment>??????????????????????????</comment>
+        <id name="modelId" type="string">
+            <column name="MODEL_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="modelName" type="string">
+            <column name="MODEL_NAME" length="100" not-null="true">
+                <comment>1:?????????? 2:????????????????</comment>
+            </column>
+        </property>
+        <property name="businClasses" type="string">
+            <column name="BUSIN_CLASSES" length="512" not-null="true">
+                <comment>?????','??? ?91,93</comment>
+            </column>
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true">
+                <comment>bns?1???2???3??</comment>
+            </column>
+        </property>
+        <property name="limit" type="big_decimal">
+            <column name="LIMIT" precision="22" scale="0" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>??????????????????? ???????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="interestConfType" type="string">
+            <column name="INTEREST_CONF_TYPE" length="1" not-null="true">
+                <comment>??? 1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="interestType" type="string">
+            <column name="INTEREST_TYPE" length="1" not-null="true">
+                <comment>?????????????????K_LLLX 1????2???</comment>
+            </column>
+        </property>
+        <property name="fixType" type="string">
+            <column name="FIX_TYPE" length="1" not-null="true">
+                <comment>?????????????? 1-???????????????? 2???????????? 3??(?????Shibor??)</comment>
+            </column>
+        </property>
+        <property name="floatType" type="string">
+            <column name="FLOAT_TYPE" length="1" not-null="true">
+                <comment>?tbreferindex?????????????????? 0?SHIBOR 1????? 2?LIBOR</comment>
+            </column>
+        </property>
+        <property name="indexId" type="string">
+            <column name="INDEX_ID" length="20" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="isRuleFreq" type="string">
+            <column name="IS_RULE_FREQ" length="1" not-null="true">
+                <comment>??????????????? ??????0. ???????tbreferindex??????????? 0?????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="isRealAdjust" type="string">
+            <column name="IS_REAL_ADJUST" length="1" not-null="true">
+                <comment>????????????????? 0-??? 1-?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="interestMode" type="string">
+            <column name="INTEREST_MODE" length="1" not-null="true">
+                <comment>1-??? 2-?? T-?? 4-???</comment>
+            </column>
+        </property>
+        <property name="payFreq" type="string">
+            <column name="PAY_FREQ" length="3" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="isInterestBal" type="string">
+            <column name="IS_INTEREST_BAL" length="1" not-null="true">
+                <comment>??????????????????? 0????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

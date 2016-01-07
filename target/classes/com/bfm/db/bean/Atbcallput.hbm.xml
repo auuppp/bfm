@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbcallput" table="ATBCALLPUT" schema="TZYHSC">
+        <comment>ATBCALLPUT&#189;&#187;&#210;&#215;&#186;&#172;&#200;&#168;&#208;&#197;&#207;&#162;</comment>
+        <id name="id" type="string">
+            <column name="ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="productname" type="string">
+            <column name="PRODUCTNAME" length="30">
+                <comment>&#198;&#218;&#200;&#168;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="cpspecsCallstyle" type="string">
+            <column name="CPSPECS_CALLSTYLE" length="4">
+                <comment>EURO &#197;&#183;&#202;&#189; AMER &#195;&#192;&#202;&#189; BERM &#176;&#217;&#196;&#189;&#180;&#243;</comment>
+            </column>
+        </property>
+        <property name="cpspecsCallintaccrual" type="string">
+            <column name="CPSPECS_CALLINTACCRUAL" length="1">
+                <comment>1 &#202;&#199; 2 &#183;&#241;</comment>
+            </column>
+        </property>
+        <property name="cpspecsCallthresvalue" type="big_decimal">
+            <column name="CPSPECS_CALLTHRESVALUE" precision="18" scale="6">
+                <comment>&#187;&#216;&#185;&#186;&#198;&#240;&#181;&#227;&#188;&#219;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="cpspecsPutstyle" type="string">
+            <column name="CPSPECS_PUTSTYLE" length="4">
+                <comment>&#187;&#216;&#202;&#219;&#198;&#218;&#200;&#168;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="cpspecsPutintaccrual" type="string">
+            <column name="CPSPECS_PUTINTACCRUAL" length="1">
+                <comment>&#202;&#199;&#183;&#241;&#188;&#198;&#203;&#227;&#187;&#216;&#202;&#219;&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="cpspecsThresvalue" type="big_decimal">
+            <column name="CPSPECS_THRESVALUE" precision="18">
+                <comment>&#187;&#216;&#202;&#219;&#198;&#240;&#181;&#227;&#188;&#219;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="callextCpfreq" type="string">
+            <column name="CALLEXT_CPFREQ" length="1">
+                <comment>&#187;&#216;&#185;&#186;&#198;&#218;&#200;&#168;&#214;&#180;&#208;&#208;&#198;&#181;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="callextAnnday" type="string">
+            <column name="CALLEXT_ANNDAY" length="8">
+                <comment>&#187;&#216;&#185;&#186;&#198;&#218;&#200;&#168;&#199;&#248;&#188;&#228;&#185;&#204;&#182;&#168;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="callextFromtoca" type="string">
+            <column name="CALLEXT_FROMTOCA" length="3">
+                <comment>&#187;&#216;&#185;&#186;&#198;&#218;&#200;&#168;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="callextFromtorule" type="string">
+            <column name="CALLEXT_FROMTORULE" length="2">
+                <comment>&#187;&#216;&#185;&#186;&#189;&#218;&#188;&#217;&#200;&#213;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="callextFromtogap" type="big_decimal">
+            <column name="CALLEXT_FROMTOGAP" precision="22" scale="0">
+                <comment>&#187;&#216;&#185;&#186;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="callextPorc" type="string">
+            <column name="CALLEXT_PORC" length="1">
+                <comment>&#187;&#216;&#185;&#186;&#198;&#218;&#200;&#168;&#194;&#242;&#194;&#244;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="callextNoticegap1" type="big_decimal">
+            <column name="CALLEXT_NOTICEGAP1" precision="22" scale="0">
+                <comment>&#181;&#218;&#210;&#187;&#204;&#225;&#208;&#209;&#200;&#213;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="callextNoticegap2" type="big_decimal">
+            <column name="CALLEXT_NOTICEGAP2" precision="22" scale="0">
+                <comment>&#181;&#218;&#182;&#254;&#204;&#225;&#208;&#209;&#200;&#213;&#204;&#225;&#199;&#176;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="callextNoticecal1" type="string">
+            <column name="CALLEXT_NOTICECAL1" length="3">
+                <comment>&#181;&#218;&#210;&#187;&#204;&#225;&#208;&#209;&#200;&#213;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="callextNoticecal2" type="string">
+            <column name="CALLEXT_NOTICECAL2" length="3">
+                <comment>&#181;&#218;&#182;&#254;&#204;&#225;&#208;&#209;&#200;&#213;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="callextNoticerule1" type="string">
+            <column name="CALLEXT_NOTICERULE1" length="2">
+                <comment>&#181;&#218;&#210;&#187;&#204;&#225;&#208;&#209;&#200;&#213;&#189;&#218;&#188;&#217;&#200;&#213;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="callextNoticerule2" type="string">
+            <column name="CALLEXT_NOTICERULE2" length="2">
+                <comment>&#181;&#218;&#182;&#254;&#204;&#225;&#208;&#209;&#200;&#213;&#189;&#218;&#188;&#217;&#200;&#213;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="callextNotice2type" type="string">
+            <column name="CALLEXT_NOTICE2TYPE" length="3">
+                <comment>&#181;&#218;&#182;&#254;&#204;&#225;&#208;&#209;&#200;&#213;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="callcustom" type="string">
+            <column name="CALLCUSTOM" length="1">
+                <comment>&#202;&#177;&#188;&#228;&#177;&#237;&#202;&#199;&#183;&#241;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="firstcall" type="string">
+            <column name="FIRSTCALL" length="8">
+                <comment>&#181;&#218;&#210;&#187;&#180;&#206;&#187;&#216;&#185;&#186;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="expiry" type="string">
+            <column name="EXPIRY" length="8">
+                <comment>&#198;&#218;&#200;&#168;&#181;&#189;&#198;&#218;&#200;&#213;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

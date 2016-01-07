@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atcosts" table="ATCOSTS" schema="TZYHSC">
+        <comment>ATCOSTS&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#201;&#232;&#214;&#195;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtcostsId">
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="20" />
+            </key-property>
+            <key-property name="costNo" type="string">
+                <column name="COST_NO" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="costName" type="string">
+            <column name="COST_NAME" length="100" not-null="true">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="costType" type="java.lang.Character">
+            <column name="COST_TYPE" length="1">
+                <comment>1.&#210;&#198;&#182;&#175;&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249; 2.&#207;&#200;&#189;&#248;&#207;&#200;&#179;&#246;
+                3.&#186;&#243;&#189;&#248;&#207;&#200;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="dealFlag" type="java.lang.Character">
+            <column name="DEAL_FLAG" length="1">
+                <comment>0.&#178;&#187;&#201;&#250;&#179;&#201;&#213;&#203;&#206;&#241; 1.&#201;&#250;&#179;&#201;&#213;&#203;&#206;&#241;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

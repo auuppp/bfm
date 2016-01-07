@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcurrencypair" table="TBCURRENCYPAIR" schema="TZYHSC">
+        <id name="currencyPair" type="string">
+            <column name="CURRENCY_PAIR" length="7" />
+            <generator class="assigned" />
+        </id>
+        <property name="currencyPairName" type="string">
+            <column name="CURRENCY_PAIR_NAME" length="50" not-null="true" />
+        </property>
+        <property name="currencyPairNo" type="string">
+            <column name="CURRENCY_PAIR_NO" length="10" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+        <property name="decimalPoint" type="big_decimal">
+            <column name="DECIMAL_POINT" precision="22" scale="0" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+        <property name="pricedWay" type="string">
+            <column name="PRICED_WAY" length="1" not-null="true">
+                <comment>1.????????????1?100?1000?10000??????????????????????? 2.????????????1???????????????????????????</comment>
+            </column>
+        </property>
+        <property name="quotedUnit" type="big_decimal">
+            <column name="QUOTED_UNIT" precision="22" scale="0" not-null="true">
+                <comment>????1?JPY/CNY?100?????????? 100JPY/CNY?6.9486??100JPY=6.9486CNY</comment>
+            </column>
+        </property>
+        <property name="spreadObversion" type="big_decimal">
+            <column name="SPREAD_OBVERSION" precision="22" scale="0" not-null="true">
+                <comment>??0.0001 USD/CNY????????6.2157?1M??????20???????1USD=(6.2157+20*0.0001)=6.2177CNY</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0-?? 1-??</comment>
+            </column>
+        </property>
+        <property name="source" type="string">
+            <column name="SOURCE" length="50" not-null="true" />
+        </property>
+        <property name="minimumAmount" type="big_decimal">
+            <column name="MINIMUM_AMOUNT" precision="16" not-null="true">
+                <comment>??????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="minimumAmountCurrency" type="string">
+            <column name="MINIMUM_AMOUNT_CURRENCY" length="3" not-null="true" />
+        </property>
+        <property name="thresholdAmount" type="big_decimal">
+            <column name="THRESHOLD_AMOUNT" precision="16" not-null="true">
+                <comment>????????????????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="thresholdAmountCurrency" type="string">
+            <column name="THRESHOLD_AMOUNT_CURRENCY" length="3" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

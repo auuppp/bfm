@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbratevar" table="TBRATEVAR" schema="TZYHSC">
+        <comment>???????????????? ???????????????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbratevarId">
+            <key-property name="ruleRefersNo" type="string">
+                <column name="RULE_REFERS_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="ruleName" type="string">
+            <column name="RULE_NAME" length="100" not-null="true" />
+        </property>
+        <property name="ruleType" type="string">
+            <column name="RULE_TYPE" length="1" not-null="true">
+                <comment>1-?? 2??? 3????? 4??????? 5???????</comment>
+            </column>
+        </property>
+        <property name="orgId" type="big_decimal">
+            <column name="ORG_ID" precision="22" scale="0" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>??????????????????? ??????????????????????????</comment>
+            </column>
+        </property>
+        <property name="interestConfType" type="string">
+            <column name="INTEREST_CONF_TYPE" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="interestType" type="string">
+            <column name="INTEREST_TYPE" length="1" not-null="true">
+                <comment>K_LLLX 1????2???</comment>
+            </column>
+        </property>
+        <property name="fixType" type="string">
+            <column name="FIX_TYPE" length="1" not-null="true">
+                <comment>1-???????????????? 2????????????</comment>
+            </column>
+        </property>
+        <property name="fixRate" type="big_decimal">
+            <column name="FIX_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="indexId" type="string">
+            <column name="INDEX_ID" length="20" not-null="true" />
+        </property>
+        <property name="isRuleFreq" type="string">
+            <column name="IS_RULE_FREQ" length="1" not-null="true">
+                <comment>???tbreferindex??????????? 0???????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="floatType" type="string">
+            <column name="FLOAT_TYPE" length="1" not-null="true">
+                <comment>?tbreferindex?????????????????? 0?SHIBOR 1????? 2?LIBOR</comment>
+            </column>
+        </property>
+        <property name="paySpread" type="big_decimal">
+            <column name="PAY_SPREAD" precision="18" not-null="true">
+                <comment>?????????+??/100?????%????20???????20</comment>
+            </column>
+        </property>
+        <property name="obsFirstDate" type="big_decimal">
+            <column name="OBS_FIRST_DATE" precision="22" scale="0" not-null="true">
+                <comment>0????????</comment>
+            </column>
+        </property>
+        <property name="fixingOffset" type="big_decimal">
+            <column name="FIXING_OFFSET" precision="22" scale="0" not-null="true">
+                <comment>??????0</comment>
+            </column>
+        </property>
+        <property name="upfrontOrArrears" type="string">
+            <column name="UPFRONT_OR_ARREARS" length="1" not-null="true">
+                <comment>??????????0???? 0??? 1???</comment>
+            </column>
+        </property>
+        <property name="obsFreq" type="string">
+            <column name="OBS_FREQ" length="3" not-null="true">
+                <comment>?????????????? ?3M???3?? D?? M?? Y?? MT?????</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>???????3??????? 0???? 1?????? 2???????????????????????????? 3?????? 4?????????</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true">
+                <comment>??????????? ??GBPJPY,??10??3???????????</comment>
+            </column>
+        </property>
+        <property name="isObsCombine" type="string">
+            <column name="IS_OBS_COMBINE" length="1" not-null="true">
+                <comment>??????????1???? 0???? 1-??</comment>
+            </column>
+        </property>
+        <property name="isRealAdjust" type="string">
+            <column name="IS_REAL_ADJUST" length="1" not-null="true">
+                <comment>????????????? 0-??? 1-?????????????????????????</comment>
+            </column>
+        </property>
+        <property name="everyDayType" type="string">
+            <column name="EVERY_DAY_TYPE" length="1" not-null="true">
+                <comment>1-????? 2????? 3-?? 4??????</comment>
+            </column>
+        </property>
+        <property name="levelType" type="string">
+            <column name="LEVEL_TYPE" length="1" not-null="true">
+                <comment>0-????? 1???</comment>
+            </column>
+        </property>
+        <property name="avgDailyFreq" type="string">
+            <column name="AVG_DAILY_FREQ" length="3" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="isCondBal" type="string">
+            <column name="IS_COND_BAL" length="1" not-null="true">
+                <comment>?????????????????????????? 0-??? 1-????????????</comment>
+            </column>
+        </property>
+        <property name="isCondLimit" type="string">
+            <column name="IS_COND_LIMIT" length="1" not-null="true">
+                <comment>???????????3?????????????????????? 0-??? 1-????????????</comment>
+            </column>
+        </property>
+        <property name="limitType" type="string">
+            <column name="LIMIT_TYPE" length="1" not-null="true">
+                <comment>??????????? 0-??? 1-???</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1-?? 2???</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

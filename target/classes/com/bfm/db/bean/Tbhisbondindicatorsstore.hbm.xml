@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbhisbondindicatorsstore" table="TBHISBONDINDICATORSSTORE" schema="TZYHSC">
+        <comment>tbbondindicators&#213;&#174;&#200;&#175;&#202;&#208;&#179;&#161;&#202;&#253;&#190;&#221;&#177;&#237;&#207;&#224;&#205;&#172;
+        &#195;&#191;&#204;&#236;&#200;&#213;&#214;&#213;&#176;&#209;tbbondindicators&#213;&#174;&#200;&#175;&#202;&#208;&#179;&#161;&#202;&#253;&#190;&#221;&#185;&#233;&#181;&#181;&#214;&#193;&#181;&#177;&#199;&#176;&#192;&#250;&#202;&#183;&#177;&#237;&#163;&#187;
+        tbhisbondindicators&#207;&#214;&#212;&#218;&#180;&#211;wind&#200;&#161;&#161;&#163;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbhisbondindicatorsstoreId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="conLevel" type="string">
+                <column name="CON_LEVEL" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="macaulayDuration" type="big_decimal">
+            <column name="MACAULAY_DURATION" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="modifiedDuration" type="big_decimal">
+            <column name="MODIFIED_DURATION" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="convexity" type="big_decimal">
+            <column name="CONVEXITY" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="valueBasis" type="big_decimal">
+            <column name="VALUE_BASIS" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="yieldbe" type="big_decimal">
+            <column name="YIELDBE" precision="16" scale="8" not-null="true">
+                <comment>&#178;&#187;&#180;&#248;%&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="yieldMaturity" type="big_decimal">
+            <column name="YIELD_MATURITY" precision="16" scale="8" not-null="true">
+                <comment>&#178;&#187;&#180;&#248;%&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#214;&#181;&#190;&#187;&#188;&#219; 4&#206;&#187;&#208;&#161;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="endInterest" type="big_decimal">
+            <column name="END_INTEREST" precision="16" scale="8" not-null="true">
+                <comment>&#200;&#213;&#214;&#213;&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="endFullPrice" type="big_decimal">
+            <column name="END_FULL_PRICE" precision="16" scale="8" not-null="true">
+                <comment>&#200;&#213;&#214;&#213;&#185;&#192;&#188;&#219;&#200;&#171;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="repayPerild" type="big_decimal">
+            <column name="REPAY_PERILD" precision="16" scale="8" not-null="true">
+                <comment>&#180;&#253;&#179;&#165;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="dayFullPrice" type="big_decimal">
+            <column name="DAY_FULL_PRICE" precision="16" scale="8" not-null="true">
+                <comment>&#200;&#213;&#188;&#228;&#185;&#192;&#188;&#219;&#200;&#171;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="dayInterest" type="big_decimal">
+            <column name="DAY_INTEREST" precision="16" scale="8" not-null="true">
+                <comment>&#200;&#213;&#188;&#228;&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="evaYield" type="big_decimal">
+            <column name="EVA_YIELD" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#188;&#219;&#202;&#213;&#210;&#230;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="evaBpDuration" type="big_decimal">
+            <column name="EVA_BP_DURATION" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#188;&#219;&#192;&#251;&#178;&#238;&#190;&#195;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="evaBpCon" type="big_decimal">
+            <column name="EVA_BP_CON" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#188;&#219;&#192;&#251;&#178;&#238;&#205;&#185;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="marketFullPrice" type="big_decimal">
+            <column name="MARKET_FULL_PRICE" precision="16" scale="8" not-null="true">
+                <comment>&#202;&#208;&#179;&#161;&#200;&#171;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="avgNetPrice" type="big_decimal">
+            <column name="AVG_NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#190;&#187;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="avgYield" type="big_decimal">
+            <column name="AVG_YIELD" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#202;&#213;&#210;&#230;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="avgModDuration" type="big_decimal">
+            <column name="AVG_MOD_DURATION" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#208;&#222;&#213;&#253;&#190;&#195;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="avgCon" type="big_decimal">
+            <column name="AVG_CON" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#205;&#185;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="avgValueBasis" type="big_decimal">
+            <column name="AVG_VALUE_BASIS" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#187;&#249;&#181;&#227;&#188;&#219;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="avgBpDuration" type="big_decimal">
+            <column name="AVG_BP_DURATION" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#192;&#251;&#178;&#238;&#190;&#195;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="avgBpCon" type="big_decimal">
+            <column name="AVG_BP_CON" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#192;&#251;&#178;&#238;&#205;&#185;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="rateDuration" type="big_decimal">
+            <column name="RATE_DURATION" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#188;&#219;&#192;&#251;&#194;&#202;&#190;&#195;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="rateCon" type="big_decimal">
+            <column name="RATE_CON" precision="16" scale="8" not-null="true">
+                <comment>&#185;&#192;&#188;&#219;&#192;&#251;&#194;&#202;&#205;&#185;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="avgRateDuration" type="big_decimal">
+            <column name="AVG_RATE_DURATION" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#192;&#251;&#194;&#202;&#190;&#195;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="avgRateCon" type="big_decimal">
+            <column name="AVG_RATE_CON" precision="16" scale="8" not-null="true">
+                <comment>&#188;&#211;&#200;&#168;&#198;&#189;&#190;&#249;&#189;&#225;&#203;&#227;&#188;&#219;&#192;&#251;&#194;&#202;&#205;&#185;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="bpYield" type="big_decimal">
+            <column name="BP_YIELD" precision="16" scale="8" not-null="true">
+                <comment>&#181;&#227;&#178;&#238;&#202;&#213;&#210;&#230;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

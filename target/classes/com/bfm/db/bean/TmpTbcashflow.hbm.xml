@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbcashflow" table="TMP_TBCASHFLOW" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbcashflowId">
+            <key-property name="occurDate" type="big_decimal">
+                <column name="OCCUR_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="marketNo" type="string">
+                <column name="MARKET_NO" length="6" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="32" />
+            </key-property>
+            <key-property name="fundNo" type="string">
+                <column name="FUND_NO" length="32" />
+            </key-property>
+            <key-property name="assetNo" type="string">
+                <column name="ASSET_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="sourceFlag" type="string">
+                <column name="SOURCE_FLAG" length="1" />
+            </key-property>
+            <key-property name="businSerial" type="string">
+                <column name="BUSIN_SERIAL" length="32" />
+            </key-property>
+            <key-property name="oriBusinSerial" type="string">
+                <column name="ORI_BUSIN_SERIAL" length="32" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="oriBusinClass" type="string">
+                <column name="ORI_BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="subCode" type="string">
+                <column name="SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="stockName" type="string">
+                <column name="STOCK_NAME" length="100" />
+            </key-property>
+            <key-property name="reportCode" type="string">
+                <column name="REPORT_CODE" length="32" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="18" />
+            </key-property>
+            <key-property name="balance" type="big_decimal">
+                <column name="BALANCE" precision="18" />
+            </key-property>
+            <key-property name="lastPayDate" type="big_decimal">
+                <column name="LAST_PAY_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="payDate" type="big_decimal">
+                <column name="PAY_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="settleDate" type="big_decimal">
+                <column name="SETTLE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cancelFlag" type="string">
+                <column name="CANCEL_FLAG" length="1" />
+            </key-property>
+            <key-property name="summary" type="string">
+                <column name="SUMMARY" length="256" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="256" />
+            </key-property>
+            <key-property name="approveStatus" type="string">
+                <column name="APPROVE_STATUS" length="1" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="repealAccruedAmt" type="big_decimal">
+                <column name="REPEAL_ACCRUED_AMT" precision="18" />
+            </key-property>
+            <key-property name="feeType" type="string">
+                <column name="FEE_TYPE" length="2" />
+            </key-property>
+            <key-property name="contraBusinSerial" type="string">
+                <column name="CONTRA_BUSIN_SERIAL" length="32" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

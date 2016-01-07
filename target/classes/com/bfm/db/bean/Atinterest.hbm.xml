@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atinterest" table="ATINTEREST" schema="TZYHSC">
+        <comment>ATINTEREST&#200;&#168;&#210;&#230;&#177;&#237;</comment>
+        <id name="registerdate" type="string">
+            <column name="REGISTERDATE" length="8" />
+            <generator class="assigned" />
+        </id>
+        <property name="voucher" type="string">
+            <column name="VOUCHER" length="20">
+                <comment>&#198;&#190;&#214;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="entrycataNo" type="string">
+            <column name="ENTRYCATA_NO" length="2" not-null="true">
+                <comment>&#183;&#214;&#194;&#188;&#192;&#224;&#208;&#205;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="40" not-null="true">
+                <comment>&#213;&#170;&#210;&#170;</comment>
+            </column>
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="jf" type="big_decimal">
+            <column name="JF" precision="8">
+                <comment>&#189;&#232;&#183;&#189;</comment>
+            </column>
+        </property>
+        <property name="df" type="big_decimal">
+            <column name="DF" precision="8">
+                <comment>&#180;&#251;&#183;&#189;</comment>
+            </column>
+        </property>
+        <property name="direction" type="string">
+            <column name="DIRECTION" length="2">
+                <comment>&#189;&#232;&#180;&#251;&#183;&#189;&#207;&#242;</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="8">
+                <comment>&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

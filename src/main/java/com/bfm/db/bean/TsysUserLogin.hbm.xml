@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysUserLogin" table="TSYS_USER_LOGIN" schema="TZYHSC">
+        <id name="userId" type="string">
+            <column name="USER_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="lastLoginDate" type="big_decimal">
+            <column name="LAST_LOGIN_DATE" precision="22" scale="0" />
+        </property>
+        <property name="lastLoginTime" type="big_decimal">
+            <column name="LAST_LOGIN_TIME" precision="22" scale="0" />
+        </property>
+        <property name="lastLoginIp" type="string">
+            <column name="LAST_LOGIN_IP" length="16" />
+        </property>
+        <property name="loginFailTimes" type="big_decimal">
+            <column name="LOGIN_FAIL_TIMES" precision="22" scale="0" />
+        </property>
+        <property name="lastFailDate" type="big_decimal">
+            <column name="LAST_FAIL_DATE" precision="22" scale="0" />
+        </property>
+        <property name="extField" type="string">
+            <column name="EXT_FIELD" length="16" />
+        </property>
+    </class>
+</hibernate-mapping>

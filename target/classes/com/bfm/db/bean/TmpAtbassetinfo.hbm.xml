@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbassetinfo" table="TMP_ATBASSETINFO" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbassetinfoId">
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="assetCode" type="string">
+                <column name="ASSET_CODE" length="30" />
+            </key-property>
+            <key-property name="assetName" type="string">
+                <column name="ASSET_NAME" length="100" />
+            </key-property>
+            <key-property name="assetPublish" type="string">
+                <column name="ASSET_PUBLISH" length="60" />
+            </key-property>
+            <key-property name="faceValue" type="big_decimal">
+                <column name="FACE_VALUE" precision="12" />
+            </key-property>
+            <key-property name="price" type="big_decimal">
+                <column name="PRICE" precision="6" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="10" />
+            </key-property>
+            <key-property name="assetSubType1" type="string">
+                <column name="ASSET_SUB_TYPE1" length="30" />
+            </key-property>
+            <key-property name="assetSubType2" type="string">
+                <column name="ASSET_SUB_TYPE2" length="10" />
+            </key-property>
+            <key-property name="assetSubType3" type="string">
+                <column name="ASSET_SUB_TYPE3" length="10" />
+            </key-property>
+            <key-property name="acctType" type="string">
+                <column name="ACCT_TYPE" length="30" />
+            </key-property>
+            <key-property name="interestBase" type="string">
+                <column name="INTEREST_BASE" length="3" />
+            </key-property>
+            <key-property name="interestFrequency" type="string">
+                <column name="INTEREST_FREQUENCY" length="3" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="valueDate" type="string">
+                <column name="VALUE_DATE" length="8" />
+            </key-property>
+            <key-property name="endDate" type="string">
+                <column name="END_DATE" length="8" />
+            </key-property>
+            <key-property name="transPlaces" type="string">
+                <column name="TRANS_PLACES" length="3" />
+            </key-property>
+            <key-property name="interestType" type="java.lang.Character">
+                <column name="INTEREST_TYPE" length="1" />
+            </key-property>
+            <key-property name="xdividendXdivrule" type="string">
+                <column name="XDIVIDEND_XDIVRULE" length="4" />
+            </key-property>
+            <key-property name="xdividendXdivbdrule" type="string">
+                <column name="XDIVIDEND_XDIVBDRULE" length="2" />
+            </key-property>
+            <key-property name="daysruleSettleRule" type="string">
+                <column name="DAYSRULE_SETTLE_RULE" length="4" />
+            </key-property>
+            <key-property name="daysruleSettleBdrule" type="string">
+                <column name="DAYSRULE_SETTLE_BDRULE" length="2" />
+            </key-property>
+            <key-property name="daysruleSettleDays" type="big_decimal">
+                <column name="DAYSRULE_SETTLE_DAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="daysruleValueDays" type="big_decimal">
+                <column name="DAYSRULE_VALUE_DAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="daysruleValueRule" type="string">
+                <column name="DAYSRULE_VALUE_RULE" length="4" />
+            </key-property>
+            <key-property name="daysruleValueBdrule" type="string">
+                <column name="DAYSRULE_VALUE_BDRULE" length="2" />
+            </key-property>
+            <key-property name="lformatPriceformCentunits" type="big_decimal">
+                <column name="LFORMAT_PRICEFORM_CENTUNITS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lformatPriceformRound" type="big_decimal">
+                <column name="LFORMAT_PRICEFORM_ROUND" precision="22" scale="0" />
+            </key-property>
+            <key-property name="collateral" type="string">
+                <column name="COLLATERAL" length="1" />
+            </key-property>
+            <key-property name="country" type="string">
+                <column name="COUNTRY" length="12" />
+            </key-property>
+            <key-property name="sizeissue" type="big_decimal">
+                <column name="SIZEISSUE" precision="18" />
+            </key-property>
+            <key-property name="payingagent" type="string">
+                <column name="PAYINGAGENT" length="12" />
+            </key-property>
+            <key-property name="srtylevel" type="string">
+                <column name="SRTYLEVEL" length="7" />
+            </key-property>
+            <key-property name="ratio" type="big_decimal">
+                <column name="RATIO" precision="12" scale="6" />
+            </key-property>
+            <key-property name="quote" type="string">
+                <column name="QUOTE" length="5" />
+            </key-property>
+            <key-property name="yieldformula" type="string">
+                <column name="YIELDFORMULA" length="5" />
+            </key-property>
+            <key-property name="priceformula" type="string">
+                <column name="PRICEFORMULA" length="5" />
+            </key-property>
+            <key-property name="ypspread" type="big_decimal">
+                <column name="YPSPREAD" precision="22" scale="0" />
+            </key-property>
+            <key-property name="yield" type="big_decimal">
+                <column name="YIELD" precision="12" scale="6" />
+            </key-property>
+            <key-property name="riskindex" type="string">
+                <column name="RISKINDEX" length="5" />
+            </key-property>
+            <key-property name="fundindex" type="string">
+                <column name="FUNDINDEX" length="5" />
+            </key-property>
+            <key-property name="fundspread" type="big_decimal">
+                <column name="FUNDSPREAD" precision="12" scale="6" />
+            </key-property>
+            <key-property name="repospread" type="big_decimal">
+                <column name="REPOSPREAD" precision="12" scale="6" />
+            </key-property>
+            <key-property name="callable" type="string">
+                <column name="CALLABLE" length="1" />
+            </key-property>
+            <key-property name="puttable" type="string">
+                <column name="PUTTABLE" length="1" />
+            </key-property>
+            <key-property name="issueprice" type="big_decimal">
+                <column name="ISSUEPRICE" precision="18" scale="5" />
+            </key-property>
+            <key-property name="redemptionprice" type="big_decimal">
+                <column name="REDEMPTIONPRICE" precision="18" scale="5" />
+            </key-property>
+            <key-property name="pors" type="string">
+                <column name="PORS" length="1" />
+            </key-property>
+            <key-property name="assetccy" type="string">
+                <column name="ASSETCCY" length="3" />
+            </key-property>
+            <key-property name="interestNrate" type="big_decimal">
+                <column name="INTEREST_NRATE" precision="12" scale="6" />
+            </key-property>
+            <key-property name="interestDmindex" type="string">
+                <column name="INTEREST_DMINDEX" length="6" />
+            </key-property>
+            <key-property name="interestCcy" type="string">
+                <column name="INTEREST_CCY" length="3" />
+            </key-property>
+            <key-property name="intRefSource" type="string">
+                <column name="INT_REF_SOURCE" length="10" />
+            </key-property>
+            <key-property name="interestSpread" type="big_decimal">
+                <column name="INTEREST_SPREAD" precision="12" scale="6" />
+            </key-property>
+            <key-property name="interestTerm" type="string">
+                <column name="INTEREST_TERM" length="8" />
+            </key-property>
+            <key-property name="intAccAcccalc" type="string">
+                <column name="INT_ACC_ACCCALC" length="1" />
+            </key-property>
+            <key-property name="intAccBasis" type="string">
+                <column name="INT_ACC_BASIS" length="6" />
+            </key-property>
+            <key-property name="interestFwddecomp" type="string">
+                <column name="INTEREST_FWDDECOMP" length="1" />
+            </key-property>
+            <key-property name="schedPayFreq" type="string">
+                <column name="SCHED_PAY_FREQ" length="3" />
+            </key-property>
+            <key-property name="schedPayAnnday" type="big_decimal">
+                <column name="SCHED_PAY_ANNDAY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="schedPayRule" type="string">
+                <column name="SCHED_PAY_RULE" length="2" />
+            </key-property>
+            <key-property name="schedPayIntrule" type="string">
+                <column name="SCHED_PAY_INTRULE" length="1" />
+            </key-property>
+            <key-property name="schedPayTime" type="string">
+                <column name="SCHED_PAY_TIME" length="4" />
+            </key-property>
+            <key-property name="schedPayCal" type="string">
+                <column name="SCHED_PAY_CAL" length="3" />
+            </key-property>
+            <key-property name="schedResetFreq" type="string">
+                <column name="SCHED_RESET_FREQ" length="3" />
+            </key-property>
+            <key-property name="schedResetAnnday" type="big_decimal">
+                <column name="SCHED_RESET_ANNDAY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="schedResetRule" type="string">
+                <column name="SCHED_RESET_RULE" length="2" />
+            </key-property>
+            <key-property name="schedResetIntrule" type="string">
+                <column name="SCHED_RESET_INTRULE" length="1" />
+            </key-property>
+            <key-property name="schedResetTime" type="string">
+                <column name="SCHED_RESET_TIME" length="4" />
+            </key-property>
+            <key-property name="schedResetCal" type="string">
+                <column name="SCHED_RESET_CAL" length="3" />
+            </key-property>
+            <key-property name="custom" type="string">
+                <column name="CUSTOM" length="4" />
+            </key-property>
+            <key-property name="crossCcyForexrate" type="big_decimal">
+                <column name="CROSS_CCY_FOREXRATE" precision="12" scale="6" />
+            </key-property>
+            <key-property name="nextfixing" type="string">
+                <column name="NEXTFIXING" length="8" />
+            </key-property>
+            <key-property name="intResRefixmode" type="string">
+                <column name="INT_RES_REFIXMODE" length="10" />
+            </key-property>
+            <key-property name="amortSchedAnnday" type="big_decimal">
+                <column name="AMORT_SCHED_ANNDAY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="intResFxGap" type="string">
+                <column name="INT_RES_FX_GAP" length="8" />
+            </key-property>
+            <key-property name="schedPayGap" type="string">
+                <column name="SCHED_PAY_GAP" length="8" />
+            </key-property>
+            <key-property name="schedResetGap" type="string">
+                <column name="SCHED_RESET_GAP" length="8" />
+            </key-property>
+            <key-property name="intResPaymentreset" type="string">
+                <column name="INT_RES_PAYMENTRESET" length="1" />
+            </key-property>
+            <key-property name="busmatdate" type="string">
+                <column name="BUSMATDATE" length="1" />
+            </key-property>
+            <key-property name="interestFundsprd" type="big_decimal">
+                <column name="INTEREST_FUNDSPRD" precision="12" scale="6" />
+            </key-property>
+            <key-property name="intResNtlGap" type="string">
+                <column name="INT_RES_NTL_GAP" length="8" />
+            </key-property>
+            <key-property name="interestIntratetype" type="string">
+                <column name="INTEREST_INTRATETYPE" length="3" />
+            </key-property>
+            <key-property name="prmdiscountindex" type="string">
+                <column name="PRMDISCOUNTINDEX" length="5" />
+            </key-property>
+            <key-property name="qmethodindex" type="string">
+                <column name="QMETHODINDEX" length="3" />
+            </key-property>
+            <key-property name="qmethodccy" type="string">
+                <column name="QMETHODCCY" length="3" />
+            </key-property>
+            <key-property name="payproccparty" type="string">
+                <column name="PAYPROCCPARTY" length="7" />
+            </key-property>
+            <key-property name="fullypositionable" type="string">
+                <column name="FULLYPOSITIONABLE" length="1" />
+            </key-property>
+            <key-property name="autopricing" type="string">
+                <column name="AUTOPRICING" length="1" />
+            </key-property>
+            <key-property name="deliverable" type="string">
+                <column name="DELIVERABLE" length="1" />
+            </key-property>
+            <key-property name="netcouponflows" type="string">
+                <column name="NETCOUPONFLOWS" length="1" />
+            </key-property>
+            <key-property name="ceccy" type="string">
+                <column name="CECCY" length="3" />
+            </key-property>
+            <key-property name="guarantor" type="string">
+                <column name="GUARANTOR" length="12" />
+            </key-property>
+            <key-property name="custid" type="string">
+                <column name="CUSTID" length="20" />
+            </key-property>
+            <key-property name="datesMonthEnd" type="string">
+                <column name="DATES_MONTH_END" length="1" />
+            </key-property>
+            <key-property name="compdMethod" type="string">
+                <column name="COMPD_METHOD" length="1" />
+            </key-property>
+            <key-property name="principalamortFlag" type="string">
+                <column name="PRINCIPALAMORT_FLAG" length="1" />
+            </key-property>
+            <key-property name="principalamortType" type="string">
+                <column name="PRINCIPALAMORT_TYPE" length="1" />
+            </key-property>
+            <key-property name="principalamortValue" type="string">
+                <column name="PRINCIPALAMORT_VALUE" length="30" />
+            </key-property>
+            <key-property name="principalamortFreq" type="string">
+                <column name="PRINCIPALAMORT_FREQ" length="3" />
+            </key-property>
+            <key-property name="principalamort1stDate" type="string">
+                <column name="PRINCIPALAMORT_1ST_DATE" length="8" />
+            </key-property>
+            <key-property name="principalamortLastDate" type="string">
+                <column name="PRINCIPALAMORT_LAST_DATE" length="8" />
+            </key-property>
+            <key-property name="status" type="char">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="couponFstDate" type="string">
+                <column name="COUPON_FST_DATE" length="8" />
+            </key-property>
+            <key-property name="couponLastDate" type="string">
+                <column name="COUPON_LAST_DATE" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

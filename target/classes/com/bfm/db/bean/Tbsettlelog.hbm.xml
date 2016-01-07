@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsettlelog" table="TBSETTLELOG" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbsettlelogId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="operateTime" type="big_decimal">
+                <column name="OPERATE_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="operator" type="string">
+                <column name="OPERATOR" length="32" />
+            </key-property>
+            <key-property name="operateName" type="string">
+                <column name="OPERATE_NAME" length="256" />
+            </key-property>
+            <key-property name="nettingNo" type="string">
+                <column name="NETTING_NO" length="32" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

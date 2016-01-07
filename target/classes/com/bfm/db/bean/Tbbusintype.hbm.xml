@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbusintype" table="TBBUSINTYPE" schema="TZYHSC">
+        <comment>Add by lzq for bns</comment>
+        <id name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="businType" type="string">
+            <column name="BUSIN_TYPE" length="10" not-null="true">
+                <comment>???????????????????????????11</comment>
+            </column>
+        </property>
+        <property name="businName" type="string">
+            <column name="BUSIN_NAME" length="32" not-null="true">
+                <comment>??????K_YWDL?????? ?????????????</comment>
+            </column>
+        </property>
+        <property name="businBelong" type="string">
+            <column name="BUSIN_BELONG" length="10" not-null="true">
+                <comment>???????????????????????????11</comment>
+            </column>
+        </property>
+        <property name="businBelongName" type="string">
+            <column name="BUSIN_BELONG_NAME" length="32" not-null="true">
+                <comment>???????????????????????????11</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

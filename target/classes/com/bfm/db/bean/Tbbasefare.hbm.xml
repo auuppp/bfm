@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbasefare" table="TBBASEFARE" schema="TZYHSC">
+        <id name="fareType" type="string">
+            <column name="FARE_TYPE" length="1" />
+            <generator class="assigned" />
+        </id>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>K_BZ</comment>
+            </column>
+        </property>
+        <property name="chargeRule" type="string">
+            <column name="CHARGE_RULE" length="1" not-null="true">
+                <comment>1?????2????</comment>
+            </column>
+        </property>
+        <property name="chargeValue" type="big_decimal">
+            <column name="CHARGE_VALUE" precision="16" scale="8" not-null="true">
+                <comment>?????0???????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

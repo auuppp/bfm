@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreferindex" table="TBREFERINDEX" schema="TZYHSC">
+        <comment>?????????????????????????? ??????????? K_FDLLJZ ???????????????????????</comment>
+        <id name="indexId" type="string">
+            <column name="INDEX_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="isFloatInterest" type="string">
+            <column name="IS_FLOAT_INTEREST" length="1" not-null="true">
+                <comment>0??????? 1-?????????</comment>
+            </column>
+        </property>
+        <property name="floatType" type="string">
+            <column name="FLOAT_TYPE" length="1" not-null="true">
+                <comment>0-SHIBOR 1-??????? 2-LIBOR 3-HIBOR 4-????</comment>
+            </column>
+        </property>
+        <property name="indexFreq" type="string">
+            <column name="INDEX_FREQ" length="3" not-null="true">
+                <comment>???(????????????????????????????) ????????????????????????index_id ????????0?SHIBOR 1D?O/N 1W?1W 2W?2W 3M?3M 6M?6M 1Y?1Y 3Y?3Y 5Y?5Y ????????1?????
+                01-?????? 10-????????? 12-???????? 11-????????? 13-???????? 16-???????? 17-???????? 30-??6M 31-??6M-12M 32-??1Y-3Y 33-??3Y-5Y 34-??5Y?? 02-????????
+                20?????</comment>
+            </column>
+        </property>
+        <property name="ccy" type="string">
+            <column name="CCY" length="3" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="100" not-null="true" />
+        </property>
+        <property name="isRuleFreq" type="string">
+            <column name="IS_RULE_FREQ" length="1" not-null="true">
+                <comment>0???????????? 1-??</comment>
+            </column>
+        </property>
+        <property name="resetFreq" type="string">
+            <column name="RESET_FREQ" length="3" not-null="true">
+                <comment>????????????????????????????????1D??????3M?????T????????? ?????????3M??????????????????????????????? D?? M?? Y?? T???</comment>
+            </column>
+        </property>
+        <property name="obsFreq" type="string">
+            <column name="OBS_FREQ" length="3" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="obsTime" type="big_decimal">
+            <column name="OBS_TIME" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="spotOffset" type="big_decimal">
+            <column name="SPOT_OFFSET" precision="22" scale="0" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="cutoffDays" type="big_decimal">
+            <column name="CUTOFF_DAYS" precision="22" scale="0" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="upfrontOrArrears" type="string">
+            <column name="UPFRONT_OR_ARREARS" length="1" not-null="true">
+                <comment>0??? 1??????</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true">
+                <comment>??????????? ??GBPJPY,??10??3???????????</comment>
+            </column>
+        </property>
+        <property name="dateAdjustMethod" type="string">
+            <column name="DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>0???? 1?????? 2???????????????????????????? 3????????? 4?????????</comment>
+            </column>
+        </property>
+        <property name="sortNum" type="big_decimal">
+            <column name="SORT_NUM" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

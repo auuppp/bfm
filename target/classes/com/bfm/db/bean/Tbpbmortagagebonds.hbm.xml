@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpbmortagagebonds" table="TBPBMORTAGAGEBONDS" schema="TZYHSC">
+        <comment>Adjust by fj from 20100113 for pub version ????????????????????????????? ?????????????,??????????????.</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbpbmortagagebondsId">
+            <key-property name="tenderInfoId" type="string">
+                <column name="TENDER_INFO_ID" length="32" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="firstSettlePrice" type="big_decimal">
+                <column name="FIRST_SETTLE_PRICE" precision="16" scale="8" />
+            </key-property>
+            <key-property name="mortagageRatio" type="big_decimal">
+                <column name="MORTAGAGE_RATIO" precision="9" scale="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

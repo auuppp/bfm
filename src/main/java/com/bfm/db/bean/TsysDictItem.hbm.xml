@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysDictItem" table="TSYS_DICT_ITEM" schema="TZYHSC">
+        <comment>????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TsysDictItemId">
+            <key-property name="dictItemCode" type="string">
+                <column name="DICT_ITEM_CODE" length="256" />
+            </key-property>
+            <key-property name="dictEntryCode" type="string">
+                <column name="DICT_ENTRY_CODE" length="60" />
+            </key-property>
+        </composite-id>
+        <property name="dictItemName" type="string">
+            <column name="DICT_ITEM_NAME" length="256" not-null="true" />
+        </property>
+        <property name="dictItemOrder" type="big_decimal">
+            <column name="DICT_ITEM_ORDER" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

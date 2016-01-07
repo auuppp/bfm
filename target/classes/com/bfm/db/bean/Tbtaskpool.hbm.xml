@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbtaskpool" table="TBTASKPOOL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbtaskpoolId">
+            <key-property name="marketCode" type="string">
+                <column name="MARKET_CODE" length="20" />
+            </key-property>
+            <key-property name="taskCode" type="string">
+                <column name="TASK_CODE" length="10" />
+            </key-property>
+            <key-property name="parentTaskCode" type="string">
+                <column name="PARENT_TASK_CODE" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="taskName" type="string">
+            <column name="TASK_NAME" length="256" not-null="true" />
+        </property>
+        <property name="actionClass" type="string">
+            <column name="ACTION_CLASS" length="100" not-null="true" />
+        </property>
+        <property name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" not-null="true">
+                <comment>????tbmonitor????</comment>
+            </column>
+        </property>
+        <property name="parentTaskNum" type="big_decimal">
+            <column name="PARENT_TASK_NUM" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="taskPage" type="string">
+            <column name="TASK_PAGE" length="1" not-null="true">
+                <comment>0???? 1???? 2???? 3????????</comment>
+            </column>
+        </property>
+        <property name="taskType" type="string">
+            <column name="TASK_TYPE" length="1" not-null="true">
+                <comment>[K_TASKTYPE] 1??????? 2?????? 3?????????????????????</comment>
+            </column>
+        </property>
+        <property name="taskRow" type="big_decimal">
+            <column name="TASK_ROW" precision="22" scale="0" not-null="true">
+                <comment>?1?????(?????????????????)</comment>
+            </column>
+        </property>
+        <property name="taskColumn" type="big_decimal">
+            <column name="TASK_COLUMN" precision="22" scale="0" not-null="true">
+                <comment>?1?????(?????????????????)</comment>
+            </column>
+        </property>
+        <property name="redoFlag" type="string">
+            <column name="REDO_FLAG" length="1" not-null="true">
+                <comment>0-??? 1-??</comment>
+            </column>
+        </property>
+        <property name="delayFlag" type="string">
+            <column name="DELAY_FLAG" length="1" not-null="true">
+                <comment>0-? 1-?? 2-?? 3-??</comment>
+            </column>
+        </property>
+        <property name="delayTime" type="string">
+            <column name="DELAY_TIME" length="6" not-null="true">
+                <comment>???????? ????=`0?????????????? ????=`1????????????????? ????=`2??????????????????????hhmmss? ????=`3????????????</comment>
+            </column>
+        </property>
+        <property name="opCode" type="string">
+            <column name="OP_CODE" length="32" not-null="true" />
+        </property>
+        <property name="opTimes" type="big_decimal">
+            <column name="OP_TIMES" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="dealStatus" type="string">
+            <column name="DEAL_STATUS" length="1" not-null="true">
+                <comment>[K_PCLZT] 0-??? 1-??? 2-???? 3-???? 4-???? 5-???? Z-????</comment>
+            </column>
+        </property>
+        <property name="stopDealFlag" type="string">
+            <column name="STOP_DEAL_FLAG" length="1" not-null="true">
+                <comment>???TA???????????????????????? 1?????? 0 ?????????0? ???????200109????????????TA?????????200110??TA??????????TA??????????????0????????</comment>
+            </column>
+        </property>
+        <property name="excutePercentage" type="big_decimal">
+            <column name="EXCUTE_PERCENTAGE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="errCode" type="string">
+            <column name="ERR_CODE" length="7" not-null="true" />
+        </property>
+        <property name="errMsg" type="string">
+            <column name="ERR_MSG" length="512" not-null="true" />
+        </property>
+        <property name="warnFlag" type="string">
+            <column name="WARN_FLAG" length="1" not-null="true">
+                <comment>0???????(??0??) 1??????????</comment>
+            </column>
+        </property>
+        <property name="warnMsg" type="string">
+            <column name="WARN_MSG" length="256" not-null="true" />
+        </property>
+        <property name="beginTime" type="big_decimal">
+            <column name="BEGIN_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endTime" type="big_decimal">
+            <column name="END_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="holdTime" type="big_decimal">
+            <column name="HOLD_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTransDate" type="big_decimal">
+            <column name="LAST_TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="transToSub" type="string">
+            <column name="TRANS_TO_SUB" length="256" not-null="true" />
+        </property>
+        <property name="transToSub2" type="string">
+            <column name="TRANS_TO_SUB2" length="256" not-null="true" />
+        </property>
+        <property name="detailUrl" type="string">
+            <column name="DETAIL_URL" length="256" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

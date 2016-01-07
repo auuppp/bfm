@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysProKeyword" table="TSYS_PRO_KEYWORD" schema="TZYHSC">
+        <comment>????????</comment>
+        <id name="proKeyword" type="string">
+            <column name="PRO_KEYWORD" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="stdTypeCode" type="string">
+            <column name="STD_TYPE_CODE" length="16" />
+        </property>
+        <property name="proType" type="string">
+            <column name="PRO_TYPE" length="8" not-null="true">
+                <comment>???????????? ?????[SYS_BIZ_PROG_TYPE] 0-JAVA 1-C 2-C++ 3-C# 4-Delphi 5-VB</comment>
+            </column>
+        </property>
+        <property name="defFlag" type="string">
+            <column name="DEF_FLAG" length="8">
+                <comment>???????????????????? ?????[SYS_BIZ_YES_OR_NO] 0-? 1-?</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

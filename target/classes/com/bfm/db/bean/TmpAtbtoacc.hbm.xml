@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbtoacc" table="TMP_ATBTOACC" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbtoaccId">
+            <key-property name="genflag" type="char">
+                <column name="GENFLAG" length="1" />
+            </key-property>
+            <key-property name="erykey" type="string">
+                <column name="ERYKEY" length="10" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="tranSubCode" type="string">
+                <column name="TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="32" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="transFlowid" type="string">
+                <column name="TRANS_FLOWID" length="32" />
+            </key-property>
+            <key-property name="amountType" type="string">
+                <column name="AMOUNT_TYPE" length="3" />
+            </key-property>
+            <key-property name="accDate" type="string">
+                <column name="ACC_DATE" length="8" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="count" type="big_decimal">
+                <column name="COUNT" precision="18" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="18" />
+            </key-property>
+            <key-property name="serialno" type="string">
+                <column name="SERIALNO" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

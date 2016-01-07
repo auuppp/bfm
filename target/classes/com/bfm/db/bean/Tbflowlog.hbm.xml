@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbflowlog" table="TBFLOWLOG" schema="TZYHSC">
+        <comment>??????? ????+?????+????+???+??????????????????????????????????;?????tbinstructionflow????????????????????????pend_serial_no??</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true" />
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true">
+                <comment>?1???????????????????</comment>
+            </column>
+        </property>
+        <property name="opFlag" type="string">
+            <column name="OP_FLAG" length="1" not-null="true">
+                <comment>?tbinstructionflow??</comment>
+            </column>
+        </property>
+        <property name="activityName" type="string">
+            <column name="ACTIVITY_NAME" length="256" not-null="true" />
+        </property>
+        <property name="assignee" type="string">
+            <column name="ASSIGNEE" length="256" not-null="true" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true">
+                <comment>3???? 4????</comment>
+            </column>
+        </property>
+        <property name="opinion" type="string">
+            <column name="OPINION" length="1024" not-null="true" />
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true" />
+        </property>
+        <property name="opDate" type="big_decimal">
+            <column name="OP_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="opTime" type="big_decimal">
+            <column name="OP_TIME" precision="22" scale="0" not-null="true">
+                <comment>???????????????????????????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysDictEntry" table="TSYS_DICT_ENTRY" schema="TZYHSC">
+        <comment>?????</comment>
+        <id name="dictEntryCode" type="string">
+            <column name="DICT_ENTRY_CODE" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="dictEntryName" type="string">
+            <column name="DICT_ENTRY_NAME" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="kindCode" type="string">
+            <column name="KIND_CODE" length="32" />
+        </property>
+        <property name="ctrlFlag" type="string">
+            <column name="CTRL_FLAG" length="8" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

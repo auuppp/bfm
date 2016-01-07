@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbtrans" table="TBTRANS" schema="TZYHSC">
+        <id name="transCode" type="string">
+            <column name="TRANS_CODE" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="transName" type="string">
+            <column name="TRANS_NAME" length="256" not-null="true">
+                <comment>????????????</comment>
+            </column>
+        </property>
+        <property name="enableFlag" type="string">
+            <column name="ENABLE_FLAG" length="1" not-null="true">
+                <comment>[K_YXBZ] 0-??? 1-??</comment>
+            </column>
+        </property>
+        <property name="channels" type="string">
+            <column name="CHANNELS" length="64" not-null="true">
+                <comment>??????????,?????? [K_JYQD] 0-???? 1-???? 2-???? 3-???? 4-ATM 5-TA 6-??</comment>
+            </column>
+        </property>
+        <property name="hostOnline" type="string">
+            <column name="HOST_ONLINE" length="1" not-null="true">
+                <comment>???????????? [K_YORN] 0-???? 1-???</comment>
+            </column>
+        </property>
+        <property name="transType" type="string">
+            <column name="TRANS_TYPE" length="1" not-null="true">
+                <comment>[K_JYTP] 0-???? 1-TA?? 2-???? 3-???? 4-???? 5-??</comment>
+            </column>
+        </property>
+        <property name="monitorStatus" type="string">
+            <column name="MONITOR_STATUS" length="1" not-null="true">
+                <comment>[K_YORN] 0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="logLevel" type="string">
+            <column name="LOG_LEVEL" length="1" not-null="true">
+                <comment>K_RZJB</comment>
+            </column>
+        </property>
+        <property name="cancelFlag" type="string">
+            <column name="CANCEL_FLAG" length="1" not-null="true">
+                <comment>?????????? 1:?? 0:???</comment>
+            </column>
+        </property>
+        <property name="eraseFlag" type="string">
+            <column name="ERASE_FLAG" length="1" not-null="true">
+                <comment>?????????? 1:?? 0:???</comment>
+            </column>
+        </property>
+        <property name="monTransType" type="string">
+            <column name="MON_TRANS_TYPE" length="1" not-null="true">
+                <comment>?tbmonitor?trans_type??</comment>
+            </column>
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

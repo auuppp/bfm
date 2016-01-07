@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysParameter" table="TSYS_PARAMETER" schema="TZYHSC">
+        <comment>?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TsysParameterId">
+            <key-property name="paramCode" type="string">
+                <column name="PARAM_CODE" length="64" />
+            </key-property>
+            <key-property name="relOrg" type="string">
+                <column name="REL_ORG" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="kindCode" type="string">
+            <column name="KIND_CODE" length="64" />
+        </property>
+        <property name="paramName" type="string">
+            <column name="PARAM_NAME" length="32" not-null="true" />
+        </property>
+        <property name="paramValue" type="string">
+            <column name="PARAM_VALUE" length="1024" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

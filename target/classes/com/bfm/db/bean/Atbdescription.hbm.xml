@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbdescription" table="ATBDESCRIPTION" schema="TZYHSC">
+        <comment>&#213;&#170;&#210;&#170;&#197;&#228;&#214;&#195;&#177;&#237;
+        &#202;&#214;&#185;&#164;&#201;&#250;&#179;&#201;&#198;&#190;&#214;&#164;&#181;&#196;&#202;&#177;&#186;&#242;&#180;&#211;&#180;&#203;&#177;&#237;&#214;&#208;&#209;&#161;&#200;&#161;&#177;&#224;&#186;&#197;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbdescriptionId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="descriptionCode" type="string">
+                <column name="DESCRIPTION_CODE" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512">
+                <comment>&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

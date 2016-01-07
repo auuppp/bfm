@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbankbill" table="ATBANKBILL" schema="TZYHSC">
+        <comment>ATBANKBILL&#210;&#248;&#208;&#208;&#181;&#165;&#190;&#221;</comment>
+        <id name="serialno" type="big_decimal">
+            <column name="SERIALNO" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="registerdate" type="string">
+            <column name="REGISTERDATE" length="8" not-null="true">
+                <comment>&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="billno" type="string">
+            <column name="BILLNO" length="6" not-null="true">
+                <comment>&#189;&#225;&#203;&#227;&#198;&#177;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="direction" type="char">
+            <column name="DIRECTION" length="1" not-null="true">
+                <comment>&#189;&#232;&#180;&#251;&#183;&#189;&#207;&#242;</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="8" not-null="true">
+                <comment>&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="entrycatalog" type="string">
+            <column name="ENTRYCATALOG" length="10" not-null="true">
+                <comment>&#198;&#190;&#214;&#164;&#192;&#224;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="entryno" type="big_decimal">
+            <column name="ENTRYNO" precision="22" scale="0" not-null="true">
+                <comment>&#198;&#190;&#214;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="settleflag" type="char">
+            <column name="SETTLEFLAG" length="1" not-null="true">
+                <comment>&#180;&#166;&#192;&#237;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+        <property name="operator" type="big_decimal">
+            <column name="OPERATOR" precision="22" scale="0" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#212;&#177;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

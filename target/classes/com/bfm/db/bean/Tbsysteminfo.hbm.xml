@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsysteminfo" table="TBSYSTEMINFO" schema="TZYHSC">
+        <comment>??????????? ???????????????????????? Adjust by fj from 20091125 for pubuse?</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbsysteminfoId">
+            <key-property name="consumerNo" type="string">
+                <column name="CONSUMER_NO" length="6" />
+            </key-property>
+            <key-property name="consumerName" type="string">
+                <column name="CONSUMER_NAME" length="64" />
+            </key-property>
+            <key-property name="productNo" type="string">
+                <column name="PRODUCT_NO" length="10" />
+            </key-property>
+            <key-property name="productName" type="string">
+                <column name="PRODUCT_NAME" length="64" />
+            </key-property>
+            <key-property name="productVersionNo" type="string">
+                <column name="PRODUCT_VERSION_NO" length="10" />
+            </key-property>
+            <key-property name="lastInitDate" type="big_decimal">
+                <column name="LAST_INIT_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="initDate" type="big_decimal">
+                <column name="INIT_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="initializtionFlag" type="string">
+                <column name="INITIALIZTION_FLAG" length="1" />
+            </key-property>
+            <key-property name="timeZone" type="big_decimal">
+                <column name="TIME_ZONE" precision="3" scale="1" />
+            </key-property>
+            <key-property name="archiveDate" type="big_decimal">
+                <column name="ARCHIVE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="businStatus" type="string">
+                <column name="BUSIN_STATUS" length="1" />
+            </key-property>
+            <key-property name="openBusinFlag" type="string">
+                <column name="OPEN_BUSIN_FLAG" length="64" />
+            </key-property>
+            <key-property name="reserve1" type="string">
+                <column name="RESERVE1" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

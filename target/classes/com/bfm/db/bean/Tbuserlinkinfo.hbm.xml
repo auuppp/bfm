@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbuserlinkinfo" table="TBUSERLINKINFO" schema="TZYHSC">
+        <id name="userId" type="string">
+            <column name="USER_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="phone" type="string">
+            <column name="PHONE" length="32" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="32" not-null="true" />
+        </property>
+        <property name="mobilePhone" type="string">
+            <column name="MOBILE_PHONE" length="32" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="128" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+        <property name="trade1" type="string">
+            <column name="TRADE1" length="32" not-null="true">
+                <comment>??????????? 1??????? 2?Deaing 3000 3??? 4?????</comment>
+            </column>
+        </property>
+        <property name="trade1Default" type="string">
+            <column name="TRADE1_DEFAULT" length="32" not-null="true">
+                <comment>???1?????</comment>
+            </column>
+        </property>
+        <property name="trade2" type="string">
+            <column name="TRADE2" length="32" not-null="true">
+                <comment>??????????? 1??????? 2?Deaing 3000 3??? 4?????</comment>
+            </column>
+        </property>
+        <property name="trade2Default" type="string">
+            <column name="TRADE2_DEFAULT" length="32" not-null="true">
+                <comment>???2?????</comment>
+            </column>
+        </property>
+        <property name="trade3" type="string">
+            <column name="TRADE3" length="32" not-null="true">
+                <comment>Deaing 3000???????</comment>
+            </column>
+        </property>
+        <property name="trade3Default" type="string">
+            <column name="TRADE3_DEFAULT" length="32" not-null="true">
+                <comment>???3?????</comment>
+            </column>
+        </property>
+        <property name="trade4" type="string">
+            <column name="TRADE4" length="32" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="trade4Default" type="string">
+            <column name="TRADE4_DEFAULT" length="32" not-null="true">
+                <comment>???4?????</comment>
+            </column>
+        </property>
+        <property name="trade5" type="string">
+            <column name="TRADE5" length="32" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="trade5Default" type="string">
+            <column name="TRADE5_DEFAULT" length="32" not-null="true">
+                <comment>???5?????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

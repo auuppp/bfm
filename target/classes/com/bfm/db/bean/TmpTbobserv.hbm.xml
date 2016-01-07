@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbobserv" table="TMP_TBOBSERV" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbobservId">
+            <key-property name="isBond" type="string">
+                <column name="IS_BOND" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rateNo" type="big_decimal">
+                <column name="RATE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="observNo" type="big_decimal">
+                <column name="OBSERV_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="indexId" type="string">
+                <column name="INDEX_ID" length="20" />
+            </key-property>
+            <key-property name="obsFreq" type="string">
+                <column name="OBS_FREQ" length="3" />
+            </key-property>
+            <key-property name="obsDate" type="big_decimal">
+                <column name="OBS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="obsDateUnadj" type="big_decimal">
+                <column name="OBS_DATE_UNADJ" precision="22" scale="0" />
+            </key-property>
+            <key-property name="dateAdjustMethod" type="string">
+                <column name="DATE_ADJUST_METHOD" length="1" />
+            </key-property>
+            <key-property name="obsTime" type="big_decimal">
+                <column name="OBS_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="knowRate" type="big_decimal">
+                <column name="KNOW_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="estimateRate" type="big_decimal">
+                <column name="ESTIMATE_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="observStatus" type="string">
+                <column name="OBSERV_STATUS" length="1" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

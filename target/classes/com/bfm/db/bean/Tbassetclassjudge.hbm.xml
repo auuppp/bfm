@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbassetclassjudge" table="TBASSETCLASSJUDGE" schema="TZYHSC">
+        <id name="classSerial" type="string">
+            <column name="CLASS_SERIAL" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="classDate" type="big_decimal">
+            <column name="CLASS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="32" not-null="true" />
+        </property>
+        <property name="sourceFlag" type="string">
+            <column name="SOURCE_FLAG" length="1" not-null="true">
+                <comment>??0-?? 1-????</comment>
+            </column>
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="oldClass" type="string">
+            <column name="OLD_CLASS" length="3" not-null="true">
+                <comment>?K_ZCFL</comment>
+            </column>
+        </property>
+        <property name="principal" type="big_decimal">
+            <column name="PRINCIPAL" precision="16" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="newClass" type="string">
+            <column name="NEW_CLASS" length="3" not-null="true">
+                <comment>?K_ZCFL</comment>
+            </column>
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

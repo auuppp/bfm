@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbclearaccountforcast" table="TBCLEARACCOUNTFORCAST" schema="TZYHSC">
+        <comment>&#205;&#183;&#180;&#231;&#178;&#226;&#203;&#227;&#185;&#166;&#196;&#220;&#211;&#195;&#181;&#189;&#181;&#196;&#178;&#206;&#202;&#253;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="prepareBalance" type="big_decimal">
+            <column name="PREPARE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="overBalanceAbsolute" type="big_decimal">
+            <column name="OVER_BALANCE_ABSOLUTE" precision="16" not-null="true" />
+        </property>
+        <property name="overBalancePercentage" type="big_decimal">
+            <column name="OVER_BALANCE_PERCENTAGE" precision="16" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="offsetAbsolute" type="big_decimal">
+            <column name="OFFSET_ABSOLUTE" precision="16" not-null="true" />
+        </property>
+        <property name="offsetPercentage" type="big_decimal">
+            <column name="OFFSET_PERCENTAGE" precision="16" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

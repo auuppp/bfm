@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbdealhgmortagage" table="TBDEALHGMORTAGAGE" schema="TZYHSC">
+        <comment>Adjust by fj from 20091117 for pub ???????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbdealhgmortagageId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="offerSide" type="string">
+                <column name="OFFER_SIDE" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true">
+                <comment>??????-1</comment>
+            </column>
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="ratio" type="big_decimal">
+            <column name="RATIO" precision="9" scale="4" not-null="true" />
+        </property>
+        <property name="mortagageAmount" type="big_decimal">
+            <column name="MORTAGAGE_AMOUNT" precision="16" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

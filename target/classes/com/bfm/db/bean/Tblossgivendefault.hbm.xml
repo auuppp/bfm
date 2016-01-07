@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tblossgivendefault" table="TBLOSSGIVENDEFAULT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TblossgivendefaultId">
+            <key-property name="isExistMortgage" type="string">
+                <column name="IS_EXIST_MORTGAGE" length="1" />
+            </key-property>
+            <key-property name="stockTypesOrBusinClasses" type="string">
+                <column name="STOCK_TYPES_OR_BUSIN_CLASSES" length="256" />
+            </key-property>
+            <key-property name="mortgageType" type="string">
+                <column name="MORTGAGE_TYPE" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="lossGivenDefault" type="big_decimal">
+            <column name="LOSS_GIVEN_DEFAULT" precision="16" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

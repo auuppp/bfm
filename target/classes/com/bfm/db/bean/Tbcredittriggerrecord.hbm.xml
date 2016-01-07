@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcredittriggerrecord" table="TBCREDITTRIGGERRECORD" schema="TZYHSC">
+        <id name="creditSerialNo" type="string">
+            <column name="CREDIT_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="totalCreditId" type="string">
+            <column name="TOTAL_CREDIT_ID" length="32" not-null="true" />
+        </property>
+        <property name="creditType" type="big_decimal">
+            <column name="CREDIT_TYPE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditObjectId" type="string">
+            <column name="CREDIT_OBJECT_ID" length="32" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="useableCredit" type="big_decimal">
+            <column name="USEABLE_CREDIT" precision="16" not-null="true" />
+        </property>
+        <property name="businNo" type="string">
+            <column name="BUSIN_NO" length="32" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="oriCurrType" type="string">
+            <column name="ORI_CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true" />
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

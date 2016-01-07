@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbankchek" table="ATBANKCHEK" schema="TZYHSC">
+        <comment>&#214;&#247;&#187;&#250;&#182;&#212;&#213;&#203;&#189;&#225;&#185;&#251;&#200;&#213;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbankchekId">
+            <key-property name="checkDate" type="string">
+                <column name="CHECK_DATE" length="8" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="hostamt" type="big_decimal">
+            <column name="HOSTAMT" precision="16">
+                <comment>&#214;&#247;&#187;&#250;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="localamt" type="big_decimal">
+            <column name="LOCALAMT" precision="16">
+                <comment>&#177;&#190;&#181;&#216;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

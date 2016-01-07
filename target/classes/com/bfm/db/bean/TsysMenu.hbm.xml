@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysMenu" table="TSYS_MENU" schema="TZYHSC">
+        <comment>?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TsysMenuId">
+            <key-property name="menuCode" type="string">
+                <column name="MENU_CODE" length="32" />
+            </key-property>
+            <key-property name="kindCode" type="string">
+                <column name="KIND_CODE" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="transCode" type="string">
+            <column name="TRANS_CODE" length="32" />
+        </property>
+        <property name="subTransCode" type="string">
+            <column name="SUB_TRANS_CODE" length="32">
+                <comment>????URL ????????????????????????????????????????????????URL?js??</comment>
+            </column>
+        </property>
+        <property name="menuName" type="string">
+            <column name="MENU_NAME" length="32" not-null="true">
+                <comment>?????????? Studio???????</comment>
+            </column>
+        </property>
+        <property name="menuArg" type="string">
+            <column name="MENU_ARG" length="256" />
+        </property>
+        <property name="menuIcon" type="string">
+            <column name="MENU_ICON" length="256">
+                <comment>????ICON???????????</comment>
+            </column>
+        </property>
+        <property name="windowType" type="string">
+            <column name="WINDOW_TYPE" length="8">
+                <comment>?????????????????? ?????[SYS_BIZ_WINDOW_CATE] 0-???TAB? 1-????</comment>
+            </column>
+        </property>
+        <property name="tip" type="string">
+            <column name="TIP" length="256">
+                <comment>?????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="hotKey" type="string">
+            <column name="HOT_KEY" length="8" />
+        </property>
+        <property name="parentCode" type="string">
+            <column name="PARENT_CODE" length="32">
+                <comment>????????????? Studio?????????</comment>
+            </column>
+        </property>
+        <property name="orderNo" type="big_decimal">
+            <column name="ORDER_NO" precision="22" scale="0">
+                <comment>?????????????? Studio???</comment>
+            </column>
+        </property>
+        <property name="openFlag" type="string">
+            <column name="OPEN_FLAG" length="8">
+                <comment>????????????? ?????[SYS_BIZ_YES_OR_NO] 0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="treeIdx" type="string">
+            <column name="TREE_IDX" length="256">
+                <comment>????????????,?????id???'#'? e.g. #grandfather#father#children#</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+        <property name="windowModel" type="string">
+            <column name="WINDOW_MODEL" length="8" />
+        </property>
+        <property name="menuUrl" type="string">
+            <column name="MENU_URL" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

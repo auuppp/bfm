@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcflrule" table="TBCFLRULE" schema="TZYHSC">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="cflCondition" type="string">
+            <column name="CFL_CONDITION" not-null="true" />
+        </property>
+        <property name="ruleNo" type="string">
+            <column name="RULE_NO" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

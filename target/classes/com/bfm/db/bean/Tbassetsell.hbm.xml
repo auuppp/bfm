@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbassetsell" table="TBASSETSELL" schema="TZYHSC">
+        <id name="businNo" type="string">
+            <column name="BUSIN_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="oriBusinNo" type="string">
+            <column name="ORI_BUSIN_NO" length="32" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="drawAmt" type="big_decimal">
+            <column name="DRAW_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="withInterestFlag" type="string">
+            <column name="WITH_INTEREST_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="interestAmt" type="big_decimal">
+            <column name="INTEREST_AMT" precision="18" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="settleAmt" type="big_decimal">
+            <column name="SETTLE_AMT" precision="18" not-null="true">
+                <comment>????+????</comment>
+            </column>
+        </property>
+        <property name="interestDate" type="big_decimal">
+            <column name="INTEREST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0???? 1???? 2????</comment>
+            </column>
+        </property>
+        <property name="recordDate" type="big_decimal">
+            <column name="RECORD_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="recordTime" type="big_decimal">
+            <column name="RECORD_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

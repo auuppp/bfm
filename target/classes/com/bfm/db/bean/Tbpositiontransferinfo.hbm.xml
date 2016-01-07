@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositiontransferinfo" table="TBPOSITIONTRANSFERINFO" schema="TZYHSC">
+        <comment>
+        &#188;&#199;&#194;&#188;&#205;&#183;&#180;&#231;&#181;&#247;&#178;&#166;&#210;&#181;&#206;&#241;&#195;&#247;&#207;&#184;&#188;&#176;&#201;&#243;&#197;&#250;&#215;&#180;&#204;&#172;</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="outAccount" type="string">
+            <column name="OUT_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="inAccount" type="string">
+            <column name="IN_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="1" not-null="true" />
+        </property>
+        <property name="reverse1" type="string">
+            <column name="REVERSE1" length="32" not-null="true" />
+        </property>
+        <property name="reverse2" type="string">
+            <column name="REVERSE2" length="32" not-null="true" />
+        </property>
+        <property name="reverse3" type="string">
+            <column name="REVERSE3" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbilltype" table="TBBILLTYPE" schema="TZYHSC">
+        <comment>Add by fj from 20091031 for znx 1?????????????????????????????????? 2?????????znx??????????????????????????????</comment>
+        <id name="billType" type="string">
+            <column name="BILL_TYPE" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="billClass" type="string">
+            <column name="BILL_CLASS" length="2" not-null="true">
+                <comment>?????K_PJFL ?????????? 1????? 2????? 3????? 4???????? 5?????? 99???</comment>
+            </column>
+        </property>
+        <property name="billFullname" type="string">
+            <column name="BILL_FULLNAME" length="128" not-null="true" />
+        </property>
+        <property name="billShortname" type="string">
+            <column name="BILL_SHORTNAME" length="64" not-null="true" />
+        </property>
+        <property name="useFlag" type="string">
+            <column name="USE_FLAG" length="1" not-null="true">
+                <comment>0???? 1???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

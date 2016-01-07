@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpreferentialfare" table="TBPREFERENTIALFARE" schema="TZYHSC">
+        <id name="preferentialFareNo" type="string">
+            <column name="PREFERENTIAL_FARE_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="businClasses" type="string">
+            <column name="BUSIN_CLASSES" length="256" not-null="true">
+                <comment>????K_YWZL?</comment>
+            </column>
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true">
+                <comment>0???3?1??4?2?????</comment>
+            </column>
+        </property>
+        <property name="minAmt" type="big_decimal">
+            <column name="MIN_AMT" precision="16" not-null="true" />
+        </property>
+        <property name="maxAmt" type="big_decimal">
+            <column name="MAX_AMT" precision="16" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>K_BZ</comment>
+            </column>
+        </property>
+        <property name="preferentialRule" type="big_decimal">
+            <column name="PREFERENTIAL_RULE" precision="16" scale="8" not-null="true">
+                <comment>?????0???????</comment>
+            </column>
+        </property>
+        <property name="preferentialValue" type="big_decimal">
+            <column name="PREFERENTIAL_VALUE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

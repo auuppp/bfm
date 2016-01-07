@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbrisktransvarparam" table="TBRISKTRANSVARPARAM" schema="TZYHSC">
+        <comment>
+        &#184;&#247;&#192;&#224;&#183;&#231;&#191;&#216;&#203;&#249;&#208;&#232;&#210;&#170;&#181;&#196;&#178;&#206;&#202;&#253;&#212;&#218;&#184;&#195;&#177;&#237;&#214;&#208;&#189;&#248;&#208;&#208;&#197;&#228;&#214;&#195;&#163;&#172;&#199;&#176;&#204;&#168;&#189;&#231;&#195;&#230;&#180;&#171;&#200;&#235;&#181;&#196;&#178;&#206;&#202;&#253;&#208;&#232;&#210;&#170;&#186;&#205;&#197;&#228;&#214;&#195;&#181;&#196;&#178;&#206;&#202;&#253;&#195;&#251;&#177;&#163;&#179;&#214;&#210;&#187;&#214;&#194;&#208;&#212;&#161;&#163;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbrisktransvarparamId">
+            <key-property name="riskType" type="string">
+                <column name="RISK_TYPE" length="2" />
+            </key-property>
+            <key-property name="paramName" type="string">
+                <column name="PARAM_NAME" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="remark" type="string">
+            <column name="REMARK" length="128" not-null="true">
+                <comment>&#182;&#212;&#184;&#195;&#178;&#206;&#202;&#253;&#195;&#251;&#179;&#198;&#181;&#196;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

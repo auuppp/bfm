@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbratestandard" table="TBRATESTANDARD" schema="TZYHSC">
+        <comment>Add by fj from 20091211 for pub 1??????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbratestandardId">
+            <key-property name="rateInstitutionNo" type="string">
+                <column name="RATE_INSTITUTION_NO" length="8" />
+            </key-property>
+            <key-property name="creditRate" type="string">
+                <column name="CREDIT_RATE" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="creditLevel" type="big_decimal">
+            <column name="CREDIT_LEVEL" precision="22" scale="0" not-null="true">
+                <comment>??? ??AAA=1?AA+=2?AA=3?AA-=4?????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

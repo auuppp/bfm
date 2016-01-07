@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Accountextract" table="ACCOUNTEXTRACT" schema="TZYHSC">
+        <comment>ACCOUNTEXTRACT&#204;&#225;&#200;&#161;&#183;&#214;&#194;&#188;&#191;&#198;&#196;&#191;&#201;&#232;&#214;&#195;&#177;&#237;</comment>
+        <id name="catalog" type="string">
+            <column name="CATALOG" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="listid" type="big_decimal">
+            <column name="LISTID" precision="22" scale="0">
+                <comment>&#198;&#190;&#214;&#164;&#183;&#214;&#194;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="direction" type="string">
+            <column name="DIRECTION" length="2" not-null="true">
+                <comment>&#189;&#232;&#180;&#251;&#183;&#189;&#207;&#242;</comment>
+            </column>
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="deptno" type="string">
+            <column name="DEPTNO" length="6" not-null="true">
+                <comment>&#178;&#191;&#195;&#197;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="projno" type="string">
+            <column name="PROJNO" length="20">
+                <comment>&#207;&#238;&#196;&#191;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="formula" type="string">
+            <column name="FORMULA" length="80" not-null="true">
+                <comment>&#188;&#198;&#203;&#227;&#185;&#171;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="cnformula" type="string">
+            <column name="CNFORMULA" not-null="true">
+                <comment>&#214;&#208;&#206;&#196;&#185;&#171;&#202;&#189;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

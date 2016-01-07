@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysUserDetail" table="TSYS_USER_DETAIL" schema="TZYHSC">
+        <id name="userId" type="string">
+            <column name="USER_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="nameZh" type="string">
+            <column name="NAME_ZH" length="32" not-null="true" />
+        </property>
+        <property name="nameEn" type="string">
+            <column name="NAME_EN" length="32" not-null="true" />
+        </property>
+        <property name="code" type="string">
+            <column name="CODE" length="32" not-null="true" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="32" not-null="true" />
+        </property>
+        <property name="sex" type="string">
+            <column name="SEX" length="2" not-null="true" />
+        </property>
+        <property name="nation" type="string">
+            <column name="NATION" length="16" not-null="true" />
+        </property>
+        <property name="birthday" type="big_decimal">
+            <column name="BIRTHDAY" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="record" type="string">
+            <column name="RECORD" length="32" not-null="true" />
+        </property>
+        <property name="academic" type="string">
+            <column name="ACADEMIC" length="32" not-null="true" />
+        </property>
+        <property name="nationality" type="string">
+            <column name="NATIONALITY" length="32" not-null="true" />
+        </property>
+        <property name="identification" type="string">
+            <column name="IDENTIFICATION" length="32" not-null="true" />
+        </property>
+        <property name="otherCredentialsName" type="string">
+            <column name="OTHER_CREDENTIALS_NAME" length="32" not-null="true" />
+        </property>
+        <property name="otherCredentialsCode" type="string">
+            <column name="OTHER_CREDENTIALS_CODE" length="32" not-null="true" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="MOBILE" length="16" not-null="true" />
+        </property>
+        <property name="bankMail" type="string">
+            <column name="BANK_MAIL" length="32" not-null="true" />
+        </property>
+        <property name="privateMail" type="string">
+            <column name="PRIVATE_MAIL" length="32" not-null="true" />
+        </property>
+        <property name="msn" type="string">
+            <column name="MSN" length="32" not-null="true" />
+        </property>
+        <property name="qq" type="string">
+            <column name="QQ" length="32" not-null="true" />
+        </property>
+        <property name="workPhone" type="string">
+            <column name="WORK_PHONE" length="16" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="16" not-null="true" />
+        </property>
+        <property name="job" type="string">
+            <column name="JOB" length="32" not-null="true" />
+        </property>
+        <property name="identificationScan" type="string">
+            <column name="IDENTIFICATION_SCAN" length="32" not-null="true" />
+        </property>
+        <property name="credentialsPhoto" type="string">
+            <column name="CREDENTIALS_PHOTO" length="50" not-null="true" />
+        </property>
+        <property name="familyPhone" type="string">
+            <column name="FAMILY_PHONE" length="16" not-null="true" />
+        </property>
+        <property name="linealConsanguinity1" type="string">
+            <column name="LINEAL_CONSANGUINITY1" length="32" not-null="true" />
+        </property>
+        <property name="linealConsanguinity1Name" type="string">
+            <column name="LINEAL_CONSANGUINITY1_NAME" length="32" not-null="true" />
+        </property>
+        <property name="linealConsanguinity1Phone" type="string">
+            <column name="LINEAL_CONSANGUINITY1_PHONE" length="16" not-null="true" />
+        </property>
+        <property name="linealConsanguinity2" type="string">
+            <column name="LINEAL_CONSANGUINITY2" length="32" not-null="true" />
+        </property>
+        <property name="linealConsanguinity2Name" type="string">
+            <column name="LINEAL_CONSANGUINITY2_NAME" length="32" not-null="true" />
+        </property>
+        <property name="linealConsanguinity2Phone" type="string">
+            <column name="LINEAL_CONSANGUINITY2_PHONE" length="16" not-null="true" />
+        </property>
+        <property name="otherContacts1" type="string">
+            <column name="OTHER_CONTACTS1" length="32" not-null="true" />
+        </property>
+        <property name="otherContacts1Name" type="string">
+            <column name="OTHER_CONTACTS1_NAME" length="32" not-null="true" />
+        </property>
+        <property name="otherContacts1Phone" type="string">
+            <column name="OTHER_CONTACTS1_PHONE" length="16" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

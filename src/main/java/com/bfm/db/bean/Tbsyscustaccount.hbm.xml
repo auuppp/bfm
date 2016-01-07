@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsyscustaccount" table="TBSYSCUSTACCOUNT" schema="TZYHSC">
+        <comment>????????????bank_no?????cust_no???</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbsyscustaccountId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="bookMarket" type="string">
+                <column name="BOOK_MARKET" length="1" />
+            </key-property>
+            <key-property name="bondAccount" type="string">
+                <column name="BOND_ACCOUNT" length="11" />
+            </key-property>
+        </composite-id>
+        <property name="bondAccountname" type="string">
+            <column name="BOND_ACCOUNTNAME" length="256" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="bondAccountProperty" type="string">
+            <column name="BOND_ACCOUNT_PROPERTY" length="1" not-null="true">
+                <comment>1:??2:??3:??4:?</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

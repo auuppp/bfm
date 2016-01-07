@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreferindexinterface" table="TBREFERINDEXINTERFACE" schema="TZYHSC">
+        <comment>??????????????????????</comment>
+        <id name="indexId" type="string">
+            <column name="INDEX_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="sourceId" type="string">
+            <column name="SOURCE_ID" length="20" not-null="true">
+                <comment>?Bloomberg?Reuter</comment>
+            </column>
+        </property>
+        <property name="sourceFreq" type="string">
+            <column name="SOURCE_FREQ" length="3" not-null="true">
+                <comment>????????1S?????</comment>
+            </column>
+        </property>
+        <property name="sourceRegex" type="string">
+            <column name="SOURCE_REGEX" length="200" not-null="true">
+                <comment>????????????? ??DDE?????????? =ROUND(BLP|M!'US0003M INDEX,[PX LAST]',5)@@@=BLP|M!'US0003M INDEX,[last_update_dt]'</comment>
+            </column>
+        </property>
+        <property name="calcMethod" type="string">
+            <column name="CALC_METHOD" length="1" not-null="true">
+                <comment>???? 0???? 1??????????????</comment>
+            </column>
+        </property>
+        <property name="calcDays" type="big_decimal">
+            <column name="CALC_DAYS" precision="22" scale="0" not-null="true">
+                <comment>???????????????? ??5????????Shibor?1Y??????????????5??????????</comment>
+            </column>
+        </property>
+        <property name="baseIndexId" type="string">
+            <column name="BASE_INDEX_ID" length="20" not-null="true">
+                <comment>???????????????? ??5????????Shibor?1Y??????????????????????Shibor(1Y)?index_id??????????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysUserMessage" table="TSYS_USER_MESSAGE" schema="TZYHSC">
+        <id name="msgId" type="string">
+            <column name="MSG_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="msgTitle" type="string">
+            <column name="MSG_TITLE" length="64" />
+        </property>
+        <property name="sendUserId" type="string">
+            <column name="SEND_USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="receiveUserId" type="string">
+            <column name="RECEIVE_USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="sendDate" type="big_decimal">
+            <column name="SEND_DATE" precision="22" scale="0" />
+        </property>
+        <property name="msgContent" type="string">
+            <column name="MSG_CONTENT" length="1024" />
+        </property>
+        <property name="msgType" type="string">
+            <column name="MSG_TYPE" length="8" not-null="true" />
+        </property>
+        <property name="msgIsred" type="string">
+            <column name="MSG_ISRED" length="8" not-null="true" />
+        </property>
+        <property name="extField" type="string">
+            <column name="EXT_FIELD" length="16" />
+        </property>
+    </class>
+</hibernate-mapping>

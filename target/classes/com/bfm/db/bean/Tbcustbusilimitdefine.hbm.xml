@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustbusilimitdefine" table="TBCUSTBUSILIMITDEFINE" schema="TZYHSC">
+        <id name="limitBusiId" type="big_decimal">
+            <column name="LIMIT_BUSI_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="describe" type="string">
+            <column name="DESCRIBE" length="1024" not-null="true" />
+        </property>
+        <property name="limit" type="big_decimal">
+            <column name="LIMIT" precision="16" scale="6" not-null="true">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="controlType" type="string">
+            <column name="CONTROL_TYPE" length="1" not-null="true">
+                <comment>Adjust by fj from 20091120 for znx 1-???????? 2-???</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbflowapprovelevel" table="TBFLOWAPPROVELEVEL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbflowapprovelevelId">
+            <key-property name="processId" type="string">
+                <column name="PROCESS_ID" length="36" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="lowerBalance" type="big_decimal">
+                <column name="LOWER_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="subKind" type="string">
+                <column name="SUB_KIND" length="16" />
+            </key-property>
+            <key-property name="subKind2" type="string">
+                <column name="SUB_KIND2" length="16" />
+            </key-property>
+            <key-property name="branchCode" type="string">
+                <column name="BRANCH_CODE" length="16" />
+            </key-property>
+            <key-property name="rivalFlag" type="string">
+                <column name="RIVAL_FLAG" length="2" />
+            </key-property>
+            <key-property name="rivalType" type="string">
+                <column name="RIVAL_TYPE" length="2" />
+            </key-property>
+            <key-property name="lowerLimit" type="big_decimal">
+                <column name="LOWER_LIMIT" precision="38" scale="0" />
+            </key-property>
+            <key-property name="param1" type="string">
+                <column name="PARAM1" length="64" />
+            </key-property>
+            <key-property name="param2" type="string">
+                <column name="PARAM2" length="64" />
+            </key-property>
+            <key-property name="param3" type="string">
+                <column name="PARAM3" length="64" />
+            </key-property>
+            <key-property name="param4" type="string">
+                <column name="PARAM4" length="64" />
+            </key-property>
+            <key-property name="param5" type="string">
+                <column name="PARAM5" length="64" />
+            </key-property>
+            <key-property name="param6" type="string">
+                <column name="PARAM6" length="64" />
+            </key-property>
+            <key-property name="param7" type="string">
+                <column name="PARAM7" length="64" />
+            </key-property>
+            <key-property name="param8" type="string">
+                <column name="PARAM8" length="64" />
+            </key-property>
+            <key-property name="param9" type="string">
+                <column name="PARAM9" length="64" />
+            </key-property>
+            <key-property name="lower1" type="big_decimal">
+                <column name="LOWER1" precision="38" scale="0" />
+            </key-property>
+            <key-property name="lower2" type="big_decimal">
+                <column name="LOWER2" precision="38" scale="0" />
+            </key-property>
+            <key-property name="lower3" type="big_decimal">
+                <column name="LOWER3" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="processName" type="string">
+            <column name="PROCESS_NAME" length="100" not-null="true" />
+        </property>
+        <property name="upperBalance" type="big_decimal">
+            <column name="UPPER_BALANCE" precision="16" not-null="true">
+                <comment>
+                &#210;&#187;&#176;&#227;&#200;&#231;2&#210;&#218;&#196;&#218;&#211;&#201;XX&#201;&#243;&#197;&#250;&#163;&#172;&#214;&#184;&#176;&#252;&#192;&#168;2&#210;&#218;&#201;&#207;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="branchName" type="string">
+            <column name="BRANCH_NAME" length="64" not-null="true" />
+        </property>
+        <property name="upperLimit" type="big_decimal">
+            <column name="UPPER_LIMIT" precision="38" scale="0" not-null="true">
+                <comment>
+                &#210;&#187;&#176;&#227;&#200;&#231;4&#184;&#246;&#212;&#194;&#181;&#196;&#189;&#187;&#210;&#215;&#163;&#172;&#214;&#184;&#176;&#252;&#192;&#168;4&#184;&#246;&#212;&#194;&#201;&#207;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="upper1" type="big_decimal">
+            <column name="UPPER1" precision="38" scale="0" />
+        </property>
+        <property name="upper2" type="big_decimal">
+            <column name="UPPER2" precision="38" scale="0" />
+        </property>
+        <property name="upper3" type="big_decimal">
+            <column name="UPPER3" precision="38" scale="0" />
+        </property>
+        <property name="approveLevel" type="string">
+            <column name="APPROVE_LEVEL" length="2" not-null="true">
+                <comment>
+                &#210;&#187;&#176;&#227;&#206;&#170;1&#161;&#171;n&#202;&#253;&#214;&#181;&#163;&#172;&#184;&#249;&#190;&#221;&#193;&#247;&#179;&#204;id&#161;&#162;&#177;&#210;&#214;&#214;&#161;&#162;&#189;&#240;&#182;&#238;&#201;&#207;&#207;&#194;&#207;&#222;&#161;&#162;&#207;&#184;&#183;&#214;&#192;&#224;&#177;&#240;&#161;&#162;&#207;&#184;&#183;&#214;&#192;&#224;&#177;&#240;2&#161;&#162;&#187;&#250;&#185;&#185;&#177;&#224;&#186;&#197;&#190;&#246;&#182;&#168;&#201;&#243;&#197;&#250;&#188;&#182;&#177;&#240;&#163;&#172;&#190;&#246;&#182;&#168;&#210;&#242;&#203;&#216;&#181;&#196;&#183;&#214;&#214;&#167;&#206;&#170;&#191;&#213;&#177;&#237;&#202;&#190;&#200;&#171;&#178;&#191;&#163;&#172;&#201;&#243;&#197;&#250;&#188;&#182;&#177;&#240;&#212;&#242;&#212;&#218;&#185;&#164;&#215;&#247;&#193;&#247;&#189;&#218;&#181;&#227;&#214;&#208;&#214;&#177;&#189;&#211;&#197;&#228;&#214;&#195;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

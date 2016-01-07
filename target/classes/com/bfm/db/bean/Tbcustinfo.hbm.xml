@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustinfo" table="TBCUSTINFO" schema="TZYHSC">
+        <id name="custNo" type="string">
+            <column name="CUST_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="custName" type="string">
+            <column name="CUST_NAME" length="100" not-null="true" />
+        </property>
+        <property name="coreCustNo" type="string">
+            <column name="CORE_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="parentCustNo" type="string">
+            <column name="PARENT_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="creditCustNo" type="string">
+            <column name="CREDIT_CUST_NO" length="40" not-null="true" />
+        </property>
+        <property name="custType1" type="string">
+            <column name="CUST_TYPE1" length="20" not-null="true" />
+        </property>
+        <property name="custType2" type="string">
+            <column name="CUST_TYPE2" length="20" not-null="true" />
+        </property>
+        <property name="largeBankNo" type="string">
+            <column name="LARGE_BANK_NO" length="20" not-null="true" />
+        </property>
+        <property name="custProperty" type="string">
+            <column name="CUST_PROPERTY" length="20" not-null="true" />
+        </property>
+        <property name="mainBranchNo" type="string">
+            <column name="MAIN_BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="custManagerNo" type="string">
+            <column name="CUST_MANAGER_NO" length="32" not-null="true" />
+        </property>
+        <property name="custCreateDate" type="big_decimal">
+            <column name="CUST_CREATE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="custStatus" type="string">
+            <column name="CUST_STATUS" length="5" not-null="true" />
+        </property>
+        <property name="custBasicAccount" type="string">
+            <column name="CUST_BASIC_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="officeTime" type="big_decimal">
+            <column name="OFFICE_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="economyOrgType" type="string">
+            <column name="ECONOMY_ORG_TYPE" length="20" not-null="true" />
+        </property>
+        <property name="oneLevelBranchNum" type="big_decimal">
+            <column name="ONE_LEVEL_BRANCH_NUM" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="workerNum" type="big_decimal">
+            <column name="WORKER_NUM" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="scaleType" type="string">
+            <column name="SCALE_TYPE" length="5" not-null="true" />
+        </property>
+        <property name="foundingDate" type="big_decimal">
+            <column name="FOUNDING_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="businessSubordinate" type="string">
+            <column name="BUSINESS_SUBORDINATE" length="200" not-null="true" />
+        </property>
+        <property name="businessType" type="string">
+            <column name="BUSINESS_TYPE" length="5" not-null="true" />
+        </property>
+        <property name="businessProperty" type="string">
+            <column name="BUSINESS_PROPERTY" length="20" not-null="true" />
+        </property>
+        <property name="oneLevelCorporation" type="string">
+            <column name="ONE_LEVEL_CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="supervisionDep" type="string">
+            <column name="SUPERVISION_DEP" length="32" not-null="true" />
+        </property>
+        <property name="custOrgType" type="string">
+            <column name="CUST_ORG_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="coreBasicOpenBank" type="string">
+            <column name="CORE_BASIC_OPEN_BANK" length="32" not-null="true" />
+        </property>
+        <property name="coreBusinessScale" type="string">
+            <column name="CORE_BUSINESS_SCALE" length="10" not-null="true" />
+        </property>
+        <property name="ibmTradesType" type="string">
+            <column name="IBM_TRADES_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="country" type="string">
+            <column name="COUNTRY" length="10" not-null="true" />
+        </property>
+        <property name="foreignBankNo" type="string">
+            <column name="FOREIGN_BANK_NO" length="32" not-null="true" />
+        </property>
+        <property name="foreignBankAccount" type="string">
+            <column name="FOREIGN_BANK_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="custStatutoryName" type="string">
+            <column name="CUST_STATUTORY_NAME" length="100" not-null="true" />
+        </property>
+        <property name="custForeignSimpleName" type="string">
+            <column name="CUST_FOREIGN_SIMPLE_NAME" length="100" not-null="true" />
+        </property>
+        <property name="custForeignName" type="string">
+            <column name="CUST_FOREIGN_NAME" length="100" not-null="true" />
+        </property>
+        <property name="custSimpleName" type="string">
+            <column name="CUST_SIMPLE_NAME" length="100" not-null="true">
+                <comment>0????????????? ??????????????????????</comment>
+            </column>
+        </property>
+        <property name="custFullname" type="string">
+            <column name="CUST_FULLNAME" length="100" not-null="true" />
+        </property>
+        <property name="loanAccount" type="string">
+            <column name="LOAN_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="fciCode" type="string">
+            <column name="FCI_CODE" length="32" not-null="true" />
+        </property>
+        <property name="swiftCode" type="string">
+            <column name="SWIFT_CODE" length="32" not-null="true" />
+        </property>
+        <property name="insuranceLicense" type="string">
+            <column name="INSURANCE_LICENSE" length="32" not-null="true" />
+        </property>
+        <property name="securitiesLicense" type="string">
+            <column name="SECURITIES_LICENSE" length="32" not-null="true" />
+        </property>
+        <property name="financialLicense" type="string">
+            <column name="FINANCIAL_LICENSE" length="32" not-null="true" />
+        </property>
+        <property name="coreOpenLicense" type="string">
+            <column name="CORE_OPEN_LICENSE" length="82" not-null="true" />
+        </property>
+        <property name="coreTaxRegistration" type="string">
+            <column name="CORE_TAX_REGISTRATION" length="42" not-null="true" />
+        </property>
+        <property name="coreSameTradeCode" type="string">
+            <column name="CORE_SAME_TRADE_CODE" length="32" not-null="true" />
+        </property>
+        <property name="coreOrgCode" type="string">
+            <column name="CORE_ORG_CODE" length="32" not-null="true" />
+        </property>
+        <property name="reutersCode" type="string">
+            <column name="REUTERS_CODE" length="32" not-null="true" />
+        </property>
+        <property name="isGroupCust" type="string">
+            <column name="IS_GROUP_CUST" length="5" not-null="true" />
+        </property>
+        <property name="isLegalEntity" type="string">
+            <column name="IS_LEGAL_ENTITY" length="1" not-null="true" />
+        </property>
+        <property name="isOneLevelLegalEntity" type="string">
+            <column name="IS_ONE_LEVEL_LEGAL_ENTITY" length="1" not-null="true" />
+        </property>
+        <property name="isListedCompany" type="string">
+            <column name="IS_LISTED_COMPANY" length="20" not-null="true" />
+        </property>
+        <property name="isOwnStockholder" type="string">
+            <column name="IS_OWN_STOCKHOLDER" length="20" not-null="true" />
+        </property>
+        <property name="isCreditCust" type="string">
+            <column name="IS_CREDIT_CUST" length="1" not-null="true" />
+        </property>
+        <property name="simultaneousBusiness" type="string">
+            <column name="SIMULTANEOUS_BUSINESS" length="32" not-null="true" />
+        </property>
+        <property name="mainBusiness" type="string">
+            <column name="MAIN_BUSINESS" length="200" not-null="true" />
+        </property>
+        <property name="businessRange" type="string">
+            <column name="BUSINESS_RANGE" length="200" not-null="true" />
+        </property>
+        <property name="businessAreaType" type="string">
+            <column name="BUSINESS_AREA_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="legalRepresentative" type="string">
+            <column name="LEGAL_REPRESENTATIVE" length="42" not-null="true" />
+        </property>
+        <property name="registerAddress" type="string">
+            <column name="REGISTER_ADDRESS" length="100" not-null="true" />
+        </property>
+        <property name="registerPostcode" type="string">
+            <column name="REGISTER_POSTCODE" length="20" not-null="true" />
+        </property>
+        <property name="businessLicense" type="string">
+            <column name="BUSINESS_LICENSE" length="32" not-null="true" />
+        </property>
+        <property name="busLisBeginDate" type="big_decimal">
+            <column name="BUS_LIS_BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="busLisEndDate" type="big_decimal">
+            <column name="BUS_LIS_END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="isAlwaysEfftiveLis" type="string">
+            <column name="IS_ALWAYS_EFFTIVE_LIS" length="1" not-null="true" />
+        </property>
+        <property name="registeredCapital" type="big_decimal">
+            <column name="REGISTERED_CAPITAL" precision="18" not-null="true" />
+        </property>
+        <property name="registeredCurrType" type="string">
+            <column name="REGISTERED_CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="paidInCapital" type="big_decimal">
+            <column name="PAID_IN_CAPITAL" precision="24" scale="6" not-null="true" />
+        </property>
+        <property name="paidInCurrType" type="string">
+            <column name="PAID_IN_CURR_TYPE" length="20" not-null="true" />
+        </property>
+        <property name="approvalAuthority" type="string">
+            <column name="APPROVAL_AUTHORITY" length="32" not-null="true" />
+        </property>
+        <property name="lastYearlyInspection" type="big_decimal">
+            <column name="LAST_YEARLY_INSPECTION" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="provincial" type="string">
+            <column name="PROVINCIAL" length="32" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="32" not-null="true" />
+        </property>
+        <property name="county" type="string">
+            <column name="COUNTY" length="32" not-null="true" />
+        </property>
+        <property name="coreLinker" type="string">
+            <column name="CORE_LINKER" length="100" not-null="true" />
+        </property>
+        <property name="corePhone" type="string">
+            <column name="CORE_PHONE" length="50" not-null="true" />
+        </property>
+        <property name="coreEMail" type="string">
+            <column name="CORE_E_MAIL" length="80" not-null="true" />
+        </property>
+        <property name="coreAddress" type="string">
+            <column name="CORE_ADDRESS" length="100" not-null="true" />
+        </property>
+        <property name="corePostcode" type="string">
+            <column name="CORE_POSTCODE" length="32" not-null="true" />
+        </property>
+        <property name="coreFax" type="string">
+            <column name="CORE_FAX" length="40" not-null="true" />
+        </property>
+        <property name="netAddress" type="string">
+            <column name="NET_ADDRESS" length="100" not-null="true" />
+        </property>
+        <property name="netLinkType" type="string">
+            <column name="NET_LINK_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="32" not-null="true" />
+        </property>
+        <property name="phoneType" type="string">
+            <column name="PHONE_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="extension" type="string">
+            <column name="EXTENSION" length="32" not-null="true" />
+        </property>
+        <property name="internationalAreaCode" type="string">
+            <column name="INTERNATIONAL_AREA_CODE" length="10" not-null="true" />
+        </property>
+        <property name="domesticAreaCode" type="string">
+            <column name="DOMESTIC_AREA_CODE" length="10" not-null="true" />
+        </property>
+        <property name="reportCode" type="string">
+            <column name="REPORT_CODE" length="32" not-null="true" />
+        </property>
+        <property name="reportUnit" type="string">
+            <column name="REPORT_UNIT" length="32" not-null="true" />
+        </property>
+        <property name="reportDate" type="big_decimal">
+            <column name="REPORT_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="financialDetailCode" type="string">
+            <column name="FINANCIAL_DETAIL_CODE" length="32" not-null="true" />
+        </property>
+        <property name="financialDetailAmt" type="big_decimal">
+            <column name="FINANCIAL_DETAIL_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="accountingMonth" type="big_decimal">
+            <column name="ACCOUNTING_MONTH" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="reportType" type="string">
+            <column name="REPORT_TYPE" length="5" not-null="true" />
+        </property>
+        <property name="accountingStandardsType" type="string">
+            <column name="ACCOUNTING_STANDARDS_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="reportStatements" type="string">
+            <column name="REPORT_STATEMENTS" length="32" not-null="true" />
+        </property>
+        <property name="reportKind" type="string">
+            <column name="REPORT_KIND" length="5" not-null="true" />
+        </property>
+        <property name="reportPeriod" type="string">
+            <column name="REPORT_PERIOD" length="10" not-null="true" />
+        </property>
+        <property name="stockCode" type="string">
+            <column name="STOCK_CODE" length="20" not-null="true" />
+        </property>
+        <property name="stockName" type="string">
+            <column name="STOCK_NAME" length="100" not-null="true" />
+        </property>
+        <property name="stockType" type="string">
+            <column name="STOCK_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="turnoverAmount" type="big_decimal">
+            <column name="TURNOVER_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="listingPlace" type="string">
+            <column name="LISTING_PLACE" length="20" not-null="true" />
+        </property>
+        <property name="isStStock" type="string">
+            <column name="IS_ST_STOCK" length="5" not-null="true" />
+        </property>
+        <property name="totalAmount" type="big_decimal">
+            <column name="TOTAL_AMOUNT" precision="18" not-null="true" />
+        </property>
+        <property name="isListed" type="string">
+            <column name="IS_LISTED" length="5" not-null="true" />
+        </property>
+        <property name="auditFlag" type="string">
+            <column name="AUDIT_FLAG" length="5" not-null="true" />
+        </property>
+        <property name="auditOfficeName" type="string">
+            <column name="AUDIT_OFFICE_NAME" length="100" not-null="true" />
+        </property>
+        <property name="auditOfficeOptionType" type="string">
+            <column name="AUDIT_OFFICE_OPTION_TYPE" length="10" not-null="true" />
+        </property>
+        <property name="riskWarningCode" type="string">
+            <column name="RISK_WARNING_CODE" length="32" not-null="true" />
+        </property>
+        <property name="riskWarningName" type="string">
+            <column name="RISK_WARNING_NAME" length="32" not-null="true" />
+        </property>
+        <property name="riskWarningLevel" type="string">
+            <column name="RISK_WARNING_LEVEL" length="32" not-null="true" />
+        </property>
+        <property name="externalRatingType" type="string">
+            <column name="EXTERNAL_RATING_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="externalRating" type="string">
+            <column name="EXTERNAL_RATING" length="32" not-null="true" />
+        </property>
+        <property name="externalRatingDate" type="big_decimal">
+            <column name="EXTERNAL_RATING_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="externalPreRating" type="string">
+            <column name="EXTERNAL_PRE_RATING" length="32" not-null="true" />
+        </property>
+        <property name="riskLevelMark" type="string">
+            <column name="RISK_LEVEL_MARK" length="32" not-null="true" />
+        </property>
+        <property name="politics" type="string">
+            <column name="POLITICS" length="32" not-null="true" />
+        </property>
+        <property name="isCountryBanned" type="string">
+            <column name="IS_COUNTRY_BANNED" length="1" not-null="true" />
+        </property>
+        <property name="applicableLaw" type="string">
+            <column name="APPLICABLE_LAW" length="32" not-null="true" />
+        </property>
+        <property name="riskLevel" type="string">
+            <column name="RISK_LEVEL" length="10" not-null="true" />
+        </property>
+        <property name="internalRatingFlag" type="string">
+            <column name="INTERNAL_RATING_FLAG" length="5" not-null="true" />
+        </property>
+        <property name="ratingMethod" type="string">
+            <column name="RATING_METHOD" length="32" not-null="true" />
+        </property>
+        <property name="ratingOrg" type="string">
+            <column name="RATING_ORG" length="32" not-null="true" />
+        </property>
+        <property name="ratingResult" type="string">
+            <column name="RATING_RESULT" length="32" not-null="true" />
+        </property>
+        <property name="ratingDate" type="big_decimal">
+            <column name="RATING_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="breachFlag" type="string">
+            <column name="BREACH_FLAG" length="10" not-null="true" />
+        </property>
+        <property name="breachType" type="string">
+            <column name="BREACH_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="creditBeginDate" type="big_decimal">
+            <column name="CREDIT_BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditEndDate" type="big_decimal">
+            <column name="CREDIT_END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditLimitAmt" type="big_decimal">
+            <column name="CREDIT_LIMIT_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="creditSetCode" type="string">
+            <column name="CREDIT_SET_CODE" length="32" not-null="true" />
+        </property>
+        <property name="creditStatisticsCode" type="string">
+            <column name="CREDIT_STATISTICS_CODE" length="32" not-null="true" />
+        </property>
+        <property name="creditLimitType" type="string">
+            <column name="CREDIT_LIMIT_TYPE" length="32" not-null="true" />
+        </property>
+        <property name="sameDeposit" type="big_decimal">
+            <column name="SAME_DEPOSIT" precision="18" not-null="true" />
+        </property>
+        <property name="sameDebt" type="big_decimal">
+            <column name="SAME_DEBT" precision="18" not-null="true" />
+        </property>
+        <property name="stockTradeAmt" type="big_decimal">
+            <column name="STOCK_TRADE_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="foreignExchangeTradeAmt" type="big_decimal">
+            <column name="FOREIGN_EXCHANGE_TRADE_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="isBeijinBranch" type="string">
+            <column name="IS_BEIJIN_BRANCH" length="1" not-null="true" />
+        </property>
+        <property name="isSameCust" type="string">
+            <column name="IS_SAME_CUST" length="1" not-null="true" />
+        </property>
+        <property name="isDomesticClearAgent" type="string">
+            <column name="IS_DOMESTIC_CLEAR_AGENT" length="1" not-null="true" />
+        </property>
+        <property name="isOfferedObject" type="string">
+            <column name="IS_OFFERED_OBJECT" length="1" not-null="true" />
+        </property>
+        <property name="isForeignAccountBank" type="string">
+            <column name="IS_FOREIGN_ACCOUNT_BANK" length="1" not-null="true" />
+        </property>
+        <property name="isForeignExchangeRival" type="string">
+            <column name="IS_FOREIGN_EXCHANGE_RIVAL" length="1" not-null="true" />
+        </property>
+        <property name="isHoldHisStock" type="string">
+            <column name="IS_HOLD_HIS_STOCK" length="1" not-null="true" />
+        </property>
+        <property name="isRmbCredit" type="string">
+            <column name="IS_RMB_CREDIT" length="1" not-null="true" />
+        </property>
+        <property name="isSameCreditLimit" type="string">
+            <column name="IS_SAME_CREDIT_LIMIT" length="1" not-null="true" />
+        </property>
+        <property name="isOfferCreditLimit" type="string">
+            <column name="IS_OFFER_CREDIT_LIMIT" length="1" not-null="true" />
+        </property>
+        <property name="isInterClearAgent" type="string">
+            <column name="IS_INTER_CLEAR_AGENT" length="1" not-null="true" />
+        </property>
+        <property name="creditRegistrationBranch" type="string">
+            <column name="CREDIT_REGISTRATION_BRANCH" length="100" not-null="true" />
+        </property>
+        <property name="creditRegistrationName" type="string">
+            <column name="CREDIT_REGISTRATION_NAME" length="100" not-null="true" />
+        </property>
+        <property name="creditRegistrationDate" type="big_decimal">
+            <column name="CREDIT_REGISTRATION_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="creditRegistrationUpdate" type="big_decimal">
+            <column name="CREDIT_REGISTRATION_UPDATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true" />
+        </property>
+        <property name="orgName" type="string">
+            <column name="ORG_NAME" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

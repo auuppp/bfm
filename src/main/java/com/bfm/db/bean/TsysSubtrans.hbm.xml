@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysSubtrans" table="TSYS_SUBTRANS" schema="TZYHSC">
+        <comment>??????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TsysSubtransId">
+            <key-property name="transCode" type="string">
+                <column name="TRANS_CODE" length="32" />
+            </key-property>
+            <key-property name="subTransCode" type="string">
+                <column name="SUB_TRANS_CODE" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="subTransName" type="string">
+            <column name="SUB_TRANS_NAME" length="256" />
+        </property>
+        <property name="relServ" type="string">
+            <column name="REL_SERV" length="256" />
+        </property>
+        <property name="relUrl" type="string">
+            <column name="REL_URL" length="256">
+                <comment>00-???????/??????? 01-???????/?????? 10-??????/??????? 11-??????/??????</comment>
+            </column>
+        </property>
+        <property name="ctrlFlag" type="string">
+            <column name="CTRL_FLAG" length="8">
+                <comment>0-??? 1-????</comment>
+            </column>
+        </property>
+        <property name="loginFlag" type="string">
+            <column name="LOGIN_FLAG" length="8">
+                <comment>0-? 1-?</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+        <property name="extField1" type="string">
+            <column name="EXT_FIELD_1" length="256" />
+        </property>
+        <property name="extField2" type="string">
+            <column name="EXT_FIELD_2" length="256">
+                <comment>0???? ??????? 1?????????1</comment>
+            </column>
+        </property>
+        <property name="extField3" type="string">
+            <column name="EXT_FIELD_3" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbordealdetailinterface" table="TBORDEALDETAILINTERFACE" schema="TZYHSC">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="reportCode" type="string">
+            <column name="REPORT_CODE" length="24" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="firstPrice" type="big_decimal">
+            <column name="FIRST_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="firstFullPrice" type="big_decimal">
+            <column name="FIRST_FULL_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="firstYiled" type="big_decimal">
+            <column name="FIRST_YILED" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="firstInterest" type="big_decimal">
+            <column name="FIRST_INTEREST" precision="18" scale="12" not-null="true" />
+        </property>
+        <property name="firstSettleBalance" type="big_decimal">
+            <column name="FIRST_SETTLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="secondPrice" type="big_decimal">
+            <column name="SECOND_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="secondFullPrice" type="big_decimal">
+            <column name="SECOND_FULL_PRICE" precision="20" scale="12" not-null="true" />
+        </property>
+        <property name="secondYiled" type="big_decimal">
+            <column name="SECOND_YILED" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondInterest" type="big_decimal">
+            <column name="SECOND_INTEREST" precision="18" scale="12" not-null="true" />
+        </property>
+        <property name="secondSettleBalance" type="big_decimal">
+            <column name="SECOND_SETTLE_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="bailOfferSide" type="string">
+            <column name="BAIL_OFFER_SIDE" length="1" not-null="true">
+                <comment>adjust by fj from 20K_WTJGMS4 for bns version:?? 0?? 1??? 2???? 3???</comment>
+            </column>
+        </property>
+        <property name="bailBalance" type="big_decimal">
+            <column name="BAIL_BALANCE" precision="16" not-null="true">
+                <comment>adjust by fj from 20K_WTJGMS4 for bns version:??</comment>
+            </column>
+        </property>
+        <property name="otherBailBalance" type="big_decimal">
+            <column name="OTHER_BAIL_BALANCE" precision="16" not-null="true">
+                <comment>adjust by fj from 20K_WTJGMS4 for bns version:??</comment>
+            </column>
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

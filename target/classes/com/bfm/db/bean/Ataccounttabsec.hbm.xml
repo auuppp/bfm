@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Ataccounttabsec" table="ATACCOUNTTABSEC" schema="TZYHSC">
+        <comment>&#191;&#198;&#196;&#191;&#200;&#168;&#207;&#222;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtaccounttabsecId">
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="40" />
+            </key-property>
+            <key-property name="rolecode" type="string">
+                <column name="ROLECODE" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="entryflag" type="java.lang.Character">
+            <column name="ENTRYFLAG" length="1">
+                <comment>&#214;&#198;&#214;&#164;&#200;&#168;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="queryflag" type="java.lang.Character">
+            <column name="QUERYFLAG" length="1">
+                <comment>&#178;&#233;&#209;&#175;&#200;&#168;&#207;&#222;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

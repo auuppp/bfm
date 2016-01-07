@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbreakhistory" table="TBBREAKHISTORY" schema="TZYHSC">
+        <comment>??????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="businNo" type="string">
+            <column name="BUSIN_NO" length="32" not-null="true">
+                <comment>?????????????????</comment>
+            </column>
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="breackDirction" type="string">
+            <column name="BREACK_DIRCTION" length="1" not-null="true">
+                <comment>1???2??????????1</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="breakAmt" type="big_decimal">
+            <column name="BREAK_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true">
+                <comment>0??? 1????</comment>
+            </column>
+        </property>
+        <property name="recordDate" type="big_decimal">
+            <column name="RECORD_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="recordTime" type="big_decimal">
+            <column name="RECORD_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

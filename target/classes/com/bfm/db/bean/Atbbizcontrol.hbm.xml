@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbbizcontrol" table="ATBBIZCONTROL" schema="TZYHSC">
+        <comment>
+        &#215;&#211;&#207;&#181;&#205;&#179;&#181;&#196;&#210;&#181;&#206;&#241;&#192;&#224;&#208;&#205;&#182;&#212;&#213;&#213;&#181;&#189;&#198;&#190;&#214;&#164;&#201;&#250;&#179;&#201;&#181;&#196;&#210;&#181;&#206;&#241;&#192;&#224;&#208;&#205;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbbizcontrolId">
+            <key-property name="subflag" type="string">
+                <column name="SUBFLAG" length="8" />
+            </key-property>
+            <key-property name="srcTranSubCode" type="string">
+                <column name="SRC_TRAN_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="srcTranCode" type="string">
+                <column name="SRC_TRAN_CODE" length="10" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="4" />
+            </key-property>
+            <key-property name="srcAcct" type="string">
+                <column name="SRC_ACCT" length="4" />
+            </key-property>
+            <key-property name="assetSubType" type="char">
+                <column name="ASSET_SUB_TYPE" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="tranSubCode" type="string">
+            <column name="TRAN_SUB_CODE" length="4" not-null="true">
+                <comment>&#210;&#181;&#206;&#241;&#207;&#184;&#183;&#214;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="tranCode" type="string">
+            <column name="TRAN_CODE" length="10" not-null="true" />
+        </property>
+        <property name="accType" type="string">
+            <column name="ACC_TYPE" length="4" not-null="true">
+                <comment>&#184;&#249;&#190;&#221;&#203;&#196;&#183;&#214;&#192;&#224;&#183;&#168;&#200;&#183;&#182;&#168;&#215;&#202;&#178;&#250;&#192;&#224;&#208;&#205; 1000
+                &#181;&#189;&#198;&#218;&#202;&#213;&#210;&#230;&#194;&#202; 1101 &#189;&#187;&#210;&#215;&#208;&#212;&#189;&#240;&#200;&#218;&#215;&#202;&#178;&#250; 1501
+                &#179;&#214;&#211;&#208;&#214;&#193;&#181;&#189;&#198;&#218;&#205;&#182;&#215;&#202; 1503
+                &#191;&#201;&#185;&#169;&#179;&#246;&#202;&#219;&#189;&#240;&#200;&#218;&#215;&#202;&#178;&#250;</comment>
+            </column>
+        </property>
+        <property name="bak" type="string">
+            <column name="BAK" length="32">
+                <comment>&#212;&#164;&#193;&#244;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

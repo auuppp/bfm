@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Athbexrate" table="ATHBEXRATE" schema="TZYHSC">
+        <comment>ATBHEXRATE&#205;&#226;&#187;&#227;&#208;&#208;&#199;&#233;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AthbexrateId">
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="duration" type="string">
+                <column name="DURATION" length="3" />
+            </key-property>
+            <key-property name="priceDate" type="string">
+                <column name="PRICE_DATE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="buyingRate" type="big_decimal">
+            <column name="BUYING_RATE" precision="12" scale="7" not-null="true">
+                <comment>&#194;&#242;&#200;&#235;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="sellingRate" type="big_decimal">
+            <column name="SELLING_RATE" precision="12" scale="7" not-null="true">
+                <comment>&#194;&#244;&#179;&#246;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="closingRate" type="big_decimal">
+            <column name="CLOSING_RATE" precision="12" scale="7" not-null="true">
+                <comment>&#202;&#213;&#197;&#204;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="middleRate" type="big_decimal">
+            <column name="MIDDLE_RATE" precision="12" scale="7" not-null="true">
+                <comment>&#214;&#208;&#188;&#228;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="priceTime" type="string">
+            <column name="PRICE_TIME" length="6">
+                <comment>&#208;&#208;&#199;&#233;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="sourceId" type="string">
+            <column name="SOURCE_ID" length="20">
+                <comment>&#200;&#161;&#188;&#219;&#192;&#180;&#212;&#180;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbassetprice" table="ATBASSETPRICE" schema="TZYHSC">
+        <comment>ATBASSETPRICE&#185;&#171;&#212;&#202;&#188;&#219;&#208;&#208;&#199;&#233;&#208;&#197;&#207;&#162;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbassetpriceId">
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="indexType" type="char">
+                <column name="INDEX_TYPE" length="1" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="price3" type="big_decimal">
+            <column name="PRICE3" precision="12" scale="8">
+                <comment>&#188;&#219;&#184;&#241;3</comment>
+            </column>
+        </property>
+        <property name="price2" type="big_decimal">
+            <column name="PRICE2" precision="12" scale="8">
+                <comment>&#188;&#219;&#184;&#241;2</comment>
+            </column>
+        </property>
+        <property name="price1" type="big_decimal">
+            <column name="PRICE1" precision="12" scale="8">
+                <comment>&#188;&#219;&#184;&#241;1</comment>
+            </column>
+        </property>
+        <property name="sourceId" type="string">
+            <column name="SOURCE_ID" length="20">
+                <comment>&#200;&#161;&#188;&#219;&#192;&#180;&#212;&#180;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

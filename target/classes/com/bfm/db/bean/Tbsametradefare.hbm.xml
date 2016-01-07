@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsametradefare" table="TBSAMETRADEFARE" schema="TZYHSC">
+        <comment>lou?2013/6/19 ???</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbsametradefareId">
+            <key-property name="businNo" type="string">
+                <column name="BUSIN_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="fareType" type="string">
+            <column name="FARE_TYPE" length="1" not-null="true">
+                <comment>1?? 2?? 3????</comment>
+            </column>
+        </property>
+        <property name="payFrequency" type="string">
+            <column name="PAY_FREQUENCY" length="3" not-null="true">
+                <comment>1?? 2?? 3??? 4?? 5?? 6??? 7?? 8???</comment>
+            </column>
+        </property>
+        <property name="baseInterest" type="string">
+            <column name="BASE_INTEREST" length="12" not-null="true">
+                <comment>1?A/A 2?A/360 3?A/365 4?A/365F 5?30/360 6?30E/360</comment>
+            </column>
+        </property>
+        <property name="fareCalType" type="string">
+            <column name="FARE_CAL_TYPE" length="1" not-null="true">
+                <comment>1?????? 2??????????????? 3??????????</comment>
+            </column>
+        </property>
+        <property name="feeRate" type="big_decimal">
+            <column name="FEE_RATE" precision="16" scale="8" not-null="true">
+                <comment>??????????????????????</comment>
+            </column>
+        </property>
+        <property name="amtFixed" type="big_decimal">
+            <column name="AMT_FIXED" precision="16" not-null="true">
+                <comment>??????????????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbassetplan" table="TMP_TBASSETPLAN" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbassetplanId">
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="objectCode" type="string">
+                <column name="OBJECT_CODE" length="24" />
+            </key-property>
+            <key-property name="objectName" type="string">
+                <column name="OBJECT_NAME" length="64" />
+            </key-property>
+            <key-property name="toolCode" type="string">
+                <column name="TOOL_CODE" length="30" />
+            </key-property>
+            <key-property name="businType" type="string">
+                <column name="BUSIN_TYPE" length="6" />
+            </key-property>
+            <key-property name="subCode" type="string">
+                <column name="SUB_CODE" length="1" />
+            </key-property>
+            <key-property name="foundDate" type="big_decimal">
+                <column name="FOUND_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="beginDate" type="big_decimal">
+                <column name="BEGIN_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="endDate" type="big_decimal">
+                <column name="END_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="fixType" type="string">
+                <column name="FIX_TYPE" length="1" />
+            </key-property>
+            <key-property name="fixRate" type="big_decimal">
+                <column name="FIX_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="payBasis" type="string">
+                <column name="PAY_BASIS" length="12" />
+            </key-property>
+            <key-property name="dateAdjustMethod" type="string">
+                <column name="DATE_ADJUST_METHOD" length="1" />
+            </key-property>
+            <key-property name="maturityDateAdj" type="big_decimal">
+                <column name="MATURITY_DATE_ADJ" precision="22" scale="0" />
+            </key-property>
+            <key-property name="firstSettleDate" type="big_decimal">
+                <column name="FIRST_SETTLE_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="firstPayDate" type="big_decimal">
+                <column name="FIRST_PAY_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="investObject" type="string">
+                <column name="INVEST_OBJECT" length="30" />
+            </key-property>
+            <key-property name="financeType" type="string">
+                <column name="FINANCE_TYPE" length="1" />
+            </key-property>
+            <key-property name="creditCode" type="string">
+                <column name="CREDIT_CODE" length="30" />
+            </key-property>
+            <key-property name="profitType" type="string">
+                <column name="PROFIT_TYPE" length="1" />
+            </key-property>
+            <key-property name="publisher" type="string">
+                <column name="PUBLISHER" length="64" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="branchs" type="string">
+                <column name="BRANCHS" length="320" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

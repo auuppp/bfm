@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbstocktoyield" table="TBSTOCKTOYIELD" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbstocktoyieldId">
+            <key-property name="stockType" type="string">
+                <column name="STOCK_TYPE" length="4" />
+            </key-property>
+            <key-property name="interestType" type="string">
+                <column name="INTEREST_TYPE" length="1" />
+            </key-property>
+            <key-property name="basicRateType" type="string">
+                <column name="BASIC_RATE_TYPE" length="20" />
+            </key-property>
+            <key-property name="bondAppraise" type="string">
+                <column name="BOND_APPRAISE" length="1" />
+            </key-property>
+        </composite-id>
+        <property name="yieldCode" type="string">
+            <column name="YIELD_CODE" length="18" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

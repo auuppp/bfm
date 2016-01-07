@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atformula" table="ATFORMULA" schema="TZYHSC">
+        <comment>&#179;&#204;&#208;&#242;&#211;&#195;&#181;&#189;&#181;&#196;&#188;&#198;&#203;&#227;&#185;&#171;&#202;&#189;&#203;&#181;&#195;&#247;&#177;&#237;</comment>
+        <id name="formulacode" type="string">
+            <column name="FORMULACODE" length="6" />
+            <generator class="assigned" />
+        </id>
+        <property name="formula" type="string">
+            <column name="FORMULA" length="100" not-null="true">
+                <comment>&#185;&#171;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="200" not-null="true">
+                <comment>&#185;&#171;&#202;&#189;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

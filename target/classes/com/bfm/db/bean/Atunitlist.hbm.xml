@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atunitlist" table="ATUNITLIST" schema="TZYHSC">
+        <comment>ATUNITLIST&#181;&#165;&#206;&#187;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtunitlistId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="unitcode" type="string">
+                <column name="UNITCODE" length="6" />
+            </key-property>
+        </composite-id>
+        <property name="unitname" type="string">
+            <column name="UNITNAME" length="40" not-null="true">
+                <comment>&#181;&#165;&#206;&#187;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="receive" type="big_decimal">
+            <column name="RECEIVE" precision="22" scale="0" not-null="true">
+                <comment>&#202;&#213;&#200;&#161;</comment>
+            </column>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

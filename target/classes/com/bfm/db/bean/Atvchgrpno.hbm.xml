@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atvchgrpno" table="ATVCHGRPNO" schema="TZYHSC">
+        <comment>
+        &#184;&#249;&#190;&#221;&#178;&#187;&#205;&#172;&#181;&#196;&#198;&#190;&#214;&#164;&#192;&#224;&#208;&#205;&#186;&#205;&#187;&#225;&#188;&#198;&#199;&#248;&#188;&#228;&#201;&#250;&#179;&#201;&#198;&#190;&#214;&#164;&#193;&#247;&#203;&#174;&#186;&#197;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtvchgrpnoId">
+            <key-property name="entrycatalog" type="string">
+                <column name="ENTRYCATALOG" length="6" />
+            </key-property>
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="6" />
+            </key-property>
+        </composite-id>
+        <property name="sequence" type="string">
+            <column name="SEQUENCE" length="10">
+                <comment>&#193;&#247;&#203;&#174;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

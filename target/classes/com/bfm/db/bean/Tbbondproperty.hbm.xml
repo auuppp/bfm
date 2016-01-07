@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondproperty" table="TBBONDPROPERTY" schema="TZYHSC">
+        <comment>???????tbbondproperty?????????tbstockinfo???</comment>
+        <id name="interCode" type="string">
+            <column name="INTER_CODE" length="24" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true" />
+        </property>
+        <property name="publishDate" type="big_decimal">
+            <column name="PUBLISH_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="beginCalDate" type="big_decimal">
+            <column name="BEGIN_CAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="marketDate" type="big_decimal">
+            <column name="MARKET_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="delistedDate" type="big_decimal">
+            <column name="DELISTED_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="termUnit" type="string">
+            <column name="TERM_UNIT" length="1" not-null="true">
+                <comment>1???2???3??</comment>
+            </column>
+        </property>
+        <property name="existLimit" type="big_decimal">
+            <column name="EXIST_LIMIT" precision="16" scale="4" not-null="true">
+                <comment>Adjust by fj from 20100715 for pub version 1????????????????????????????? 2?2010???????????????????????????
+                3????????????????????NUMERIC(14,4)????????</comment>
+            </column>
+        </property>
+        <property name="publishPrice" type="big_decimal">
+            <column name="PUBLISH_PRICE" precision="16" scale="8" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="faceValue" type="big_decimal">
+            <column name="FACE_VALUE" precision="16" scale="8" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="realInterest" type="big_decimal">
+            <column name="REAL_INTEREST" precision="18" scale="12" not-null="true">
+                <comment>?????xuhl? ????????????????????</comment>
+            </column>
+        </property>
+        <property name="interestType" type="string">
+            <column name="INTEREST_TYPE" length="1" not-null="true">
+                <comment>K_LLLX 1????2????4????(xhl))</comment>
+            </column>
+        </property>
+        <property name="payInterestType" type="string">
+            <column name="PAY_INTEREST_TYPE" length="1" not-null="true">
+                <comment>1????? ????????? ?????K_FXLX 2???? ????????? 3???? ????1??????????????100??</comment>
+            </column>
+        </property>
+        <property name="payInterestStyle" type="string">
+            <column name="PAY_INTEREST_STYLE" length="1" not-null="true">
+                <comment>from 20090527 ????????? ?????????????????????????????? ?? ????????????????????????????? ?????K_FXFS 1???????? 2???????</comment>
+            </column>
+        </property>
+        <property name="basicRateType" type="string">
+            <column name="BASIC_RATE_TYPE" length="20" not-null="true">
+                <comment>???tbreferindex??</comment>
+            </column>
+        </property>
+        <property name="payInterval" type="string">
+            <column name="PAY_INTERVAL" length="3" not-null="true">
+                <comment>3M?2D?4Y?</comment>
+            </column>
+        </property>
+        <property name="faceRate" type="big_decimal">
+            <column name="FACE_RATE" precision="10" scale="8" not-null="true">
+                <comment>?%</comment>
+            </column>
+        </property>
+        <property name="basicRate" type="big_decimal">
+            <column name="BASIC_RATE" precision="10" scale="8" not-null="true">
+                <comment>?%??????????20bp????0.2</comment>
+            </column>
+        </property>
+        <property name="currBasicRate" type="big_decimal">
+            <column name="CURR_BASIC_RATE" precision="10" scale="8" not-null="true">
+                <comment>?%???????????????+????=????</comment>
+            </column>
+        </property>
+        <property name="optionType" type="string">
+            <column name="OPTION_TYPE" length="1" not-null="true">
+                <comment>???? K_XZQLB</comment>
+            </column>
+        </property>
+        <property name="optionDate" type="big_decimal">
+            <column name="OPTION_DATE" precision="22" scale="0" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="adjustRate" type="big_decimal">
+            <column name="ADJUST_RATE" precision="10" scale="8" not-null="true">
+                <comment>Add by fj from 20100625 for pub version ??????????????????????????????????????????? ??????????????? ???????%?</comment>
+            </column>
+        </property>
+        <property name="bondAppraise" type="string">
+            <column name="BOND_APPRAISE" length="1" not-null="true">
+                <comment>????K_ZQPJ</comment>
+            </column>
+        </property>
+        <property name="bondAppraiseOrgan" type="string">
+            <column name="BOND_APPRAISE_ORGAN" length="128" not-null="true" />
+        </property>
+        <property name="mainAppraise" type="string">
+            <column name="MAIN_APPRAISE" length="16" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="mainAppraiseOrgn" type="string">
+            <column name="MAIN_APPRAISE_ORGN" length="256" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="insideAppraise" type="string">
+            <column name="INSIDE_APPRAISE" length="1" not-null="true">
+                <comment>????K_ZQNBQJ</comment>
+            </column>
+        </property>
+        <property name="remainPrincipal" type="big_decimal">
+            <column name="REMAIN_PRINCIPAL" precision="16" scale="8" not-null="true">
+                <comment>Add by fj from 20091026 for ABS</comment>
+            </column>
+        </property>
+        <property name="leastRate" type="big_decimal">
+            <column name="LEAST_RATE" precision="10" scale="8" not-null="true">
+                <comment>?%;???????? 2.5%????2.5</comment>
+            </column>
+        </property>
+        <property name="bondInterest" type="big_decimal">
+            <column name="BOND_INTEREST" precision="18" scale="12" not-null="true">
+                <comment>???????????????????????????? ?????????????????????????? ????? ??????????????????????0??????? Adjust by fj from 20091027 for pub
+                1????????????????????</comment>
+            </column>
+        </property>
+        <property name="nextBondInterest" type="big_decimal">
+            <column name="NEXT_BOND_INTEREST" precision="18" scale="12" not-null="true">
+                <comment>???????????????????????</comment>
+            </column>
+        </property>
+        <property name="netPriceFlag" type="string">
+            <column name="NET_PRICE_FLAG" length="1" not-null="true">
+                <comment>??????????xhl? 0??? 1???</comment>
+            </column>
+        </property>
+        <property name="rateDays" type="big_decimal">
+            <column name="RATE_DAYS" precision="22" scale="0" not-null="true">
+                <comment>?????xhl, ???????365)</comment>
+            </column>
+        </property>
+        <property name="bidDate" type="big_decimal">
+            <column name="BID_DATE" precision="22" scale="0" not-null="true">
+                <comment>Add by fj from 20091211 for bns</comment>
+            </column>
+        </property>
+        <property name="endCalDate" type="big_decimal">
+            <column name="END_CAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>Add by fj from 20091211 for bns</comment>
+            </column>
+        </property>
+        <property name="cashDate" type="big_decimal">
+            <column name="CASH_DATE" precision="22" scale="0" not-null="true">
+                <comment>Add by fj from 20091224 for bns</comment>
+            </column>
+        </property>
+        <property name="bookMarket" type="string">
+            <column name="BOOK_MARKET" length="1" not-null="true">
+                <comment>1????2?????</comment>
+            </column>
+        </property>
+        <property name="basisAct" type="string">
+            <column name="BASIS_ACT" length="1" not-null="true" />
+        </property>
+        <property name="additionalType" type="string">
+            <column name="ADDITIONAL_TYPE" length="1" not-null="true">
+                <comment>K_ZQFJFL</comment>
+            </column>
+        </property>
+        <property name="exciseType" type="string">
+            <column name="EXCISE_TYPE" length="1" not-null="true">
+                <comment>K_XQLX</comment>
+            </column>
+        </property>
+        <property name="modifyDate" type="big_decimal">
+            <column name="MODIFY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDateAdjustMethod" type="string">
+            <column name="END_DATE_ADJUST_METHOD" length="1" not-null="true">
+                <comment>0????????1???????2???????????????????????????? 3???????4?????????</comment>
+            </column>
+        </property>
+        <property name="holiday" type="string">
+            <column name="HOLIDAY" length="30" not-null="true" />
+        </property>
+        <property name="resetFreq" type="string">
+            <column name="RESET_FREQ" length="3" not-null="true">
+                <comment>3M?2D?4Y?</comment>
+            </column>
+        </property>
+        <property name="compdMethod" type="string">
+            <column name="COMPD_METHOD" length="1" not-null="true" />
+        </property>
+        <property name="principalamortFlag" type="string">
+            <column name="PRINCIPALAMORT_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="principalamortType" type="string">
+            <column name="PRINCIPALAMORT_TYPE" length="1" not-null="true">
+                <comment>1?????? 2???? 3?????</comment>
+            </column>
+        </property>
+        <property name="principalamortValue" type="string">
+            <column name="PRINCIPALAMORT_VALUE" length="30" not-null="true" />
+        </property>
+        <property name="principalamortFreq" type="string">
+            <column name="PRINCIPALAMORT_FREQ" length="3" not-null="true" />
+        </property>
+        <property name="principalamort1stDate" type="big_decimal">
+            <column name="PRINCIPALAMORT_1ST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="principalamortLastDate" type="big_decimal">
+            <column name="PRINCIPALAMORT_LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="datesAdjust" type="string">
+            <column name="DATES_ADJUST" length="1" not-null="true">
+                <comment>K_YORN</comment>
+            </column>
+        </property>
+        <property name="datesMonthEnd" type="string">
+            <column name="DATES_MONTH_END" length="1" not-null="true" />
+        </property>
+        <property name="couponAdjust" type="string">
+            <column name="COUPON_ADJUST" length="1" not-null="true">
+                <comment>?????????EndDate???????????????????EndDate?????.?????????????</comment>
+            </column>
+        </property>
+        <property name="datesPayFlag" type="string">
+            <column name="DATES_PAY_FLAG" length="1" not-null="true">
+                <comment>0 ??? 1 ???</comment>
+            </column>
+        </property>
+        <property name="datesPayOffset" type="big_decimal">
+            <column name="DATES_PAY_OFFSET" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="datesAdjustMethod" type="string">
+            <column name="DATES_ADJUST_METHOD" length="1" not-null="true" />
+        </property>
+        <property name="datesAdjustHoliday" type="string">
+            <column name="DATES_ADJUST_HOLIDAY" length="30" not-null="true" />
+        </property>
+        <property name="coupon1stDate" type="big_decimal">
+            <column name="COUPON_1ST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="couponLastDate" type="big_decimal">
+            <column name="COUPON_LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="repoSpread" type="big_decimal">
+            <column name="REPO_SPREAD" precision="18" scale="6" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="redPrice" type="big_decimal">
+            <column name="RED_PRICE" precision="18" scale="6" not-null="true" />
+        </property>
+        <property name="interestSpread" type="big_decimal">
+            <column name="INTEREST_SPREAD" precision="18" scale="6" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="fullyPositionable" type="string">
+            <column name="FULLY_POSITIONABLE" length="1" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="autoPricing" type="string">
+            <column name="AUTO_PRICING" length="1" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="guarantorNo" type="string">
+            <column name="GUARANTOR_NO" length="32" not-null="true" />
+        </property>
+        <property name="memo1" type="string">
+            <column name="MEMO1" length="1024" not-null="true">
+                <comment>????????????????</comment>
+            </column>
+        </property>
+        <property name="memo2" type="string">
+            <column name="MEMO2" length="1024" not-null="true">
+                <comment>????????????</comment>
+            </column>
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true">
+                <comment>1?????????????????</comment>
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="guarantorMethod" type="string">
+            <column name="GUARANTOR_METHOD" length="32" not-null="true">
+                <comment>0?????? 1-?????????? 2-???? 3???? 4-???? 5-???? 6-?????? 7-????????? ??????</comment>
+            </column>
+        </property>
+        <property name="obsFirstDate" type="big_decimal">
+            <column name="OBS_FIRST_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????0????????</comment>
+            </column>
+        </property>
+        <property name="indexFixingOffset" type="big_decimal">
+            <column name="INDEX_FIXING_OFFSET" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="offsetType" type="string">
+            <column name="OFFSET_TYPE" length="1" not-null="true">
+                <comment>0-?????? 1-???</comment>
+            </column>
+        </property>
+        <property name="obsAdjustMethod" type="string">
+            <column name="OBS_ADJUST_METHOD" length="1" not-null="true" />
+        </property>
+        <property name="obsAdjustHoliday" type="string">
+            <column name="OBS_ADJUST_HOLIDAY" length="30" not-null="true" />
+        </property>
+        <property name="indexPrecision" type="big_decimal">
+            <column name="INDEX_PRECISION" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="offsetFreq" type="string">
+            <column name="OFFSET_FREQ" length="3" not-null="true">
+                <comment>???????????:3M?2D?4Y?</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

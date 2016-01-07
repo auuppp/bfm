@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbreportdatastore" table="TBREPORTDATASTORE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbreportdatastoreId">
+            <key-property name="fillingDate" type="big_decimal">
+                <column name="FILLING_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="reportId" type="string">
+                <column name="REPORT_ID" length="8" />
+            </key-property>
+            <key-property name="itemId" type="string">
+                <column name="ITEM_ID" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="column1" type="big_decimal">
+            <column name="COLUMN1" precision="16" not-null="true" />
+        </property>
+        <property name="column2" type="big_decimal">
+            <column name="COLUMN2" precision="16" not-null="true" />
+        </property>
+        <property name="column3" type="big_decimal">
+            <column name="COLUMN3" precision="16" not-null="true" />
+        </property>
+        <property name="column4" type="big_decimal">
+            <column name="COLUMN4" precision="16" not-null="true" />
+        </property>
+        <property name="column5" type="big_decimal">
+            <column name="COLUMN5" precision="16" not-null="true" />
+        </property>
+        <property name="column6" type="big_decimal">
+            <column name="COLUMN6" precision="16" not-null="true" />
+        </property>
+        <property name="column7" type="big_decimal">
+            <column name="COLUMN7" precision="16" not-null="true" />
+        </property>
+        <property name="column8" type="big_decimal">
+            <column name="COLUMN8" precision="16" not-null="true" />
+        </property>
+        <property name="column9" type="big_decimal">
+            <column name="COLUMN9" precision="16" not-null="true" />
+        </property>
+        <property name="column10" type="big_decimal">
+            <column name="COLUMN10" precision="16" not-null="true" />
+        </property>
+        <property name="column11" type="big_decimal">
+            <column name="COLUMN11" precision="16" not-null="true" />
+        </property>
+        <property name="column12" type="big_decimal">
+            <column name="COLUMN12" precision="16" not-null="true" />
+        </property>
+        <property name="column13" type="big_decimal">
+            <column name="COLUMN13" precision="16" not-null="true" />
+        </property>
+        <property name="column14" type="big_decimal">
+            <column name="COLUMN14" precision="16" not-null="true" />
+        </property>
+        <property name="column15" type="big_decimal">
+            <column name="COLUMN15" precision="16" not-null="true" />
+        </property>
+        <property name="column16" type="big_decimal">
+            <column name="COLUMN16" precision="16" not-null="true" />
+        </property>
+        <property name="column17" type="big_decimal">
+            <column name="COLUMN17" precision="16" not-null="true" />
+        </property>
+        <property name="column18" type="big_decimal">
+            <column name="COLUMN18" precision="16" not-null="true" />
+        </property>
+        <property name="column19" type="big_decimal">
+            <column name="COLUMN19" precision="16" not-null="true" />
+        </property>
+        <property name="column20" type="big_decimal">
+            <column name="COLUMN20" precision="16" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="38" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

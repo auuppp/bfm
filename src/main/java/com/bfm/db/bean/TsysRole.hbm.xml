@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysRole" table="TSYS_ROLE" schema="TZYHSC">
+        <comment>?????</comment>
+        <id name="roleCode" type="string">
+            <column name="ROLE_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="roleName" type="string">
+            <column name="ROLE_NAME" length="32" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="32">
+                <comment>0-???? 1-????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

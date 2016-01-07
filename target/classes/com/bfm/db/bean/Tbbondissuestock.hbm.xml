@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondissuestock" table="TBBONDISSUESTOCK" schema="TZYHSC">
+        <comment>2015.7.24 yangxi &#180;&#180;&#189;&#168;
+        &#211;&#195;&#211;&#218;&#205;&#172;&#210;&#181;&#180;&#230;&#181;&#165;&#183;&#162;&#208;&#208;&#202;&#177;&#177;&#163;&#180;&#230;&#205;&#182;&#215;&#202;&#200;&#203;&#183;&#221;&#182;&#238;&#195;&#247;&#207;&#184;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbbondissuestockId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="rivalBalance" type="big_decimal">
+            <column name="RIVAL_BALANCE" precision="18" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

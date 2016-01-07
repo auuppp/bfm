@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbfairpricesumtmp" table="ATBFAIRPRICESUMTMP" schema="TZYHSC">
+        <comment>&#185;&#171;&#212;&#202;&#188;&#219;&#177;&#228;&#182;&#175;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbfairpricesumtmpId">
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="8" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="18" scale="6">
+                <comment>&#185;&#171;&#212;&#202;&#188;&#219;&#177;&#228;&#182;&#175;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="costs" type="big_decimal">
+            <column name="COSTS" precision="18" scale="6">
+                <comment>&#215;&#202;&#178;&#250;&#189;&#187;&#210;&#215;&#187;&#227;&#215;&#220;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

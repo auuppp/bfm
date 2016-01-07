@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbpositionbal" table="TBPOSITIONBAL" schema="TZYHSC">
+        <comment>??? 1??? ????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbpositionbalId">
+            <key-property name="reportDate" type="big_decimal">
+                <column name="REPORT_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="fundNo" type="string">
+                <column name="FUND_NO" length="32" />
+            </key-property>
+            <key-property name="assetNo" type="string">
+                <column name="ASSET_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="ccy" type="string">
+            <column name="CCY" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="18" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

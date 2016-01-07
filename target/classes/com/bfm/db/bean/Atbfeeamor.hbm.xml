@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbfeeamor" table="ATBFEEAMOR" schema="TZYHSC">
+        <comment>&#176;&#180;&#200;&#213;&#188;&#199;&#194;&#188;&#183;&#209;&#211;&#195;&#188;&#198;&#204;&#225;&#204;&#175;&#207;&#250;&#183;&#209;&#211;&#195;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbfeeamorId">
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="amorDate" type="string">
+                <column name="AMOR_DATE" length="8" />
+            </key-property>
+        </composite-id>
+        <property name="bookBranch" type="string">
+            <column name="BOOK_BRANCH" length="32">
+                <comment>&#188;&#199;&#213;&#203;&#187;&#250;&#185;&#185;</comment>
+            </column>
+        </property>
+        <property name="curCode" type="string">
+            <column name="CUR_CODE" length="3" not-null="true">
+                <comment>&#186;&#203;&#203;&#227;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="assetAmor" type="big_decimal">
+            <column name="ASSET_AMOR" precision="18" not-null="true">
+                <comment>&#204;&#175;&#207;&#250;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="amorDays" type="big_decimal">
+            <column name="AMOR_DAYS" precision="22" scale="0">
+                <comment>&#204;&#175;&#207;&#250;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="serialno" type="string">
+            <column name="SERIALNO" length="8">
+                <comment>&#198;&#190;&#214;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,6 @@
+logout:
+ type:name
+ value:logout
+logoutConfirm:
+ type:xpath
+ value:"//*[@id='queding']//td/*//button"

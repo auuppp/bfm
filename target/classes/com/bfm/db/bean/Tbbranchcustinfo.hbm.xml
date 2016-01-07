@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbranchcustinfo" table="TBBRANCHCUSTINFO" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbbranchcustinfoId">
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="16" />
+            </key-property>
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.PlanTable" table="PLAN_TABLE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.PlanTableId">
+            <key-property name="statementId" type="string">
+                <column name="STATEMENT_ID" length="30" />
+            </key-property>
+            <key-property name="planId" type="big_decimal">
+                <column name="PLAN_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="timestamp" type="date">
+                <column name="TIMESTAMP" length="7" />
+            </key-property>
+            <key-property name="remarks" type="string">
+                <column name="REMARKS" length="4000" />
+            </key-property>
+            <key-property name="operation" type="string">
+                <column name="OPERATION" length="30" />
+            </key-property>
+            <key-property name="options" type="string">
+                <column name="OPTIONS" />
+            </key-property>
+            <key-property name="objectNode" type="string">
+                <column name="OBJECT_NODE" length="128" />
+            </key-property>
+            <key-property name="objectOwner" type="string">
+                <column name="OBJECT_OWNER" length="30" />
+            </key-property>
+            <key-property name="objectName" type="string">
+                <column name="OBJECT_NAME" length="30" />
+            </key-property>
+            <key-property name="objectAlias" type="string">
+                <column name="OBJECT_ALIAS" length="65" />
+            </key-property>
+            <key-property name="objectInstance" type="big_decimal">
+                <column name="OBJECT_INSTANCE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="objectType" type="string">
+                <column name="OBJECT_TYPE" length="30" />
+            </key-property>
+            <key-property name="optimizer" type="string">
+                <column name="OPTIMIZER" />
+            </key-property>
+            <key-property name="searchColumns" type="big_decimal">
+                <column name="SEARCH_COLUMNS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="id" type="big_decimal">
+                <column name="ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="parentId" type="big_decimal">
+                <column name="PARENT_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="depth" type="big_decimal">
+                <column name="DEPTH" precision="22" scale="0" />
+            </key-property>
+            <key-property name="position" type="big_decimal">
+                <column name="POSITION" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cost" type="big_decimal">
+                <column name="COST" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cardinality" type="big_decimal">
+                <column name="CARDINALITY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="bytes" type="big_decimal">
+                <column name="BYTES" precision="22" scale="0" />
+            </key-property>
+            <key-property name="otherTag" type="string">
+                <column name="OTHER_TAG" />
+            </key-property>
+            <key-property name="partitionStart" type="string">
+                <column name="PARTITION_START" />
+            </key-property>
+            <key-property name="partitionStop" type="string">
+                <column name="PARTITION_STOP" />
+            </key-property>
+            <key-property name="partitionId" type="big_decimal">
+                <column name="PARTITION_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="other" type="string">
+                <column name="OTHER" length="0" />
+            </key-property>
+            <key-property name="distribution" type="string">
+                <column name="DISTRIBUTION" length="30" />
+            </key-property>
+            <key-property name="cpuCost" type="big_decimal">
+                <column name="CPU_COST" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ioCost" type="big_decimal">
+                <column name="IO_COST" precision="22" scale="0" />
+            </key-property>
+            <key-property name="tempSpace" type="big_decimal">
+                <column name="TEMP_SPACE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="accessPredicates" type="string">
+                <column name="ACCESS_PREDICATES" length="4000" />
+            </key-property>
+            <key-property name="filterPredicates" type="string">
+                <column name="FILTER_PREDICATES" length="4000" />
+            </key-property>
+            <key-property name="projection" type="string">
+                <column name="PROJECTION" length="4000" />
+            </key-property>
+            <key-property name="time" type="big_decimal">
+                <column name="TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="qblockName" type="string">
+                <column name="QBLOCK_NAME" length="30" />
+            </key-property>
+            <key-property name="otherXml" type="clob">
+                <column name="OTHER_XML" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

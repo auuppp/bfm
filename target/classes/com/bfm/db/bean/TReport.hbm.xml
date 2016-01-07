@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TReport" table="T_REPORT" schema="TZYHSC">
+        <comment>t_report???????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TReportId">
+            <key-property name="reportId" type="string">
+                <column name="REPORT_ID" length="20" />
+            </key-property>
+            <key-property name="reportName" type="string">
+                <column name="REPORT_NAME" length="30" />
+            </key-property>
+            <key-property name="reportType" type="char">
+                <column name="REPORT_TYPE" length="1" />
+            </key-property>
+            <key-property name="reportPath" type="string">
+                <column name="REPORT_PATH" length="200" />
+            </key-property>
+            <key-property name="maxNumber" type="big_decimal">
+                <column name="MAX_NUMBER" precision="22" scale="0" />
+            </key-property>
+            <key-property name="proc" type="string">
+                <column name="PROC" length="30" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" length="10" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" length="100" />
+            </key-property>
+            <key-property name="bak1" type="string">
+                <column name="BAK1" length="30" />
+            </key-property>
+            <key-property name="bak2" type="string">
+                <column name="BAK2" length="30" />
+            </key-property>
+            <key-property name="bak3" type="string">
+                <column name="BAK3" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

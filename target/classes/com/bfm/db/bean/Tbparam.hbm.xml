@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbparam" table="TBPARAM" schema="TZYHSC">
+        <comment>????????(???????????????????) ????:0:?? ???:000000:??</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbparamId">
+            <key-property name="taCode" type="string">
+                <column name="TA_CODE" length="9" />
+            </key-property>
+            <key-property name="paramId" type="string">
+                <column name="PARAM_ID" length="64" />
+            </key-property>
+        </composite-id>
+        <property name="paramName" type="string">
+            <column name="PARAM_NAME" length="256" not-null="true" />
+        </property>
+        <property name="paramValue" type="string">
+            <column name="PARAM_VALUE" length="256" not-null="true" />
+        </property>
+        <property name="valueName" type="string">
+            <column name="VALUE_NAME" length="256" not-null="true" />
+        </property>
+        <property name="belongType" type="string">
+            <column name="BELONG_TYPE" length="1" not-null="true">
+                <comment>[K_GSXT] 0?? 1BTA 2?? Z??</comment>
+            </column>
+        </property>
+        <property name="modiFlag" type="string">
+            <column name="MODI_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

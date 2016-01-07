@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TMenu" table="T_MENU" schema="TZYHSC">
+        <comment>??????????????????????,????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TMenuId">
+            <key-property name="menuId" type="string">
+                <column name="MENU_ID" length="30" />
+            </key-property>
+            <key-property name="aboveMenuId" type="string">
+                <column name="ABOVE_MENU_ID" length="30" />
+            </key-property>
+            <key-property name="menuDeep" type="big_decimal">
+                <column name="MENU_DEEP" precision="22" scale="0" />
+            </key-property>
+            <key-property name="menuName" type="string">
+                <column name="MENU_NAME" length="20" />
+            </key-property>
+            <key-property name="menuDesc" type="string">
+                <column name="MENU_DESC" length="50" />
+            </key-property>
+            <key-property name="isRunMenu" type="char">
+                <column name="IS_RUN_MENU" length="1" />
+            </key-property>
+            <key-property name="tranCode" type="string">
+                <column name="TRAN_CODE" length="20" />
+            </key-property>
+            <key-property name="isEnable" type="java.lang.Character">
+                <column name="IS_ENABLE" length="1" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" length="10" />
+            </key-property>
+            <key-property name="reportId" type="string">
+                <column name="REPORT_ID" length="40" />
+            </key-property>
+            <key-property name="orderId" type="string">
+                <column name="ORDER_ID" length="20" />
+            </key-property>
+            <key-property name="menuType" type="char">
+                <column name="MENU_TYPE" length="1" />
+            </key-property>
+            <key-property name="systemId" type="string">
+                <column name="SYSTEM_ID" length="10" />
+            </key-property>
+            <key-property name="bak1" type="string">
+                <column name="BAK1" length="30" />
+            </key-property>
+            <key-property name="bak2" type="string">
+                <column name="BAK2" length="30" />
+            </key-property>
+            <key-property name="bak3" type="string">
+                <column name="BAK3" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

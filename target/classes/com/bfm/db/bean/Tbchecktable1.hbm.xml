@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbchecktable1" table="TBCHECKTABLE1" schema="TZYHSC">
+        <comment>tbchecktable1???1??????CheckTable?Bean????????????n</comment>
+        <composite-id name="id" class="com.bfm.db.bean.Tbchecktable1Id">
+            <key-property name="serialNo" type="string">
+                <column name="SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="serialNo2" type="string">
+                <column name="SERIAL_NO2" length="32" />
+            </key-property>
+            <key-property name="serialNo3" type="string">
+                <column name="SERIAL_NO3" length="32" />
+            </key-property>
+            <key-property name="recordNo" type="big_decimal">
+                <column name="RECORD_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="businFlag" type="string">
+            <column name="BUSIN_FLAG" length="4" not-null="true">
+                <comment>1?????? 2???? 3??????</comment>
+            </column>
+        </property>
+        <property name="nextFlag" type="string">
+            <column name="NEXT_FLAG" length="1" not-null="true">
+                <comment>1?????? 2???? 3??????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true">
+                <comment>1?????? 2???? 3??????</comment>
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="256" not-null="true">
+                <comment>1?????? 2???? 3??????</comment>
+            </column>
+        </property>
+        <property name="param1" type="string">
+            <column name="PARAM1" length="256" not-null="true" />
+        </property>
+        <property name="param2" type="string">
+            <column name="PARAM2" length="256" not-null="true" />
+        </property>
+        <property name="param3" type="string">
+            <column name="PARAM3" length="256" not-null="true" />
+        </property>
+        <property name="param4" type="string">
+            <column name="PARAM4" length="256" not-null="true" />
+        </property>
+        <property name="param5" type="string">
+            <column name="PARAM5" length="256" not-null="true" />
+        </property>
+        <property name="param6" type="string">
+            <column name="PARAM6" length="256" not-null="true" />
+        </property>
+        <property name="param7" type="string">
+            <column name="PARAM7" length="256" not-null="true" />
+        </property>
+        <property name="param8" type="string">
+            <column name="PARAM8" length="256" not-null="true" />
+        </property>
+        <property name="param9" type="string">
+            <column name="PARAM9" length="256" not-null="true" />
+        </property>
+        <property name="param10" type="string">
+            <column name="PARAM10" length="256" not-null="true" />
+        </property>
+        <property name="param11" type="string">
+            <column name="PARAM11" length="256" not-null="true" />
+        </property>
+        <property name="param12" type="string">
+            <column name="PARAM12" length="256" not-null="true" />
+        </property>
+        <property name="param13" type="string">
+            <column name="PARAM13" length="256" not-null="true" />
+        </property>
+        <property name="param14" type="string">
+            <column name="PARAM14" length="256" not-null="true" />
+        </property>
+        <property name="param15" type="string">
+            <column name="PARAM15" length="256" not-null="true" />
+        </property>
+        <property name="param16" type="string">
+            <column name="PARAM16" length="256" not-null="true" />
+        </property>
+        <property name="param17" type="string">
+            <column name="PARAM17" length="256" not-null="true" />
+        </property>
+        <property name="param18" type="string">
+            <column name="PARAM18" length="256" not-null="true" />
+        </property>
+        <property name="param19" type="string">
+            <column name="PARAM19" length="256" not-null="true" />
+        </property>
+        <property name="param20" type="string">
+            <column name="PARAM20" length="256" not-null="true" />
+        </property>
+        <property name="param21" type="string">
+            <column name="PARAM21" length="256" not-null="true" />
+        </property>
+        <property name="param22" type="string">
+            <column name="PARAM22" length="256" not-null="true" />
+        </property>
+        <property name="param23" type="string">
+            <column name="PARAM23" length="256" not-null="true" />
+        </property>
+        <property name="param24" type="string">
+            <column name="PARAM24" length="256" not-null="true" />
+        </property>
+        <property name="param25" type="string">
+            <column name="PARAM25" length="256" not-null="true" />
+        </property>
+        <property name="param26" type="string">
+            <column name="PARAM26" length="256" not-null="true" />
+        </property>
+        <property name="param27" type="string">
+            <column name="PARAM27" length="256" not-null="true" />
+        </property>
+        <property name="param28" type="string">
+            <column name="PARAM28" length="256" not-null="true" />
+        </property>
+        <property name="param29" type="string">
+            <column name="PARAM29" length="256" not-null="true" />
+        </property>
+        <property name="param30" type="string">
+            <column name="PARAM30" length="256" not-null="true" />
+        </property>
+        <property name="param31" type="string">
+            <column name="PARAM31" length="256" not-null="true" />
+        </property>
+        <property name="param32" type="string">
+            <column name="PARAM32" length="256" not-null="true" />
+        </property>
+        <property name="param33" type="string">
+            <column name="PARAM33" length="256" not-null="true" />
+        </property>
+        <property name="param34" type="string">
+            <column name="PARAM34" length="256" not-null="true" />
+        </property>
+        <property name="param35" type="string">
+            <column name="PARAM35" length="256" not-null="true" />
+        </property>
+        <property name="param36" type="string">
+            <column name="PARAM36" length="256" not-null="true" />
+        </property>
+        <property name="param37" type="string">
+            <column name="PARAM37" length="256" not-null="true" />
+        </property>
+        <property name="param38" type="string">
+            <column name="PARAM38" length="256" not-null="true" />
+        </property>
+        <property name="param39" type="string">
+            <column name="PARAM39" length="256" not-null="true" />
+        </property>
+        <property name="param40" type="string">
+            <column name="PARAM40" length="256" not-null="true" />
+        </property>
+        <property name="param41" type="string">
+            <column name="PARAM41" length="256" not-null="true" />
+        </property>
+        <property name="param42" type="string">
+            <column name="PARAM42" length="256" not-null="true" />
+        </property>
+        <property name="param43" type="string">
+            <column name="PARAM43" length="256" not-null="true" />
+        </property>
+        <property name="param44" type="string">
+            <column name="PARAM44" length="256" not-null="true" />
+        </property>
+        <property name="param45" type="string">
+            <column name="PARAM45" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

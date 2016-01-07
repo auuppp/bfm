@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbassetrealdeal" table="TMP_TBASSETREALDEAL" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbassetrealdealId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="price" type="big_decimal">
+                <column name="PRICE" precision="16" scale="8" />
+            </key-property>
+            <key-property name="dealAmount" type="big_decimal">
+                <column name="DEAL_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="dealNo" type="string">
+                <column name="DEAL_NO" length="32" />
+            </key-property>
+            <key-property name="dealTime" type="big_decimal">
+                <column name="DEAL_TIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="innerFee" type="big_decimal">
+                <column name="INNER_FEE" precision="16" />
+            </key-property>
+            <key-property name="withInterestFlag" type="string">
+                <column name="WITH_INTEREST_FLAG" length="1" />
+            </key-property>
+            <key-property name="interestAmt" type="big_decimal">
+                <column name="INTEREST_AMT" precision="18" />
+            </key-property>
+            <key-property name="settleAmt" type="big_decimal">
+                <column name="SETTLE_AMT" precision="18" />
+            </key-property>
+            <key-property name="discountAmt" type="big_decimal">
+                <column name="DISCOUNT_AMT" precision="18" />
+            </key-property>
+            <key-property name="reserve" type="string">
+                <column name="RESERVE" length="64" />
+            </key-property>
+            <key-property name="reserve2" type="string">
+                <column name="RESERVE2" length="64" />
+            </key-property>
+            <key-property name="reserve3" type="string">
+                <column name="RESERVE3" length="64" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atunpostentry" table="ATUNPOSTENTRY" schema="TZYHSC">
+        <comment>ATUNPOSTENTRY&#206;&#180;&#185;&#253;&#213;&#203;&#198;&#190;&#214;&#164;</comment>
+        <id name="serialno" type="big_decimal">
+            <column name="SERIALNO" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="bookcode" type="string">
+            <column name="BOOKCODE" length="8" not-null="true">
+                <comment>&#213;&#202;&#204;&#215;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="entrydate" type="string">
+            <column name="ENTRYDATE" length="8" not-null="true">
+                <comment>&#198;&#190;&#214;&#164;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="registerdate" type="string">
+            <column name="REGISTERDATE" length="8" not-null="true">
+                <comment>&#185;&#253;&#213;&#203;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="entrycatalog" type="string">
+            <column name="ENTRYCATALOG" length="6" not-null="true">
+                <comment>&#198;&#190;&#214;&#164;&#192;&#224;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="entryno" type="big_decimal">
+            <column name="ENTRYNO" precision="22" scale="0" not-null="true">
+                <comment>&#198;&#190;&#214;&#164; &#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="voucher" type="string">
+            <column name="VOUCHER" length="32">
+                <comment>&#212;&#173;&#202;&#188;&#198;&#177;&#190;&#221;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="enclosure" type="big_decimal">
+            <column name="ENCLOSURE" precision="22" scale="0">
+                <comment>&#184;&#189;&#188;&#254;&#213;&#197;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="checkflag" type="char">
+            <column name="CHECKFLAG" length="1" not-null="true">
+                <comment>1.&#206;&#180;&#184;&#180;&#186;&#203; 2.&#201;&#243;&#186;&#203;&#205;&#168;&#185;&#253; 3.&#201;&#243;&#186;&#203;&#190;&#220;&#190;&#248;</comment>
+            </column>
+        </property>
+        <property name="postor" type="string">
+            <column name="POSTOR" length="16">
+                <comment>&#185;&#253;&#213;&#202;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="checkout" type="string">
+            <column name="CHECKOUT" length="16">
+                <comment>&#201;&#243;&#186;&#203;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="16" not-null="true">
+                <comment>&#214;&#198;&#214;&#164;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="genflag" type="java.lang.Character">
+            <column name="GENFLAG" length="1">
+                <comment>0 &#202;&#214;&#185;&#164;&#201;&#250;&#179;&#201; 1 &#215;&#212;&#182;&#175;&#201;&#250;&#179;&#201;</comment>
+            </column>
+        </property>
+        <property name="genhostflag" type="java.lang.Character">
+            <column name="GENHOSTFLAG" length="1">
+                <comment>0 &#206;&#180;&#201;&#250;&#179;&#201; 1 &#210;&#209;&#190;&#173;&#201;&#250;&#179;&#201; 2
+                &#178;&#187;&#208;&#232;&#210;&#170;&#201;&#250;&#179;&#201;</comment>
+            </column>
+        </property>
+        <property name="delFlag" type="java.lang.Character">
+            <column name="DEL_FLAG" length="1">
+                <comment>0 &#206;&#180;&#179;&#229;&#213;&#202; 1 &#210;&#209;&#179;&#229;&#213;&#203;</comment>
+            </column>
+        </property>
+        <property name="srcId" type="string">
+            <column name="SRC_ID" length="32">
+                <comment>&#212;&#173;&#202;&#188;&#189;&#187;&#210;&#215;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

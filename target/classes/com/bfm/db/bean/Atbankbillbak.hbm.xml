@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbankbillbak" table="ATBANKBILLBAK" schema="TZYHSC">
+        <comment>ATBANKBILLBAK&#210;&#248;&#208;&#208;&#181;&#165;&#190;&#221;&#177;&#184;&#183;&#221;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbankbillbakId">
+            <key-property name="serialno" type="big_decimal">
+                <column name="SERIALNO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="40" />
+            </key-property>
+            <key-property name="registerdate" type="string">
+                <column name="REGISTERDATE" length="8" />
+            </key-property>
+            <key-property name="billno" type="string">
+                <column name="BILLNO" length="6" />
+            </key-property>
+            <key-property name="direction" type="char">
+                <column name="DIRECTION" length="1" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="8" />
+            </key-property>
+            <key-property name="entrycatalog" type="string">
+                <column name="ENTRYCATALOG" length="10" />
+            </key-property>
+            <key-property name="entryno" type="big_decimal">
+                <column name="ENTRYNO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="settleflag" type="char">
+                <column name="SETTLEFLAG" length="1" />
+            </key-property>
+            <key-property name="operator" type="big_decimal">
+                <column name="OPERATOR" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

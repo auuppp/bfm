@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbaccreal" table="ATBACCREAL" schema="TZYHSC">
+        <comment>
+        &#215;&#202;&#178;&#250;&#186;&#203;&#203;&#227;&#183;&#189;&#202;&#189;&#182;&#212;&#213;&#213;&#177;&#237;&#163;&#172;&#180;&#211;&#185;&#192;&#214;&#181;&#163;&#172;&#215;&#202;&#189;&#240;&#189;&#187;&#210;&#215;&#207;&#181;&#205;&#179;&#181;&#200;&#198;&#228;&#203;&#251;&#207;&#181;&#205;&#179;&#211;&#179;&#201;&#228;&#181;&#189;&#187;&#225;&#188;&#198;&#203;&#196;&#183;&#214;&#192;&#224;&#181;&#196;&#186;&#203;&#203;&#227;&#183;&#189;&#202;&#189;&#161;&#163;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbaccrealId">
+            <key-property name="subflag" type="string">
+                <column name="SUBFLAG" length="8" />
+            </key-property>
+            <key-property name="srcAcct" type="string">
+                <column name="SRC_ACCT" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="acct" type="string">
+            <column name="ACCT" length="4">
+                <comment>&#187;&#225;&#188;&#198;&#186;&#203;&#203;&#227;&#194;&#235;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

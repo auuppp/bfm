@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbassetbookvalue" table="TMP_ATBASSETBOOKVALUE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbassetbookvalueId">
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+            <key-property name="assetFlag" type="java.lang.Character">
+                <column name="ASSET_FLAG" length="1" />
+            </key-property>
+            <key-property name="assetCount" type="big_decimal">
+                <column name="ASSET_COUNT" precision="18" />
+            </key-property>
+            <key-property name="assetPosition" type="big_decimal">
+                <column name="ASSET_POSITION" precision="18" />
+            </key-property>
+            <key-property name="acosts" type="big_decimal">
+                <column name="ACOSTS" precision="18" />
+            </key-property>
+            <key-property name="costsfull" type="big_decimal">
+                <column name="COSTSFULL" precision="18" />
+            </key-property>
+            <key-property name="costs" type="big_decimal">
+                <column name="COSTS" precision="18" />
+            </key-property>
+            <key-property name="interest" type="big_decimal">
+                <column name="INTEREST" precision="18" />
+            </key-property>
+            <key-property name="ajstinterate" type="big_decimal">
+                <column name="AJSTINTERATE" precision="18" />
+            </key-property>
+            <key-property name="impairment" type="big_decimal">
+                <column name="IMPAIRMENT" precision="18" />
+            </key-property>
+            <key-property name="interestaccrual" type="big_decimal">
+                <column name="INTERESTACCRUAL" precision="18" />
+            </key-property>
+            <key-property name="curraccrual" type="big_decimal">
+                <column name="CURRACCRUAL" precision="18" />
+            </key-property>
+            <key-property name="costDate" type="string">
+                <column name="COST_DATE" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

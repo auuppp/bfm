@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbhisunitstock" table="TMP_TBHISUNITSTOCK" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbhisunitstockId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="fundNo" type="string">
+                <column name="FUND_NO" length="32" />
+            </key-property>
+            <key-property name="assetNo" type="string">
+                <column name="ASSET_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+            <key-property name="marketNo" type="string">
+                <column name="MARKET_NO" length="6" />
+            </key-property>
+            <key-property name="beginAmount" type="big_decimal">
+                <column name="BEGIN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentAmount" type="big_decimal">
+                <column name="CURRENT_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentRepoAmount" type="big_decimal">
+                <column name="CURRENT_REPO_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentReporevAmount" type="big_decimal">
+                <column name="CURRENT_REPOREV_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentLoanrevAmount" type="big_decimal">
+                <column name="CURRENT_LOANREV_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentLoanAmount" type="big_decimal">
+                <column name="CURRENT_LOAN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="frozenAmount" type="big_decimal">
+                <column name="FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="unfrozenAmount" type="big_decimal">
+                <column name="UNFROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="mortrevFrozenAmount" type="big_decimal">
+                <column name="MORTREV_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="mortFrozenAmount" type="big_decimal">
+                <column name="MORT_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="forceFrozenAmount" type="big_decimal">
+                <column name="FORCE_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="sysFrozenAmount" type="big_decimal">
+                <column name="SYS_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="buyAmount" type="big_decimal">
+                <column name="BUY_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="saleAmount" type="big_decimal">
+                <column name="SALE_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="preBuyAmount" type="big_decimal">
+                <column name="PRE_BUY_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="preSaleAmount" type="big_decimal">
+                <column name="PRE_SALE_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="tempFrozenAmount" type="big_decimal">
+                <column name="TEMP_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="tempFrozenAmount2" type="big_decimal">
+                <column name="TEMP_FROZEN_AMOUNT2" precision="16" />
+            </key-property>
+            <key-property name="tempUnfrozenAmount" type="big_decimal">
+                <column name="TEMP_UNFROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="t1TempFrozenAmount" type="big_decimal">
+                <column name="T1_TEMP_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="t1FrozenAmount" type="big_decimal">
+                <column name="T1_FROZEN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="buyBalance" type="big_decimal">
+                <column name="BUY_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="saleBalance" type="big_decimal">
+                <column name="SALE_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="buyFee" type="big_decimal">
+                <column name="BUY_FEE" precision="16" />
+            </key-property>
+            <key-property name="saleFee" type="big_decimal">
+                <column name="SALE_FEE" precision="16" />
+            </key-property>
+            <key-property name="buyUnsettleAmount" type="big_decimal">
+                <column name="BUY_UNSETTLE_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="saleUnsettleAmount" type="big_decimal">
+                <column name="SALE_UNSETTLE_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="buyUnsettleBalance" type="big_decimal">
+                <column name="BUY_UNSETTLE_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="saleUnsettleBalance" type="big_decimal">
+                <column name="SALE_UNSETTLE_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="buyUnsettleAmount2" type="big_decimal">
+                <column name="BUY_UNSETTLE_AMOUNT2" precision="16" />
+            </key-property>
+            <key-property name="saleUnsettleAmount2" type="big_decimal">
+                <column name="SALE_UNSETTLE_AMOUNT2" precision="16" />
+            </key-property>
+            <key-property name="untransferedInvest" type="big_decimal">
+                <column name="UNTRANSFERED_INVEST" precision="16" />
+            </key-property>
+            <key-property name="fairvalueChange" type="big_decimal">
+                <column name="FAIRVALUE_CHANGE" precision="16" />
+            </key-property>
+            <key-property name="interestInvest" type="big_decimal">
+                <column name="INTEREST_INVEST" precision="16" />
+            </key-property>
+            <key-property name="accumulateProfit" type="big_decimal">
+                <column name="ACCUMULATE_PROFIT" precision="16" />
+            </key-property>
+            <key-property name="turnInvest" type="big_decimal">
+                <column name="TURN_INVEST" precision="16" />
+            </key-property>
+            <key-property name="turnInterestInvest" type="big_decimal">
+                <column name="TURN_INTEREST_INVEST" precision="16" />
+            </key-property>
+            <key-property name="turnProfit" type="big_decimal">
+                <column name="TURN_PROFIT" precision="16" />
+            </key-property>
+            <key-property name="seatNo" type="string">
+                <column name="SEAT_NO" length="6" />
+            </key-property>
+            <key-property name="stockholderId" type="string">
+                <column name="STOCKHOLDER_ID" length="10" />
+            </key-property>
+            <key-property name="positionFlag" type="string">
+                <column name="POSITION_FLAG" length="1" />
+            </key-property>
+            <key-property name="todayProfit" type="big_decimal">
+                <column name="TODAY_PROFIT" precision="16" />
+            </key-property>
+            <key-property name="currentCost" type="big_decimal">
+                <column name="CURRENT_COST" precision="16" />
+            </key-property>
+            <key-property name="preImpawnAmount" type="big_decimal">
+                <column name="PRE_IMPAWN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="impawnAmount" type="big_decimal">
+                <column name="IMPAWN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="preReturnAmount" type="big_decimal">
+                <column name="PRE_RETURN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="returnAmount" type="big_decimal">
+                <column name="RETURN_AMOUNT" precision="16" />
+            </key-property>
+            <key-property name="currentImpawnAmount" type="big_decimal">
+                <column name="CURRENT_IMPAWN_AMOUNT" precision="16" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

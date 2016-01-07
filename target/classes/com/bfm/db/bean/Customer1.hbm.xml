@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Customer1" table="CUSTOMER1" schema="TZYHSC">
+        <id name="cid" type="big_decimal">
+            <column name="CID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="username" type="string">
+            <column name="USERNAME" length="12" not-null="true" />
+        </property>
+        <property name="userpassword" type="string">
+            <column name="USERPASSWORD" length="12" />
+        </property>
+    </class>
+</hibernate-mapping>

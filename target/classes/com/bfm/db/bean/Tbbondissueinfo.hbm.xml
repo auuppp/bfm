@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbondissueinfo" table="TBBONDISSUEINFO" schema="TZYHSC">
+        <comment>Adjust by fj from 20100416 for bns version: 1????????????????????????????????????????? Adjust by fj from 20100114 for bns version: ???????????????????????????????
+        from 20090531 1???????????????????</comment>
+        <id name="issueNo" type="string">
+            <column name="ISSUE_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="16" not-null="true">
+                <comment>add by fj from 20091019 for pub 1???????????????</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true">
+                <comment>?????????????????</comment>
+            </column>
+        </property>
+        <property name="issueType" type="string">
+            <column name="ISSUE_TYPE" length="1" not-null="true">
+                <comment>????? K_ZQFXLX 1????? 2?????</comment>
+            </column>
+        </property>
+        <property name="currentAmount" type="big_decimal">
+            <column name="CURRENT_AMOUNT" precision="16" not-null="true">
+                <comment>Add by fj from 20K_SBDW0 for bns version 1???????????=???? 2???or??(?????????)???????????????? 3???????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="bondStatus" type="string">
+            <column name="BOND_STATUS" length="1" not-null="true">
+                <comment>0???? 1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true">
+                <comment>Add by fj from 20100416 for bns version</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="16" scale="8" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="stockType" type="string">
+            <column name="STOCK_TYPE" length="4" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="faceValue" type="big_decimal">
+            <column name="FACE_VALUE" precision="16" scale="8" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="reportCode" type="string">
+            <column name="REPORT_CODE" length="20" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="stockName" type="string">
+            <column name="STOCK_NAME" length="100" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="marketNo" type="string">
+            <column name="MARKET_NO" length="6" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="totalAmount" type="big_decimal">
+            <column name="TOTAL_AMOUNT" precision="16" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="bondAppraise" type="string">
+            <column name="BOND_APPRAISE" length="1" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="interestType" type="string">
+            <column name="INTEREST_TYPE" length="1" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="payInterestType" type="string">
+            <column name="PAY_INTEREST_TYPE" length="1" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="payInteval" type="string">
+            <column name="PAY_INTEVAL" length="3" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="existLimit" type="big_decimal">
+            <column name="EXIST_LIMIT" precision="9" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="faceRate" type="big_decimal">
+            <column name="FACE_RATE" precision="10" scale="8" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="publishDate" type="big_decimal">
+            <column name="PUBLISH_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="marketDate" type="big_decimal">
+            <column name="MARKET_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="beginCalDate" type="big_decimal">
+            <column name="BEGIN_CAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="endCalDate" type="big_decimal">
+            <column name="END_CAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="investorOperationType" type="string">
+            <column name="INVESTOR_OPERATION_TYPE" length="1" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="investorOperationDate" type="big_decimal">
+            <column name="INVESTOR_OPERATION_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="publisherOperationType" type="string">
+            <column name="PUBLISHER_OPERATION_TYPE" length="1" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="publisherOperationDate" type="big_decimal">
+            <column name="PUBLISHER_OPERATION_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="upperSubAmount" type="big_decimal">
+            <column name="UPPER_SUB_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="lowerSubAmount" type="big_decimal">
+            <column name="LOWER_SUB_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="upperSubPrice" type="big_decimal">
+            <column name="UPPER_SUB_PRICE" precision="16" not-null="true" />
+        </property>
+        <property name="lowerSubPrice" type="big_decimal">
+            <column name="LOWER_SUB_PRICE" precision="16" not-null="true" />
+        </property>
+        <property name="resultDate" type="big_decimal">
+            <column name="RESULT_DATE" precision="22" scale="0" not-null="true">
+                <comment>???</comment>
+            </column>
+        </property>
+        <property name="earnestRate" type="big_decimal">
+            <column name="EARNEST_RATE" precision="8" scale="4" not-null="true" />
+        </property>
+        <property name="isSelfIssue" type="string">
+            <column name="IS_SELF_ISSUE" length="1" not-null="true">
+                <comment>0-????? 1-????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="256" not-null="true" />
+        </property>
+        <property name="isAdditionalIssue" type="string">
+            <column name="IS_ADDITIONAL_ISSUE" length="1" not-null="true" />
+        </property>
+        <property name="bidDate" type="big_decimal">
+            <column name="BID_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

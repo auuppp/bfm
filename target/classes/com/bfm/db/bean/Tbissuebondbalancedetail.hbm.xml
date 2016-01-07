@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbissuebondbalancedetail" table="TBISSUEBONDBALANCEDETAIL" schema="TZYHSC">
+        <comment>Adjust by fj from 20100114 for bns version???????????????????????</comment>
+        <id name="receiptNo" type="string">
+            <column name="RECEIPT_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="receiptDate" type="big_decimal">
+            <column name="RECEIPT_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>Add by fj from 20100114 for bns version</comment>
+            </column>
+        </property>
+        <property name="issueNo" type="string">
+            <column name="ISSUE_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="16" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="custNo" type="string">
+            <column name="CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="feeRate" type="big_decimal">
+            <column name="FEE_RATE" precision="9" scale="8" not-null="true">
+                <comment>??%????2.3%???????0.023 130628?????? ???????????????????????????</comment>
+            </column>
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>Adjust by fj from 20100114 for bns version 1????? 2???? 3????? 4????? 5??????? 6??????? ?????????????????????1?5?6???</comment>
+            </column>
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="inputOperator" type="string">
+            <column name="INPUT_OPERATOR" length="32" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Depreciation" table="DEPRECIATION" schema="TZYHSC">
+        <comment>depreciation</comment>
+        <composite-id name="id" class="com.bfm.db.bean.DepreciationId">
+            <key-property name="period" type="string">
+                <column name="PERIOD" length="6" />
+            </key-property>
+            <key-property name="deprecatalog" type="string">
+                <column name="DEPRECATALOG" length="2" />
+            </key-property>
+            <key-property name="deprename" type="string">
+                <column name="DEPRENAME" length="20" />
+            </key-property>
+            <key-property name="account" type="string">
+                <column name="ACCOUNT" length="40" />
+            </key-property>
+            <key-property name="deptno" type="string">
+                <column name="DEPTNO" length="6" />
+            </key-property>
+            <key-property name="projno" type="string">
+                <column name="PROJNO" length="20" />
+            </key-property>
+            <key-property name="assetvalue" type="big_decimal">
+                <column name="ASSETVALUE" precision="8" />
+            </key-property>
+            <key-property name="depreamount" type="big_decimal">
+                <column name="DEPREAMOUNT" precision="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

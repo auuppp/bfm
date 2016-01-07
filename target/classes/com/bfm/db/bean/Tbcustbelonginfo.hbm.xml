@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustbelonginfo" table="TBCUSTBELONGINFO" schema="TZYHSC">
+        <comment>2015.7.24 yangxi &#180;&#180;&#189;&#168;
+        &#211;&#195;&#211;&#218;&#197;&#228;&#214;&#195;&#191;&#205;&#187;&#167;&#192;&#224;&#208;&#205;&#182;&#212;&#211;&#166;&#181;&#196;&#191;&#205;&#187;&#167;&#185;&#233;&#202;&#244;</comment>
+        <id name="custType" type="string">
+            <column name="CUST_TYPE" length="2" />
+            <generator class="assigned" />
+        </id>
+        <property name="custBelong1" type="string">
+            <column name="CUST_BELONG1" length="32" not-null="true">
+                <comment>K_KHGS1</comment>
+            </column>
+        </property>
+        <property name="custBelong2" type="string">
+            <column name="CUST_BELONG2" length="32" not-null="true">
+                <comment>K_KHGS2</comment>
+            </column>
+        </property>
+        <property name="custBelong3" type="string">
+            <column name="CUST_BELONG3" length="32" not-null="true">
+                <comment>K_KHGS3</comment>
+            </column>
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

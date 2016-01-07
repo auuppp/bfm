@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcombiholdadjust" table="TBCOMBIHOLDADJUST" schema="TZYHSC">
+        <id name="adjustId" type="string">
+            <column name="ADJUST_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="srcCombiNo" type="string">
+            <column name="SRC_COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="tarCombiNo" type="string">
+            <column name="TAR_COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="srcInvestType" type="string">
+            <column name="SRC_INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="tarInvestType" type="string">
+            <column name="TAR_INVEST_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>?????????????????????</comment>
+            </column>
+        </property>
+        <property name="inputOperator" type="string">
+            <column name="INPUT_OPERATOR" length="32" not-null="true">
+                <comment>??????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="tsInputTime" type="big_decimal">
+            <column name="TS_INPUT_TIME" precision="22" scale="0" not-null="true">
+                <comment>????????????????????????</comment>
+            </column>
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true">
+                <comment>??????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="tsCheckTime" type="big_decimal">
+            <column name="TS_CHECK_TIME" precision="22" scale="0" not-null="true">
+                <comment>???????/?????????????????????</comment>
+            </column>
+        </property>
+        <property name="adjustDate" type="big_decimal">
+            <column name="ADJUST_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????????????????????? ???????????20081201???20081202?????????????20081202?</comment>
+            </column>
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true" />
+        </property>
+        <property name="checkMind" type="string">
+            <column name="CHECK_MIND" length="512" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1???? 2????? 3?????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

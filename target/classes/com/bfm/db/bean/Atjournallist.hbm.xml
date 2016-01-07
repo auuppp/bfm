@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atjournallist" table="ATJOURNALLIST" schema="TZYHSC">
+        <comment>ATJOURNALLIST&#188;&#199;&#213;&#203;&#198;&#190;&#214;&#164;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtjournallistId">
+            <key-property name="serialno" type="big_decimal">
+                <column name="SERIALNO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="listid" type="big_decimal">
+                <column name="LISTID" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="period" type="string">
+            <column name="PERIOD" length="6" not-null="true">
+                <comment>&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="512">
+                <comment>&#213;&#170;&#210;&#170;</comment>
+            </column>
+        </property>
+        <property name="account" type="string">
+            <column name="ACCOUNT" length="40" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="deptno" type="string">
+            <column name="DEPTNO" length="32">
+                <comment>&#178;&#191;&#195;&#197;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="projno" type="string">
+            <column name="PROJNO" length="20">
+                <comment>&#207;&#238;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="direction" type="char">
+            <column name="DIRECTION" length="1" not-null="true">
+                <comment>&#189;&#232;&#180;&#251;&#183;&#189;&#207;&#242;</comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="18" not-null="true">
+                <comment>&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="curcode" type="string">
+            <column name="CURCODE" length="3" not-null="true">
+                <comment>&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="foreignamount" type="big_decimal">
+            <column name="FOREIGNAMOUNT" precision="8">
+                <comment>&#205;&#226;&#177;&#210;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="rate" type="java.lang.Double">
+            <column name="RATE" precision="126" scale="0">
+                <comment>&#187;&#227;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="billno" type="string">
+            <column name="BILLNO" length="6">
+                <comment>&#189;&#225;&#203;&#227;&#198;&#177;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="payreceivno" type="string">
+            <column name="PAYRECEIVNO" length="10">
+                <comment>&#205;&#249;&#192;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="quantity" type="java.lang.Double">
+            <column name="QUANTITY" precision="126" scale="0">
+                <comment>&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="PRICE" precision="126" scale="0">
+                <comment>&#181;&#165;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="bankacct" type="string">
+            <column name="BANKACCT" length="40">
+                <comment>&#210;&#248;&#208;&#208;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+        <property name="trntype" type="string">
+            <column name="TRNTYPE" length="4">
+                <comment>&#210;&#181;&#206;&#241;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="catcode" type="string">
+            <column name="CATCODE" length="4">
+                <comment>&#210;&#181;&#206;&#241;&#202;&#194;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="acctype" type="string">
+            <column name="ACCTYPE" length="4">
+                <comment>&#186;&#203;&#203;&#227;&#176;&#236;&#183;&#168;</comment>
+            </column>
+        </property>
+        <property name="erykey" type="string">
+            <column name="ERYKEY" length="10">
+                <comment>&#207;&#214;&#212;&#218;&#211;&#195;&#215;&#247;&#215;&#202;&#178;&#250;&#192;&#224;&#208;&#205;&#191;&#198;&#196;&#191;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

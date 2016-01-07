@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbaccrueddetail" table="TBACCRUEDDETAIL" schema="TZYHSC">
+        <comment>????? ??? 1???????????????????????????????????? ????????????????? ??????????????????????????????????????????????????????????????????????????????????
+        ????????????????????????????????????????????????????? 2???????????????????0????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbaccrueddetailId">
+            <key-property name="isBond" type="string">
+                <column name="IS_BOND" length="1" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="legNo" type="big_decimal">
+                <column name="LEG_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cflNo" type="big_decimal">
+                <column name="CFL_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rateNo" type="big_decimal">
+                <column name="RATE_NO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="accuredDate" type="big_decimal">
+                <column name="ACCURED_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="seqNo" type="big_decimal">
+                <column name="SEQ_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="startDate" type="big_decimal">
+            <column name="START_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????????????????</comment>
+            </column>
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????????????????+1????</comment>
+            </column>
+        </property>
+        <property name="payCcy" type="string">
+            <column name="PAY_CCY" length="3" not-null="true" />
+        </property>
+        <property name="accruedSum" type="big_decimal">
+            <column name="ACCRUED_SUM" precision="18" not-null="true">
+                <comment>?????????</comment>
+            </column>
+        </property>
+        <property name="accruedRate" type="big_decimal">
+            <column name="ACCRUED_RATE" precision="10" scale="8" not-null="true" />
+        </property>
+        <property name="accruedAmt" type="big_decimal">
+            <column name="ACCRUED_AMT" precision="18" scale="7" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="resetFlag" type="string">
+            <column name="RESET_FLAG" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Ataccountreal" table="ATACCOUNTREAL" schema="TZYHSC">
+        <comment>ATACCOUNTREAL&#191;&#198;&#196;&#191;&#182;&#212;&#211;&#166;&#185;&#216;&#207;&#181;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtaccountrealId">
+            <key-property name="hsbookcode" type="string">
+                <column name="HSBOOKCODE" length="8" />
+            </key-property>
+            <key-property name="hsacct" type="string">
+                <column name="HSACCT" length="40" />
+            </key-property>
+        </composite-id>
+        <property name="bankacct" type="string">
+            <column name="BANKACCT" length="40" not-null="true">
+                <comment>&#210;&#248;&#208;&#208;&#191;&#198;&#196;&#191;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="100">
+                <comment>&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+        <property name="bak" type="string">
+            <column name="BAK" length="100">
+                <comment>&#212;&#164;&#193;&#244;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

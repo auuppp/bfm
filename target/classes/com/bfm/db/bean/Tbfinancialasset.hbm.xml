@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbfinancialasset" table="TBFINANCIALASSET" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbfinancialassetId">
+            <key-property name="financeType" type="string">
+                <column name="FINANCE_TYPE" length="1" />
+            </key-property>
+            <key-property name="creditCode" type="string">
+                <column name="CREDIT_CODE" length="30" />
+            </key-property>
+        </composite-id>
+        <property name="creditName" type="string">
+            <column name="CREDIT_NAME" length="64" not-null="true" />
+        </property>
+        <property name="trustSettler" type="string">
+            <column name="TRUST_SETTLER" length="64" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="trustTrusteeNo" type="string">
+            <column name="TRUST_TRUSTEE_NO" length="64" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="trustTrusteeOrg" type="string">
+            <column name="TRUST_TRUSTEE_ORG" length="64" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="trustTrusteeName" type="string">
+            <column name="TRUST_TRUSTEE_NAME" length="64" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="trustContractCode" type="string">
+            <column name="TRUST_CONTRACT_CODE" length="30" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="trustContractName" type="string">
+            <column name="TRUST_CONTRACT_NAME" length="64" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="borrower" type="string">
+            <column name="BORROWER" length="64" not-null="true" />
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balanceAmt" type="big_decimal">
+            <column name="BALANCE_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="convertAmt" type="big_decimal">
+            <column name="CONVERT_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="rateSummary" type="string">
+            <column name="RATE_SUMMARY" length="128" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true">
+                <comment>1????? 2????? 3?????? 4????? 5????????</comment>
+            </column>
+        </property>
+        <property name="assureForm" type="string">
+            <column name="ASSURE_FORM" length="3" not-null="true">
+                <comment>1??? 2??? 3??? 4???</comment>
+            </column>
+        </property>
+        <property name="assureHuman" type="string">
+            <column name="ASSURE_HUMAN" length="64" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

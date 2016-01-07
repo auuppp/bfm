@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atversioninfo" table="ATVERSIONINFO" schema="TZYHSC">
+        <comment>
+        &#213;&#202;&#204;&#215;&#203;&#181;&#195;&#247;&#208;&#197;&#207;&#162;&#177;&#237;&#163;&#172;&#182;&#212;&#186;&#243;&#208;&#248;&#176;&#230;&#177;&#190;&#191;&#216;&#214;&#198;&#202;&#177;&#202;&#185;&#211;&#195;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtversioninfoId">
+            <key-property name="number" type="string">
+                <column name="NUMBER" length="11" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="NAME" length="60" />
+            </key-property>
+            <key-property name="installdate" type="string">
+                <column name="INSTALLDATE" length="8" />
+            </key-property>
+            <key-property name="serialnumber" type="string">
+                <column name="SERIALNUMBER" length="15" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" length="15" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

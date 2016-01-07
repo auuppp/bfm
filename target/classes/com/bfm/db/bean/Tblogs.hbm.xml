@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tblogs" table="TBLOGS" schema="TZYHSC">
+        <id name="logSerial" type="string">
+            <column name="LOG_SERIAL" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="transCode" type="string">
+            <column name="TRANS_CODE" length="32" not-null="true" />
+        </property>
+        <property name="subTransCode" type="string">
+            <column name="SUB_TRANS_CODE" length="32" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="16" not-null="true" />
+        </property>
+        <property name="opDate" type="big_decimal">
+            <column name="OP_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="opTime" type="big_decimal">
+            <column name="OP_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="ip" type="string">
+            <column name="IP" length="32" not-null="true" />
+        </property>
+        <property name="authUser" type="string">
+            <column name="AUTH_USER" length="32" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="1024" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

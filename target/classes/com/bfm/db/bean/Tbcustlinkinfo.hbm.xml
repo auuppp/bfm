@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustlinkinfo" table="TBCUSTLINKINFO" schema="TZYHSC">
+        <comment>Adjust by fj from 20091112 for pub ?????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbcustlinkinfoId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="linker" type="string">
+                <column name="LINKER" length="64" />
+            </key-property>
+        </composite-id>
+        <property name="phone" type="string">
+            <column name="PHONE" length="32" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="32" not-null="true" />
+        </property>
+        <property name="mobilePhone" type="string">
+            <column name="MOBILE_PHONE" length="32" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="128" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysOffice" table="TSYS_OFFICE" schema="TZYHSC">
+        <comment>?????</comment>
+        <id name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="officeName" type="string">
+            <column name="OFFICE_NAME" length="64" />
+        </property>
+        <property name="shortName" type="string">
+            <column name="SHORT_NAME" length="32" />
+        </property>
+        <property name="parentCode" type="string">
+            <column name="PARENT_CODE" length="16" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="16" />
+        </property>
+        <property name="depCode" type="string">
+            <column name="DEP_CODE" length="16" />
+        </property>
+        <property name="officePath" type="string">
+            <column name="OFFICE_PATH" length="256" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" />
+        </property>
+        <property name="extField1" type="string">
+            <column name="EXT_FIELD_1" length="256" />
+        </property>
+        <property name="extField2" type="string">
+            <column name="EXT_FIELD_2" length="256" />
+        </property>
+        <property name="extField3" type="string">
+            <column name="EXT_FIELD_3" length="256" />
+        </property>
+        <property name="branchLevel" type="string">
+            <column name="BRANCH_LEVEL" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

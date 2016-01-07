@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbhisbankrealdeal" table="TBHISBANKREALDEAL" schema="TZYHSC">
+        <comment>adjust by fj from 20K_WTJGMS4 for bns version:?????????????? 1???????????????????????????????? ??????????????????????????????????????? from 20090521
+        1?????????????????????? 2????????? 1??????? 2??????? 4????????? 5??????? 6???????? 7???????? 8??????? 3? ======================================
+        ???????????????????????????? ????????????????????????????????????????????SEQGENERAL ???????????????????????? ?????????????????????????????? ???????????????????
+        ???????????????????????????????? ????????????? ??????? ??</comment>
+        <id name="dealSerialNo" type="string">
+            <column name="DEAL_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true">
+                <comment>???????? ???R+yyyyymmdd+?? ???B+yyyyymmdd+?? ??????????????seq??</comment>
+            </column>
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="dealDate" type="big_decimal">
+            <column name="DEAL_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="dealTime" type="big_decimal">
+            <column name="DEAL_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="relateDealSerialId" type="string">
+            <column name="RELATE_DEAL_SERIAL_ID" length="32" not-null="true">
+                <comment>from 20090930 for znx ?? 1???????????????????????????? 2????????????????????????? 3?????????????????????????????????????1000??????XXXX???
+                ????????????????????????????????????????????? ?????????????????1001??????XXXX-1????????1000? ?????????????????1002??????XXXX-2????????1000?
+                ?????????????????1003??????XXXX-3????????1000? 4???????????? 5??????????????</comment>
+            </column>
+        </property>
+        <property name="flowInstanceId" type="string">
+            <column name="FLOW_INSTANCE_ID" length="256" not-null="true">
+                <comment>???????????????</comment>
+            </column>
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true">
+                <comment>??????-1</comment>
+            </column>
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true">
+                <comment>??????-1</comment>
+            </column>
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>????K_TZLX 1???? 2????? 3????? 4???????? ???????</comment>
+            </column>
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true">
+                <comment>???????</comment>
+            </column>
+        </property>
+        <property name="settleSpeed" type="big_decimal">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+                <comment>0?T+0?? 1?T+1??</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="dealAmount" type="big_decimal">
+            <column name="DEAL_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="firstSettleInterest" type="big_decimal">
+            <column name="FIRST_SETTLE_INTEREST" precision="18" scale="12" not-null="true" />
+        </property>
+        <property name="firstNetPrice" type="big_decimal">
+            <column name="FIRST_NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>??????100</comment>
+            </column>
+        </property>
+        <property name="firstFullPrice" type="big_decimal">
+            <column name="FIRST_FULL_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="firstClearBalance" type="big_decimal">
+            <column name="FIRST_CLEAR_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="secondSettleInterest" type="big_decimal">
+            <column name="SECOND_SETTLE_INTEREST" precision="18" scale="12" not-null="true" />
+        </property>
+        <property name="secondNetPrice" type="big_decimal">
+            <column name="SECOND_NET_PRICE" precision="16" scale="8" not-null="true">
+                <comment>??????100</comment>
+            </column>
+        </property>
+        <property name="secondFullPrice" type="big_decimal">
+            <column name="SECOND_FULL_PRICE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondClearBalance" type="big_decimal">
+            <column name="SECOND_CLEAR_BALANCE" precision="16" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="firstMatureYield" type="big_decimal">
+            <column name="FIRST_MATURE_YIELD" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="secondMatureYield" type="big_decimal">
+            <column name="SECOND_MATURE_YIELD" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="firstSettleDate" type="big_decimal">
+            <column name="FIRST_SETTLE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="secondSettleDate" type="big_decimal">
+            <column name="SECOND_SETTLE_DATE" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="firstSettleType" type="string">
+            <column name="FIRST_SETTLE_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="secondSettleType" type="string">
+            <column name="SECOND_SETTLE_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="16" scale="8" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="hgDays" type="big_decimal">
+            <column name="HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="realHgDays" type="big_decimal">
+            <column name="REAL_HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="remitterName" type="string">
+            <column name="REMITTER_NAME" length="128" not-null="true" />
+        </property>
+        <property name="remitterAccount" type="string">
+            <column name="REMITTER_ACCOUNT" length="64" not-null="true" />
+        </property>
+        <property name="remitterBank" type="string">
+            <column name="REMITTER_BANK" length="128" not-null="true" />
+        </property>
+        <property name="remitterBankNo" type="string">
+            <column name="REMITTER_BANK_NO" length="32" not-null="true">
+                <comment>Adjust by fj from 20100406 for bns version ??????????????????????</comment>
+            </column>
+        </property>
+        <property name="remitteeName" type="string">
+            <column name="REMITTEE_NAME" length="128" not-null="true" />
+        </property>
+        <property name="remitteeAccount" type="string">
+            <column name="REMITTEE_ACCOUNT" length="64" not-null="true" />
+        </property>
+        <property name="remitteeBank" type="string">
+            <column name="REMITTEE_BANK" length="128" not-null="true" />
+        </property>
+        <property name="remitteeBankNo" type="string">
+            <column name="REMITTEE_BANK_NO" length="32" not-null="true">
+                <comment>Adjust by fj from 20100406 for bns version ??????????????????????</comment>
+            </column>
+        </property>
+        <property name="bondAccountname" type="string">
+            <column name="BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="bondTrustBranch" type="string">
+            <column name="BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="bondAccount" type="string">
+            <column name="BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="otherBondAccountname" type="string">
+            <column name="OTHER_BOND_ACCOUNTNAME" length="256" not-null="true" />
+        </property>
+        <property name="otherBondTrustBranch" type="string">
+            <column name="OTHER_BOND_TRUST_BRANCH" length="256" not-null="true" />
+        </property>
+        <property name="otherBondAccount" type="string">
+            <column name="OTHER_BOND_ACCOUNT" length="11" not-null="true" />
+        </property>
+        <property name="otherOperator" type="string">
+            <column name="OTHER_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="otherPhone" type="string">
+            <column name="OTHER_PHONE" length="32" not-null="true" />
+        </property>
+        <property name="otherFax" type="string">
+            <column name="OTHER_FAX" length="32" not-null="true" />
+        </property>
+        <property name="otherCorporation" type="string">
+            <column name="OTHER_CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="otherAddress" type="string">
+            <column name="OTHER_ADDRESS" length="256" not-null="true" />
+        </property>
+        <property name="operator" type="string">
+            <column name="OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="32" not-null="true" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" length="32" not-null="true" />
+        </property>
+        <property name="corporation" type="string">
+            <column name="CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="256" not-null="true" />
+        </property>
+        <property name="fee" type="big_decimal">
+            <column name="FEE" precision="16" not-null="true">
+                <comment>Adjust by fj from 20091024 for znx 1??????????????????????????? 2???????????????????????????????????? from 20091015 for bns ???????????????????
+                ?????????????????????</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>Adjust by fj from 20K_WTJGMS6 for bns version(??????) ??????????????(a?b???3???????) a????????????????????? b????????????????????? ??????by chenjl
+                20090929,?????(K_YHJCJZT) 1???? 2?????? 3??? 4??????? 5????????? 6?????? 7??? 8??????? 9????????? ??bns? ???-?????? -??? -?????? -??? \-??????? \-?????????
+                \-??????? \-&gt;???????? ??znx???????????????????? ???-???-???</comment>
+            </column>
+        </property>
+        <property name="storeStatus" type="string">
+            <column name="STORE_STATUS" length="1" not-null="true">
+                <comment>1??????(?????????1) 0?????(???????)</comment>
+            </column>
+        </property>
+        <property name="enoughFlag" type="string">
+            <column name="ENOUGH_FLAG" length="1" not-null="true">
+                <comment>?????? from 20090810 ?????? 1?????? 2?????? 3?????? 4?????? ??????????-??????-??????-?????? ????????-??????-??????-??????</comment>
+            </column>
+        </property>
+        <property name="dataSource" type="string">
+            <column name="DATA_SOURCE" length="1" not-null="true">
+                <comment>1??????2?????????2</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+        <property name="cancelFlag" type="string">
+            <column name="CANCEL_FLAG" length="1" not-null="true">
+                <comment>1??? 0?????</comment>
+            </column>
+        </property>
+        <property name="entrustSerialNo" type="string">
+            <column name="ENTRUST_SERIAL_NO" length="32" not-null="true">
+                <comment>?SeqEntrustNo???????????1??? ???????????? ????????????? ????????????????</comment>
+            </column>
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="feeDate" type="big_decimal">
+            <column name="FEE_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="deductBalance" type="big_decimal">
+            <column name="DEDUCT_BALANCE" precision="16" not-null="true" />
+        </property>
+        <property name="deductFeeFlag" type="string">
+            <column name="DEDUCT_FEE_FLAG" length="1" not-null="true">
+                <comment>Add by fj from 20091024 for znx 1??? 2????</comment>
+            </column>
+        </property>
+        <property name="deductFeeType" type="string">
+            <column name="DEDUCT_FEE_TYPE" length="1" not-null="true">
+                <comment>Add by fj from 20091024 for znx 1??????????? 2???????????</comment>
+            </column>
+        </property>
+        <property name="feeStatus" type="string">
+            <column name="FEE_STATUS" length="1" not-null="true">
+                <comment>1???? 2??????? 3????? 4?????</comment>
+            </column>
+        </property>
+        <property name="bailOfferSide" type="string">
+            <column name="BAIL_OFFER_SIDE" length="1" not-null="true">
+                <comment>Adjust by fj from 20K_WTJGMS4 for bns version:?? 0?? 1??? 2???? 3???</comment>
+            </column>
+        </property>
+        <property name="bailBalance" type="big_decimal">
+            <column name="BAIL_BALANCE" precision="16" not-null="true">
+                <comment>Adjust by fj from 20K_WTJGMS4 for bns version:??</comment>
+            </column>
+        </property>
+        <property name="otherBailBalance" type="big_decimal">
+            <column name="OTHER_BAIL_BALANCE" precision="16" not-null="true">
+                <comment>Adjust by fj from 20K_WTJGMS4 for bns version:??</comment>
+            </column>
+        </property>
+        <property name="tradeFare" type="big_decimal">
+            <column name="TRADE_FARE" precision="16" not-null="true" />
+        </property>
+        <property name="settleFare" type="big_decimal">
+            <column name="SETTLE_FARE" precision="16" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="strategy" type="string">
+            <column name="STRATEGY" length="32" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

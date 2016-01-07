@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsyscustinfo" table="TBSYSCUSTINFO" schema="TZYHSC">
+        <comment>
+        &#184;&#249;&#190;&#221;&#210;&#248;&#208;&#208;&#188;&#228;&#205;&#226;&#187;&#227;&#202;&#208;&#179;&#161;&#200;&#183;&#182;&#168;&#181;&#196;bank_no&#206;&#168;&#210;&#187;&#214;&#181;&#200;&#183;&#182;&#168;cust_no&#206;&#168;&#210;&#187;&#214;&#181;</comment>
+        <id name="custNo" type="string">
+            <column name="CUST_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="custType1" type="string">
+            <column name="CUST_TYPE1" length="2" not-null="true">
+                <comment>K_KHDL 00-&#177;&#190;&#208;&#208;(&#191;&#205;&#187;&#167;&#177;&#224;&#186;&#197;&#206;&#170;&#184;&#247;&#187;&#250;&#185;&#185;&#186;&#197;)
+                ...</comment>
+            </column>
+        </property>
+        <property name="custFullname" type="string">
+            <column name="CUST_FULLNAME" length="256" not-null="true" />
+        </property>
+        <property name="custName" type="string">
+            <column name="CUST_NAME" length="64" not-null="true" />
+        </property>
+        <property name="outerAppraise" type="string">
+            <column name="OUTER_APPRAISE" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_KHWBPJ&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="innerAppraise" type="string">
+            <column name="INNER_APPRAISE" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_KHNBPJ&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="generalAppraise" type="string">
+            <column name="GENERAL_APPRAISE" length="1" not-null="true">
+                <comment>&#202;&#253;&#190;&#221;&#215;&#214;&#181;&#228;K_KHZHPJ&#161;&#163;</comment>
+            </column>
+        </property>
+        <property name="registration" type="string">
+            <column name="REGISTRATION" length="2" not-null="true">
+                <comment>500005 01-&#177;&#177;&#190;&#169;&#202;&#208; 02-&#204;&#236;&#189;&#242;&#202;&#208; 03-&#186;&#211;&#177;&#177;&#202;&#161;
+                04-&#201;&#189;&#206;&#247;&#202;&#161; 05-&#196;&#218;&#195;&#201;&#185;&#197;&#215;&#212;&#214;&#206;&#199;&#248; 06-&#193;&#201;&#196;&#254;&#202;&#161;
+                07-&#188;&#170;&#193;&#214;&#202;&#161; 08-&#186;&#218;&#193;&#250;&#189;&#173;&#202;&#161; 09-&#201;&#207;&#186;&#163;&#202;&#208;
+                10-&#189;&#173;&#203;&#213;&#202;&#161; 11-&#213;&#227;&#189;&#173;&#202;&#161; 12-&#176;&#178;&#187;&#213;&#202;&#161; 13-&#184;&#163;&#189;&#168;&#202;&#161;
+                14-&#189;&#173;&#206;&#247;&#202;&#161; 15-&#201;&#189;&#182;&#171;&#202;&#161; 16-&#186;&#211;&#196;&#207;&#202;&#161; 17-&#186;&#254;&#177;&#177;&#202;&#161;
+                18-&#186;&#254;&#196;&#207;&#202;&#161; 19-&#185;&#227;&#182;&#171;&#202;&#161;
+                20-&#185;&#227;&#206;&#247;&#215;&#179;&#215;&#229;&#215;&#212;&#214;&#206;&#199;&#248; 21-&#186;&#163;&#196;&#207;&#202;&#161;
+                22-&#214;&#216;&#199;&#236;&#202;&#208; 23-&#203;&#196;&#180;&#168;&#202;&#161; 24-&#185;&#243;&#214;&#221;&#202;&#161; 25-&#212;&#198;&#196;&#207;&#202;&#161;
+                26-&#206;&#247;&#178;&#216;&#215;&#212;&#214;&#206;&#199;&#248; 27-&#201;&#194;&#206;&#247;&#202;&#161; 28-&#184;&#202;&#203;&#224;&#202;&#161;
+                29-&#199;&#224;&#186;&#163;&#202;&#161; 30-&#196;&#254;&#207;&#196;&#187;&#216;&#215;&#229;&#215;&#212;&#214;&#206;&#199;&#248;
+                31-&#208;&#194;&#189;&#174;&#206;&#172;&#206;&#225;&#182;&#251;&#215;&#212;&#214;&#206;&#199;&#248;
+                32-&#207;&#227;&#184;&#219;&#204;&#216;&#177;&#240;&#208;&#208;&#213;&#254;&#199;&#248;
+                33-&#176;&#196;&#195;&#197;&#204;&#216;&#177;&#240;&#208;&#208;&#213;&#254;&#199;&#248; 34-&#204;&#168;&#205;&#229;&#202;&#161;
+                35-&#190;&#179;&#205;&#226;</comment>
+            </column>
+        </property>
+        <property name="custStauts" type="string">
+            <column name="CUST_STAUTS" length="1" not-null="true">
+                <comment>0&#163;&#186;&#215;&#162;&#207;&#250; 1&#163;&#186;&#213;&#253;&#179;&#163; &#196;&#172;&#200;&#207;&#206;&#170;&#213;&#253;&#179;&#163;</comment>
+            </column>
+        </property>
+        <property name="license1" type="string">
+            <column name="LICENSE1" length="32" not-null="true" />
+        </property>
+        <property name="license2" type="string">
+            <column name="LICENSE2" length="32" not-null="true">
+                <comment>&#214;&#202;&#188;&#236;&#215;&#220;&#190;&#214;&#181;&#196;&#187;&#250;&#185;&#185;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="license3" type="string">
+            <column name="LICENSE3" length="32" not-null="true" />
+        </property>
+        <property name="corporation" type="string">
+            <column name="CORPORATION" length="32" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="256" not-null="true" />
+        </property>
+        <property name="zipCode" type="string">
+            <column name="ZIP_CODE" length="8" not-null="true" />
+        </property>
+        <property name="isHeadoffice" type="string">
+            <column name="IS_HEADOFFICE" length="1" not-null="true">
+                <comment>0&#163;&#186;&#183;&#241; 1&#163;&#186;&#202;&#199;
+                &#200;&#231;&#185;&#251;&#180;&#230;&#212;&#218;&#201;&#207;&#188;&#182;&#191;&#205;&#187;&#167;&#212;&#242;&#206;&#170;0&#163;&#172;&#183;&#241;&#212;&#242;&#206;&#170;1</comment>
+            </column>
+        </property>
+        <property name="upCustNo" type="string">
+            <column name="UP_CUST_NO" length="32" not-null="true">
+                <comment>
+                &#211;&#195;&#211;&#218;&#199;&#248;&#183;&#214;&#202;&#199;&#183;&#241;&#215;&#220;&#185;&#171;&#203;&#190;&#163;&#172;&#200;&#161;&#207;&#251;&#212;&#173;&#192;&#180;&#208;&#161;&#192;&#224;&#207;&#224;&#205;&#172;&#188;&#180;&#206;&#170;&#205;&#172;&#210;&#187;&#215;&#220;&#185;&#171;&#203;&#190;&#207;&#194;&#163;&#172;&#212;&#217;&#184;&#249;&#190;&#221;&#202;&#199;&#183;&#241;&#215;&#220;&#208;&#208;&#187;&#242;&#215;&#220;&#185;&#171;&#203;&#190;&#177;&#237;&#202;&#190;&#196;&#196;&#204;&#245;&#202;&#199;&#215;&#220;&#178;&#191;&#181;&#196;&#215;&#246;&#183;&#168;</comment>
+            </column>
+        </property>
+        <property name="bankNo" type="string">
+            <column name="BANK_NO" length="32" not-null="true">
+                <comment>CFETS&#214;&#208;&#177;&#190;&#177;&#210;</comment>
+            </column>
+        </property>
+        <property name="cfetsNo" type="string">
+            <column name="CFETS_NO" length="32" not-null="true">
+                <comment>&#205;&#226;&#177;&#210;&#181;&#196;&#191;&#205;&#187;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="flag" type="string">
+            <column name="FLAG" length="20" not-null="true">
+                <comment>K_KHLX
+                0&#177;&#237;&#202;&#190;&#189;&#187;&#210;&#215;&#182;&#212;&#202;&#214;&#161;&#162;1&#177;&#237;&#202;&#190;&#183;&#162;&#208;&#208;&#200;&#203;&#161;&#162;2&#177;&#237;&#202;&#190;&#179;&#208;&#182;&#210;&#208;&#208;
+                &#205;&#172;&#202;&#177;&#206;&#170;&#189;&#187;&#210;&#215;&#182;&#212;&#202;&#214;&#186;&#205;&#183;&#162;&#208;&#208;&#200;&#203;&#163;&#172;&#212;&#242;&#206;&#170;&#163;&#186;0&#163;&#172;1</comment>
+            </column>
+        </property>
+        <property name="pym" type="string">
+            <column name="PYM" length="32" not-null="true">
+                <comment>
+                &#191;&#201;&#202;&#228;&#200;&#235;&#198;&#180;&#210;&#244;&#194;&#235;&#189;&#248;&#208;&#208;&#191;&#236;&#203;&#217;&#196;&#163;&#186;&#253;&#178;&#233;&#213;&#210;&#163;&#172;&#212;&#221;&#178;&#187;&#191;&#170;&#183;&#197;</comment>
+            </column>
+        </property>
+        <property name="coreCustNo" type="string">
+            <column name="CORE_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="creditCustNo" type="string">
+            <column name="CREDIT_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="custClass1" type="string">
+            <column name="CUST_CLASS1" length="20" not-null="true">
+                <comment>
+                &#184;&#247;&#210;&#248;&#208;&#208;&#182;&#168;&#210;&#229;&#181;&#196;&#211;&#195;&#211;&#218;&#199;&#248;&#183;&#214;&#208;&#208;&#210;&#181;&#192;&#224;&#177;&#240;&#197;&#169;&#193;&#214;&#196;&#193;&#211;&#230;&#181;&#200;(&#185;&#250;&#188;&#210;&#177;&#234;&#215;&#188;&#183;&#214;&#192;&#224;&#181;&#200;)&#163;&#187;</comment>
+            </column>
+        </property>
+        <property name="custClass2" type="string">
+            <column name="CUST_CLASS2" length="20" not-null="true">
+                <comment>&#208;&#208;&#210;&#181;&#183;&#214;&#192;&#224;1&#207;&#194;&#181;&#196;&#183;&#214;&#192;&#224;&#163;&#187;</comment>
+            </column>
+        </property>
+        <property name="financialClass1" type="string">
+            <column name="FINANCIAL_CLASS1" length="1" not-null="true">
+                <comment>K_JRJGYJFL A&#163;&#173;&#187;&#245;&#177;&#210;&#181;&#177;&#190;&#214; B&#163;&#173;&#188;&#224;&#185;&#220;&#181;&#177;&#190;&#214;
+                C&#163;&#173;&#210;&#248;&#208;&#208;&#210;&#181;&#180;&#230;&#191;&#238;&#192;&#224;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;
+                D&#163;&#173;&#210;&#248;&#208;&#208;&#210;&#181;&#183;&#199;&#180;&#230;&#191;&#238;&#192;&#224;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;
+                E&#163;&#173;&#214;&#164;&#200;&#175;&#210;&#181;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;
+                F&#163;&#173;&#177;&#163;&#207;&#213;&#210;&#181;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;
+                G&#163;&#173;&#189;&#187;&#210;&#215;&#188;&#176;&#189;&#225;&#203;&#227;&#192;&#224;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;
+                H&#163;&#173;&#189;&#240;&#200;&#218;&#191;&#216;&#185;&#201;&#185;&#171;&#203;&#190; Z&#163;&#173;&#198;&#228;&#203;&#251;</comment>
+            </column>
+        </property>
+        <property name="financialClass2" type="string">
+            <column name="FINANCIAL_CLASS2" length="3" not-null="true">
+                <comment>K_JRJGEJFL_A&#161;&#162;K_JRJGEJFL_B&#181;&#200;</comment>
+            </column>
+        </property>
+        <property name="financialNo1" type="string">
+            <column name="FINANCIAL_NO1" length="32" not-null="true">
+                <comment>
+                14&#206;&#187;&#200;&#203;&#195;&#241;&#210;&#248;&#208;&#208;&#177;&#224;&#214;&#198;&#181;&#196;&#189;&#240;&#200;&#218;&#187;&#250;&#185;&#185;&#177;&#224;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="financialNo2" type="string">
+            <column name="FINANCIAL_NO2" length="32" not-null="true">
+                <comment>&#189;&#240;&#200;&#218;&#208;&#237;&#191;&#201;&#214;&#164;&#201;&#207;&#181;&#196;&#187;&#250;&#185;&#185;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="bankBic" type="string">
+            <column name="BANK_BIC" length="32" not-null="true" />
+        </property>
+        <property name="hvpsNo" type="string">
+            <column name="HVPS_NO" length="32" not-null="true">
+                <comment>&#180;&#243;&#182;&#238;&#214;&#167;&#184;&#182;&#207;&#181;&#205;&#179;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="reserve1" type="string">
+            <column name="RESERVE1" length="32" not-null="true">
+                <comment>&#177;&#190;&#208;&#208;&#191;&#205;&#187;&#167;&#180;&#243;&#192;&#224;,K_BHKHDL</comment>
+            </column>
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

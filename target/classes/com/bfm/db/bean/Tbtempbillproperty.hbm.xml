@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbtempbillproperty" table="TBTEMPBILLPROPERTY" schema="TZYHSC">
+        <id name="billNo" type="string">
+            <column name="BILL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="outDate" type="big_decimal">
+            <column name="OUT_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="faceAmt" type="big_decimal">
+            <column name="FACE_AMT" precision="18" not-null="true" />
+        </property>
+        <property name="billClass" type="string">
+            <column name="BILL_CLASS" length="1" not-null="true">
+                <comment>1-&#210;&#248;&#179;&#208; 2-&#201;&#204;&#179;&#208;</comment>
+            </column>
+        </property>
+        <property name="billType" type="string">
+            <column name="BILL_TYPE" length="1" not-null="true">
+                <comment>1-&#202;&#181;&#206;&#239;&#198;&#177; 2-&#181;&#231;&#215;&#211;&#198;&#177;</comment>
+            </column>
+        </property>
+        <property name="accepterNo" type="string">
+            <column name="ACCEPTER_NO" length="32" not-null="true">
+                <comment>&#202;&#218;&#208;&#197;&#202;&#177;&#202;&#185;&#211;&#195;&#161;&#163;
+                &#185;&#216;&#193;&#170;tbcustinfo&#207;&#181;&#205;&#179;&#191;&#205;&#187;&#167;&#208;&#197;&#207;&#162;&#177;&#237;
+                &#179;&#208;&#182;&#210;&#200;&#203;&#163;&#186;&#185;&#164;&#208;&#208;&#215;&#220;&#208;&#208;&#163;&#187;&#179;&#208;&#182;&#210;&#208;&#208;&#163;&#186;&#185;&#164;&#208;&#208;&#214;&#167;&#208;&#208;</comment>
+            </column>
+        </property>
+        <property name="accepterName" type="string">
+            <column name="ACCEPTER_NAME" length="256" not-null="true" />
+        </property>
+        <property name="accepterBankNo" type="string">
+            <column name="ACCEPTER_BANK_NO" length="256" not-null="true" />
+        </property>
+        <property name="accepterBankno" type="string">
+            <column name="ACCEPTER_BANKNO" length="32" not-null="true" />
+        </property>
+        <property name="accepterOpenName" type="string">
+            <column name="ACCEPTER_OPEN_NAME" length="256" not-null="true" />
+        </property>
+        <property name="accepterOpenNo" type="string">
+            <column name="ACCEPTER_OPEN_NO" length="32" not-null="true">
+                <comment>&#177;&#184;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="accepterOpenAname" type="string">
+            <column name="ACCEPTER_OPEN_ANAME" length="256" not-null="true" />
+        </property>
+        <property name="accepterType" type="string">
+            <column name="ACCEPTER_TYPE" length="256" not-null="true" />
+        </property>
+        <property name="drawerNo" type="string">
+            <column name="DRAWER_NO" length="256" not-null="true" />
+        </property>
+        <property name="drawerAccount" type="string">
+            <column name="DRAWER_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="drawerOpenName" type="string">
+            <column name="DRAWER_OPEN_NAME" length="256" not-null="true" />
+        </property>
+        <property name="drawerOpenNo" type="string">
+            <column name="DRAWER_OPEN_NO" length="256" not-null="true">
+                <comment>&#177;&#184;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="drawerOpenAname" type="string">
+            <column name="DRAWER_OPEN_ANAME" length="256" not-null="true" />
+        </property>
+        <property name="receiverNo" type="string">
+            <column name="RECEIVER_NO" length="256" not-null="true" />
+        </property>
+        <property name="receiverAccount" type="string">
+            <column name="RECEIVER_ACCOUNT" length="32" not-null="true" />
+        </property>
+        <property name="receiverOpenName" type="string">
+            <column name="RECEIVER_OPEN_NAME" length="256" not-null="true" />
+        </property>
+        <property name="receiverOpenNo" type="string">
+            <column name="RECEIVER_OPEN_NO" length="32" not-null="true">
+                <comment>&#177;&#184;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="receiverOpenAname" type="string">
+            <column name="RECEIVER_OPEN_ANAME" length="256" not-null="true" />
+        </property>
+        <property name="allowFlag" type="string">
+            <column name="ALLOW_FLAG" length="1" not-null="true">
+                <comment>0-&#191;&#201;&#212;&#217;&#215;&#170;&#200;&#195; 1-&#178;&#187;&#191;&#201;&#215;&#170;&#200;&#195;</comment>
+            </column>
+        </property>
+        <property name="payBasis" type="string">
+            <column name="PAY_BASIS" length="12" not-null="true">
+                <comment>A/360</comment>
+            </column>
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true">
+                <comment>&#215;&#238;&#208;&#194;&#189;&#187;&#210;&#215;&#182;&#212;&#211;&#166;&#181;&#196;&#215;&#233;&#186;&#207;</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1&#163;&#173;&#213;&#253;&#179;&#163;&#161;&#162; 2&#163;&#173;&#194;&#244;&#179;&#246;&#163;&#168;&#207;&#250;&#213;&#203;&#163;&#169;&#161;&#162;
+                3&#163;&#173;&#205;&#208;&#202;&#213;&#161;&#162;
+                4&#163;&#173;&#181;&#189;&#198;&#218;&#163;&#168;&#202;&#213;&#187;&#216;&#207;&#250;&#213;&#203;&#163;&#169;&#161;&#162;
+                5&#163;&#173;&#214;&#202;&#209;&#186;&#161;&#162; 8&#163;&#173;&#191;&#201;&#214;&#202;&#209;&#186;&#161;&#162;
+                9&#163;&#173;&#178;&#187;&#191;&#201;&#214;&#202;&#209;&#186; 0&#163;&#173;&#215;&#247;&#183;&#207;</comment>
+            </column>
+        </property>
+        <property name="dealingStatus" type="string">
+            <column name="DEALING_STATUS" length="1" not-null="true">
+                <comment>0&#163;&#173;&#205;&#234;&#179;&#201; 1&#163;&#173;&#194;&#242;&#200;&#235;&#201;&#243;&#197;&#250;&#214;&#208;
+                2&#163;&#173;&#194;&#244;&#179;&#246;&#201;&#243;&#197;&#250;&#214;&#208; 3&#163;&#173;&#213;&#253;&#187;&#216;&#185;&#186;&#201;&#243;&#197;&#250;&#214;&#208;
+                4&#163;&#173;&#196;&#230;&#187;&#216;&#185;&#186;&#201;&#243;&#197;&#250;&#214;&#208;
+                5&#163;&#173;&#212;&#217;&#204;&#249;&#207;&#214;&#187;&#216;&#185;&#186;&#201;&#243;&#197;&#250;&#214;&#208;
+                8&#163;&#173;&#205;&#208;&#202;&#213;&#201;&#243;&#197;&#250;&#214;&#208; 9&#163;&#173;&#181;&#189;&#198;&#218;&#201;&#243;&#197;&#250;&#214;&#208;
+                &#211;&#195;&#211;&#218;&#177;&#237;&#202;&#190;&#212;&#218;&#210;&#187;&#208;&#169;&#204;&#216;&#182;&#168;&#215;&#180;&#204;&#172;&#214;&#208;&#163;&#172;&#191;&#216;&#214;&#198;&#207;&#194;&#210;&#187;&#178;&#189;&#202;&#194;&#188;&#254;&#178;&#217;&#215;&#247;&#202;&#199;&#183;&#241;&#212;&#202;&#208;&#237;</comment>
+            </column>
+        </property>
+        <property name="isOrgin" type="string">
+            <column name="IS_ORGIN" length="1" not-null="true">
+                <comment>
+                &#202;&#199;&#183;&#241;&#206;&#222;&#212;&#173;&#202;&#188;&#188;&#199;&#194;&#188;&#163;&#187;&#196;&#191;&#199;&#176;&#214;&#247;&#210;&#170;&#206;&#170;&#213;&#253;&#187;&#216;&#185;&#186;&#202;&#177;&#202;&#185;&#211;&#195;
+                &#202;&#199;&#163;&#173;&#206;&#222;&#212;&#173;&#202;&#188;&#188;&#199;&#194;&#188;
+                &#183;&#241;&#163;&#173;&#211;&#208;&#212;&#173;&#202;&#188;&#188;&#199;&#194;&#188;</comment>
+            </column>
+        </property>
+        <property name="buySubCode" type="string">
+            <column name="BUY_SUB_CODE" length="4" not-null="true">
+                <comment>
+                &#194;&#242;&#200;&#235;&#202;&#177;&#181;&#196;&#210;&#181;&#206;&#241;&#207;&#184;&#183;&#214;&#194;&#235;&#163;&#187;&#214;&#247;&#210;&#170;&#215;&#247;&#211;&#195;&#163;&#186;&#215;&#170;&#204;&#249;&#194;&#244;&#179;&#246;&#187;&#242;&#205;&#208;&#202;&#213;&#187;&#242;&#181;&#189;&#198;&#218;&#202;&#177;&#202;&#199;&#206;&#170;&#214;&#177;&#204;&#249;&#194;&#242;&#200;&#235;/&#215;&#170;&#204;&#249;&#194;&#242;&#200;&#235;
+                1 - &#214;&#177;&#204;&#249; 2 - &#215;&#170;&#204;&#249; 3 - &#212;&#217;&#204;&#249;</comment>
+            </column>
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDateUnadj" type="big_decimal">
+            <column name="END_DATE_UNADJ" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

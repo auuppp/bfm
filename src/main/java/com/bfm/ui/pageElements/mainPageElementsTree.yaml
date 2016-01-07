@@ -1,0 +1,4 @@
+bankBondInstr:
+ level0:"//*[@id='bfmBondBiz']//button[text()='指令发起']"
+ level1:"//*[@id='itembfmBondBiz']//span[text()='债券市场']"
+ level2:"//*[@id='itembfmBondBiz']//span[text()='债券现券']"

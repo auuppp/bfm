@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbtradetool" table="TBTRADETOOL" schema="TZYHSC">
+        <comment>????????????????????????????????????????????</comment>
+        <id name="toolCode" type="string">
+            <column name="TOOL_CODE" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="toolName" type="string">
+            <column name="TOOL_NAME" length="100" not-null="true">
+                <comment>1:?????????? 2:????????????????</comment>
+            </column>
+        </property>
+        <property name="businType" type="string">
+            <column name="BUSIN_TYPE" length="6" not-null="true" />
+        </property>
+        <property name="subCodes" type="string">
+            <column name="SUB_CODES" length="128" not-null="true">
+                <comment>?????','??? ?ab,cd</comment>
+            </column>
+        </property>
+        <property name="tradeFeeFlag" type="string">
+            <column name="TRADE_FEE_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="objectFeeFlag" type="string">
+            <column name="OBJECT_FEE_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="innerFeeFlag" type="string">
+            <column name="INNER_FEE_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

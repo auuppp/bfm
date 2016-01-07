@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbselfshibor" table="TBSELFSHIBOR" schema="TZYHSC">
+        <comment>Add by fj from 20100416 for bns version 1?????Shibor??????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbselfshiborId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="interCode" type="string">
+                <column name="INTER_CODE" length="24" />
+            </key-property>
+        </composite-id>
+        <property name="inPrice" type="big_decimal">
+            <column name="IN_PRICE" precision="20" scale="12" not-null="true">
+                <comment>??%</comment>
+            </column>
+        </property>
+        <property name="outPrice" type="big_decimal">
+            <column name="OUT_PRICE" precision="20" scale="12" not-null="true">
+                <comment>??%</comment>
+            </column>
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="16" not-null="true" />
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true">
+                <comment>???????????</comment>
+            </column>
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

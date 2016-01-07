@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbmmrealdeal" table="TBMMREALDEAL" schema="TZYHSC">
+        <comment>???????????????????????(???????)??????????????????????????????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbmmrealdealId">
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="versionNo" type="big_decimal">
+                <column name="VERSION_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true">
+                <comment>???????? ???R+yyyyymmdd+?? ???B+yyyyymmdd+?? ??????????????seq??</comment>
+            </column>
+        </property>
+        <property name="contractNo" type="string">
+            <column name="CONTRACT_NO" length="32" not-null="true" />
+        </property>
+        <property name="contractName" type="string">
+            <column name="CONTRACT_NAME" length="100" not-null="true" />
+        </property>
+        <property name="subAccountNo" type="string">
+            <column name="SUB_ACCOUNT_NO" length="32" not-null="true">
+                <comment>?????????????????????</comment>
+            </column>
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true">
+                <comment>1???2???3??</comment>
+            </column>
+        </property>
+        <property name="limit" type="big_decimal">
+            <column name="LIMIT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="amtSource" type="string">
+            <column name="AMT_SOURCE" length="10" not-null="true">
+                <comment>???? ? 12 1????(??) 2??/????</comment>
+            </column>
+        </property>
+        <property name="upperLimit" type="big_decimal">
+            <column name="UPPER_LIMIT" precision="18" not-null="true" />
+        </property>
+        <property name="autoContinueFlag" type="string">
+            <column name="AUTO_CONTINUE_FLAG" length="1" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="foundDate" type="big_decimal">
+            <column name="FOUND_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="dealTime" type="big_decimal">
+            <column name="DEAL_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="withInterestFlag" type="string">
+            <column name="WITH_INTEREST_FLAG" length="1" not-null="true">
+                <comment>1 ? 0 ?</comment>
+            </column>
+        </property>
+        <property name="interestAmt" type="big_decimal">
+            <column name="INTEREST_AMT" precision="16" not-null="true" />
+        </property>
+        <property name="settleAmt" type="big_decimal">
+            <column name="SETTLE_AMT" precision="18" not-null="true">
+                <comment>????+????</comment>
+            </column>
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="18" not-null="true">
+                <comment>??????????????????(??????????,???????????)</comment>
+            </column>
+        </property>
+        <property name="interestDate" type="big_decimal">
+            <column name="INTEREST_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????????????(?????????)</comment>
+            </column>
+        </property>
+        <property name="lastInterestEndDate" type="big_decimal">
+            <column name="LAST_INTEREST_END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="baseInterest" type="string">
+            <column name="BASE_INTEREST" length="12" not-null="true" />
+        </property>
+        <property name="aheadAllow" type="string">
+            <column name="AHEAD_ALLOW" length="1" not-null="true" />
+        </property>
+        <property name="settleSpeed" type="big_decimal">
+            <column name="SETTLE_SPEED" precision="22" scale="0" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+        <property name="firstSettleType" type="string">
+            <column name="FIRST_SETTLE_TYPE" length="1" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+        <property name="secondSettleType" type="string">
+            <column name="SECOND_SETTLE_TYPE" length="1" not-null="true">
+                <comment>?????????????</comment>
+            </column>
+        </property>
+        <property name="secondClearBalance" type="big_decimal">
+            <column name="SECOND_CLEAR_BALANCE" precision="16" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="16" scale="8" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+        <property name="hgDays" type="big_decimal">
+            <column name="HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+        <property name="realHgDays" type="big_decimal">
+            <column name="REAL_HG_DAYS" precision="22" scale="0" not-null="true">
+                <comment>????????????????????</comment>
+            </column>
+        </property>
+        <property name="tenderInfoId" type="string">
+            <column name="TENDER_INFO_ID" length="32" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="payDate" type="big_decimal">
+            <column name="PAY_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="matureInterest" type="big_decimal">
+            <column name="MATURE_INTEREST" precision="16" not-null="true">
+                <comment>?????????(???????????)</comment>
+            </column>
+        </property>
+        <property name="repurchaseOrg" type="string">
+            <column name="REPURCHASE_ORG" length="32" not-null="true">
+                <comment>??????? ?????????????????????</comment>
+            </column>
+        </property>
+        <property name="objectMethod" type="string">
+            <column name="OBJECT_METHOD" length="1" not-null="true">
+                <comment>1-???? 2-?????? ??????????????</comment>
+            </column>
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

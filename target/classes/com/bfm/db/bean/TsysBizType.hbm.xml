@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysBizType" table="TSYS_BIZ_TYPE" schema="TZYHSC">
+        <comment>???????</comment>
+        <id name="bizTypeCode" type="string">
+            <column name="BIZ_TYPE_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="bizTypeName" type="string">
+            <column name="BIZ_TYPE_NAME" length="32">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="defValueCode" type="string">
+            <column name="DEF_VALUE_CODE" length="16">
+                <comment>?????</comment>
+            </column>
+        </property>
+        <property name="stdTypeCode" type="string">
+            <column name="STD_TYPE_CODE" length="16" />
+        </property>
+        <property name="typeLength" type="big_decimal">
+            <column name="TYPE_LENGTH" precision="22" scale="0">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="typePrec" type="big_decimal">
+            <column name="TYPE_PREC" precision="22" scale="0">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256">
+                <comment>??</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

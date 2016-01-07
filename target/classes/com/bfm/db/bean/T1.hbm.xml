@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.T1" table="T1" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.T1Id">
+            <key-property name="tableName" type="string">
+                <column name="TABLE_NAME" length="30" />
+            </key-property>
+            <key-property name="tablespaceName" type="string">
+                <column name="TABLESPACE_NAME" length="30" />
+            </key-property>
+            <key-property name="clusterName" type="string">
+                <column name="CLUSTER_NAME" length="30" />
+            </key-property>
+            <key-property name="iotName" type="string">
+                <column name="IOT_NAME" length="30" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="8" />
+            </key-property>
+            <key-property name="pctFree" type="big_decimal">
+                <column name="PCT_FREE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="pctUsed" type="big_decimal">
+                <column name="PCT_USED" precision="22" scale="0" />
+            </key-property>
+            <key-property name="iniTrans" type="big_decimal">
+                <column name="INI_TRANS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="maxTrans" type="big_decimal">
+                <column name="MAX_TRANS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="initialExtent" type="big_decimal">
+                <column name="INITIAL_EXTENT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="nextExtent" type="big_decimal">
+                <column name="NEXT_EXTENT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="minExtents" type="big_decimal">
+                <column name="MIN_EXTENTS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="maxExtents" type="big_decimal">
+                <column name="MAX_EXTENTS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="pctIncrease" type="big_decimal">
+                <column name="PCT_INCREASE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="freelists" type="big_decimal">
+                <column name="FREELISTS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="freelistGroups" type="big_decimal">
+                <column name="FREELIST_GROUPS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="logging" type="string">
+                <column name="LOGGING" length="3" />
+            </key-property>
+            <key-property name="backedUp" type="string">
+                <column name="BACKED_UP" length="1" />
+            </key-property>
+            <key-property name="numRows" type="big_decimal">
+                <column name="NUM_ROWS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="blocks" type="big_decimal">
+                <column name="BLOCKS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="emptyBlocks" type="big_decimal">
+                <column name="EMPTY_BLOCKS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="avgSpace" type="big_decimal">
+                <column name="AVG_SPACE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="chainCnt" type="big_decimal">
+                <column name="CHAIN_CNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="avgRowLen" type="big_decimal">
+                <column name="AVG_ROW_LEN" precision="22" scale="0" />
+            </key-property>
+            <key-property name="avgSpaceFreelistBlocks" type="big_decimal">
+                <column name="AVG_SPACE_FREELIST_BLOCKS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="numFreelistBlocks" type="big_decimal">
+                <column name="NUM_FREELIST_BLOCKS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="degree" type="string">
+                <column name="DEGREE" length="20" />
+            </key-property>
+            <key-property name="instances" type="string">
+                <column name="INSTANCES" length="20" />
+            </key-property>
+            <key-property name="cache" type="string">
+                <column name="CACHE" length="10" />
+            </key-property>
+            <key-property name="tableLock" type="string">
+                <column name="TABLE_LOCK" length="8" />
+            </key-property>
+            <key-property name="sampleSize" type="big_decimal">
+                <column name="SAMPLE_SIZE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lastAnalyzed" type="date">
+                <column name="LAST_ANALYZED" length="7" />
+            </key-property>
+            <key-property name="partitioned" type="string">
+                <column name="PARTITIONED" length="3" />
+            </key-property>
+            <key-property name="iotType" type="string">
+                <column name="IOT_TYPE" length="12" />
+            </key-property>
+            <key-property name="temporary" type="string">
+                <column name="TEMPORARY" length="1" />
+            </key-property>
+            <key-property name="secondary" type="string">
+                <column name="SECONDARY" length="1" />
+            </key-property>
+            <key-property name="nested" type="string">
+                <column name="NESTED" length="3" />
+            </key-property>
+            <key-property name="bufferPool" type="string">
+                <column name="BUFFER_POOL" length="7" />
+            </key-property>
+            <key-property name="flashCache" type="string">
+                <column name="FLASH_CACHE" length="7" />
+            </key-property>
+            <key-property name="cellFlashCache" type="string">
+                <column name="CELL_FLASH_CACHE" length="7" />
+            </key-property>
+            <key-property name="rowMovement" type="string">
+                <column name="ROW_MOVEMENT" length="8" />
+            </key-property>
+            <key-property name="globalStats" type="string">
+                <column name="GLOBAL_STATS" length="3" />
+            </key-property>
+            <key-property name="userStats" type="string">
+                <column name="USER_STATS" length="3" />
+            </key-property>
+            <key-property name="duration" type="string">
+                <column name="DURATION" length="15" />
+            </key-property>
+            <key-property name="skipCorrupt" type="string">
+                <column name="SKIP_CORRUPT" length="8" />
+            </key-property>
+            <key-property name="monitoring" type="string">
+                <column name="MONITORING" length="3" />
+            </key-property>
+            <key-property name="clusterOwner" type="string">
+                <column name="CLUSTER_OWNER" length="30" />
+            </key-property>
+            <key-property name="dependencies" type="string">
+                <column name="DEPENDENCIES" length="8" />
+            </key-property>
+            <key-property name="compression" type="string">
+                <column name="COMPRESSION" length="8" />
+            </key-property>
+            <key-property name="compressFor" type="string">
+                <column name="COMPRESS_FOR" length="12" />
+            </key-property>
+            <key-property name="dropped" type="string">
+                <column name="DROPPED" length="3" />
+            </key-property>
+            <key-property name="readOnly" type="string">
+                <column name="READ_ONLY" length="3" />
+            </key-property>
+            <key-property name="segmentCreated" type="string">
+                <column name="SEGMENT_CREATED" length="3" />
+            </key-property>
+            <key-property name="resultCache" type="string">
+                <column name="RESULT_CACHE" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

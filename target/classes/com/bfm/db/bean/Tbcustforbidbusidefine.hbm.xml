@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustforbidbusidefine" table="TBCUSTFORBIDBUSIDEFINE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcustforbidbusidefineId">
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+        </composite-id>
+        <property name="describe" type="string">
+            <column name="DESCRIBE" length="1024" not-null="true" />
+        </property>
+        <property name="isForbid" type="string">
+            <column name="IS_FORBID" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

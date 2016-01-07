@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TsysStdType" table="TSYS_STD_TYPE" schema="TZYHSC">
+        <comment>???????: HsInteger-int HsShort - smallint HsTinyint - tinyint HsLong - bigint HsChar - char HsVarChar - varchar HsDouble - double HsFloat - float HsNumeric -
+        numeric HsDecimal - decimal HsIntDate - int HsIntTime - int HsIntDatetime - int HsDatetime - datetime</comment>
+        <id name="stdTypeCode" type="string">
+            <column name="STD_TYPE_CODE" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="stdTypeName" type="string">
+            <column name="STD_TYPE_NAME" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

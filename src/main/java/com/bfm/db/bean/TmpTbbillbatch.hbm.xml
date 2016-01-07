@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbbillbatch" table="TMP_TBBILLBATCH" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbbillbatchId">
+            <key-property name="batchNo" type="string">
+                <column name="BATCH_NO" length="32" />
+            </key-property>
+            <key-property name="batchType" type="string">
+                <column name="BATCH_TYPE" length="1" />
+            </key-property>
+            <key-property name="billNo" type="string">
+                <column name="BILL_NO" length="32" />
+            </key-property>
+            <key-property name="businType" type="string">
+                <column name="BUSIN_TYPE" length="6" />
+            </key-property>
+            <key-property name="subCode" type="string">
+                <column name="SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="entrustDirection" type="string">
+                <column name="ENTRUST_DIRECTION" length="1" />
+            </key-property>
+            <key-property name="actionName" type="string">
+                <column name="ACTION_NAME" length="4" />
+            </key-property>
+            <key-property name="rivalNo" type="string">
+                <column name="RIVAL_NO" length="32" />
+            </key-property>
+            <key-property name="dealSerialNo" type="string">
+                <column name="DEAL_SERIAL_NO" length="32" />
+            </key-property>
+            <key-property name="combiNo" type="string">
+                <column name="COMBI_NO" length="32" />
+            </key-property>
+            <key-property name="investType" type="string">
+                <column name="INVEST_TYPE" length="1" />
+            </key-property>
+            <key-property name="pages" type="big_decimal">
+                <column name="PAGES" precision="38" scale="0" />
+            </key-property>
+            <key-property name="faceAmt" type="big_decimal">
+                <column name="FACE_AMT" precision="18" />
+            </key-property>
+            <key-property name="valueDate" type="big_decimal">
+                <column name="VALUE_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="beginAmt" type="big_decimal">
+                <column name="BEGIN_AMT" precision="18" />
+            </key-property>
+            <key-property name="payRate" type="big_decimal">
+                <column name="PAY_RATE" precision="10" scale="8" />
+            </key-property>
+            <key-property name="interestAmt" type="big_decimal">
+                <column name="INTEREST_AMT" precision="18" />
+            </key-property>
+            <key-property name="userId" type="string">
+                <column name="USER_ID" length="32" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" length="1" />
+            </key-property>
+            <key-property name="flowInstanceId" type="string">
+                <column name="FLOW_INSTANCE_ID" length="256" />
+            </key-property>
+            <key-property name="approveStatus" type="string">
+                <column name="APPROVE_STATUS" length="1" />
+            </key-property>
+            <key-property name="isSystem" type="string">
+                <column name="IS_SYSTEM" length="1" />
+            </key-property>
+            <key-property name="buySubCode" type="string">
+                <column name="BUY_SUB_CODE" length="4" />
+            </key-property>
+            <key-property name="billClass" type="string">
+                <column name="BILL_CLASS" length="1" />
+            </key-property>
+            <key-property name="billType" type="string">
+                <column name="BILL_TYPE" length="1" />
+            </key-property>
+            <key-property name="cityFlag" type="string">
+                <column name="CITY_FLAG" length="1" />
+            </key-property>
+            <key-property name="adjDays" type="big_decimal">
+                <column name="ADJ_DAYS" precision="38" scale="0" />
+            </key-property>
+            <key-property name="calDays" type="big_decimal">
+                <column name="CAL_DAYS" precision="38" scale="0" />
+            </key-property>
+            <key-property name="maturityDate" type="big_decimal">
+                <column name="MATURITY_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="maturityDateAdj" type="big_decimal">
+                <column name="MATURITY_DATE_ADJ" precision="38" scale="0" />
+            </key-property>
+            <key-property name="contract" type="string">
+                <column name="CONTRACT" length="256" />
+            </key-property>
+            <key-property name="invoice" type="string">
+                <column name="INVOICE" length="32" />
+            </key-property>
+            <key-property name="remoteHolder" type="string">
+                <column name="REMOTE_HOLDER" length="32" />
+            </key-property>
+            <key-property name="applicatName" type="string">
+                <column name="APPLICAT_NAME" length="32" />
+            </key-property>
+            <key-property name="repoDays" type="big_decimal">
+                <column name="REPO_DAYS" precision="38" scale="0" />
+            </key-property>
+            <key-property name="remark" type="string">
+                <column name="REMARK" length="256" />
+            </key-property>
+            <key-property name="lastDate" type="big_decimal">
+                <column name="LAST_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="lastTime" type="big_decimal">
+                <column name="LAST_TIME" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

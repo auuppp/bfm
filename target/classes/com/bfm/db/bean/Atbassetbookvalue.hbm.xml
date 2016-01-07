@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbassetbookvalue" table="ATBASSETBOOKVALUE" schema="TZYHSC">
+        <comment>&#215;&#202;&#178;&#250;&#213;&#203;&#195;&#230;&#208;&#197;&#207;&#162;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbassetbookvalueId">
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="bookBranch" type="string">
+            <column name="BOOK_BRANCH" length="32">
+                <comment>&#188;&#199;&#213;&#203;&#187;&#250;&#185;&#185;</comment>
+            </column>
+        </property>
+        <property name="assetFlag" type="java.lang.Character">
+            <column name="ASSET_FLAG" length="1">
+                <comment>1-&#215;&#202;&#178;&#250; 2-&#184;&#186;&#213;&#174;</comment>
+            </column>
+        </property>
+        <property name="assetCount" type="big_decimal">
+            <column name="ASSET_COUNT" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#202;&#253;&#193;&#191;&#163;&#172;&#210;&#212;&#212;&#170;&#206;&#170;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="assetPosition" type="big_decimal">
+            <column name="ASSET_POSITION" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#202;&#208;&#214;&#181;&#205;&#183;&#180;&#231;</comment>
+            </column>
+        </property>
+        <property name="acosts" type="big_decimal">
+            <column name="ACOSTS" precision="18">
+                <comment>&#190;&#187;&#188;&#219;&#179;&#201;&#189;&#187;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="costsfull" type="big_decimal">
+            <column name="COSTSFULL" precision="18">
+                <comment>&#188;&#198;&#203;&#227;&#202;&#181;&#188;&#202;&#196;&#234;&#187;&#170;&#202;&#213;&#210;&#230;&#194;&#202;&#202;&#177;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="costs" type="big_decimal">
+            <column name="COSTS" precision="18">
+                <comment>&#190;&#187;&#188;&#219;&#204;&#175;&#211;&#224;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="18">
+                <comment>&#211;&#166;&#188;&#198;&#192;&#251;&#207;&#162;&#211;&#224;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="ajstinterate" type="big_decimal">
+            <column name="AJSTINTERATE" precision="18">
+                <comment>&#192;&#251;&#207;&#162;&#181;&#247;&#213;&#251;</comment>
+            </column>
+        </property>
+        <property name="impairment" type="big_decimal">
+            <column name="IMPAIRMENT" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#188;&#245;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="interestaccrual" type="big_decimal">
+            <column name="INTERESTACCRUAL" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#184;&#182;&#207;&#162;&#198;&#218;&#188;&#228;&#211;&#166;&#188;&#198;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="curraccrual" type="big_decimal">
+            <column name="CURRACCRUAL" precision="18">
+                <comment>&#181;&#177;&#199;&#176;&#188;&#198;&#207;&#162;&#198;&#218;&#188;&#228;&#211;&#166;&#188;&#198;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="costDate" type="string">
+            <column name="COST_DATE" length="8">
+                <comment>
+                &#188;&#198;&#203;&#227;&#189;&#216;&#214;&#185;&#200;&#213;&#198;&#218;&#163;&#172;&#191;&#231;&#200;&#213;&#188;&#198;&#204;&#225;&#202;&#177;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

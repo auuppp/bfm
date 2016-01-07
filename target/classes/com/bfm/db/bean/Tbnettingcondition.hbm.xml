@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbnettingcondition" table="TBNETTINGCONDITION" schema="TZYHSC">
+        <id name="ruleNo" type="string">
+            <column name="RULE_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="ruleName" type="string">
+            <column name="RULE_NAME" length="32" not-null="true">
+                <comment>??</comment>
+            </column>
+        </property>
+        <property name="closeType" type="string">
+            <column name="CLOSE_TYPE" length="1" not-null="true">
+                <comment>1-? 2-?? 3-?????</comment>
+            </column>
+        </property>
+        <property name="closeValue" type="big_decimal">
+            <column name="CLOSE_VALUE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="releaseTime" type="big_decimal">
+            <column name="RELEASE_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="netConditions" type="string">
+            <column name="NET_CONDITIONS" not-null="true">
+                <comment>???????????pay_date,busin_class</comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="50" not-null="true" />
+        </property>
+        <property name="reserve" type="string">
+            <column name="RESERVE" length="64" not-null="true" />
+        </property>
+        <property name="reserve2" type="string">
+            <column name="RESERVE2" length="64" not-null="true" />
+        </property>
+        <property name="reserve3" type="string">
+            <column name="RESERVE3" length="64" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

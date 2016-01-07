@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbacctbookset" table="ATBACCTBOOKSET" schema="TZYHSC">
+        <comment>ATBACCTBOOKSET&#213;&#202;&#204;&#215;&#208;&#197;&#207;&#162;</comment>
+        <id name="bookcode" type="string">
+            <column name="BOOKCODE" length="8" />
+            <generator class="assigned" />
+        </id>
+        <property name="bookname" type="string">
+            <column name="BOOKNAME" length="100" not-null="true">
+                <comment>&#213;&#202;&#204;&#215;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="curcode" type="string">
+            <column name="CURCODE" length="3" not-null="true">
+                <comment>&#177;&#190;&#177;&#210;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="currentperiod" type="string">
+            <column name="CURRENTPERIOD" length="6" not-null="true">
+                <comment>&#181;&#177;&#199;&#176;&#187;&#225;&#188;&#198;&#212;&#194;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="startperiod" type="string">
+            <column name="STARTPERIOD" length="6" not-null="true">
+                <comment>&#191;&#170;&#202;&#188;&#187;&#225;&#188;&#198;&#212;&#194;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="manager" type="string">
+            <column name="MANAGER" length="15" not-null="true">
+                <comment>&#214;&#247;&#185;&#220;</comment>
+            </column>
+        </property>
+        <property name="acctstructure" type="string">
+            <column name="ACCTSTRUCTURE" length="20" not-null="true">
+                <comment>&#191;&#198;&#196;&#191;&#189;&#225;&#185;&#185;</comment>
+            </column>
+        </property>
+        <property name="seniorcode" type="string">
+            <column name="SENIORCODE" length="11">
+                <comment>&#201;&#207;&#188;&#182;&#181;&#165;&#206;&#187;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="checkflag" type="char">
+            <column name="CHECKFLAG" length="1" not-null="true">
+                <comment>1 &#180;&#253;&#201;&#243;&#197;&#250; 2 &#201;&#243;&#197;&#250;&#205;&#168;&#185;&#253; 3 &#201;&#243;&#197;&#250;&#190;&#220;&#190;&#248;</comment>
+            </column>
+        </property>
+        <property name="firstmonth" type="string">
+            <column name="FIRSTMONTH" length="6" not-null="true">
+                <comment>&#198;&#240;&#202;&#188;&#212;&#194;&#183;&#221;</comment>
+            </column>
+        </property>
+        <property name="prebookcode" type="string">
+            <column name="PREBOOKCODE" length="8">
+                <comment>&#201;&#207;&#196;&#234;&#213;&#202;&#204;&#215;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="status" type="char">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>0 &#206;&#180;&#198;&#244;&#211;&#195; 1 &#210;&#209;&#190;&#173;&#198;&#244;&#211;&#195; 2. &#210;&#209;&#190;&#173;&#185;&#216;&#177;&#213; 3.
+                &#180;&#253;&#185;&#216;&#177;&#213;</comment>
+            </column>
+        </property>
+        <property name="bookType" type="char">
+            <column name="BOOK_TYPE" length="1" not-null="true">
+                <comment>2.&#215;&#202;&#178;&#250;&#179;&#216;&#213;&#202;&#204;&#215; 1.&#198;&#213;&#205;&#168;&#213;&#202;&#204;&#215;
+                0.&#196;&#163;&#176;&#229;&#213;&#202;&#204;&#215;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

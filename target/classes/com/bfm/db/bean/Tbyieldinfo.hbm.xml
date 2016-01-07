@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbyieldinfo" table="TBYIELDINFO" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbyieldinfoId">
+            <key-property name="transDate" type="big_decimal">
+                <column name="TRANS_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="yieldCode" type="string">
+                <column name="YIELD_CODE" length="24" />
+            </key-property>
+            <key-property name="yieldType" type="string">
+                <column name="YIELD_TYPE" length="1" />
+            </key-property>
+            <key-property name="maturity" type="big_decimal">
+                <column name="MATURITY" precision="18" scale="4" />
+            </key-property>
+            <key-property name="futureN" type="big_decimal">
+                <column name="FUTURE_N" precision="18" scale="4" />
+            </key-property>
+            <key-property name="futureK" type="big_decimal">
+                <column name="FUTURE_K" precision="18" scale="4" />
+            </key-property>
+        </composite-id>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="38" scale="0" not-null="true" />
+        </property>
+        <property name="yieldName" type="string">
+            <column name="YIELD_NAME" length="100" not-null="true" />
+        </property>
+        <property name="yield" type="big_decimal">
+            <column name="YIELD" precision="18" scale="6" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="20" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

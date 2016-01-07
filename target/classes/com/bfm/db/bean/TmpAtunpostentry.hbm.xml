@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtunpostentry" table="TMP_ATUNPOSTENTRY" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtunpostentryId">
+            <key-property name="serialno" type="big_decimal">
+                <column name="SERIALNO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="registerdate" type="big_decimal">
+                <column name="REGISTERDATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="entrydate" type="big_decimal">
+                <column name="ENTRYDATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="entrycatalog" type="string">
+                <column name="ENTRYCATALOG" length="6" />
+            </key-property>
+            <key-property name="entryno" type="big_decimal">
+                <column name="ENTRYNO" precision="22" scale="0" />
+            </key-property>
+            <key-property name="voucher" type="string">
+                <column name="VOUCHER" length="32" />
+            </key-property>
+            <key-property name="enclosure" type="big_decimal">
+                <column name="ENCLOSURE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="operator" type="string">
+                <column name="OPERATOR" length="16" />
+            </key-property>
+            <key-property name="checkout" type="string">
+                <column name="CHECKOUT" length="16" />
+            </key-property>
+            <key-property name="postor" type="string">
+                <column name="POSTOR" length="16" />
+            </key-property>
+            <key-property name="checkflag" type="java.lang.Character">
+                <column name="CHECKFLAG" length="1" />
+            </key-property>
+            <key-property name="genflag" type="java.lang.Character">
+                <column name="GENFLAG" length="1" />
+            </key-property>
+            <key-property name="genhostflag" type="java.lang.Character">
+                <column name="GENHOSTFLAG" length="1" />
+            </key-property>
+            <key-property name="delFlag" type="java.lang.Character">
+                <column name="DEL_FLAG" length="1" />
+            </key-property>
+            <key-property name="srcId" type="string">
+                <column name="SRC_ID" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

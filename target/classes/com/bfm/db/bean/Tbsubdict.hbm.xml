@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbsubdict" table="TBSUBDICT" schema="TZYHSC">
+        <comment>??????????????????????????????????????K_YWZL?90?1???????????????K_YWZL?81?1?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbsubdictId">
+            <key-property name="hsKey" type="string">
+                <column name="HS_KEY" length="64" />
+            </key-property>
+            <key-property name="val" type="string">
+                <column name="VAL" length="64" />
+            </key-property>
+            <key-property name="subItem" type="string">
+                <column name="SUB_ITEM" length="64" />
+            </key-property>
+            <key-property name="sceneNo" type="big_decimal">
+                <column name="SCENE_NO" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="sceneDescr" type="string">
+            <column name="SCENE_DESCR" length="100" not-null="true" />
+        </property>
+        <property name="subItemName" type="string">
+            <column name="SUB_ITEM_NAME" length="100" not-null="true">
+                <comment>???? K_WTFX</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

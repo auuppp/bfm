@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbbusinaccount" table="TBBUSINACCOUNT" schema="TZYHSC">
+        <comment>??status????found_status?????????????????????????????0?status??? ????????????????????????????0~N???????
+        ??????(???)??????????????????????????????????????????????????????&gt;=?????????????????????????????????</comment>
+        <id name="subAccountNo" type="string">
+            <column name="SUB_ACCOUNT_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="32" not-null="true" />
+        </property>
+        <property name="businNo" type="string">
+            <column name="BUSIN_NO" length="32" not-null="true" unique="true">
+                <comment>?????????????????</comment>
+            </column>
+        </property>
+        <property name="businFlag" type="string">
+            <column name="BUSIN_FLAG" length="1" not-null="true">
+                <comment>1???? 2???? 3??? 4????</comment>
+            </column>
+        </property>
+        <property name="businFlag2" type="string">
+            <column name="BUSIN_FLAG2" length="1" not-null="true">
+                <comment>?????????1??????????(1.62) 0 ????????(0.72)</comment>
+            </column>
+        </property>
+        <property name="amtSource" type="string">
+            <column name="AMT_SOURCE" length="10" not-null="true">
+                <comment>???? ? 12 1????(??) 2??/????</comment>
+            </column>
+        </property>
+        <property name="currType" type="string">
+            <column name="CURR_TYPE" length="3" not-null="true" />
+        </property>
+        <property name="balance" type="big_decimal">
+            <column name="BALANCE" precision="16" not-null="true">
+                <comment>??????????</comment>
+            </column>
+        </property>
+        <property name="upperLimit" type="big_decimal">
+            <column name="UPPER_LIMIT" precision="18" not-null="true" />
+        </property>
+        <property name="beginDate" type="big_decimal">
+            <column name="BEGIN_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1?? 0 ??(???????????????????????)???????????(??????)</comment>
+            </column>
+        </property>
+        <property name="limitUnit" type="string">
+            <column name="LIMIT_UNIT" length="1" not-null="true">
+                <comment>1???2???3??</comment>
+            </column>
+        </property>
+        <property name="limit" type="big_decimal">
+            <column name="LIMIT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="foundStatus" type="string">
+            <column name="FOUND_STATUS" length="1" not-null="true">
+                <comment>???????????????????????????? 1 ??? 2??? 3???(??????????????????????????????) ??????</comment>
+            </column>
+        </property>
+        <property name="foundDate" type="big_decimal">
+            <column name="FOUND_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="openBranch" type="string">
+            <column name="OPEN_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="256" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="amtConfirmFlag" type="string">
+            <column name="AMT_CONFIRM_FLAG" length="1" not-null="true">
+                <comment>1 ? 0 ?</comment>
+            </column>
+        </property>
+        <property name="amtSummary" type="string">
+            <column name="AMT_SUMMARY" length="256" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true">
+                <comment>3 ?? 4?? 9 ?? ?????????3? ???????????????????</comment>
+            </column>
+        </property>
+        <property name="withInterestFlag" type="string">
+            <column name="WITH_INTEREST_FLAG" length="1" not-null="true">
+                <comment>1 ? 0 ?</comment>
+            </column>
+        </property>
+        <property name="interestAmt" type="big_decimal">
+            <column name="INTEREST_AMT" precision="16" not-null="true" />
+        </property>
+        <property name="settleAmt" type="big_decimal">
+            <column name="SETTLE_AMT" precision="18" not-null="true">
+                <comment>????+????</comment>
+            </column>
+        </property>
+        <property name="interest" type="big_decimal">
+            <column name="INTEREST" precision="18" not-null="true">
+                <comment>??????????????????(??????????,???????????)</comment>
+            </column>
+        </property>
+        <property name="interestDate" type="big_decimal">
+            <column name="INTEREST_DATE" precision="22" scale="0" not-null="true">
+                <comment>??????????????????(?????????)</comment>
+            </column>
+        </property>
+        <property name="lastInterestEndDate" type="big_decimal">
+            <column name="LAST_INTEREST_END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="notEffectiveReason" type="string">
+            <column name="NOT_EFFECTIVE_REASON" length="1" not-null="true">
+                <comment>summary???????? 1 ????(??) 2 ???? 3 ???????? 4 ????(?????????) 5 ??????</comment>
+            </column>
+        </property>
+        <property name="bookBranch" type="string">
+            <column name="BOOK_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="attributeBranch" type="string">
+            <column name="ATTRIBUTE_BRANCH" length="32" not-null="true" />
+        </property>
+        <property name="rivalNo" type="string">
+            <column name="RIVAL_NO" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

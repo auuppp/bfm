@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpTbbreakdowncredit" table="TMP_TBBREAKDOWNCREDIT" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpTbbreakdowncreditId">
+            <key-property name="totalCreditId" type="string">
+                <column name="TOTAL_CREDIT_ID" length="32" />
+            </key-property>
+            <key-property name="creditType" type="big_decimal">
+                <column name="CREDIT_TYPE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="breakdowncreditBeginDate" type="big_decimal">
+                <column name="BREAKDOWNCREDIT_BEGIN_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="breakdowncreditEndDate" type="big_decimal">
+                <column name="BREAKDOWNCREDIT_END_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="controlType" type="string">
+                <column name="CONTROL_TYPE" length="1" />
+            </key-property>
+            <key-property name="commCreditBalance" type="big_decimal">
+                <column name="COMM_CREDIT_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="tempcreditBalance" type="big_decimal">
+                <column name="TEMPCREDIT_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="usedCredit" type="big_decimal">
+                <column name="USED_CREDIT" precision="16" />
+            </key-property>
+            <key-property name="returnBalance" type="big_decimal">
+                <column name="RETURN_BALANCE" precision="16" />
+            </key-property>
+            <key-property name="tempcreditBeginDate" type="big_decimal">
+                <column name="TEMPCREDIT_BEGIN_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="tempcreditEndDate" type="big_decimal">
+                <column name="TEMPCREDIT_END_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="latestMaintainOperator" type="string">
+                <column name="LATEST_MAINTAIN_OPERATOR" length="32" />
+            </key-property>
+            <key-property name="latestMaintainDate" type="big_decimal">
+                <column name="LATEST_MAINTAIN_DATE" precision="38" scale="0" />
+            </key-property>
+            <key-property name="needControl" type="string">
+                <column name="NEED_CONTROL" length="1" />
+            </key-property>
+            <key-property name="reflectStockTypes" type="string">
+                <column name="REFLECT_STOCK_TYPES" length="1024" />
+            </key-property>
+            <key-property name="businClasses" type="string">
+                <column name="BUSIN_CLASSES" length="1024" />
+            </key-property>
+            <key-property name="currType" type="string">
+                <column name="CURR_TYPE" length="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

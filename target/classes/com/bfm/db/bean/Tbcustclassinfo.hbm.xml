@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustclassinfo" table="TBCUSTCLASSINFO" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcustclassinfoId">
+            <key-property name="custType1" type="string">
+                <column name="CUST_TYPE1" length="2" />
+            </key-property>
+            <key-property name="custType2" type="string">
+                <column name="CUST_TYPE2" length="5" />
+            </key-property>
+        </composite-id>
+        <property name="custType1Name" type="string">
+            <column name="CUST_TYPE1_NAME" length="128" not-null="true" />
+        </property>
+        <property name="custType2Name" type="string">
+            <column name="CUST_TYPE2_NAME" length="128" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

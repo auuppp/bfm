@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbstockfrozendetail" table="TBSTOCKFROZENDETAIL" schema="TZYHSC">
+        <comment>?????????????</comment>
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="assoSerial" type="string">
+            <column name="ASSO_SERIAL" length="32" not-null="true">
+                <comment>????????</comment>
+            </column>
+        </property>
+        <property name="fundNo" type="string">
+            <column name="FUND_NO" length="32" not-null="true" />
+        </property>
+        <property name="assetNo" type="string">
+            <column name="ASSET_NO" length="32" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true" />
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true">
+                <comment>????????????????0</comment>
+            </column>
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="bailAmount" type="big_decimal">
+            <column name="BAIL_AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="bailAmount2" type="big_decimal">
+            <column name="BAIL_AMOUNT2" precision="16" not-null="true" />
+        </property>
+        <property name="opFlag" type="string">
+            <column name="OP_FLAG" length="1" not-null="true">
+                <comment>1??? 2??? 3???</comment>
+            </column>
+        </property>
+        <property name="frozenKind" type="string">
+            <column name="FROZEN_KIND" length="1" not-null="true">
+                <comment>1????? 2????? 3?????</comment>
+            </column>
+        </property>
+        <property name="stockExpireDate" type="big_decimal">
+            <column name="STOCK_EXPIRE_DATE" precision="22" scale="0" not-null="true">
+                <comment>0????????????</comment>
+            </column>
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="1024" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true">
+                <comment>1??? 2????(???????2)</comment>
+            </column>
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="lastDate" type="big_decimal">
+            <column name="LAST_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="lastTime" type="big_decimal">
+            <column name="LAST_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="256" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

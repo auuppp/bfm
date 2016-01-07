@@ -1,0 +1,9 @@
+userName:  
+ type:name
+ value:loginName
+passWord:  
+ type:name
+ value:password
+loginSubmit:
+ type:class
+ value:btnLogin

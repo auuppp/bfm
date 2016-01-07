@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbfinancialproduct" table="TBFINANCIALPRODUCT" schema="TZYHSC">
+        <id name="dealSerialNo" type="string">
+            <column name="DEAL_SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="dealNo" type="string">
+            <column name="DEAL_NO" length="32" not-null="true" />
+        </property>
+        <property name="isPreservation" type="string">
+            <column name="IS_PRESERVATION" length="1" not-null="true" />
+        </property>
+        <property name="beginCalDate" type="big_decimal">
+            <column name="BEGIN_CAL_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="endDate" type="big_decimal">
+            <column name="END_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="financialLimit" type="big_decimal">
+            <column name="FINANCIAL_LIMIT" precision="22" scale="0" not-null="true">
+                <comment>????</comment>
+            </column>
+        </property>
+        <property name="financialRate" type="big_decimal">
+            <column name="FINANCIAL_RATE" precision="16" scale="8" not-null="true" />
+        </property>
+        <property name="financialFundCustodian" type="string">
+            <column name="FINANCIAL_FUND_CUSTODIAN" length="32" not-null="true" />
+        </property>
+        <property name="raiseFund" type="big_decimal">
+            <column name="RAISE_FUND" precision="18" not-null="true" />
+        </property>
+        <property name="totalOperateCapital" type="big_decimal">
+            <column name="TOTAL_OPERATE_CAPITAL" precision="18" not-null="true" />
+        </property>
+        <property name="remainCapital" type="big_decimal">
+            <column name="REMAIN_CAPITAL" precision="18" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

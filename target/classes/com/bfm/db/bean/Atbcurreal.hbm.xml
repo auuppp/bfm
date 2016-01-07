@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbcurreal" table="ATBCURREAL" schema="TZYHSC">
+        <comment>ATBCURREAL&#177;&#210;&#214;&#214;&#182;&#212;&#211;&#166;&#185;&#216;&#207;&#181;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbcurrealId">
+            <key-property name="tranType" type="string">
+                <column name="TRAN_TYPE" length="4" />
+            </key-property>
+            <key-property name="accCur" type="string">
+                <column name="ACC_CUR" length="4" />
+            </key-property>
+            <key-property name="tranCur" type="string">
+                <column name="TRAN_CUR" length="4" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

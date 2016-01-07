@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TmpAtbhisfairpricesum" table="TMP_ATBHISFAIRPRICESUM" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TmpAtbhisfairpricesumId">
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="hsdate" type="string">
+                <column name="HSDATE" length="8" />
+            </key-property>
+            <key-property name="bookcode" type="string">
+                <column name="BOOKCODE" length="8" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="accType" type="string">
+                <column name="ACC_TYPE" length="4" />
+            </key-property>
+            <key-property name="bookBranch" type="string">
+                <column name="BOOK_BRANCH" length="32" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="18" scale="6" />
+            </key-property>
+            <key-property name="costs" type="big_decimal">
+                <column name="COSTS" precision="18" scale="6" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

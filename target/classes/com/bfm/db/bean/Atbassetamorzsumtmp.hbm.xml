@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Atbassetamorzsumtmp" table="ATBASSETAMORZSUMTMP" schema="TZYHSC">
+        <comment>&#215;&#202;&#178;&#250;&#204;&#175;&#207;&#250;&#187;&#227;&#215;&#220;&#177;&#237;</comment>
+        <composite-id name="id" class="com.bfm.db.bean.AtbassetamorzsumtmpId">
+            <key-property name="transId" type="string">
+                <column name="TRANS_ID" length="32" />
+            </key-property>
+            <key-property name="branchNo" type="string">
+                <column name="BRANCH_NO" length="8" />
+            </key-property>
+            <key-property name="assetId" type="string">
+                <column name="ASSET_ID" length="32" />
+            </key-property>
+            <key-property name="assetPort" type="string">
+                <column name="ASSET_PORT" length="8" />
+            </key-property>
+            <key-property name="costsCenter" type="string">
+                <column name="COSTS_CENTER" length="20" />
+            </key-property>
+            <key-property name="assetType" type="string">
+                <column name="ASSET_TYPE" length="4" />
+            </key-property>
+            <key-property name="amorBdate" type="string">
+                <column name="AMOR_BDATE" length="8" />
+            </key-property>
+            <key-property name="amorEdate" type="string">
+                <column name="AMOR_EDATE" length="8" />
+            </key-property>
+            <key-property name="amorDate" type="string">
+                <column name="AMOR_DATE" length="8" />
+            </key-property>
+            <key-property name="amorType" type="char">
+                <column name="AMOR_TYPE" length="1" />
+            </key-property>
+            <key-property name="amorFlag" type="char">
+                <column name="AMOR_FLAG" length="1" />
+            </key-property>
+            <key-property name="curCode" type="string">
+                <column name="CUR_CODE" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="rate" type="big_decimal">
+            <column name="RATE" precision="18" scale="8">
+                <comment>&#204;&#175;&#207;&#250;&#192;&#251;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="amt" type="big_decimal">
+            <column name="AMT" precision="18">
+                <comment>&#189;&#187;&#210;&#215;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="assetAmor" type="big_decimal">
+            <column name="ASSET_AMOR" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#204;&#175;&#207;&#250;&#215;&#220;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="assetAlamor" type="big_decimal">
+            <column name="ASSET_ALAMOR" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#210;&#209;&#204;&#175;&#207;&#250;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="assetBlamor" type="big_decimal">
+            <column name="ASSET_BLAMOR" precision="18">
+                <comment>&#215;&#202;&#178;&#250;&#206;&#180;&#204;&#175;&#207;&#250;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="amorDays" type="big_decimal">
+            <column name="AMOR_DAYS" precision="22" scale="0">
+                <comment>&#202;&#163;&#211;&#224;&#204;&#175;&#207;&#250;&#204;&#236;&#202;&#253;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbratiolog" table="TBRATIOLOG" schema="TZYHSC">
+        <id name="serialNo" type="string">
+            <column name="SERIAL_NO" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="transTime" type="big_decimal">
+            <column name="TRANS_TIME" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="triggerType" type="string">
+            <column name="TRIGGER_TYPE" length="1" not-null="true" />
+        </property>
+        <property name="instructionType" type="string">
+            <column name="INSTRUCTION_TYPE" length="32" not-null="true">
+                <comment>1 tbinstruction 2 tbbankrealdeal(????) 3 tbcmbankrealdeal(??????) 4 tbbiddeal(??????) 5 tbinstext(?????????)</comment>
+            </column>
+        </property>
+        <property name="tempDailyInstruction" type="string">
+            <column name="TEMP_DAILY_INSTRUCTION" length="32" not-null="true">
+                <comment>?????????????????????????????</comment>
+            </column>
+        </property>
+        <property name="dailyInstructionNo" type="string">
+            <column name="DAILY_INSTRUCTION_NO" length="32" not-null="true">
+                <comment>????????? ????????? ?????????</comment>
+            </column>
+        </property>
+        <property name="indexDailyModify" type="big_decimal">
+            <column name="INDEX_DAILY_MODIFY" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="riskSerial" type="string">
+            <column name="RISK_SERIAL" length="32" not-null="true" />
+        </property>
+        <property name="setValue" type="big_decimal">
+            <column name="SET_VALUE" precision="18" scale="5" not-null="true" />
+        </property>
+        <property name="realValue" type="big_decimal">
+            <column name="REAL_VALUE" precision="18" scale="5" not-null="true" />
+        </property>
+        <property name="userId" type="string">
+            <column name="USER_ID" length="32" not-null="true" />
+        </property>
+        <property name="warnLevel" type="string">
+            <column name="WARN_LEVEL" length="1" not-null="true">
+                <comment>????K_YJJB? 1:??? 2:??? 3:??? 4:?? A:????</comment>
+            </column>
+        </property>
+        <property name="warnOperation" type="string">
+            <column name="WARN_OPERATION" length="1" not-null="true">
+                <comment>0?? 1:?? 2:??</comment>
+            </column>
+        </property>
+        <property name="returnMessage" type="string">
+            <column name="RETURN_MESSAGE" length="512" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="entrustDirection" type="string">
+            <column name="ENTRUST_DIRECTION" length="1" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="combiNo" type="string">
+            <column name="COMBI_NO" length="32" not-null="true">
+                <comment>??????</comment>
+            </column>
+        </property>
+        <property name="investType" type="string">
+            <column name="INVEST_TYPE" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

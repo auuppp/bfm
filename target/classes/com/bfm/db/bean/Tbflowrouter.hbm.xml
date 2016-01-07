@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbflowrouter" table="TBFLOWROUTER" schema="TZYHSC">
+        <comment>?????????????????order??</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TbflowrouterId">
+            <key-property name="marketNo" type="string">
+                <column name="MARKET_NO" length="6" />
+            </key-property>
+            <key-property name="businClass" type="string">
+                <column name="BUSIN_CLASS" length="6" />
+            </key-property>
+            <key-property name="businFlag" type="string">
+                <column name="BUSIN_FLAG" length="6" />
+            </key-property>
+            <key-property name="opFlag" type="string">
+                <column name="OP_FLAG" length="1" />
+            </key-property>
+            <key-property name="opFlag2" type="string">
+                <column name="OP_FLAG2" length="1" />
+            </key-property>
+            <key-property name="entrustDirection" type="string">
+                <column name="ENTRUST_DIRECTION" length="1" />
+            </key-property>
+            <key-property name="firstEndFlag" type="string">
+                <column name="FIRST_END_FLAG" length="1" />
+            </key-property>
+            <key-property name="settleType" type="string">
+                <column name="SETTLE_TYPE" length="1" />
+            </key-property>
+            <key-property name="param1" type="string">
+                <column name="PARAM1" length="20" />
+            </key-property>
+            <key-property name="param2" type="string">
+                <column name="PARAM2" length="20" />
+            </key-property>
+            <key-property name="param3" type="string">
+                <column name="PARAM3" length="20" />
+            </key-property>
+            <key-property name="param4" type="string">
+                <column name="PARAM4" length="20" />
+            </key-property>
+            <key-property name="param5" type="string">
+                <column name="PARAM5" length="20" />
+            </key-property>
+            <key-property name="param6" type="string">
+                <column name="PARAM6" length="20" />
+            </key-property>
+            <key-property name="param7" type="string">
+                <column name="PARAM7" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="processId" type="string">
+            <column name="PROCESS_ID" length="36" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

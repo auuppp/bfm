@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.TRole" table="T_ROLE" schema="TZYHSC">
+        <comment>?????</comment>
+        <composite-id name="id" class="com.bfm.db.bean.TRoleId">
+            <key-property name="roleId" type="string">
+                <column name="ROLE_ID" length="15" />
+            </key-property>
+            <key-property name="roleName" type="string">
+                <column name="ROLE_NAME" length="20" />
+            </key-property>
+            <key-property name="roleDesc" type="string">
+                <column name="ROLE_DESC" length="30" />
+            </key-property>
+            <key-property name="bak1" type="string">
+                <column name="BAK1" length="30" />
+            </key-property>
+            <key-property name="bak2" type="string">
+                <column name="BAK2" length="30" />
+            </key-property>
+            <key-property name="bak3" type="string">
+                <column name="BAK3" length="30" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

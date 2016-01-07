@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbissuebondtransfer" table="TBISSUEBONDTRANSFER" schema="TZYHSC">
+        <id name="transferId" type="string">
+            <column name="TRANSFER_ID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="transferNo" type="string">
+            <column name="TRANSFER_NO" length="32" not-null="true" />
+        </property>
+        <property name="transDate" type="big_decimal">
+            <column name="TRANS_DATE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="issueNo" type="string">
+            <column name="ISSUE_NO" length="32" not-null="true" />
+        </property>
+        <property name="interCode" type="string">
+            <column name="INTER_CODE" length="24" not-null="true" />
+        </property>
+        <property name="branchNo" type="string">
+            <column name="BRANCH_NO" length="32" not-null="true" />
+        </property>
+        <property name="businClass" type="string">
+            <column name="BUSIN_CLASS" length="6" not-null="true" />
+        </property>
+        <property name="outCustNo" type="string">
+            <column name="OUT_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="inCustNo" type="string">
+            <column name="IN_CUST_NO" length="32" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="14" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="1" not-null="true" />
+        </property>
+        <property name="summary" type="string">
+            <column name="SUMMARY" length="100" not-null="true" />
+        </property>
+        <property name="inputOperator" type="string">
+            <column name="INPUT_OPERATOR" length="32" not-null="true" />
+        </property>
+        <property name="checkOperator" type="string">
+            <column name="CHECK_OPERATOR" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

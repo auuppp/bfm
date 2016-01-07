@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-11-18 13:54:09 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.bfm.db.bean.Tbcustomcreditappraise" table="TBCUSTOMCREDITAPPRAISE" schema="TZYHSC">
+        <composite-id name="id" class="com.bfm.db.bean.TbcustomcreditappraiseId">
+            <key-property name="custNo" type="string">
+                <column name="CUST_NO" length="32" />
+            </key-property>
+            <key-property name="appraiseDate" type="big_decimal">
+                <column name="APPRAISE_DATE" precision="38" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="custName" type="string">
+            <column name="CUST_NAME" length="256" not-null="true" />
+        </property>
+        <property name="creditAppraise" type="string">
+            <column name="CREDIT_APPRAISE" length="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
